@@ -1,0 +1,319 @@
+{
+  "$defs": {
+    "CheckCode": {
+      "enum": [
+        "BUDGET",
+        "CURRENCY",
+        "DURATION",
+        "ROUTING",
+        "RETURN_TRIP",
+        "OPENING_HOURS",
+        "WALKING",
+        "EXCLUSIONS",
+        "DIETARY",
+        "GROUNDING",
+        "PRICE_CONFIDENCE"
+      ],
+      "title": "CheckCode",
+      "type": "string"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW",
+            "UNKNOWN"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "expires_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Expires At"
+        },
+        "field": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Field",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "OSM",
+            "VALHALLA",
+            "SERPAPI",
+            "DIRECT",
+            "COMMUNITY",
+            "FIXTURE"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "source_ref": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "subject_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Subject Id",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/JsonValue"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "subject_id",
+        "field",
+        "value",
+        "source",
+        "source_ref",
+        "observed_at",
+        "expires_at",
+        "confidence"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "Money": {
+      "additionalProperties": false,
+      "properties": {
+        "currency_code": {
+          "enum": [
+            "INR",
+            "USD",
+            "GBP",
+            "SGD",
+            "JPY",
+            "EUR",
+            "AUD",
+            "CAD",
+            "AED"
+          ],
+          "title": "Currency Code",
+          "type": "string"
+        },
+        "minor_units": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Minor Units",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "currency_code",
+        "minor_units"
+      ],
+      "title": "Money",
+      "type": "object"
+    },
+    "PriceConfidence": {
+      "enum": [
+        "VERIFIED",
+        "BOUNDED",
+        "ESTIMATED",
+        "UNKNOWN"
+      ],
+      "title": "PriceConfidence",
+      "type": "string"
+    },
+    "PriceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "$ref": "#/$defs/PriceConfidence"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "lower": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Money"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scope": {
+          "anyOf": [
+            {
+              "enum": [
+                "PER_PERSON",
+                "TOTAL"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope"
+        },
+        "upper": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Money"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "confidence",
+        "lower",
+        "upper",
+        "scope",
+        "evidence"
+      ],
+      "title": "PriceEvidence",
+      "type": "object"
+    },
+    "ValidationCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/CheckCode"
+        },
+        "evidence_ids": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "hard": {
+          "title": "Hard",
+          "type": "boolean"
+        },
+        "message": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Message",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "status",
+        "hard",
+        "message",
+        "evidence_ids"
+      ],
+      "title": "ValidationCheck",
+      "type": "object"
+    },
+    "ValidationResult": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted": {
+          "title": "Accepted",
+          "type": "boolean"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/ValidationCheck"
+          },
+          "minItems": 1,
+          "title": "Checks",
+          "type": "array"
+        },
+        "plan_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Plan Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "plan_id",
+        "accepted",
+        "checks"
+      ],
+      "title": "ValidationResult",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cost": {
+      "$ref": "#/$defs/PriceEvidence"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "minItems": 1,
+      "title": "Sources",
+      "type": "array"
+    },
+    "total_duration_seconds": {
+      "exclusiveMinimum": 0,
+      "title": "Total Duration Seconds",
+      "type": "integer"
+    },
+    "validation": {
+      "$ref": "#/$defs/ValidationResult"
+    },
+    "walking_distance_meters": {
+      "minimum": 0,
+      "title": "Walking Distance Meters",
+      "type": "number"
+    }
+  },
+  "required": [
+    "validation",
+    "cost",
+    "total_duration_seconds",
+    "walking_distance_meters",
+    "sources"
+  ],
+  "title": "PlanProof",
+  "type": "object"
+}

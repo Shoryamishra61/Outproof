@@ -1,0 +1,12 @@
+# Bootstrap UI brief
+
+Audience: developers checking the Ground Rule setup. Job: see API availability without mistaking bootstrap for a working outing compiler.
+
+Visual thesis: **Field notebook** — plain paper, readable ink, and a single grounded status.
+
+Signature decisions:
+1. Paper and grass tokens connect the setup to the outdoor product without decorative imagery.
+2. A left-aligned notebook rule groups one setup action; no recommendation cards.
+3. The compiler invariant closes the page, and explicit stage copy prevents unsupported outing claims.
+
+Hierarchy: product name → intended job → bootstrap limitation → API state → retry. One column fits narrow screens; system fonts avoid downloads. Loading disables retry, failures remain visible, success means health only. No animation. Product intake/results/GO remain Phase 10 work.

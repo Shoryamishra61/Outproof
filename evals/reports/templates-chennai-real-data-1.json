@@ -1,0 +1,414 @@
+{
+  "evaluation": "REAL_PROVIDER_CANDIDATE_TEMPLATES_NOT_COMPILED_OUTINGS",
+  "controls": {
+    "currency_code": "INR",
+    "budget_minor_units": 50000,
+    "budget_scope": "PER_PERSON",
+    "duration_max_minutes": 90,
+    "party_mode": "FRIEND",
+    "party_size": 2,
+    "vibes": [
+      "Food",
+      "Talk"
+    ],
+    "hard_constraints": [
+      {
+        "kind": "DIETARY",
+        "value": "vegetarian"
+      },
+      {
+        "kind": "EXCLUDE_CATEGORY",
+        "value": "mall"
+      }
+    ],
+    "soft_constraints": [
+      {
+        "preference": "quiet"
+      }
+    ],
+    "max_walking_minutes": null,
+    "max_walking_meters": null,
+    "return_by_local": null,
+    "locale": "en-IN",
+    "origin": {
+      "latitude": 13.0418,
+      "longitude": 80.2341
+    },
+    "departure_at": "2026-10-06T19:40:12.509476Z",
+    "strict_budget": true
+  },
+  "evaluated_at": "2026-10-06T19:40:12.509476+00:00",
+  "discovery_report": "evals\\reports\\discovery-chennai-live-1.json",
+  "routing_report": "evals\\reports\\routing-chennai-live-1.json",
+  "candidates": [
+    {
+      "plan_id": "template-B:fd585941d841706f4a2cac39",
+      "origin": {
+        "latitude": 13.0418,
+        "longitude": 80.2341
+      },
+      "departure_at": "2026-10-06T19:40:12.509476Z",
+      "stops": [
+        {
+          "place": {
+            "place_id": "osm:node/12473051001",
+            "provider": "OSM",
+            "provider_id": "node/12473051001",
+            "name": "Paati Veedu",
+            "coordinates": {
+              "latitude": 13.0477044,
+              "longitude": 80.2390445
+            },
+            "categories": [
+              "restaurant"
+            ],
+            "opening_windows": null,
+            "price": null,
+            "dietary_options": [
+              "vegetarian"
+            ],
+            "evidence": [
+              {
+                "evidence_id": "osm:node/12473051001:identity",
+                "subject_id": "osm:node/12473051001",
+                "field": "identity",
+                "value": {
+                  "provider": "OSM",
+                  "provider_id": "node/12473051001",
+                  "name": "Paati Veedu"
+                },
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/node/12473051001",
+                "observed_at": "2026-10-06T19:33:45.285454Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "osm:node/12473051001:coordinates",
+                "subject_id": "osm:node/12473051001",
+                "field": "coordinates",
+                "value": {
+                  "latitude": 13.0477044,
+                  "longitude": 80.2390445
+                },
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/node/12473051001",
+                "observed_at": "2026-10-06T19:33:45.285454Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "osm:node/12473051001:categories",
+                "subject_id": "osm:node/12473051001",
+                "field": "categories",
+                "value": [
+                  "restaurant"
+                ],
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/node/12473051001",
+                "observed_at": "2026-10-06T19:33:45.285454Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "osm:node/12473051001:dietary_options",
+                "subject_id": "osm:node/12473051001",
+                "field": "dietary_options",
+                "value": [
+                  "vegetarian"
+                ],
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/node/12473051001",
+                "observed_at": "2026-10-06T19:33:45.285454Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "osm:node/12473051001:osm_metadata",
+                "subject_id": "osm:node/12473051001",
+                "field": "osm_metadata",
+                "value": {
+                  "tags": {
+                    "addr:housenumber": "2",
+                    "addr:postcode": "600017",
+                    "addr:street": "Bhagirathi Ammal Street",
+                    "amenity": "restaurant",
+                    "contact:facebook": "PaatiVeedu",
+                    "contact:instagram": "paativeedu",
+                    "cuisine": "indian",
+                    "diet:vegetarian": "yes",
+                    "email": "gm@paativeedu.com",
+                    "name": "Paati Veedu",
+                    "opening_hours": "Mo-Th 12:00-15:30,19:00-22:00; Fr-Su 11:30-15:30,19:00-22:00",
+                    "website": "https://paativeedu.com/",
+                    "website:menu": "https://paativeedu.com/restaurant.html"
+                  },
+                  "opening_hours": "Mo-Th 12:00-15:30,19:00-22:00; Fr-Su 11:30-15:30,19:00-22:00",
+                  "cuisine": "indian",
+                  "edited_at": "2025-01-04T05:55:55Z",
+                  "version": 1,
+                  "database_timestamp": "2026-10-06T19:32:20Z",
+                  "coordinate_kind": "node"
+                },
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/node/12473051001",
+                "observed_at": "2026-10-06T19:33:45.285454Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              }
+            ]
+          },
+          "arrival_at": "2026-10-06T19:52:25.509476Z",
+          "dwell_seconds": 2700
+        }
+      ],
+      "routes": [
+        {
+          "route_id": "valhalla:c38797b5ce8612db0948d169",
+          "from_id": "origin",
+          "to_id": "osm:node/12473051001",
+          "reachable": true,
+          "duration_seconds": 733,
+          "distance_meters": 1006.0,
+          "evidence": [
+            {
+              "evidence_id": "valhalla:c38797b5ce8612db0948d169:walking_route",
+              "subject_id": "valhalla:c38797b5ce8612db0948d169",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "osm:node/12473051001",
+                "from_coordinates": {
+                  "latitude": 13.0418,
+                  "longitude": 80.2341
+                },
+                "to_coordinates": {
+                  "latitude": 13.0477044,
+                  "longitude": 80.2390445
+                },
+                "reachable": true,
+                "duration_seconds": 733,
+                "distance_meters": 1006.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-06T19:36:22.165633Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:c38797b5ce8612db0948d169:metadata",
+              "subject_id": "valhalla:c38797b5ce8612db0948d169",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:c38797b5ce8612db0948d169",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 13.0418,
+                      "lon": 80.2341,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 13.0477044,
+                      "lon": 80.2390445,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-06T19:36:22.165633Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            }
+          ]
+        },
+        {
+          "route_id": "valhalla:b1f052410c32150d70e81da4",
+          "from_id": "osm:node/12473051001",
+          "to_id": "origin",
+          "reachable": true,
+          "duration_seconds": 716,
+          "distance_meters": 1006.0,
+          "evidence": [
+            {
+              "evidence_id": "valhalla:b1f052410c32150d70e81da4:walking_route",
+              "subject_id": "valhalla:b1f052410c32150d70e81da4",
+              "field": "walking_route",
+              "value": {
+                "from_id": "osm:node/12473051001",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 13.0477044,
+                  "longitude": 80.2390445
+                },
+                "to_coordinates": {
+                  "latitude": 13.0418,
+                  "longitude": 80.2341
+                },
+                "reachable": true,
+                "duration_seconds": 716,
+                "distance_meters": 1006.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-06T19:36:22.365553Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:b1f052410c32150d70e81da4:metadata",
+              "subject_id": "valhalla:b1f052410c32150d70e81da4",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:b1f052410c32150d70e81da4",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 13.0477044,
+                      "lon": 80.2390445,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 13.0418,
+                      "lon": 80.2341,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-06T19:36:22.365553Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "validations": [
+    {
+      "plan_id": "template-B:fd585941d841706f4a2cac39",
+      "accepted": false,
+      "checks": [
+        {
+          "code": "GROUNDING",
+          "status": "PASS",
+          "hard": true,
+          "message": "Provider identity and coordinates must be evidenced",
+          "evidence_ids": [
+            "osm:node/12473051001:identity",
+            "osm:node/12473051001:coordinates"
+          ]
+        },
+        {
+          "code": "ROUTING",
+          "status": "PASS",
+          "hard": true,
+          "message": "Every leg including return needs reachable walking facts",
+          "evidence_ids": [
+            "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "valhalla:b1f052410c32150d70e81da4:walking_route"
+          ]
+        },
+        {
+          "code": "DURATION",
+          "status": "PASS",
+          "hard": true,
+          "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+          "evidence_ids": [
+            "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "valhalla:b1f052410c32150d70e81da4:walking_route"
+          ]
+        },
+        {
+          "code": "RETURN_TRIP",
+          "status": "PASS",
+          "hard": true,
+          "message": "Complete round trip must meet the explicit return deadline in UTC",
+          "evidence_ids": [
+            "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "valhalla:b1f052410c32150d70e81da4:walking_route"
+          ]
+        },
+        {
+          "code": "WALKING",
+          "status": "PASS",
+          "hard": true,
+          "message": "All walking legs count against both supplied maxima",
+          "evidence_ids": [
+            "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "valhalla:b1f052410c32150d70e81da4:walking_route"
+          ]
+        },
+        {
+          "code": "CURRENCY",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Costs must share the budget currency; no conversion",
+          "evidence_ids": []
+        },
+        {
+          "code": "PRICE_CONFIDENCE",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Complete mandatory cost needs current positive evidence",
+          "evidence_ids": []
+        },
+        {
+          "code": "BUDGET",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+          "evidence_ids": []
+        },
+        {
+          "code": "OPENING_HOURS",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Known hours must cover arrival through required dwell",
+          "evidence_ids": []
+        },
+        {
+          "code": "EXCLUSIONS",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Hard exclusions require positive absence and category evidence",
+          "evidence_ids": [
+            "osm:node/12473051001:categories"
+          ]
+        },
+        {
+          "code": "DIETARY",
+          "status": "PASS",
+          "hard": true,
+          "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+          "evidence_ids": [
+            "osm:node/12473051001:dietary_options"
+          ]
+        }
+      ]
+    }
+  ],
+  "failure": null,
+  "template_gate_passed": true,
+  "accepted_plans": 0
+}

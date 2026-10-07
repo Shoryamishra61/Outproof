@@ -1,0 +1,248 @@
+{
+  "scope": "synthetic structural contracts only",
+  "cases": 60,
+  "passed": 60,
+  "failed": [],
+  "results": [
+    {
+      "id": "roundtrip-Money",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-Coordinates",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-HardConstraint",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-SoftConstraint",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-ConstraintSet",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-Evidence",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-PriceEvidence",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-OpeningWindow",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-PlaceCandidate",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-RouteFact",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-PlanStop",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-CandidatePlan",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-ValidationCheck",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-ValidationResult",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-PlanProof",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-CompiledPlan",
+      "passed": true
+    },
+    {
+      "id": "roundtrip-CompilationFailure",
+      "passed": true
+    },
+    {
+      "id": "negative-money",
+      "passed": true
+    },
+    {
+      "id": "float-money",
+      "passed": true
+    },
+    {
+      "id": "bool-money",
+      "passed": true
+    },
+    {
+      "id": "numeric-string-money",
+      "passed": true
+    },
+    {
+      "id": "unsafe-integer-money",
+      "passed": true
+    },
+    {
+      "id": "unsupported-currency",
+      "passed": true
+    },
+    {
+      "id": "invalid-latitude",
+      "passed": true
+    },
+    {
+      "id": "numeric-string-coordinate",
+      "passed": true
+    },
+    {
+      "id": "partial-budget",
+      "passed": true
+    },
+    {
+      "id": "party-conflict",
+      "passed": true
+    },
+    {
+      "id": "negative-walk",
+      "passed": true
+    },
+    {
+      "id": "duplicate-vibes",
+      "passed": true
+    },
+    {
+      "id": "naive-deadline",
+      "passed": true
+    },
+    {
+      "id": "invented-venue-field",
+      "passed": true
+    },
+    {
+      "id": "untyped-hard-rule",
+      "passed": true
+    },
+    {
+      "id": "malformed-output-shape",
+      "passed": true
+    },
+    {
+      "id": "missing-source-data",
+      "passed": true
+    },
+    {
+      "id": "naive-evidence-time",
+      "passed": true
+    },
+    {
+      "id": "missing-fact-known-confidence",
+      "passed": true
+    },
+    {
+      "id": "expired-before-observed",
+      "passed": true
+    },
+    {
+      "id": "unknown-price-with-amount",
+      "passed": true
+    },
+    {
+      "id": "known-price-without-source",
+      "passed": true
+    },
+    {
+      "id": "mixed-currency-price",
+      "passed": true
+    },
+    {
+      "id": "inverted-price-range",
+      "passed": true
+    },
+    {
+      "id": "reversed-hours",
+      "passed": true
+    },
+    {
+      "id": "reachable-without-metrics",
+      "passed": true
+    },
+    {
+      "id": "unreachable-with-fake-metrics",
+      "passed": true
+    },
+    {
+      "id": "missing-return-leg",
+      "passed": true
+    },
+    {
+      "id": "wrong-return-endpoint",
+      "passed": true
+    },
+    {
+      "id": "fake-arrival",
+      "passed": true
+    },
+    {
+      "id": "empty-plan",
+      "passed": true
+    },
+    {
+      "id": "failed-hard-check-accepted",
+      "passed": true
+    },
+    {
+      "id": "unknown-hard-check-accepted",
+      "passed": true
+    },
+    {
+      "id": "incomplete-hard-checks-accepted",
+      "passed": true
+    },
+    {
+      "id": "missing-proof-source",
+      "passed": true
+    },
+    {
+      "id": "fixture-claimed-live",
+      "passed": true
+    },
+    {
+      "id": "wrong-proof-duration",
+      "passed": true
+    },
+    {
+      "id": "wrong-proof-plan",
+      "passed": true
+    },
+    {
+      "id": "multiple-default-options",
+      "passed": true
+    },
+    {
+      "id": "explicit-unknown-price",
+      "passed": true
+    },
+    {
+      "id": "unresolved-candidate",
+      "passed": true
+    },
+    {
+      "id": "unknown-route-candidate",
+      "passed": true
+    },
+    {
+      "id": "unreachable-compiled",
+      "passed": true
+    }
+  ]
+}

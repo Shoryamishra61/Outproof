@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "code": {
+      "enum": [
+        "NO_GROUNDED_CANDIDATES",
+        "NO_BUDGET_VERIFIED_PLAN",
+        "NO_TIME_FEASIBLE_PLAN",
+        "NO_OPEN_PLAN",
+        "UNSUPPORTED_CONSTRAINT",
+        "SOURCE_TEMPORARILY_UNAVAILABLE",
+        "MODEL_OUTPUT_INVALID"
+      ],
+      "title": "Code",
+      "type": "string"
+    },
+    "message": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Message",
+      "type": "string"
+    },
+    "status": {
+      "const": "FAILURE",
+      "default": "FAILURE",
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "code",
+    "message"
+  ],
+  "title": "CompilationFailure",
+  "type": "object"
+}

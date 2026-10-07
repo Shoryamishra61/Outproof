@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "model": "gemma3:1b",
+  "schema_valid": true,
+  "controls_preserved": true,
+  "locked_structured_controls": [
+    "currency_code",
+    "budget_minor_units",
+    "budget_scope",
+    "duration_max_minutes",
+    "party_size",
+    "max_walking_minutes",
+    "max_walking_meters",
+    "return_by_local",
+    "departure_at",
+    "origin"
+  ],
+  "call_latency_ms": 22068,
+  "output": {
+    "budget_minor_units": 50000,
+    "budget_scope": "PER_PERSON",
+    "currency_code": "INR",
+    "departure_at": null,
+    "duration_max_minutes": 90,
+    "hard_constraints": [
+      {
+        "kind": "EXCLUDE_CATEGORY",
+        "value": "mall"
+      }
+    ],
+    "locale": "en-IN",
+    "max_walking_meters": 2500.0,
+    "max_walking_minutes": 20,
+    "origin": null,
+    "party_mode": "FRIEND",
+    "party_size": 2,
+    "return_by_local": null,
+    "soft_constraints": [
+      {
+        "preference": "quiet"
+      }
+    ],
+    "strict_budget": true,
+    "vibes": [
+      "Talk"
+    ]
+  }
+}

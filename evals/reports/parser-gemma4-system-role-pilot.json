@@ -1,0 +1,1038 @@
+{
+  "scope": "Five diagnostic real calls; system role only changed; not a 100-case benchmark",
+  "results": [
+    {
+      "case": {
+        "id": "clean_english-03",
+        "group": "clean_english",
+        "synthetic": true,
+        "text": "No malls please",
+        "controls": {
+          "currency_code": "INR",
+          "budget_minor_units": 50000,
+          "budget_scope": "PER_PERSON",
+          "duration_max_minutes": 90,
+          "party_mode": "GROUP",
+          "party_size": 4,
+          "vibes": [
+            "Talk"
+          ],
+          "hard_constraints": [],
+          "soft_constraints": [],
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null,
+          "locale": "en-IN",
+          "origin": null,
+          "departure_at": null,
+          "strict_budget": true
+        },
+        "expected": {
+          "exclusions": [
+            "mall"
+          ],
+          "dietary": null,
+          "preferences": [],
+          "unsupported": [],
+          "party_size": null,
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null
+        }
+      },
+      "request": {
+        "model": "gemma4:e2b-it-qat",
+        "stream": false,
+        "think": false,
+        "format": {
+          "additionalProperties": false,
+          "properties": {
+            "exclusions": {
+              "items": {
+                "enum": [
+                  "mall",
+                  "alcohol",
+                  "chain"
+                ],
+                "type": "string"
+              },
+              "maxItems": 3,
+              "title": "Exclusions",
+              "type": "array"
+            },
+            "dietary": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "vegetarian",
+                    "vegan"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Dietary"
+            },
+            "unsupported": {
+              "items": {
+                "enum": [
+                  "allergy safety",
+                  "wheelchair accessibility",
+                  "personal safety",
+                  "time clarification"
+                ],
+                "type": "string"
+              },
+              "maxItems": 4,
+              "title": "Unsupported",
+              "type": "array"
+            },
+            "preferences": {
+              "items": {
+                "enum": [
+                  "quiet",
+                  "cheap",
+                  "low walking",
+                  "optional coffee",
+                  "optional food",
+                  "talk",
+                  "romantic",
+                  "open late",
+                  "uncrowded",
+                  "explore",
+                  "short outing"
+                ],
+                "type": "string"
+              },
+              "maxItems": 11,
+              "title": "Preferences",
+              "type": "array"
+            },
+            "party_size": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Party Size",
+              "const": null
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Minutes"
+            },
+            "max_walking_meters": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Meters"
+            },
+            "return_by_local": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Return By Local"
+            }
+          },
+          "required": [
+            "exclusions",
+            "dietary",
+            "unsupported",
+            "preferences",
+            "party_size",
+            "max_walking_minutes",
+            "max_walking_meters",
+            "return_by_local"
+          ],
+          "title": "ParserAdditions",
+          "type": "object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "# Ground Rule constraint parser\nExtract ONLY what the user sentence says. Output the eight schema fields.\nexclusions: [] unless malls, alcohol places or chains are forbidden.\n\"No mall\" or \"mall nahi\" means mall. \"Malls are fine\" means [].\ndietary: vegetarian for veg/vegetarian; vegan for vegan; otherwise null.\nunsupported: explicit allergy safety, wheelchair accessibility or personal safety.\nA clock-only return deadline needs time clarification, never an invented date.\npreferences: only stated wishes: quiet/shaant, cheap/sasta, low walking/zyada walk\nnahi, optional coffee, optional food/khana zaroori nahi, talk/baat, romantic,\nopen late, uncrowded/bheed kam, explore, short outing/1 ghanta.\nUnmentioned arrays must be empty. Do not list every allowed option.\nNumeric fields: null unless the sentence states the value AND the field is unset.\nreturn_by_local: null unless the sentence has an explicit ISO date and offset.\nNo places, prices, budgets, coordinates or routes. Do not invent requirements.\n"
+          },
+          {
+            "role": "user",
+            "content": "{\"unset_optional_controls\": [\"max_walking_minutes\", \"max_walking_meters\", \"return_by_local\"], \"sentence_to_parse\": \"No malls please\"}"
+          }
+        ],
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 384,
+          "num_ctx": 4096
+        }
+      },
+      "raw": "{\"exclusions\": [\"mall\"], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"quiet\", \"low walking\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "latency_ms": 5677,
+      "merged": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          },
+          {
+            "preference": "low walking"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "case": {
+        "id": "clean_english-05",
+        "group": "clean_english",
+        "synthetic": true,
+        "text": "Avoid chains",
+        "controls": {
+          "currency_code": "INR",
+          "budget_minor_units": 50000,
+          "budget_scope": "PER_PERSON",
+          "duration_max_minutes": 90,
+          "party_mode": "GROUP",
+          "party_size": 4,
+          "vibes": [
+            "Talk"
+          ],
+          "hard_constraints": [],
+          "soft_constraints": [],
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null,
+          "locale": "en-IN",
+          "origin": null,
+          "departure_at": null,
+          "strict_budget": true
+        },
+        "expected": {
+          "exclusions": [
+            "chain"
+          ],
+          "dietary": null,
+          "preferences": [],
+          "unsupported": [],
+          "party_size": null,
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null
+        }
+      },
+      "request": {
+        "model": "gemma4:e2b-it-qat",
+        "stream": false,
+        "think": false,
+        "format": {
+          "additionalProperties": false,
+          "properties": {
+            "exclusions": {
+              "items": {
+                "enum": [
+                  "mall",
+                  "alcohol",
+                  "chain"
+                ],
+                "type": "string"
+              },
+              "maxItems": 3,
+              "title": "Exclusions",
+              "type": "array"
+            },
+            "dietary": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "vegetarian",
+                    "vegan"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Dietary"
+            },
+            "unsupported": {
+              "items": {
+                "enum": [
+                  "allergy safety",
+                  "wheelchair accessibility",
+                  "personal safety",
+                  "time clarification"
+                ],
+                "type": "string"
+              },
+              "maxItems": 4,
+              "title": "Unsupported",
+              "type": "array"
+            },
+            "preferences": {
+              "items": {
+                "enum": [
+                  "quiet",
+                  "cheap",
+                  "low walking",
+                  "optional coffee",
+                  "optional food",
+                  "talk",
+                  "romantic",
+                  "open late",
+                  "uncrowded",
+                  "explore",
+                  "short outing"
+                ],
+                "type": "string"
+              },
+              "maxItems": 11,
+              "title": "Preferences",
+              "type": "array"
+            },
+            "party_size": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Party Size",
+              "const": null
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Minutes"
+            },
+            "max_walking_meters": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Meters"
+            },
+            "return_by_local": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Return By Local"
+            }
+          },
+          "required": [
+            "exclusions",
+            "dietary",
+            "unsupported",
+            "preferences",
+            "party_size",
+            "max_walking_minutes",
+            "max_walking_meters",
+            "return_by_local"
+          ],
+          "title": "ParserAdditions",
+          "type": "object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "# Ground Rule constraint parser\nExtract ONLY what the user sentence says. Output the eight schema fields.\nexclusions: [] unless malls, alcohol places or chains are forbidden.\n\"No mall\" or \"mall nahi\" means mall. \"Malls are fine\" means [].\ndietary: vegetarian for veg/vegetarian; vegan for vegan; otherwise null.\nunsupported: explicit allergy safety, wheelchair accessibility or personal safety.\nA clock-only return deadline needs time clarification, never an invented date.\npreferences: only stated wishes: quiet/shaant, cheap/sasta, low walking/zyada walk\nnahi, optional coffee, optional food/khana zaroori nahi, talk/baat, romantic,\nopen late, uncrowded/bheed kam, explore, short outing/1 ghanta.\nUnmentioned arrays must be empty. Do not list every allowed option.\nNumeric fields: null unless the sentence states the value AND the field is unset.\nreturn_by_local: null unless the sentence has an explicit ISO date and offset.\nNo places, prices, budgets, coordinates or routes. Do not invent requirements.\n"
+          },
+          {
+            "role": "user",
+            "content": "{\"unset_optional_controls\": [\"max_walking_minutes\", \"max_walking_meters\", \"return_by_local\"], \"sentence_to_parse\": \"Avoid chains\"}"
+          }
+        ],
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 384,
+          "num_ctx": 4096
+        }
+      },
+      "raw": "{\"exclusions\": [\"mall\"], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"quiet\", \"cheap\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "latency_ms": 5980,
+      "merged": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "case": {
+        "id": "clean_english-10",
+        "group": "clean_english",
+        "synthetic": true,
+        "text": "Coffee would be nice but don't make it mandatory",
+        "controls": {
+          "currency_code": "INR",
+          "budget_minor_units": 50000,
+          "budget_scope": "PER_PERSON",
+          "duration_max_minutes": 90,
+          "party_mode": "GROUP",
+          "party_size": 4,
+          "vibes": [
+            "Talk"
+          ],
+          "hard_constraints": [],
+          "soft_constraints": [],
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null,
+          "locale": "en-IN",
+          "origin": null,
+          "departure_at": null,
+          "strict_budget": true
+        },
+        "expected": {
+          "exclusions": [],
+          "dietary": null,
+          "preferences": [
+            "optional coffee"
+          ],
+          "unsupported": [],
+          "party_size": null,
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null
+        }
+      },
+      "request": {
+        "model": "gemma4:e2b-it-qat",
+        "stream": false,
+        "think": false,
+        "format": {
+          "additionalProperties": false,
+          "properties": {
+            "exclusions": {
+              "items": {
+                "enum": [
+                  "mall",
+                  "alcohol",
+                  "chain"
+                ],
+                "type": "string"
+              },
+              "maxItems": 3,
+              "title": "Exclusions",
+              "type": "array"
+            },
+            "dietary": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "vegetarian",
+                    "vegan"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Dietary"
+            },
+            "unsupported": {
+              "items": {
+                "enum": [
+                  "allergy safety",
+                  "wheelchair accessibility",
+                  "personal safety",
+                  "time clarification"
+                ],
+                "type": "string"
+              },
+              "maxItems": 4,
+              "title": "Unsupported",
+              "type": "array"
+            },
+            "preferences": {
+              "items": {
+                "enum": [
+                  "quiet",
+                  "cheap",
+                  "low walking",
+                  "optional coffee",
+                  "optional food",
+                  "talk",
+                  "romantic",
+                  "open late",
+                  "uncrowded",
+                  "explore",
+                  "short outing"
+                ],
+                "type": "string"
+              },
+              "maxItems": 11,
+              "title": "Preferences",
+              "type": "array"
+            },
+            "party_size": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Party Size",
+              "const": null
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Minutes"
+            },
+            "max_walking_meters": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Meters"
+            },
+            "return_by_local": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Return By Local"
+            }
+          },
+          "required": [
+            "exclusions",
+            "dietary",
+            "unsupported",
+            "preferences",
+            "party_size",
+            "max_walking_minutes",
+            "max_walking_meters",
+            "return_by_local"
+          ],
+          "title": "ParserAdditions",
+          "type": "object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "# Ground Rule constraint parser\nExtract ONLY what the user sentence says. Output the eight schema fields.\nexclusions: [] unless malls, alcohol places or chains are forbidden.\n\"No mall\" or \"mall nahi\" means mall. \"Malls are fine\" means [].\ndietary: vegetarian for veg/vegetarian; vegan for vegan; otherwise null.\nunsupported: explicit allergy safety, wheelchair accessibility or personal safety.\nA clock-only return deadline needs time clarification, never an invented date.\npreferences: only stated wishes: quiet/shaant, cheap/sasta, low walking/zyada walk\nnahi, optional coffee, optional food/khana zaroori nahi, talk/baat, romantic,\nopen late, uncrowded/bheed kam, explore, short outing/1 ghanta.\nUnmentioned arrays must be empty. Do not list every allowed option.\nNumeric fields: null unless the sentence states the value AND the field is unset.\nreturn_by_local: null unless the sentence has an explicit ISO date and offset.\nNo places, prices, budgets, coordinates or routes. Do not invent requirements.\n"
+          },
+          {
+            "role": "user",
+            "content": "{\"unset_optional_controls\": [\"max_walking_minutes\", \"max_walking_meters\", \"return_by_local\"], \"sentence_to_parse\": \"Coffee would be nice but don't make it mandatory\"}"
+          }
+        ],
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 384,
+          "num_ctx": 4096
+        }
+      },
+      "raw": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"optional coffee\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "latency_ms": 7169,
+      "merged": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "optional coffee"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "case": {
+        "id": "indian_english-06",
+        "group": "indian_english",
+        "synthetic": true,
+        "text": "Vegetarian required, no alcohol please",
+        "controls": {
+          "currency_code": "INR",
+          "budget_minor_units": 50000,
+          "budget_scope": "PER_PERSON",
+          "duration_max_minutes": 90,
+          "party_mode": "GROUP",
+          "party_size": 4,
+          "vibes": [
+            "Talk"
+          ],
+          "hard_constraints": [],
+          "soft_constraints": [],
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null,
+          "locale": "en-IN",
+          "origin": null,
+          "departure_at": null,
+          "strict_budget": true
+        },
+        "expected": {
+          "exclusions": [
+            "alcohol"
+          ],
+          "dietary": "vegetarian",
+          "preferences": [],
+          "unsupported": [],
+          "party_size": null,
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null
+        }
+      },
+      "request": {
+        "model": "gemma4:e2b-it-qat",
+        "stream": false,
+        "think": false,
+        "format": {
+          "additionalProperties": false,
+          "properties": {
+            "exclusions": {
+              "items": {
+                "enum": [
+                  "mall",
+                  "alcohol",
+                  "chain"
+                ],
+                "type": "string"
+              },
+              "maxItems": 3,
+              "title": "Exclusions",
+              "type": "array"
+            },
+            "dietary": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "vegetarian",
+                    "vegan"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Dietary"
+            },
+            "unsupported": {
+              "items": {
+                "enum": [
+                  "allergy safety",
+                  "wheelchair accessibility",
+                  "personal safety",
+                  "time clarification"
+                ],
+                "type": "string"
+              },
+              "maxItems": 4,
+              "title": "Unsupported",
+              "type": "array"
+            },
+            "preferences": {
+              "items": {
+                "enum": [
+                  "quiet",
+                  "cheap",
+                  "low walking",
+                  "optional coffee",
+                  "optional food",
+                  "talk",
+                  "romantic",
+                  "open late",
+                  "uncrowded",
+                  "explore",
+                  "short outing"
+                ],
+                "type": "string"
+              },
+              "maxItems": 11,
+              "title": "Preferences",
+              "type": "array"
+            },
+            "party_size": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Party Size",
+              "const": null
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Minutes"
+            },
+            "max_walking_meters": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Meters"
+            },
+            "return_by_local": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Return By Local"
+            }
+          },
+          "required": [
+            "exclusions",
+            "dietary",
+            "unsupported",
+            "preferences",
+            "party_size",
+            "max_walking_minutes",
+            "max_walking_meters",
+            "return_by_local"
+          ],
+          "title": "ParserAdditions",
+          "type": "object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "# Ground Rule constraint parser\nExtract ONLY what the user sentence says. Output the eight schema fields.\nexclusions: [] unless malls, alcohol places or chains are forbidden.\n\"No mall\" or \"mall nahi\" means mall. \"Malls are fine\" means [].\ndietary: vegetarian for veg/vegetarian; vegan for vegan; otherwise null.\nunsupported: explicit allergy safety, wheelchair accessibility or personal safety.\nA clock-only return deadline needs time clarification, never an invented date.\npreferences: only stated wishes: quiet/shaant, cheap/sasta, low walking/zyada walk\nnahi, optional coffee, optional food/khana zaroori nahi, talk/baat, romantic,\nopen late, uncrowded/bheed kam, explore, short outing/1 ghanta.\nUnmentioned arrays must be empty. Do not list every allowed option.\nNumeric fields: null unless the sentence states the value AND the field is unset.\nreturn_by_local: null unless the sentence has an explicit ISO date and offset.\nNo places, prices, budgets, coordinates or routes. Do not invent requirements.\n"
+          },
+          {
+            "role": "user",
+            "content": "{\"unset_optional_controls\": [\"max_walking_minutes\", \"max_walking_meters\", \"return_by_local\"], \"sentence_to_parse\": \"Vegetarian required, no alcohol please\"}"
+          }
+        ],
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 384,
+          "num_ctx": 4096
+        }
+      },
+      "raw": "{\"exclusions\": [], \"dietary\": \"vegetarian\", \"unsupported\": [], \"preferences\": [\"quiet\", \"short outing\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "latency_ms": 6246,
+      "merged": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "case": {
+        "id": "multiple_hard-08",
+        "group": "multiple_hard",
+        "synthetic": true,
+        "text": "No malls, no chains, no alcohol",
+        "controls": {
+          "currency_code": "INR",
+          "budget_minor_units": 50000,
+          "budget_scope": "PER_PERSON",
+          "duration_max_minutes": 90,
+          "party_mode": "GROUP",
+          "party_size": 4,
+          "vibes": [
+            "Talk"
+          ],
+          "hard_constraints": [],
+          "soft_constraints": [],
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null,
+          "locale": "en-IN",
+          "origin": null,
+          "departure_at": null,
+          "strict_budget": true
+        },
+        "expected": {
+          "exclusions": [
+            "mall",
+            "chain",
+            "alcohol"
+          ],
+          "dietary": null,
+          "preferences": [],
+          "unsupported": [],
+          "party_size": null,
+          "max_walking_minutes": null,
+          "max_walking_meters": null,
+          "return_by_local": null
+        }
+      },
+      "request": {
+        "model": "gemma4:e2b-it-qat",
+        "stream": false,
+        "think": false,
+        "format": {
+          "additionalProperties": false,
+          "properties": {
+            "exclusions": {
+              "items": {
+                "enum": [
+                  "mall",
+                  "alcohol",
+                  "chain"
+                ],
+                "type": "string"
+              },
+              "maxItems": 3,
+              "title": "Exclusions",
+              "type": "array"
+            },
+            "dietary": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "vegetarian",
+                    "vegan"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Dietary"
+            },
+            "unsupported": {
+              "items": {
+                "enum": [
+                  "allergy safety",
+                  "wheelchair accessibility",
+                  "personal safety",
+                  "time clarification"
+                ],
+                "type": "string"
+              },
+              "maxItems": 4,
+              "title": "Unsupported",
+              "type": "array"
+            },
+            "preferences": {
+              "items": {
+                "enum": [
+                  "quiet",
+                  "cheap",
+                  "low walking",
+                  "optional coffee",
+                  "optional food",
+                  "talk",
+                  "romantic",
+                  "open late",
+                  "uncrowded",
+                  "explore",
+                  "short outing"
+                ],
+                "type": "string"
+              },
+              "maxItems": 11,
+              "title": "Preferences",
+              "type": "array"
+            },
+            "party_size": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Party Size",
+              "const": null
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Minutes"
+            },
+            "max_walking_meters": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Max Walking Meters"
+            },
+            "return_by_local": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Return By Local"
+            }
+          },
+          "required": [
+            "exclusions",
+            "dietary",
+            "unsupported",
+            "preferences",
+            "party_size",
+            "max_walking_minutes",
+            "max_walking_meters",
+            "return_by_local"
+          ],
+          "title": "ParserAdditions",
+          "type": "object"
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "# Ground Rule constraint parser\nExtract ONLY what the user sentence says. Output the eight schema fields.\nexclusions: [] unless malls, alcohol places or chains are forbidden.\n\"No mall\" or \"mall nahi\" means mall. \"Malls are fine\" means [].\ndietary: vegetarian for veg/vegetarian; vegan for vegan; otherwise null.\nunsupported: explicit allergy safety, wheelchair accessibility or personal safety.\nA clock-only return deadline needs time clarification, never an invented date.\npreferences: only stated wishes: quiet/shaant, cheap/sasta, low walking/zyada walk\nnahi, optional coffee, optional food/khana zaroori nahi, talk/baat, romantic,\nopen late, uncrowded/bheed kam, explore, short outing/1 ghanta.\nUnmentioned arrays must be empty. Do not list every allowed option.\nNumeric fields: null unless the sentence states the value AND the field is unset.\nreturn_by_local: null unless the sentence has an explicit ISO date and offset.\nNo places, prices, budgets, coordinates or routes. Do not invent requirements.\n"
+          },
+          {
+            "role": "user",
+            "content": "{\"unset_optional_controls\": [\"max_walking_minutes\", \"max_walking_meters\", \"return_by_local\"], \"sentence_to_parse\": \"No malls, no chains, no alcohol\"}"
+          }
+        ],
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 384,
+          "num_ctx": 4096
+        }
+      },
+      "raw": "{\"exclusions\": [\"mall\", \"alcohol\"], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"quiet\", \"cheap\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "latency_ms": 6038,
+      "merged": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    }
+  ]
+}

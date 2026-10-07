@@ -1,0 +1,359 @@
+{
+  "status": "SUCCESS",
+  "plan": {
+    "plan_id": "synthetic-one-stop",
+    "origin": {
+      "latitude": 12.81,
+      "longitude": 80.01
+    },
+    "departure_at": "2026-10-06T08:00:00Z",
+    "stops": [
+      {
+        "place": {
+          "place_id": "fixture:space",
+          "provider": "FIXTURE",
+          "provider_id": "synthetic-space",
+          "name": "Synthetic public space",
+          "coordinates": {
+            "latitude": 12.8,
+            "longitude": 80.0
+          },
+          "categories": [
+            "park"
+          ],
+          "opening_windows": [
+            {
+              "opens_at": "2026-10-06T08:00:00Z",
+              "closes_at": "2026-10-06T11:00:00Z",
+              "evidence": [
+                {
+                  "evidence_id": "hours",
+                  "subject_id": "fixture:space",
+                  "field": "opening_window",
+                  "value": [
+                    "2026-10-06T08:00:00Z",
+                    "2026-10-06T11:00:00Z"
+                  ],
+                  "source": "FIXTURE",
+                  "source_ref": "synthetic-contract-fixture",
+                  "observed_at": "2026-10-06T08:00:00Z",
+                  "expires_at": null,
+                  "confidence": "HIGH"
+                }
+              ]
+            }
+          ],
+          "price": {
+            "confidence": "VERIFIED",
+            "lower": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "upper": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "scope": "TOTAL",
+            "evidence": [
+              {
+                "evidence_id": "price-zero",
+                "subject_id": "fixture:space",
+                "field": "price",
+                "value": {
+                  "minor_units": 0,
+                  "currency_code": "INR"
+                },
+                "source": "FIXTURE",
+                "source_ref": "synthetic-contract-fixture",
+                "observed_at": "2026-10-06T08:00:00Z",
+                "expires_at": null,
+                "confidence": "HIGH"
+              }
+            ]
+          },
+          "dietary_options": null,
+          "evidence": [
+            {
+              "evidence_id": "identity",
+              "subject_id": "fixture:space",
+              "field": "identity",
+              "value": "Synthetic public space",
+              "source": "FIXTURE",
+              "source_ref": "synthetic-contract-fixture",
+              "observed_at": "2026-10-06T08:00:00Z",
+              "expires_at": null,
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "coordinates",
+              "subject_id": "fixture:space",
+              "field": "coordinates",
+              "value": {
+                "latitude": 12.8,
+                "longitude": 80.0
+              },
+              "source": "FIXTURE",
+              "source_ref": "synthetic-contract-fixture",
+              "observed_at": "2026-10-06T08:00:00Z",
+              "expires_at": null,
+              "confidence": "HIGH"
+            }
+          ]
+        },
+        "arrival_at": "2026-10-06T08:10:00Z",
+        "dwell_seconds": 2400
+      }
+    ],
+    "routes": [
+      {
+        "route_id": "route-out",
+        "from_id": "origin",
+        "to_id": "fixture:space",
+        "reachable": true,
+        "duration_seconds": 600,
+        "distance_meters": 650.0,
+        "evidence": [
+          {
+            "evidence_id": "route-out",
+            "subject_id": "route-out",
+            "field": "walking_route",
+            "value": {
+              "duration_seconds": 600,
+              "distance_meters": 650.0
+            },
+            "source": "FIXTURE",
+            "source_ref": "synthetic-contract-fixture",
+            "observed_at": "2026-10-06T08:00:00Z",
+            "expires_at": null,
+            "confidence": "HIGH"
+          }
+        ]
+      },
+      {
+        "route_id": "route-return",
+        "from_id": "fixture:space",
+        "to_id": "origin",
+        "reachable": true,
+        "duration_seconds": 600,
+        "distance_meters": 650.0,
+        "evidence": [
+          {
+            "evidence_id": "route-return",
+            "subject_id": "route-return",
+            "field": "walking_route",
+            "value": {
+              "duration_seconds": 600,
+              "distance_meters": 650.0
+            },
+            "source": "FIXTURE",
+            "source_ref": "synthetic-contract-fixture",
+            "observed_at": "2026-10-06T08:00:00Z",
+            "expires_at": null,
+            "confidence": "HIGH"
+          }
+        ]
+      }
+    ]
+  },
+  "proof": {
+    "validation": {
+      "plan_id": "synthetic-one-stop",
+      "accepted": true,
+      "checks": [
+        {
+          "code": "BUDGET",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "CURRENCY",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "DURATION",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "ROUTING",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "RETURN_TRIP",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "OPENING_HOURS",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "WALKING",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "EXCLUSIONS",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "DIETARY",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "GROUNDING",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        },
+        {
+          "code": "PRICE_CONFIDENCE",
+          "status": "PASS",
+          "hard": true,
+          "message": "Synthetic pass marker; not a validator result.",
+          "evidence_ids": []
+        }
+      ]
+    },
+    "cost": {
+      "confidence": "VERIFIED",
+      "lower": {
+        "currency_code": "INR",
+        "minor_units": 0
+      },
+      "upper": {
+        "currency_code": "INR",
+        "minor_units": 0
+      },
+      "scope": "TOTAL",
+      "evidence": [
+        {
+          "evidence_id": "price-zero",
+          "subject_id": "fixture:space",
+          "field": "price",
+          "value": {
+            "minor_units": 0,
+            "currency_code": "INR"
+          },
+          "source": "FIXTURE",
+          "source_ref": "synthetic-contract-fixture",
+          "observed_at": "2026-10-06T08:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    "total_duration_seconds": 3600,
+    "walking_distance_meters": 1300.0,
+    "sources": [
+      {
+        "evidence_id": "identity",
+        "subject_id": "fixture:space",
+        "field": "identity",
+        "value": "Synthetic public space",
+        "source": "FIXTURE",
+        "source_ref": "synthetic-contract-fixture",
+        "observed_at": "2026-10-06T08:00:00Z",
+        "expires_at": null,
+        "confidence": "HIGH"
+      },
+      {
+        "evidence_id": "coordinates",
+        "subject_id": "fixture:space",
+        "field": "coordinates",
+        "value": {
+          "latitude": 12.8,
+          "longitude": 80.0
+        },
+        "source": "FIXTURE",
+        "source_ref": "synthetic-contract-fixture",
+        "observed_at": "2026-10-06T08:00:00Z",
+        "expires_at": null,
+        "confidence": "HIGH"
+      },
+      {
+        "evidence_id": "hours",
+        "subject_id": "fixture:space",
+        "field": "opening_window",
+        "value": [
+          "2026-10-06T08:00:00Z",
+          "2026-10-06T11:00:00Z"
+        ],
+        "source": "FIXTURE",
+        "source_ref": "synthetic-contract-fixture",
+        "observed_at": "2026-10-06T08:00:00Z",
+        "expires_at": null,
+        "confidence": "HIGH"
+      },
+      {
+        "evidence_id": "price-zero",
+        "subject_id": "fixture:space",
+        "field": "price",
+        "value": {
+          "minor_units": 0,
+          "currency_code": "INR"
+        },
+        "source": "FIXTURE",
+        "source_ref": "synthetic-contract-fixture",
+        "observed_at": "2026-10-06T08:00:00Z",
+        "expires_at": null,
+        "confidence": "HIGH"
+      },
+      {
+        "evidence_id": "route-out",
+        "subject_id": "route-out",
+        "field": "walking_route",
+        "value": {
+          "duration_seconds": 600,
+          "distance_meters": 650.0
+        },
+        "source": "FIXTURE",
+        "source_ref": "synthetic-contract-fixture",
+        "observed_at": "2026-10-06T08:00:00Z",
+        "expires_at": null,
+        "confidence": "HIGH"
+      },
+      {
+        "evidence_id": "route-return",
+        "subject_id": "route-return",
+        "field": "walking_route",
+        "value": {
+          "duration_seconds": 600,
+          "distance_meters": 650.0
+        },
+        "source": "FIXTURE",
+        "source_ref": "synthetic-contract-fixture",
+        "observed_at": "2026-10-06T08:00:00Z",
+        "expires_at": null,
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "reason": "Synthetic contract roundtrip only.",
+  "compiled_at": "2026-10-06T07:59:00Z",
+  "mode": "FIXTURE"
+}

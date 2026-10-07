@@ -1,0 +1,275 @@
+{
+  "$defs": {
+    "Coordinates": {
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "Latitude",
+          "type": "number"
+        },
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude"
+      ],
+      "title": "Coordinates",
+      "type": "object"
+    },
+    "HardConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "EXCLUDE_CATEGORY",
+            "DIETARY",
+            "ACCESSIBILITY",
+            "UNSUPPORTED"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "value"
+      ],
+      "title": "HardConstraint",
+      "type": "object"
+    },
+    "SoftConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "preference": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Preference",
+          "type": "string"
+        }
+      },
+      "required": [
+        "preference"
+      ],
+      "title": "SoftConstraint",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "budget_minor_units": {
+      "anyOf": [
+        {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Budget Minor Units"
+    },
+    "budget_scope": {
+      "anyOf": [
+        {
+          "enum": [
+            "PER_PERSON",
+            "TOTAL"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Budget Scope"
+    },
+    "currency_code": {
+      "anyOf": [
+        {
+          "enum": [
+            "INR",
+            "USD",
+            "GBP",
+            "SGD",
+            "JPY",
+            "EUR",
+            "AUD",
+            "CAD",
+            "AED"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Currency Code"
+    },
+    "departure_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Departure At"
+    },
+    "duration_max_minutes": {
+      "minimum": 15,
+      "title": "Duration Max Minutes",
+      "type": "integer"
+    },
+    "hard_constraints": {
+      "items": {
+        "$ref": "#/$defs/HardConstraint"
+      },
+      "title": "Hard Constraints",
+      "type": "array"
+    },
+    "locale": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Locale"
+    },
+    "max_walking_meters": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Max Walking Meters"
+    },
+    "max_walking_minutes": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Max Walking Minutes"
+    },
+    "origin": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Coordinates"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "party_mode": {
+      "enum": [
+        "SOLO",
+        "FRIEND",
+        "DATE",
+        "GROUP"
+      ],
+      "title": "Party Mode",
+      "type": "string"
+    },
+    "party_size": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Party Size"
+    },
+    "return_by_local": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Return By Local"
+    },
+    "soft_constraints": {
+      "items": {
+        "$ref": "#/$defs/SoftConstraint"
+      },
+      "title": "Soft Constraints",
+      "type": "array"
+    },
+    "strict_budget": {
+      "default": true,
+      "title": "Strict Budget",
+      "type": "boolean"
+    },
+    "vibes": {
+      "items": {
+        "enum": [
+          "Food",
+          "Talk",
+          "Explore",
+          "Chill",
+          "Move",
+          "Surprise"
+        ],
+        "type": "string"
+      },
+      "title": "Vibes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "currency_code",
+    "budget_minor_units",
+    "budget_scope",
+    "duration_max_minutes",
+    "party_mode",
+    "party_size",
+    "vibes",
+    "hard_constraints",
+    "soft_constraints",
+    "max_walking_minutes",
+    "max_walking_meters",
+    "return_by_local",
+    "locale",
+    "origin",
+    "departure_at"
+  ],
+  "title": "ConstraintSet",
+  "type": "object"
+}

@@ -1,0 +1,4916 @@
+{
+  "scope": "100 synthetic free-text cases, real local Gemma; zero real outings",
+  "executed_at": "2026-10-06T18:35:18.137883+00:00",
+  "model": {
+    "name": "gemma4:e2b-it-qat",
+    "model": "gemma4:e2b-it-qat",
+    "modified_at": "2026-10-06T23:34:58.8575884+05:30",
+    "size": 4336358185,
+    "digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "4.6B",
+      "quantization_level": "Q4_0",
+      "context_length": 131072,
+      "embedding_length": 1536
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ]
+  },
+  "cases": 100,
+  "prompt_sha256": "beca4203d2080e4c1cfe8dae151fda3ba3a55abf3e8ce8357a6a5dde11f72ac5",
+  "case_sha256": "56398ca382248210667033e76e8dac1823c07b6b6ff9d0bf20648642cd4b8da1",
+  "adapter_sha256": "7db683633f2ce1207cd994d3987f841fe654ecfec288f7da2f5d0a5cf787c49e",
+  "settings": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 384
+  },
+  "metrics": {
+    "schema_valid": 100,
+    "returned_constraint_sets": 70,
+    "controls_preserved": 70,
+    "authoritative_control_corruptions": 0,
+    "currency_preserved": 70,
+    "numeric_preserved": 70,
+    "hard_soft_exact": 46,
+    "exclusions_exact": 89,
+    "dietary_exact": 90,
+    "preferences_exact": 59,
+    "unsupported_raw_retained": 3,
+    "unsupported_merged_retained": 6,
+    "unsupported_failure_retained": 2,
+    "unsupported_cases": 8,
+    "hallucinated_place_count": 0,
+    "invented_field_count": 0,
+    "all_additions_exact": 44,
+    "median_parser_call_ms": 7020
+  },
+  "results": [
+    {
+      "id": "clean_english-01",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 14456,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"quiet\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-02",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 5791,
+      "raw_output": "{\"exclusions\": [], \"dietary\": \"vegetarian\", \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-03",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 6990,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-04",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 8577,
+      "raw_output": "{\n  \"exclusions\": [\n    \"alcohol\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [\n    \"allergy safety\",\n    \"wheelchair accessibility\",\n    \"personal safety\"\n  ],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text"
+      }
+    },
+    {
+      "id": "clean_english-05",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 7537,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"low walking\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "clean_english-06",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 7577,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegan\",\n  \"unsupported\": [],\n  \"preferences\": [],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegan"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-07",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 7330,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "cheap"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-08",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 6892,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"talk\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "talk"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-09",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 6724,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"romantic\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "romantic"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-10",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 7928,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"optional coffee\",\n    \"optional food\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "clean_english-11",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 6936,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"optional food\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "clean_english-12",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 7978,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"low walking\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "low walking"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-13",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 7412,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"explore\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "explore"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-14",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 7685,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"open late\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "open late"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "clean_english-15",
+      "group": "clean_english",
+      "schema_valid": true,
+      "latency_ms": 6998,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"uncrowded\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "uncrowded"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-01",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 8086,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-02",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 7817,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-03",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 7640,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "cheap"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-04",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 7328,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"low walking\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "low walking"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-05",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 6776,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-06",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 7185,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\",\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "indian_english-07",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 6541,
+      "raw_output": "{\"exclusions\": [\"chain\"], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"quiet\", \"cheap\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "chain"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          },
+          {
+            "preference": "cheap"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-08",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 6729,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"optional coffee\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "optional coffee"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-09",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 6891,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"optional food\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "indian_english-10",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 6344,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegan\",\n  \"unsupported\": [],\n  \"preferences\": [],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegan"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-11",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 5887,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"quiet\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-12",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 6724,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"romantic\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "romantic"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-13",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 6767,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"explore\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "explore"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-14",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 7506,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"uncrowded\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "uncrowded"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "indian_english-15",
+      "group": "indian_english",
+      "schema_valid": true,
+      "latency_ms": 6929,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"open late\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "open late"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-01",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 7447,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"cheap\",\n    \"low walking\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "hinglish-02",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 7118,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-03",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 6678,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-04",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 7283,
+      "raw_output": "{\n  \"exclusions\": [\n    \"alcohol\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "alcohol"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-05",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 6403,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"cheap\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "hinglish-06",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 6768,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-07",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 6893,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"talk\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "talk"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-08",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 6890,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"optional coffee\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "hinglish-09",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 6100,
+      "raw_output": "{\"exclusions\": [], \"dietary\": \"vegetarian\", \"unsupported\": [], \"preferences\": [\"optional food\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "hinglish-10",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 6467,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegan\",\n  \"unsupported\": [],\n  \"preferences\": [],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegan"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-11",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 6094,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"low walking\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "low walking"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-12",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 7372,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"cheap\",\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "cheap"
+          },
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-13",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 7554,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\",\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "hinglish-14",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 7613,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"romantic\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "romantic"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "hinglish-15",
+      "group": "hinglish",
+      "schema_valid": true,
+      "latency_ms": 5842,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"uncrowded\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "uncrowded"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "ambiguous-01",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 5634,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "ambiguous-02",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 5623,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "ambiguous-03",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 6091,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "ambiguous-04",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 5699,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "ambiguous-05",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 6417,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "ambiguous-06",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 5908,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"optional food\", \"talk\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "optional food"
+          },
+          {
+            "preference": "talk"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "ambiguous-07",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 7168,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\",\n    \"optional food\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "ambiguous-08",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 7043,
+      "raw_output": "{\n  \"exclusions\": [\n    \"alcohol\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "ambiguous-09",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 5611,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "ambiguous-10",
+      "group": "ambiguous",
+      "schema_valid": true,
+      "latency_ms": 5740,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "multiple_hard-01",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 7577,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          },
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "multiple_hard-02",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 8047,
+      "raw_output": "{\n  \"exclusions\": [\n    \"alcohol\"\n  ],\n  \"dietary\": \"vegan\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "alcohol"
+          },
+          {
+            "kind": "DIETARY",
+            "value": "vegan"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "multiple_hard-03",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 6921,
+      "raw_output": "{\"exclusions\": [\"mall\", \"chain\"], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          },
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "chain"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "multiple_hard-04",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 7378,
+      "raw_output": "{\n  \"exclusions\": [\n    \"alcohol\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "multiple_hard-05",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 7849,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\",\n    \"chain\"\n  ],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\",\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          },
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "chain"
+          },
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          },
+          {
+            "preference": "cheap"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "multiple_hard-06",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 7537,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\",\n    \"alcohol\"\n  ],\n  \"dietary\": \"vegan\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          },
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "alcohol"
+          },
+          {
+            "kind": "DIETARY",
+            "value": "vegan"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "multiple_hard-07",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 7417,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\",\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "multiple_hard-08",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 6268,
+      "raw_output": "{\"exclusions\": [\"mall\", \"alcohol\"], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"quiet\", \"cheap\"], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "multiple_hard-09",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 7122,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          },
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "cheap"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "multiple_hard-10",
+      "group": "multiple_hard",
+      "schema_valid": true,
+      "latency_ms": 8405,
+      "raw_output": "{\n  \"exclusions\": [\n    \"chain\",\n    \"alcohol\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [\n    \"allergy safety\",\n    \"wheelchair accessibility\",\n    \"personal safety\"\n  ],\n  \"preferences\": [\n    \"talk\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text"
+      }
+    },
+    {
+      "id": "budget_scope-01",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 8088,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [\n    \"personal safety\"\n  ],\n  \"preferences\": [\n    \"cheap\"\n  ],\n  \"party_size\": 3,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": false,
+        "party_size": false,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text"
+      }
+    },
+    {
+      "id": "budget_scope-02",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 5613,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": 4, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": false,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "budget_scope-03",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 7134,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "cheap"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "budget_scope-04",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 7276,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegan\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegan"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "cheap"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "budget_scope-05",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 6360,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": 4, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": false,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "budget_scope-06",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 6033,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "budget_scope-07",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 7699,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [\n    \"personal safety\"\n  ],\n  \"preferences\": [\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text"
+      }
+    },
+    {
+      "id": "budget_scope-08",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 6803,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"optional coffee\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "optional coffee"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "budget_scope-09",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 7247,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\",\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          },
+          {
+            "preference": "cheap"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "budget_scope-10",
+      "group": "budget_scope",
+      "schema_valid": true,
+      "latency_ms": 6952,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"short outing\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "short outing"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "time_deadline-01",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 7799,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [\n    \"personal safety\"\n  ],\n  \"preferences\": [\n    \"cheap\"\n  ],\n  \"party_size\": 3,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": false,
+        "party_size": false,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": false,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": true,
+      "unsupported_case": true,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text; retained unsupported/needs evidence: time clarification"
+      }
+    },
+    {
+      "id": "time_deadline-02",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 7123,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"cheap\",\n    \"low walking\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit dietary requirement conflicts with model extraction"
+      }
+    },
+    {
+      "id": "time_deadline-03",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 6253,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"short outing\", \"low walking\"], \"party_size\": null, \"max_walking_minutes\": 90, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": false,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Model lacks explicit numeric evidence for max_walking_minutes"
+      }
+    },
+    {
+      "id": "time_deadline-04",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 7080,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"talk\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "talk"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "time_deadline-05",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 5656,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": false,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": true,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "UNSUPPORTED",
+            "value": "time clarification"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "time_deadline-06",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 6835,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"open late\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": false,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": true,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "UNSUPPORTED",
+            "value": "time clarification"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "open late"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "time_deadline-07",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 6815,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"open late\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "open late"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "time_deadline-08",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 6961,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"short outing\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "short outing"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "time_deadline-09",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 8472,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"open late\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": \"2026-10-06T21:00:00+05:30\"\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "open late"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": "2026-10-06T21:00:00+05:30",
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "time_deadline-10",
+      "group": "time_deadline",
+      "schema_valid": true,
+      "latency_ms": 9687,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\",\n    \"open late\",\n    \"uncrowded\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": \"2026-11-01T01:55:00-05:00\"\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          },
+          {
+            "preference": "open late"
+          },
+          {
+            "preference": "uncrowded"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": "2026-11-01T01:55:00-05:00",
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-01",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 6810,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"low walking\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "low walking"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-02",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 7119,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegan\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-03",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 7786,
+      "raw_output": "{\n  \"exclusions\": [\n    \"alcohol\"\n  ],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [\n    \"allergy safety\"\n  ],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text"
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-04",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 7701,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [\n    \"personal safety\"\n  ],\n  \"preferences\": [\n    \"uncrowded\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text"
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-05",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 5816,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [], \"preferences\": [\"low walking\"], \"party_size\": null, \"max_walking_minutes\": 20, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "low walking"
+          }
+        ],
+        "max_walking_minutes": 20,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-06",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 7625,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [\n    \"wheelchair accessibility\"\n  ],\n  \"preferences\": [\n    \"low walking\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": 1500,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text"
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-07",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 7275,
+      "raw_output": "{\n  \"exclusions\": [\n    \"chain\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"optional coffee\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "chain"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "optional coffee"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-08",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 6852,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [],\n  \"preferences\": [\n    \"low walking\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "low walking"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-09",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 7122,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": \"vegetarian\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\",\n    \"cheap\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": false,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "walking_diet_exclusion-10",
+      "group": "walking_diet_exclusion",
+      "schema_valid": true,
+      "latency_ms": 7747,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\",\n    \"alcohol\"\n  ],\n  \"dietary\": \"vegan\",\n  \"unsupported\": [],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": false,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": false,
+      "unsupported_case": false,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Explicit exclusion conflicts with model extraction"
+      }
+    },
+    {
+      "id": "unsupported-01",
+      "group": "unsupported",
+      "schema_valid": true,
+      "latency_ms": 6980,
+      "raw_output": "{\n  \"exclusions\": [],\n  \"dietary\": null,\n  \"unsupported\": [\n    \"allergy safety\"\n  ],\n  \"preferences\": [],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": true,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "UNSUPPORTED",
+            "value": "allergy safety"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "unsupported-02",
+      "group": "unsupported",
+      "schema_valid": true,
+      "latency_ms": 5869,
+      "raw_output": "{\"exclusions\": [], \"dietary\": null, \"unsupported\": [\"wheelchair accessibility\"], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": true,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "UNSUPPORTED",
+            "value": "wheelchair accessibility"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "unsupported-03",
+      "group": "unsupported",
+      "schema_valid": true,
+      "latency_ms": 6844,
+      "raw_output": "{\"exclusions\": [], \"dietary\": \"vegetarian\", \"unsupported\": [], \"preferences\": [], \"party_size\": null, \"max_walking_minutes\": null, \"max_walking_meters\": null, \"return_by_local\": null}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": true,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": false,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": true,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          },
+          {
+            "kind": "UNSUPPORTED",
+            "value": "allergy safety"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    },
+    {
+      "id": "unsupported-04",
+      "group": "unsupported",
+      "schema_valid": true,
+      "latency_ms": 8888,
+      "raw_output": "{\n  \"exclusions\": [\n    \"alcohol\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [\n    \"allergy safety\"\n  ],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": false,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": false,
+      "controls_preserved": false,
+      "currency_preserved": false,
+      "numeric_preserved": false,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": false,
+      "unsupported_retained": false,
+      "unsupported_failure_retained": true,
+      "unsupported_case": true,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "status": "FAILURE",
+        "code": "MODEL_OUTPUT_INVALID",
+        "message": "Unsupported requirement lacks explicit source text; retained unsupported/needs evidence: personal safety"
+      }
+    },
+    {
+      "id": "unsupported-05",
+      "group": "unsupported",
+      "schema_valid": true,
+      "latency_ms": 8440,
+      "raw_output": "{\n  \"exclusions\": [\n    \"mall\"\n  ],\n  \"dietary\": null,\n  \"unsupported\": [\n    \"wheelchair accessibility\",\n    \"allergy safety\"\n  ],\n  \"preferences\": [\n    \"quiet\"\n  ],\n  \"party_size\": null,\n  \"max_walking_minutes\": null,\n  \"max_walking_meters\": null,\n  \"return_by_local\": null\n}",
+      "error": null,
+      "exact_fields": {
+        "exclusions": true,
+        "dietary": true,
+        "unsupported": true,
+        "preferences": false,
+        "party_size": true,
+        "max_walking_minutes": true,
+        "max_walking_meters": true,
+        "return_by_local": true
+      },
+      "returned_constraint_set": true,
+      "controls_preserved": true,
+      "currency_preserved": true,
+      "numeric_preserved": true,
+      "corrupted_controls": false,
+      "raw_unsupported_retained": true,
+      "unsupported_retained": true,
+      "unsupported_failure_retained": false,
+      "unsupported_case": true,
+      "invented_fields": [],
+      "hallucinated_place_fields": [],
+      "output": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "GROUP",
+        "party_size": 4,
+        "vibes": [
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "EXCLUDE_CATEGORY",
+            "value": "mall"
+          },
+          {
+            "kind": "UNSUPPORTED",
+            "value": "wheelchair accessibility"
+          },
+          {
+            "kind": "UNSUPPORTED",
+            "value": "allergy safety"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": null,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": null,
+        "departure_at": null,
+        "strict_budget": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.PHONY: install dev test lint eval-smoke
+
+install:
+	@echo "Install backend/frontend dependencies"
+
+dev:
+	@echo "Run API + web"
+
+test:
+	@echo "Run pytest + frontend tests"
+
+lint:
+	@echo "Run ruff/mypy + eslint/tsc"
+
+eval-smoke:
+	@echo "Run a small deterministic eval set"

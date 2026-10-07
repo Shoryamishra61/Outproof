@@ -1,0 +1,697 @@
+{
+  "$defs": {
+    "CandidatePlan": {
+      "additionalProperties": false,
+      "properties": {
+        "departure_at": {
+          "format": "date-time",
+          "title": "Departure At",
+          "type": "string"
+        },
+        "origin": {
+          "$ref": "#/$defs/Coordinates"
+        },
+        "plan_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "routes": {
+          "items": {
+            "$ref": "#/$defs/RouteFact"
+          },
+          "minItems": 2,
+          "title": "Routes",
+          "type": "array"
+        },
+        "stops": {
+          "items": {
+            "$ref": "#/$defs/PlanStop"
+          },
+          "minItems": 1,
+          "title": "Stops",
+          "type": "array"
+        }
+      },
+      "required": [
+        "plan_id",
+        "origin",
+        "departure_at",
+        "stops",
+        "routes"
+      ],
+      "title": "CandidatePlan",
+      "type": "object"
+    },
+    "CheckCode": {
+      "enum": [
+        "BUDGET",
+        "CURRENCY",
+        "DURATION",
+        "ROUTING",
+        "RETURN_TRIP",
+        "OPENING_HOURS",
+        "WALKING",
+        "EXCLUSIONS",
+        "DIETARY",
+        "GROUNDING",
+        "PRICE_CONFIDENCE"
+      ],
+      "title": "CheckCode",
+      "type": "string"
+    },
+    "Coordinates": {
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "Latitude",
+          "type": "number"
+        },
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude"
+      ],
+      "title": "Coordinates",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW",
+            "UNKNOWN"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "expires_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Expires At"
+        },
+        "field": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Field",
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "OSM",
+            "VALHALLA",
+            "SERPAPI",
+            "DIRECT",
+            "COMMUNITY",
+            "FIXTURE"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "source_ref": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "subject_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Subject Id",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/JsonValue"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "subject_id",
+        "field",
+        "value",
+        "source",
+        "source_ref",
+        "observed_at",
+        "expires_at",
+        "confidence"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "Money": {
+      "additionalProperties": false,
+      "properties": {
+        "currency_code": {
+          "enum": [
+            "INR",
+            "USD",
+            "GBP",
+            "SGD",
+            "JPY",
+            "EUR",
+            "AUD",
+            "CAD",
+            "AED"
+          ],
+          "title": "Currency Code",
+          "type": "string"
+        },
+        "minor_units": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Minor Units",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "currency_code",
+        "minor_units"
+      ],
+      "title": "Money",
+      "type": "object"
+    },
+    "OpeningWindow": {
+      "additionalProperties": false,
+      "properties": {
+        "closes_at": {
+          "format": "date-time",
+          "title": "Closes At",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "opens_at": {
+          "format": "date-time",
+          "title": "Opens At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "opens_at",
+        "closes_at",
+        "evidence"
+      ],
+      "title": "OpeningWindow",
+      "type": "object"
+    },
+    "PlaceCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "categories": {
+          "anyOf": [
+            {
+              "items": {
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Categories"
+        },
+        "coordinates": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Coordinates"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "dietary_options": {
+          "anyOf": [
+            {
+              "items": {
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Dietary Options"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Name"
+        },
+        "opening_windows": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/OpeningWindow"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Opening Windows"
+        },
+        "place_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Place Id",
+          "type": "string"
+        },
+        "price": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PriceEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provider": {
+          "enum": [
+            "OSM",
+            "SERPAPI",
+            "FIXTURE"
+          ],
+          "title": "Provider",
+          "type": "string"
+        },
+        "provider_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Provider Id"
+        }
+      },
+      "required": [
+        "place_id",
+        "provider",
+        "provider_id",
+        "name",
+        "coordinates",
+        "categories",
+        "opening_windows",
+        "price",
+        "dietary_options",
+        "evidence"
+      ],
+      "title": "PlaceCandidate",
+      "type": "object"
+    },
+    "PlanProof": {
+      "additionalProperties": false,
+      "properties": {
+        "cost": {
+          "$ref": "#/$defs/PriceEvidence"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Sources",
+          "type": "array"
+        },
+        "total_duration_seconds": {
+          "exclusiveMinimum": 0,
+          "title": "Total Duration Seconds",
+          "type": "integer"
+        },
+        "validation": {
+          "$ref": "#/$defs/ValidationResult"
+        },
+        "walking_distance_meters": {
+          "minimum": 0,
+          "title": "Walking Distance Meters",
+          "type": "number"
+        }
+      },
+      "required": [
+        "validation",
+        "cost",
+        "total_duration_seconds",
+        "walking_distance_meters",
+        "sources"
+      ],
+      "title": "PlanProof",
+      "type": "object"
+    },
+    "PlanStop": {
+      "additionalProperties": false,
+      "properties": {
+        "arrival_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Arrival At"
+        },
+        "dwell_seconds": {
+          "exclusiveMinimum": 0,
+          "title": "Dwell Seconds",
+          "type": "integer"
+        },
+        "place": {
+          "$ref": "#/$defs/PlaceCandidate"
+        }
+      },
+      "required": [
+        "place",
+        "arrival_at",
+        "dwell_seconds"
+      ],
+      "title": "PlanStop",
+      "type": "object"
+    },
+    "PriceConfidence": {
+      "enum": [
+        "VERIFIED",
+        "BOUNDED",
+        "ESTIMATED",
+        "UNKNOWN"
+      ],
+      "title": "PriceConfidence",
+      "type": "string"
+    },
+    "PriceEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "$ref": "#/$defs/PriceConfidence"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "lower": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Money"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scope": {
+          "anyOf": [
+            {
+              "enum": [
+                "PER_PERSON",
+                "TOTAL"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope"
+        },
+        "upper": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Money"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "confidence",
+        "lower",
+        "upper",
+        "scope",
+        "evidence"
+      ],
+      "title": "PriceEvidence",
+      "type": "object"
+    },
+    "RouteFact": {
+      "additionalProperties": false,
+      "properties": {
+        "distance_meters": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Distance Meters"
+        },
+        "duration_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Duration Seconds"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "from_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "From Id",
+          "type": "string"
+        },
+        "reachable": {
+          "title": "Reachable",
+          "type": "boolean"
+        },
+        "route_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Route Id",
+          "type": "string"
+        },
+        "to_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "To Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "route_id",
+        "from_id",
+        "to_id",
+        "reachable",
+        "duration_seconds",
+        "distance_meters",
+        "evidence"
+      ],
+      "title": "RouteFact",
+      "type": "object"
+    },
+    "ValidationCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/CheckCode"
+        },
+        "evidence_ids": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "hard": {
+          "title": "Hard",
+          "type": "boolean"
+        },
+        "message": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Message",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "status",
+        "hard",
+        "message",
+        "evidence_ids"
+      ],
+      "title": "ValidationCheck",
+      "type": "object"
+    },
+    "ValidationResult": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted": {
+          "title": "Accepted",
+          "type": "boolean"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/ValidationCheck"
+          },
+          "minItems": 1,
+          "title": "Checks",
+          "type": "array"
+        },
+        "plan_id": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Plan Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "plan_id",
+        "accepted",
+        "checks"
+      ],
+      "title": "ValidationResult",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "compiled_at": {
+      "format": "date-time",
+      "title": "Compiled At",
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "LIVE",
+        "FIXTURE",
+        "CACHED"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "plan": {
+      "$ref": "#/$defs/CandidatePlan"
+    },
+    "proof": {
+      "$ref": "#/$defs/PlanProof"
+    },
+    "reason": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Reason",
+      "type": "string"
+    },
+    "status": {
+      "const": "SUCCESS",
+      "default": "SUCCESS",
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "plan",
+    "proof",
+    "reason",
+    "compiled_at",
+    "mode"
+  ],
+  "title": "CompiledPlan",
+  "type": "object"
+}

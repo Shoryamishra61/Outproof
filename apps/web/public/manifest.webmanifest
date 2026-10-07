@@ -1,0 +1,11 @@
+{
+  "name": "Ground Rule",
+  "short_name": "Ground Rule",
+  "description": "Your limits in. One real plan out. Development setup only.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f2e9",
+  "theme_color": "#244632",
+  "icons": [{"src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

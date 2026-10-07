@@ -1,0 +1,88 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "UNKNOWN"
+      ],
+      "title": "Confidence",
+      "type": "string"
+    },
+    "evidence_id": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Evidence Id",
+      "type": "string"
+    },
+    "expires_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Expires At"
+    },
+    "field": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Field",
+      "type": "string"
+    },
+    "observed_at": {
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+    },
+    "source": {
+      "enum": [
+        "OSM",
+        "VALHALLA",
+        "SERPAPI",
+        "DIRECT",
+        "COMMUNITY",
+        "FIXTURE"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "source_ref": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Source Ref",
+      "type": "string"
+    },
+    "subject_id": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Subject Id",
+      "type": "string"
+    },
+    "value": {
+      "$ref": "#/$defs/JsonValue"
+    }
+  },
+  "required": [
+    "evidence_id",
+    "subject_id",
+    "field",
+    "value",
+    "source",
+    "source_ref",
+    "observed_at",
+    "expires_at",
+    "confidence"
+  ],
+  "title": "Evidence",
+  "type": "object"
+}

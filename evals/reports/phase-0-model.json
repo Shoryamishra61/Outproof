@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "model": "gemma3:1b",
+  "schema_valid": true,
+  "controls_preserved": true,
+  "call_latency_ms": 17100,
+  "output": {
+    "currency_code": "INR",
+    "budget_minor_units": 50000,
+    "budget_scope": "PER_PERSON",
+    "duration_max_minutes": 90,
+    "party_mode": "FRIEND",
+    "party_size": 2,
+    "vibes": [
+      "Talk"
+    ],
+    "hard_constraints": [
+      "exclude:mall"
+    ],
+    "soft_constraints": [
+      "quiet"
+    ],
+    "max_walking_minutes": 20,
+    "return_by_local": null,
+    "locale": "en-IN"
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "evaluation": "LIVE_ROUTING_NOT_AN_OUTING",
+  "discovery_report": "evals\\reports\\discovery-chennai-live-1.json",
+  "endpoint": "https://valhalla1.openstreetmap.de",
+  "latency_ms": 1948.04,
+  "routes": [
+    {
+      "latency_ms": 1079.42,
+      "result": {
+        "route_id": "valhalla:c38797b5ce8612db0948d169",
+        "from_id": "origin",
+        "to_id": "osm:node/12473051001",
+        "reachable": true,
+        "duration_seconds": 733,
+        "distance_meters": 1006.0,
+        "evidence": [
+          {
+            "evidence_id": "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "subject_id": "valhalla:c38797b5ce8612db0948d169",
+            "field": "walking_route",
+            "value": {
+              "from_id": "origin",
+              "to_id": "osm:node/12473051001",
+              "from_coordinates": {
+                "latitude": 13.0418,
+                "longitude": 80.2341
+              },
+              "to_coordinates": {
+                "latitude": 13.0477044,
+                "longitude": 80.2390445
+              },
+              "reachable": true,
+              "duration_seconds": 733,
+              "distance_meters": 1006.0
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.165633Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          },
+          {
+            "evidence_id": "valhalla:c38797b5ce8612db0948d169:metadata",
+            "subject_id": "valhalla:c38797b5ce8612db0948d169",
+            "field": "valhalla_metadata",
+            "value": {
+              "costing": "pedestrian",
+              "units": "kilometers",
+              "error_code": null,
+              "response_id": "valhalla:c38797b5ce8612db0948d169",
+              "request": {
+                "locations": [
+                  {
+                    "lat": 13.0418,
+                    "lon": 80.2341,
+                    "type": "break",
+                    "search_cutoff": 100
+                  },
+                  {
+                    "lat": 13.0477044,
+                    "lon": 80.2390445,
+                    "type": "break",
+                    "search_cutoff": 100
+                  }
+                ],
+                "costing": "pedestrian",
+                "units": "kilometers"
+              }
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.165633Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          }
+        ]
+      }
+    },
+    {
+      "latency_ms": 201.39,
+      "result": {
+        "route_id": "valhalla:b1f052410c32150d70e81da4",
+        "from_id": "osm:node/12473051001",
+        "to_id": "origin",
+        "reachable": true,
+        "duration_seconds": 716,
+        "distance_meters": 1006.0,
+        "evidence": [
+          {
+            "evidence_id": "valhalla:b1f052410c32150d70e81da4:walking_route",
+            "subject_id": "valhalla:b1f052410c32150d70e81da4",
+            "field": "walking_route",
+            "value": {
+              "from_id": "osm:node/12473051001",
+              "to_id": "origin",
+              "from_coordinates": {
+                "latitude": 13.0477044,
+                "longitude": 80.2390445
+              },
+              "to_coordinates": {
+                "latitude": 13.0418,
+                "longitude": 80.2341
+              },
+              "reachable": true,
+              "duration_seconds": 716,
+              "distance_meters": 1006.0
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.365553Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          },
+          {
+            "evidence_id": "valhalla:b1f052410c32150d70e81da4:metadata",
+            "subject_id": "valhalla:b1f052410c32150d70e81da4",
+            "field": "valhalla_metadata",
+            "value": {
+              "costing": "pedestrian",
+              "units": "kilometers",
+              "error_code": null,
+              "response_id": "valhalla:b1f052410c32150d70e81da4",
+              "request": {
+                "locations": [
+                  {
+                    "lat": 13.0477044,
+                    "lon": 80.2390445,
+                    "type": "break",
+                    "search_cutoff": 100
+                  },
+                  {
+                    "lat": 13.0418,
+                    "lon": 80.2341,
+                    "type": "break",
+                    "search_cutoff": 100
+                  }
+                ],
+                "costing": "pedestrian",
+                "units": "kilometers"
+              }
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.365553Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          }
+        ]
+      }
+    },
+    {
+      "latency_ms": 188.54,
+      "result": {
+        "route_id": "valhalla:c84704eab38694b2f9f5aade",
+        "from_id": "origin",
+        "to_id": "osm:node/2270331348",
+        "reachable": true,
+        "duration_seconds": 340,
+        "distance_meters": 459.0,
+        "evidence": [
+          {
+            "evidence_id": "valhalla:c84704eab38694b2f9f5aade:walking_route",
+            "subject_id": "valhalla:c84704eab38694b2f9f5aade",
+            "field": "walking_route",
+            "value": {
+              "from_id": "origin",
+              "to_id": "osm:node/2270331348",
+              "from_coordinates": {
+                "latitude": 13.0418,
+                "longitude": 80.2341
+              },
+              "to_coordinates": {
+                "latitude": 13.0410311,
+                "longitude": 80.2332635
+              },
+              "reachable": true,
+              "duration_seconds": 340,
+              "distance_meters": 459.0
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.551616Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          },
+          {
+            "evidence_id": "valhalla:c84704eab38694b2f9f5aade:metadata",
+            "subject_id": "valhalla:c84704eab38694b2f9f5aade",
+            "field": "valhalla_metadata",
+            "value": {
+              "costing": "pedestrian",
+              "units": "kilometers",
+              "error_code": null,
+              "response_id": "valhalla:c84704eab38694b2f9f5aade",
+              "request": {
+                "locations": [
+                  {
+                    "lat": 13.0418,
+                    "lon": 80.2341,
+                    "type": "break",
+                    "search_cutoff": 100
+                  },
+                  {
+                    "lat": 13.0410311,
+                    "lon": 80.2332635,
+                    "type": "break",
+                    "search_cutoff": 100
+                  }
+                ],
+                "costing": "pedestrian",
+                "units": "kilometers"
+              }
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.551616Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          }
+        ]
+      }
+    },
+    {
+      "latency_ms": 203.29,
+      "result": {
+        "route_id": "valhalla:23da68a2681bc4596ba0eda0",
+        "from_id": "osm:node/2270331348",
+        "to_id": "origin",
+        "reachable": true,
+        "duration_seconds": 323,
+        "distance_meters": 459.0,
+        "evidence": [
+          {
+            "evidence_id": "valhalla:23da68a2681bc4596ba0eda0:walking_route",
+            "subject_id": "valhalla:23da68a2681bc4596ba0eda0",
+            "field": "walking_route",
+            "value": {
+              "from_id": "osm:node/2270331348",
+              "to_id": "origin",
+              "from_coordinates": {
+                "latitude": 13.0410311,
+                "longitude": 80.2332635
+              },
+              "to_coordinates": {
+                "latitude": 13.0418,
+                "longitude": 80.2341
+              },
+              "reachable": true,
+              "duration_seconds": 323,
+              "distance_meters": 459.0
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.758855Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          },
+          {
+            "evidence_id": "valhalla:23da68a2681bc4596ba0eda0:metadata",
+            "subject_id": "valhalla:23da68a2681bc4596ba0eda0",
+            "field": "valhalla_metadata",
+            "value": {
+              "costing": "pedestrian",
+              "units": "kilometers",
+              "error_code": null,
+              "response_id": "valhalla:23da68a2681bc4596ba0eda0",
+              "request": {
+                "locations": [
+                  {
+                    "lat": 13.0410311,
+                    "lon": 80.2332635,
+                    "type": "break",
+                    "search_cutoff": 100
+                  },
+                  {
+                    "lat": 13.0418,
+                    "lon": 80.2341,
+                    "type": "break",
+                    "search_cutoff": 100
+                  }
+                ],
+                "costing": "pedestrian",
+                "units": "kilometers"
+              }
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.758855Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          }
+        ]
+      }
+    },
+    {
+      "latency_ms": 194.58,
+      "result": {
+        "route_id": "valhalla:1097d712895322d128a78248",
+        "from_id": "osm:node/12473051001",
+        "to_id": "osm:node/2270331348",
+        "reachable": true,
+        "duration_seconds": 1056,
+        "distance_meters": 1465.0,
+        "evidence": [
+          {
+            "evidence_id": "valhalla:1097d712895322d128a78248:walking_route",
+            "subject_id": "valhalla:1097d712895322d128a78248",
+            "field": "walking_route",
+            "value": {
+              "from_id": "osm:node/12473051001",
+              "to_id": "osm:node/2270331348",
+              "from_coordinates": {
+                "latitude": 13.0477044,
+                "longitude": 80.2390445
+              },
+              "to_coordinates": {
+                "latitude": 13.0410311,
+                "longitude": 80.2332635
+              },
+              "reachable": true,
+              "duration_seconds": 1056,
+              "distance_meters": 1465.0
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.948396Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          },
+          {
+            "evidence_id": "valhalla:1097d712895322d128a78248:metadata",
+            "subject_id": "valhalla:1097d712895322d128a78248",
+            "field": "valhalla_metadata",
+            "value": {
+              "costing": "pedestrian",
+              "units": "kilometers",
+              "error_code": null,
+              "response_id": "valhalla:1097d712895322d128a78248",
+              "request": {
+                "locations": [
+                  {
+                    "lat": 13.0477044,
+                    "lon": 80.2390445,
+                    "type": "break",
+                    "search_cutoff": 100
+                  },
+                  {
+                    "lat": 13.0410311,
+                    "lon": 80.2332635,
+                    "type": "break",
+                    "search_cutoff": 100
+                  }
+                ],
+                "costing": "pedestrian",
+                "units": "kilometers"
+              }
+            },
+            "source": "VALHALLA",
+            "source_ref": "https://valhalla1.openstreetmap.de/route",
+            "observed_at": "2026-10-06T19:36:22.948396Z",
+            "expires_at": null,
+            "confidence": "MEDIUM"
+          }
+        ]
+      }
+    }
+  ],
+  "passed": true
+}

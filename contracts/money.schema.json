@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "currency_code": {
+      "enum": [
+        "INR",
+        "USD",
+        "GBP",
+        "SGD",
+        "JPY",
+        "EUR",
+        "AUD",
+        "CAD",
+        "AED"
+      ],
+      "title": "Currency Code",
+      "type": "string"
+    },
+    "minor_units": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Minor Units",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "currency_code",
+    "minor_units"
+  ],
+  "title": "Money",
+  "type": "object"
+}

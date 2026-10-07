@@ -1,0 +1,698 @@
+{
+  "scope": "FIXTURE provider observations; actual local Gemma ranker; zero real outings",
+  "executed_at": "2026-10-07T01:19:26.381367+00:00",
+  "fixture_as_of": "2026-10-07T01:00:00+00:00",
+  "model": "gemma4:e2b-it-qat",
+  "model_digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+  "fixture_sha256": "a2a4097ca6f3766deffbf7ec722efbafd2a73d4b286633a90254a0985ad45f54",
+  "valid_candidate_count": 2,
+  "hard_checks_passed": 22,
+  "elapsed_ms": 22252.63,
+  "result": {
+    "status": "SUCCESS",
+    "plan": {
+      "plan_id": "template-B:6df9514812d329eb0646542a",
+      "origin": {
+        "latitude": 13.0418,
+        "longitude": 80.2341
+      },
+      "departure_at": "2026-10-07T01:00:00Z",
+      "stops": [
+        {
+          "place": {
+            "place_id": "fixture:cafe-1",
+            "provider": "FIXTURE",
+            "provider_id": "fixture-cafe-1",
+            "name": "FIXTURE Neem Courtyard Cafe",
+            "coordinates": {
+              "latitude": 13.044,
+              "longitude": 80.234
+            },
+            "categories": [
+              "cafe"
+            ],
+            "opening_windows": [
+              {
+                "opens_at": "2026-10-07T01:00:00Z",
+                "closes_at": "2026-10-07T05:00:00Z",
+                "evidence": [
+                  {
+                    "evidence_id": "fixture:cafe-1:opening_window",
+                    "subject_id": "fixture:cafe-1",
+                    "field": "opening_window",
+                    "value": [
+                      "2026-10-07T01:00:00+00:00",
+                      "2026-10-07T05:00:00+00:00"
+                    ],
+                    "source": "FIXTURE",
+                    "source_ref": "FIXTURE synthetic compiler observation",
+                    "observed_at": "2026-10-07T01:00:00Z",
+                    "expires_at": null,
+                    "confidence": "HIGH"
+                  }
+                ]
+              }
+            ],
+            "price": {
+              "confidence": "VERIFIED",
+              "lower": {
+                "currency_code": "INR",
+                "minor_units": 41000
+              },
+              "upper": {
+                "currency_code": "INR",
+                "minor_units": 41000
+              },
+              "scope": "PER_PERSON",
+              "evidence": [
+                {
+                  "evidence_id": "fixture:cafe-1:price",
+                  "subject_id": "fixture:cafe-1",
+                  "field": "price",
+                  "value": {
+                    "currency_code": "INR",
+                    "lower_minor_units": 41000,
+                    "upper_minor_units": 41000,
+                    "scope": "PER_PERSON",
+                    "covers_all_mandatory_costs": true
+                  },
+                  "source": "FIXTURE",
+                  "source_ref": "FIXTURE synthetic compiler observation",
+                  "observed_at": "2026-10-07T01:00:00Z",
+                  "expires_at": null,
+                  "confidence": "HIGH"
+                }
+              ]
+            },
+            "dietary_options": [
+              "vegetarian",
+              "vegan"
+            ],
+            "evidence": [
+              {
+                "evidence_id": "fixture:cafe-1:identity",
+                "subject_id": "fixture:cafe-1",
+                "field": "identity",
+                "value": {
+                  "provider": "FIXTURE",
+                  "provider_id": "fixture-cafe-1",
+                  "name": "FIXTURE Neem Courtyard Cafe"
+                },
+                "source": "FIXTURE",
+                "source_ref": "FIXTURE synthetic compiler observation",
+                "observed_at": "2026-10-07T01:00:00Z",
+                "expires_at": null,
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "fixture:cafe-1:coordinates",
+                "subject_id": "fixture:cafe-1",
+                "field": "coordinates",
+                "value": {
+                  "latitude": 13.044,
+                  "longitude": 80.234
+                },
+                "source": "FIXTURE",
+                "source_ref": "FIXTURE synthetic compiler observation",
+                "observed_at": "2026-10-07T01:00:00Z",
+                "expires_at": null,
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "fixture:cafe-1:categories",
+                "subject_id": "fixture:cafe-1",
+                "field": "categories",
+                "value": [
+                  "cafe"
+                ],
+                "source": "FIXTURE",
+                "source_ref": "FIXTURE synthetic compiler observation",
+                "observed_at": "2026-10-07T01:00:00Z",
+                "expires_at": null,
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "fixture:cafe-1:excluded_categories",
+                "subject_id": "fixture:cafe-1",
+                "field": "excluded_categories",
+                "value": [
+                  "mall",
+                  "alcohol",
+                  "chain"
+                ],
+                "source": "FIXTURE",
+                "source_ref": "FIXTURE synthetic compiler observation",
+                "observed_at": "2026-10-07T01:00:00Z",
+                "expires_at": null,
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "fixture:cafe-1:dietary_options",
+                "subject_id": "fixture:cafe-1",
+                "field": "dietary_options",
+                "value": [
+                  "vegetarian",
+                  "vegan"
+                ],
+                "source": "FIXTURE",
+                "source_ref": "FIXTURE synthetic compiler observation",
+                "observed_at": "2026-10-07T01:00:00Z",
+                "expires_at": null,
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "fixture:cafe-1:fit",
+                "subject_id": "fixture:cafe-1",
+                "field": "soft_fit",
+                "value": [
+                  "quiet",
+                  "talk"
+                ],
+                "source": "FIXTURE",
+                "source_ref": "FIXTURE synthetic compiler observation",
+                "observed_at": "2026-10-07T01:00:00Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "fixture:cafe-1:binding:FIXTURE:fixture-cafe-1",
+                "subject_id": "fixture:cafe-1",
+                "field": "identity_binding",
+                "value": {
+                  "provider": "FIXTURE",
+                  "provider_id": "fixture-cafe-1",
+                  "signals": [
+                    "normalized name matches",
+                    "coordinates within 40 m (0.00 m)",
+                    "category matches"
+                  ]
+                },
+                "source": "FIXTURE",
+                "source_ref": "FIXTURE synthetic provider identity",
+                "observed_at": "2026-10-07T01:00:00Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              }
+            ]
+          },
+          "arrival_at": "2026-10-07T01:08:00Z",
+          "dwell_seconds": 2700
+        }
+      ],
+      "routes": [
+        {
+          "route_id": "fixture-route-1-0",
+          "from_id": "origin",
+          "to_id": "fixture:cafe-1",
+          "reachable": true,
+          "duration_seconds": 480,
+          "distance_meters": 600.0,
+          "evidence": [
+            {
+              "evidence_id": "fixture-route-1-0:walking_route",
+              "subject_id": "fixture-route-1-0",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "fixture:cafe-1",
+                "reachable": true,
+                "duration_seconds": 480,
+                "distance_meters": 600.0,
+                "from_coordinates": {
+                  "latitude": 13.0418,
+                  "longitude": 80.2341
+                },
+                "to_coordinates": {
+                  "latitude": 13.044,
+                  "longitude": 80.234
+                }
+              },
+              "source": "FIXTURE",
+              "source_ref": "FIXTURE synthetic compiler observation",
+              "observed_at": "2026-10-07T01:00:00Z",
+              "expires_at": null,
+              "confidence": "HIGH"
+            }
+          ]
+        },
+        {
+          "route_id": "fixture-route-1-1",
+          "from_id": "fixture:cafe-1",
+          "to_id": "origin",
+          "reachable": true,
+          "duration_seconds": 540,
+          "distance_meters": 650.0,
+          "evidence": [
+            {
+              "evidence_id": "fixture-route-1-1:walking_route",
+              "subject_id": "fixture-route-1-1",
+              "field": "walking_route",
+              "value": {
+                "from_id": "fixture:cafe-1",
+                "to_id": "origin",
+                "reachable": true,
+                "duration_seconds": 540,
+                "distance_meters": 650.0,
+                "from_coordinates": {
+                  "latitude": 13.044,
+                  "longitude": 80.234
+                },
+                "to_coordinates": {
+                  "latitude": 13.0418,
+                  "longitude": 80.2341
+                }
+              },
+              "source": "FIXTURE",
+              "source_ref": "FIXTURE synthetic compiler observation",
+              "observed_at": "2026-10-07T01:00:00Z",
+              "expires_at": null,
+              "confidence": "HIGH"
+            }
+          ]
+        }
+      ]
+    },
+    "proof": {
+      "validation": {
+        "plan_id": "template-B:6df9514812d329eb0646542a",
+        "accepted": true,
+        "checks": [
+          {
+            "code": "GROUNDING",
+            "status": "PASS",
+            "hard": true,
+            "message": "Provider identity and coordinates must be evidenced",
+            "evidence_ids": [
+              "fixture:cafe-1:identity",
+              "fixture:cafe-1:coordinates"
+            ]
+          },
+          {
+            "code": "ROUTING",
+            "status": "PASS",
+            "hard": true,
+            "message": "Every leg including return needs reachable walking facts",
+            "evidence_ids": [
+              "fixture-route-1-0:walking_route",
+              "fixture-route-1-1:walking_route"
+            ]
+          },
+          {
+            "code": "DURATION",
+            "status": "PASS",
+            "hard": true,
+            "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+            "evidence_ids": [
+              "fixture-route-1-0:walking_route",
+              "fixture-route-1-1:walking_route"
+            ]
+          },
+          {
+            "code": "RETURN_TRIP",
+            "status": "PASS",
+            "hard": true,
+            "message": "Complete round trip must meet the explicit return deadline in UTC",
+            "evidence_ids": [
+              "fixture-route-1-0:walking_route",
+              "fixture-route-1-1:walking_route"
+            ]
+          },
+          {
+            "code": "WALKING",
+            "status": "PASS",
+            "hard": true,
+            "message": "All walking legs count against both supplied maxima",
+            "evidence_ids": [
+              "fixture-route-1-0:walking_route",
+              "fixture-route-1-1:walking_route"
+            ]
+          },
+          {
+            "code": "CURRENCY",
+            "status": "PASS",
+            "hard": true,
+            "message": "Costs must share the budget currency; no conversion",
+            "evidence_ids": [
+              "fixture:cafe-1:price"
+            ]
+          },
+          {
+            "code": "PRICE_CONFIDENCE",
+            "status": "PASS",
+            "hard": true,
+            "message": "Complete mandatory cost needs current positive evidence",
+            "evidence_ids": [
+              "fixture:cafe-1:price"
+            ]
+          },
+          {
+            "code": "BUDGET",
+            "status": "PASS",
+            "hard": true,
+            "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+            "evidence_ids": [
+              "fixture:cafe-1:price"
+            ]
+          },
+          {
+            "code": "OPENING_HOURS",
+            "status": "PASS",
+            "hard": true,
+            "message": "Known hours must cover arrival through required dwell",
+            "evidence_ids": [
+              "fixture:cafe-1:opening_window"
+            ]
+          },
+          {
+            "code": "EXCLUSIONS",
+            "status": "PASS",
+            "hard": true,
+            "message": "Hard exclusions require positive absence and category evidence",
+            "evidence_ids": [
+              "fixture:cafe-1:categories",
+              "fixture:cafe-1:excluded_categories"
+            ]
+          },
+          {
+            "code": "DIETARY",
+            "status": "PASS",
+            "hard": true,
+            "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+            "evidence_ids": [
+              "fixture:cafe-1:dietary_options"
+            ]
+          }
+        ]
+      },
+      "cost": {
+        "confidence": "VERIFIED",
+        "lower": {
+          "currency_code": "INR",
+          "minor_units": 82000
+        },
+        "upper": {
+          "currency_code": "INR",
+          "minor_units": 82000
+        },
+        "scope": "TOTAL",
+        "evidence": [
+          {
+            "evidence_id": "fixture:cafe-1:price",
+            "subject_id": "fixture:cafe-1",
+            "field": "price",
+            "value": {
+              "currency_code": "INR",
+              "lower_minor_units": 41000,
+              "upper_minor_units": 41000,
+              "scope": "PER_PERSON",
+              "covers_all_mandatory_costs": true
+            },
+            "source": "FIXTURE",
+            "source_ref": "FIXTURE synthetic compiler observation",
+            "observed_at": "2026-10-07T01:00:00Z",
+            "expires_at": null,
+            "confidence": "HIGH"
+          }
+        ]
+      },
+      "total_duration_seconds": 3720,
+      "walking_distance_meters": 1250.0,
+      "sources": [
+        {
+          "evidence_id": "fixture-route-1-0:walking_route",
+          "subject_id": "fixture-route-1-0",
+          "field": "walking_route",
+          "value": {
+            "from_id": "origin",
+            "to_id": "fixture:cafe-1",
+            "reachable": true,
+            "duration_seconds": 480,
+            "distance_meters": 600.0,
+            "from_coordinates": {
+              "latitude": 13.0418,
+              "longitude": 80.2341
+            },
+            "to_coordinates": {
+              "latitude": 13.044,
+              "longitude": 80.234
+            }
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture-route-1-1:walking_route",
+          "subject_id": "fixture-route-1-1",
+          "field": "walking_route",
+          "value": {
+            "from_id": "fixture:cafe-1",
+            "to_id": "origin",
+            "reachable": true,
+            "duration_seconds": 540,
+            "distance_meters": 650.0,
+            "from_coordinates": {
+              "latitude": 13.044,
+              "longitude": 80.234
+            },
+            "to_coordinates": {
+              "latitude": 13.0418,
+              "longitude": 80.2341
+            }
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:identity",
+          "subject_id": "fixture:cafe-1",
+          "field": "identity",
+          "value": {
+            "provider": "FIXTURE",
+            "provider_id": "fixture-cafe-1",
+            "name": "FIXTURE Neem Courtyard Cafe"
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:coordinates",
+          "subject_id": "fixture:cafe-1",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.044,
+            "longitude": 80.234
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:categories",
+          "subject_id": "fixture:cafe-1",
+          "field": "categories",
+          "value": [
+            "cafe"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:excluded_categories",
+          "subject_id": "fixture:cafe-1",
+          "field": "excluded_categories",
+          "value": [
+            "mall",
+            "alcohol",
+            "chain"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:dietary_options",
+          "subject_id": "fixture:cafe-1",
+          "field": "dietary_options",
+          "value": [
+            "vegetarian",
+            "vegan"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:fit",
+          "subject_id": "fixture:cafe-1",
+          "field": "soft_fit",
+          "value": [
+            "quiet",
+            "talk"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:binding:FIXTURE:fixture-cafe-1",
+          "subject_id": "fixture:cafe-1",
+          "field": "identity_binding",
+          "value": {
+            "provider": "FIXTURE",
+            "provider_id": "fixture-cafe-1",
+            "signals": [
+              "normalized name matches",
+              "coordinates within 40 m (0.00 m)",
+              "category matches"
+            ]
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic provider identity",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:price",
+          "subject_id": "fixture:cafe-1",
+          "field": "price",
+          "value": {
+            "currency_code": "INR",
+            "lower_minor_units": 41000,
+            "upper_minor_units": 41000,
+            "scope": "PER_PERSON",
+            "covers_all_mandatory_costs": true
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:opening_window",
+          "subject_id": "fixture:cafe-1",
+          "field": "opening_window",
+          "value": [
+            "2026-10-07T01:00:00+00:00",
+            "2026-10-07T05:00:00+00:00"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    "reason": "Selected for your soft preferences.",
+    "compiled_at": "2026-10-07T01:00:00Z",
+    "mode": "FIXTURE"
+  },
+  "proof_lines": [
+    {
+      "code": "GROUNDING",
+      "text": "PASS Every place has provider identity and coordinates",
+      "evidence_ids": [
+        "fixture:cafe-1:identity",
+        "fixture:cafe-1:coordinates"
+      ]
+    },
+    {
+      "code": "ROUTING",
+      "text": "PASS Every mandatory walking leg reachable, including return",
+      "evidence_ids": [
+        "fixture-route-1-0:walking_route",
+        "fixture-route-1-1:walking_route"
+      ]
+    },
+    {
+      "code": "DURATION",
+      "text": "PASS 62 min <= 90 min; includes return",
+      "evidence_ids": [
+        "fixture-route-1-0:walking_route",
+        "fixture-route-1-1:walking_route"
+      ]
+    },
+    {
+      "code": "RETURN_TRIP",
+      "text": "PASS Return route included; no explicit deadline",
+      "evidence_ids": [
+        "fixture-route-1-0:walking_route",
+        "fixture-route-1-1:walking_route"
+      ]
+    },
+    {
+      "code": "WALKING",
+      "text": "PASS 1250 m; every leg checked against walking limits",
+      "evidence_ids": [
+        "fixture-route-1-0:walking_route",
+        "fixture-route-1-1:walking_route"
+      ]
+    },
+    {
+      "code": "CURRENCY",
+      "text": "PASS INR; same-currency mandatory costs",
+      "evidence_ids": [
+        "fixture:cafe-1:price"
+      ]
+    },
+    {
+      "code": "PRICE_CONFIDENCE",
+      "text": "PASS VERIFIED; complete mandatory cost",
+      "evidence_ids": [
+        "fixture:cafe-1:price"
+      ]
+    },
+    {
+      "code": "BUDGET",
+      "text": "PASS INR 820.00 <= INR 1000.00 total (2 people; per-person cap)",
+      "evidence_ids": [
+        "fixture:cafe-1:price"
+      ]
+    },
+    {
+      "code": "OPENING_HOURS",
+      "text": "PASS Open throughout required dwell",
+      "evidence_ids": [
+        "fixture:cafe-1:opening_window"
+      ]
+    },
+    {
+      "code": "EXCLUSIONS",
+      "text": "PASS Hard exclusions evidenced",
+      "evidence_ids": [
+        "fixture:cafe-1:categories",
+        "fixture:cafe-1:excluded_categories"
+      ]
+    },
+    {
+      "code": "DIETARY",
+      "text": "PASS Dietary requirements evidenced",
+      "evidence_ids": [
+        "fixture:cafe-1:dietary_options"
+      ]
+    }
+  ],
+  "public_compilation_available": false
+}

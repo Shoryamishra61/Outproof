@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "preference": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Preference",
+      "type": "string"
+    }
+  },
+  "required": [
+    "preference"
+  ],
+  "title": "SoftConstraint",
+  "type": "object"
+}

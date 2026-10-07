@@ -1,0 +1,203 @@
+{
+  "evaluation": "CACHED_COMPONENT_REJECTION_DEMO_NOT_AN_OFFLINE_OUTING",
+  "model": "gemma4:e2b-it-qat",
+  "sentence": "vegetarian, no mall, somewhere quiet enough to talk",
+  "controls": {
+    "currency_code": "INR",
+    "budget_minor_units": 50000,
+    "budget_scope": "PER_PERSON",
+    "duration_max_minutes": 90,
+    "party_mode": "FRIEND",
+    "party_size": 2,
+    "vibes": [
+      "Food",
+      "Talk"
+    ],
+    "hard_constraints": [
+      {
+        "kind": "DIETARY",
+        "value": "vegetarian"
+      },
+      {
+        "kind": "EXCLUDE_CATEGORY",
+        "value": "mall"
+      }
+    ],
+    "soft_constraints": [
+      {
+        "preference": "quiet"
+      }
+    ],
+    "max_walking_minutes": null,
+    "max_walking_meters": null,
+    "return_by_local": null,
+    "locale": "en-IN",
+    "origin": {
+      "latitude": 13.0418,
+      "longitude": 80.2341
+    },
+    "departure_at": "2026-10-06T19:46:30.657669Z",
+    "strict_budget": true
+  },
+  "evaluated_at": "2026-10-06T19:46:48.070490+00:00",
+  "source_reports": [
+    "evals\\reports\\discovery-chennai-live-1.json",
+    "evals\\reports\\routing-chennai-live-1.json",
+    "evals\\reports\\templates-chennai-real-data-1.json"
+  ],
+  "parser_latency_ms": 17406.47,
+  "parser_result": {
+    "currency_code": "INR",
+    "budget_minor_units": 50000,
+    "budget_scope": "PER_PERSON",
+    "duration_max_minutes": 90,
+    "party_mode": "FRIEND",
+    "party_size": 2,
+    "vibes": [
+      "Food",
+      "Talk"
+    ],
+    "hard_constraints": [
+      {
+        "kind": "DIETARY",
+        "value": "vegetarian"
+      },
+      {
+        "kind": "EXCLUDE_CATEGORY",
+        "value": "mall"
+      }
+    ],
+    "soft_constraints": [
+      {
+        "preference": "quiet"
+      },
+      {
+        "preference": "talk"
+      }
+    ],
+    "max_walking_minutes": null,
+    "max_walking_meters": null,
+    "return_by_local": null,
+    "locale": "en-IN",
+    "origin": {
+      "latitude": 13.0418,
+      "longitude": 80.2341
+    },
+    "departure_at": "2026-10-06T19:46:30.657669Z",
+    "strict_budget": true
+  },
+  "authoritative_controls_preserved": true,
+  "validations": [
+    {
+      "plan_id": "template-B:a629d09983b34ca23fec970b",
+      "accepted": false,
+      "checks": [
+        {
+          "code": "GROUNDING",
+          "status": "PASS",
+          "hard": true,
+          "message": "Provider identity and coordinates must be evidenced",
+          "evidence_ids": [
+            "osm:node/12473051001:identity",
+            "osm:node/12473051001:coordinates"
+          ]
+        },
+        {
+          "code": "ROUTING",
+          "status": "PASS",
+          "hard": true,
+          "message": "Every leg including return needs reachable walking facts",
+          "evidence_ids": [
+            "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "valhalla:b1f052410c32150d70e81da4:walking_route"
+          ]
+        },
+        {
+          "code": "DURATION",
+          "status": "PASS",
+          "hard": true,
+          "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+          "evidence_ids": [
+            "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "valhalla:b1f052410c32150d70e81da4:walking_route"
+          ]
+        },
+        {
+          "code": "RETURN_TRIP",
+          "status": "PASS",
+          "hard": true,
+          "message": "Complete round trip must meet the explicit return deadline in UTC",
+          "evidence_ids": [
+            "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "valhalla:b1f052410c32150d70e81da4:walking_route"
+          ]
+        },
+        {
+          "code": "WALKING",
+          "status": "PASS",
+          "hard": true,
+          "message": "All walking legs count against both supplied maxima",
+          "evidence_ids": [
+            "valhalla:c38797b5ce8612db0948d169:walking_route",
+            "valhalla:b1f052410c32150d70e81da4:walking_route"
+          ]
+        },
+        {
+          "code": "CURRENCY",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Costs must share the budget currency; no conversion",
+          "evidence_ids": []
+        },
+        {
+          "code": "PRICE_CONFIDENCE",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Complete mandatory cost needs current positive evidence",
+          "evidence_ids": []
+        },
+        {
+          "code": "BUDGET",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+          "evidence_ids": []
+        },
+        {
+          "code": "OPENING_HOURS",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Known hours must cover arrival through required dwell",
+          "evidence_ids": []
+        },
+        {
+          "code": "EXCLUSIONS",
+          "status": "FAIL",
+          "hard": true,
+          "message": "Hard exclusions require positive absence and category evidence",
+          "evidence_ids": [
+            "osm:node/12473051001:categories"
+          ]
+        },
+        {
+          "code": "DIETARY",
+          "status": "PASS",
+          "hard": true,
+          "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+          "evidence_ids": [
+            "osm:node/12473051001:dietary_options"
+          ]
+        }
+      ]
+    }
+  ],
+  "candidate_failure": null,
+  "enrichment_failure": {
+    "status": "FAILURE",
+    "code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+    "message": "SerpApi credential unavailable"
+  },
+  "accepted_outings": 0,
+  "external_discovery_or_routing_requests": 0,
+  "source_timestamps_refreshed": false
+}

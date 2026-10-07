@@ -1,0 +1,3812 @@
+{
+  "evaluation": "LIVE_PROVIDER_DISCOVERY_NOT_AN_OUTING",
+  "area": "T Nagar, Chennai, India",
+  "origin": {
+    "latitude": 13.0418,
+    "longitude": 80.2341
+  },
+  "radius_meters": 1000,
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "latency_ms": 3484.96,
+  "attribution": "© OpenStreetMap contributors; ODbL 1.0",
+  "attribution_url": "https://www.openstreetmap.org/copyright",
+  "result": [
+    {
+      "place_id": "osm:node/10307972067",
+      "provider": "OSM",
+      "provider_id": "node/10307972067",
+      "name": "Omar Khayyam",
+      "coordinates": {
+        "latitude": 13.0408892,
+        "longitude": 80.2317501
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/10307972067:identity",
+          "subject_id": "osm:node/10307972067",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/10307972067",
+            "name": "Omar Khayyam"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972067",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10307972067:coordinates",
+          "subject_id": "osm:node/10307972067",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0408892,
+            "longitude": 80.2317501
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972067",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10307972067:categories",
+          "subject_id": "osm:node/10307972067",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972067",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10307972067:dietary_options",
+          "subject_id": "osm:node/10307972067",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972067",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/10307972067:osm_metadata",
+          "subject_id": "osm:node/10307972067",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "name": "Omar Khayyam",
+              "name:ta": "ஒமர் கயாம்"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2023-01-05T05:16:09Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972067",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/10307972083",
+      "provider": "OSM",
+      "provider_id": "node/10307972083",
+      "name": "Hot Chips",
+      "coordinates": {
+        "latitude": 13.0408527,
+        "longitude": 80.2311764
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/10307972083:identity",
+          "subject_id": "osm:node/10307972083",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/10307972083",
+            "name": "Hot Chips"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972083",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10307972083:coordinates",
+          "subject_id": "osm:node/10307972083",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0408527,
+            "longitude": 80.2311764
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972083",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10307972083:categories",
+          "subject_id": "osm:node/10307972083",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972083",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10307972083:dietary_options",
+          "subject_id": "osm:node/10307972083",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972083",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/10307972083:osm_metadata",
+          "subject_id": "osm:node/10307972083",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "name": "Hot Chips"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2023-01-05T05:16:09Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10307972083",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/10308012367",
+      "provider": "OSM",
+      "provider_id": "node/10308012367",
+      "name": "Nic Nac",
+      "coordinates": {
+        "latitude": 13.0406949,
+        "longitude": 80.2322275
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/10308012367:identity",
+          "subject_id": "osm:node/10308012367",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/10308012367",
+            "name": "Nic Nac"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10308012367",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10308012367:coordinates",
+          "subject_id": "osm:node/10308012367",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0406949,
+            "longitude": 80.2322275
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10308012367",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10308012367:categories",
+          "subject_id": "osm:node/10308012367",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10308012367",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/10308012367:dietary_options",
+          "subject_id": "osm:node/10308012367",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10308012367",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/10308012367:osm_metadata",
+          "subject_id": "osm:node/10308012367",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "name": "Nic Nac"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2023-01-05T05:41:07Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/10308012367",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/12473051001",
+      "provider": "OSM",
+      "provider_id": "node/12473051001",
+      "name": "Paati Veedu",
+      "coordinates": {
+        "latitude": 13.0477044,
+        "longitude": 80.2390445
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": [
+        "vegetarian"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "osm:node/12473051001:identity",
+          "subject_id": "osm:node/12473051001",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/12473051001",
+            "name": "Paati Veedu"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/12473051001",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/12473051001:coordinates",
+          "subject_id": "osm:node/12473051001",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0477044,
+            "longitude": 80.2390445
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/12473051001",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/12473051001:categories",
+          "subject_id": "osm:node/12473051001",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/12473051001",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/12473051001:dietary_options",
+          "subject_id": "osm:node/12473051001",
+          "field": "dietary_options",
+          "value": [
+            "vegetarian"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/12473051001",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/12473051001:osm_metadata",
+          "subject_id": "osm:node/12473051001",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:housenumber": "2",
+              "addr:postcode": "600017",
+              "addr:street": "Bhagirathi Ammal Street",
+              "amenity": "restaurant",
+              "contact:facebook": "PaatiVeedu",
+              "contact:instagram": "paativeedu",
+              "cuisine": "indian",
+              "diet:vegetarian": "yes",
+              "email": "gm@paativeedu.com",
+              "name": "Paati Veedu",
+              "opening_hours": "Mo-Th 12:00-15:30,19:00-22:00; Fr-Su 11:30-15:30,19:00-22:00",
+              "website": "https://paativeedu.com/",
+              "website:menu": "https://paativeedu.com/restaurant.html"
+            },
+            "opening_hours": "Mo-Th 12:00-15:30,19:00-22:00; Fr-Su 11:30-15:30,19:00-22:00",
+            "cuisine": "indian",
+            "edited_at": "2025-01-04T05:55:55Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/12473051001",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/13265521716",
+      "provider": "OSM",
+      "provider_id": "node/13265521716",
+      "name": "Pudukkottai Ayya Chettinadu Mess",
+      "coordinates": {
+        "latitude": 13.0391705,
+        "longitude": 80.2389414
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/13265521716:identity",
+          "subject_id": "osm:node/13265521716",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/13265521716",
+            "name": "Pudukkottai Ayya Chettinadu Mess"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13265521716",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13265521716:coordinates",
+          "subject_id": "osm:node/13265521716",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0391705,
+            "longitude": 80.2389414
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13265521716",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13265521716:categories",
+          "subject_id": "osm:node/13265521716",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13265521716",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13265521716:dietary_options",
+          "subject_id": "osm:node/13265521716",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13265521716",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/13265521716:osm_metadata",
+          "subject_id": "osm:node/13265521716",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "Chennai",
+              "addr:district": "Chennai",
+              "addr:housenumber": "7",
+              "addr:postcode": "600017",
+              "addr:street": "Masilamani Street",
+              "amenity": "restaurant",
+              "name": "Pudukkottai Ayya Chettinadu Mess",
+              "name:en": "Pudukkottai Ayya Chettinadu Mess",
+              "name:ta": "புதுக்கோட்டை அய்யா செட்டிநாடு மெஸ்",
+              "opening_hours": "Mo-Su 11:30-15:30,18:30-23:00"
+            },
+            "opening_hours": "Mo-Su 11:30-15:30,18:30-23:00",
+            "cuisine": null,
+            "edited_at": "2025-10-28T18:56:54Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13265521716",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/13311063201",
+      "provider": "OSM",
+      "provider_id": "node/13311063201",
+      "name": "ஹாட் சிபஎஸ்",
+      "coordinates": {
+        "latitude": 13.0413033,
+        "longitude": 80.2348192
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/13311063201:identity",
+          "subject_id": "osm:node/13311063201",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/13311063201",
+            "name": "ஹாட் சிபஎஸ்"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13311063201",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13311063201:coordinates",
+          "subject_id": "osm:node/13311063201",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0413033,
+            "longitude": 80.2348192
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13311063201",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13311063201:categories",
+          "subject_id": "osm:node/13311063201",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13311063201",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13311063201:dietary_options",
+          "subject_id": "osm:node/13311063201",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13311063201",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/13311063201:osm_metadata",
+          "subject_id": "osm:node/13311063201",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "name": "ஹாட் சிபஎஸ்",
+              "name:en": "Hot Chips"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2025-11-17T14:38:15Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13311063201",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/13742612724",
+      "provider": "OSM",
+      "provider_id": "node/13742612724",
+      "name": "Aavin parlour",
+      "coordinates": {
+        "latitude": 13.040618,
+        "longitude": 80.2395851
+      },
+      "categories": [
+        "cafe"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/13742612724:identity",
+          "subject_id": "osm:node/13742612724",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/13742612724",
+            "name": "Aavin parlour"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742612724",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13742612724:coordinates",
+          "subject_id": "osm:node/13742612724",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.040618,
+            "longitude": 80.2395851
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742612724",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13742612724:categories",
+          "subject_id": "osm:node/13742612724",
+          "field": "categories",
+          "value": [
+            "cafe"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742612724",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13742612724:dietary_options",
+          "subject_id": "osm:node/13742612724",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742612724",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/13742612724:osm_metadata",
+          "subject_id": "osm:node/13742612724",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "cafe",
+              "name": "Aavin parlour"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2026-04-19T12:49:34Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742612724",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/13742637360",
+      "provider": "OSM",
+      "provider_id": "node/13742637360",
+      "name": "New Andhra Meals Hotel",
+      "coordinates": {
+        "latitude": 13.0406713,
+        "longitude": 80.2394335
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/13742637360:identity",
+          "subject_id": "osm:node/13742637360",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/13742637360",
+            "name": "New Andhra Meals Hotel"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742637360",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13742637360:coordinates",
+          "subject_id": "osm:node/13742637360",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0406713,
+            "longitude": 80.2394335
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742637360",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13742637360:categories",
+          "subject_id": "osm:node/13742637360",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742637360",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13742637360:dietary_options",
+          "subject_id": "osm:node/13742637360",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742637360",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/13742637360:osm_metadata",
+          "subject_id": "osm:node/13742637360",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "name": "New Andhra Meals Hotel"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2026-04-19T13:13:19Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13742637360",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/13743048380",
+      "provider": "OSM",
+      "provider_id": "node/13743048380",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0409378,
+        "longitude": 80.2376226
+      },
+      "categories": [
+        "restaurant",
+        "chain"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/13743048380:identity",
+          "subject_id": "osm:node/13743048380",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/13743048380",
+            "name": "Adyar Ananda Bhavan"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13743048380",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13743048380:coordinates",
+          "subject_id": "osm:node/13743048380",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0409378,
+            "longitude": 80.2376226
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13743048380",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13743048380:categories",
+          "subject_id": "osm:node/13743048380",
+          "field": "categories",
+          "value": [
+            "restaurant",
+            "chain"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13743048380",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13743048380:dietary_options",
+          "subject_id": "osm:node/13743048380",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13743048380",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/13743048380:osm_metadata",
+          "subject_id": "osm:node/13743048380",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "Chennai",
+              "addr:postcode": "600017",
+              "addr:street": "Thiyagaraya Road",
+              "air_conditioning": "yes",
+              "amenity": "restaurant",
+              "brand": "Adyar Ananda Bhavan",
+              "brand:wikidata": "Q15178238",
+              "brand:wikipedia": "en:Adyar Ananda Bhavan",
+              "cuisine": "regional",
+              "diet:lacto_vegetarian": "yes",
+              "email": "info@aabsweets.com",
+              "image:menu": "aac1698f-232a-4e2a-8224-fe83b015779c",
+              "image:menu:0": "e8b3a6b6-0791-4513-9d7d-2216de153065",
+              "image:menu:1": "e5bb611a-dc1a-4688-84c5-95f775ceeecb",
+              "image:menu:10": "97695027-c703-4e28-be42-41366dde920c",
+              "image:menu:11": "b8765c5f-7da9-4a13-86df-6f222ea64e88",
+              "image:menu:12": "be3e94e2-7325-4702-942a-c2cafd03b047",
+              "image:menu:2": "cfc04b4b-6a0b-4890-b895-09882aee6bf8",
+              "image:menu:3": "0c7d5d14-166e-41d4-947d-8514310031d2",
+              "image:menu:4": "1278fc06-5f0b-4d84-b55f-60e2466a0a8c",
+              "image:menu:5": "d660553b-dbb9-469b-b4fc-49be7612be78",
+              "image:menu:6": "11055f54-a051-43b8-bc64-f143b337584e",
+              "image:menu:7": "b99f4896-006c-420c-9aa0-59550cf102c3",
+              "image:menu:8": "3507c007-adad-46d6-90e2-de0c592b37ea",
+              "image:menu:9": "1fd00e20-0a91-4749-baba-f98756824389",
+              "level": "1",
+              "name": "Adyar Ananda Bhavan",
+              "operator": "Adyar Ananda Bhavan",
+              "phone": "+91 44 2345 3041",
+              "short_name": "A2B",
+              "smoking": "no",
+              "website": "https://aabsweets.com"
+            },
+            "opening_hours": null,
+            "cuisine": "regional",
+            "edited_at": "2026-09-13T14:11:28Z",
+            "version": 13,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13743048380",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/13760433043",
+      "provider": "OSM",
+      "provider_id": "node/13760433043",
+      "name": "சபா காபி & டீ நேரம்",
+      "coordinates": {
+        "latitude": 13.0352011,
+        "longitude": 80.2301862
+      },
+      "categories": [
+        "cafe"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/13760433043:identity",
+          "subject_id": "osm:node/13760433043",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/13760433043",
+            "name": "சபா காபி & டீ நேரம்"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13760433043",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13760433043:coordinates",
+          "subject_id": "osm:node/13760433043",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0352011,
+            "longitude": 80.2301862
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13760433043",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13760433043:categories",
+          "subject_id": "osm:node/13760433043",
+          "field": "categories",
+          "value": [
+            "cafe"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13760433043",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/13760433043:dietary_options",
+          "subject_id": "osm:node/13760433043",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13760433043",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/13760433043:osm_metadata",
+          "subject_id": "osm:node/13760433043",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "cafe",
+              "name": "சபா காபி & டீ நேரம்",
+              "name:en": "Safa Coffee and Tea Time",
+              "name:ta": "சபா காபி & டீ நேரம்",
+              "opening_hours": "Mo-Su 00:00-23:00"
+            },
+            "opening_hours": "Mo-Su 00:00-23:00",
+            "cuisine": null,
+            "edited_at": "2026-04-25T11:16:15Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/13760433043",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/14005877596",
+      "provider": "OSM",
+      "provider_id": "node/14005877596",
+      "name": "Nasi Kandar Pelita",
+      "coordinates": {
+        "latitude": 13.0399141,
+        "longitude": 80.2418278
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/14005877596:identity",
+          "subject_id": "osm:node/14005877596",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/14005877596",
+            "name": "Nasi Kandar Pelita"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/14005877596",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/14005877596:coordinates",
+          "subject_id": "osm:node/14005877596",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0399141,
+            "longitude": 80.2418278
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/14005877596",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/14005877596:categories",
+          "subject_id": "osm:node/14005877596",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/14005877596",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/14005877596:dietary_options",
+          "subject_id": "osm:node/14005877596",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/14005877596",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/14005877596:osm_metadata",
+          "subject_id": "osm:node/14005877596",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "name": "Nasi Kandar Pelita"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2026-07-12T07:19:04Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/14005877596",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/2000840330",
+      "provider": "OSM",
+      "provider_id": "node/2000840330",
+      "name": "Banana Leaf",
+      "coordinates": {
+        "latitude": 13.0408188,
+        "longitude": 80.2380816
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/2000840330:identity",
+          "subject_id": "osm:node/2000840330",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/2000840330",
+            "name": "Banana Leaf"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2000840330",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2000840330:coordinates",
+          "subject_id": "osm:node/2000840330",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0408188,
+            "longitude": 80.2380816
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2000840330",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2000840330:categories",
+          "subject_id": "osm:node/2000840330",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2000840330",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2000840330:dietary_options",
+          "subject_id": "osm:node/2000840330",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2000840330",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/2000840330:osm_metadata",
+          "subject_id": "osm:node/2000840330",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "cuisine": "regional",
+              "name": "Banana Leaf"
+            },
+            "opening_hours": null,
+            "cuisine": "regional",
+            "edited_at": "2024-04-14T02:49:24Z",
+            "version": 4,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2000840330",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/2001148133",
+      "provider": "OSM",
+      "provider_id": "node/2001148133",
+      "name": "Nalas Aappakadai",
+      "coordinates": {
+        "latitude": 13.0414192,
+        "longitude": 80.2381571
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/2001148133:identity",
+          "subject_id": "osm:node/2001148133",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/2001148133",
+            "name": "Nalas Aappakadai"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2001148133",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2001148133:coordinates",
+          "subject_id": "osm:node/2001148133",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0414192,
+            "longitude": 80.2381571
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2001148133",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2001148133:categories",
+          "subject_id": "osm:node/2001148133",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2001148133",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2001148133:dietary_options",
+          "subject_id": "osm:node/2001148133",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2001148133",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/2001148133:osm_metadata",
+          "subject_id": "osm:node/2001148133",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "name": "Nalas Aappakadai"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2025-11-17T12:08:42Z",
+            "version": 3,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2001148133",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/2270331348",
+      "provider": "OSM",
+      "provider_id": "node/2270331348",
+      "name": "Panagal Park",
+      "coordinates": {
+        "latitude": 13.0410311,
+        "longitude": 80.2332635
+      },
+      "categories": [
+        "park"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/2270331348:identity",
+          "subject_id": "osm:node/2270331348",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/2270331348",
+            "name": "Panagal Park"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2270331348",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2270331348:coordinates",
+          "subject_id": "osm:node/2270331348",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0410311,
+            "longitude": 80.2332635
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2270331348",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2270331348:categories",
+          "subject_id": "osm:node/2270331348",
+          "field": "categories",
+          "value": [
+            "park"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2270331348",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/2270331348:dietary_options",
+          "subject_id": "osm:node/2270331348",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2270331348",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/2270331348:osm_metadata",
+          "subject_id": "osm:node/2270331348",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "leisure": "park",
+              "name": "Panagal Park",
+              "name:ml": "പനഗൽ പാർക്ക്",
+              "name:ta": "பனகல் பூங்கா"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2024-03-22T17:35:58Z",
+            "version": 4,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/2270331348",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/3508291445",
+      "provider": "OSM",
+      "provider_id": "node/3508291445",
+      "name": "Indian Cofee House",
+      "coordinates": {
+        "latitude": 13.0348438,
+        "longitude": 80.2305246
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/3508291445:identity",
+          "subject_id": "osm:node/3508291445",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/3508291445",
+            "name": "Indian Cofee House"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3508291445",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/3508291445:coordinates",
+          "subject_id": "osm:node/3508291445",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0348438,
+            "longitude": 80.2305246
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3508291445",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/3508291445:categories",
+          "subject_id": "osm:node/3508291445",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3508291445",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/3508291445:dietary_options",
+          "subject_id": "osm:node/3508291445",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3508291445",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/3508291445:osm_metadata",
+          "subject_id": "osm:node/3508291445",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "cuisine": "indian",
+              "name": "Indian Cofee House",
+              "smoking": "no"
+            },
+            "opening_hours": null,
+            "cuisine": "indian",
+            "edited_at": "2015-05-10T10:07:03Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3508291445",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/353206130",
+      "provider": "OSM",
+      "provider_id": "node/353206130",
+      "name": "Barbecue Nation",
+      "coordinates": {
+        "latitude": 13.0454388,
+        "longitude": 80.2331563
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/353206130:identity",
+          "subject_id": "osm:node/353206130",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/353206130",
+            "name": "Barbecue Nation"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/353206130",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/353206130:coordinates",
+          "subject_id": "osm:node/353206130",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0454388,
+            "longitude": 80.2331563
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/353206130",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/353206130:categories",
+          "subject_id": "osm:node/353206130",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/353206130",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/353206130:dietary_options",
+          "subject_id": "osm:node/353206130",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/353206130",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/353206130:osm_metadata",
+          "subject_id": "osm:node/353206130",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "created_by": "Potlatch 0.10f",
+              "name": "Barbecue Nation"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2009-02-27T12:52:05Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/353206130",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/3736887372",
+      "provider": "OSM",
+      "provider_id": "node/3736887372",
+      "name": "Grill Box BBQ",
+      "coordinates": {
+        "latitude": 13.0455027,
+        "longitude": 80.2355696
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/3736887372:identity",
+          "subject_id": "osm:node/3736887372",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/3736887372",
+            "name": "Grill Box BBQ"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3736887372",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/3736887372:coordinates",
+          "subject_id": "osm:node/3736887372",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0455027,
+            "longitude": 80.2355696
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3736887372",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/3736887372:categories",
+          "subject_id": "osm:node/3736887372",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3736887372",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/3736887372:dietary_options",
+          "subject_id": "osm:node/3736887372",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3736887372",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/3736887372:osm_metadata",
+          "subject_id": "osm:node/3736887372",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "Chennai",
+              "addr:postcode": "600017",
+              "addr:street": "Raghaviah Road",
+              "amenity": "restaurant",
+              "name": "Grill Box BBQ"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2024-04-14T02:49:39Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/3736887372",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/4011491489",
+      "provider": "OSM",
+      "provider_id": "node/4011491489",
+      "name": "Naidu Andhra Mess",
+      "coordinates": {
+        "latitude": 13.0353775,
+        "longitude": 80.2343301
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/4011491489:identity",
+          "subject_id": "osm:node/4011491489",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/4011491489",
+            "name": "Naidu Andhra Mess"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4011491489",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4011491489:coordinates",
+          "subject_id": "osm:node/4011491489",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0353775,
+            "longitude": 80.2343301
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4011491489",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4011491489:categories",
+          "subject_id": "osm:node/4011491489",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4011491489",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4011491489:dietary_options",
+          "subject_id": "osm:node/4011491489",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4011491489",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/4011491489:osm_metadata",
+          "subject_id": "osm:node/4011491489",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "capacity": "25",
+              "delivery": "no",
+              "name": "Naidu Andhra Mess",
+              "smoking": "no",
+              "takeaway": "yes"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2016-02-29T10:32:56Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4011491489",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/4241509490",
+      "provider": "OSM",
+      "provider_id": "node/4241509490",
+      "name": "absolute barbeques ",
+      "coordinates": {
+        "latitude": 13.045426,
+        "longitude": 80.2412295
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/4241509490:identity",
+          "subject_id": "osm:node/4241509490",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/4241509490",
+            "name": "absolute barbeques "
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241509490",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4241509490:coordinates",
+          "subject_id": "osm:node/4241509490",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.045426,
+            "longitude": 80.2412295
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241509490",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4241509490:categories",
+          "subject_id": "osm:node/4241509490",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241509490",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4241509490:dietary_options",
+          "subject_id": "osm:node/4241509490",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241509490",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/4241509490:osm_metadata",
+          "subject_id": "osm:node/4241509490",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:street": "Gopathi Narayanaswami Road",
+              "amenity": "restaurant",
+              "name": "absolute barbeques "
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2016-06-13T16:17:21Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241509490",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/4241530290",
+      "provider": "OSM",
+      "provider_id": "node/4241530290",
+      "name": "madras coffee house",
+      "coordinates": {
+        "latitude": 13.0469371,
+        "longitude": 80.2368552
+      },
+      "categories": [
+        "cafe"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/4241530290:identity",
+          "subject_id": "osm:node/4241530290",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/4241530290",
+            "name": "madras coffee house"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241530290",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4241530290:coordinates",
+          "subject_id": "osm:node/4241530290",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0469371,
+            "longitude": 80.2368552
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241530290",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4241530290:categories",
+          "subject_id": "osm:node/4241530290",
+          "field": "categories",
+          "value": [
+            "cafe"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241530290",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4241530290:dietary_options",
+          "subject_id": "osm:node/4241530290",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241530290",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/4241530290:osm_metadata",
+          "subject_id": "osm:node/4241530290",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:street": "Rajan Street",
+              "amenity": "cafe",
+              "name": "madras coffee house"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2017-04-02T07:51:43Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4241530290",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/4681428385",
+      "provider": "OSM",
+      "provider_id": "node/4681428385",
+      "name": "Murugan Idli Shop",
+      "coordinates": {
+        "latitude": 13.0378221,
+        "longitude": 80.2301551
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/4681428385:identity",
+          "subject_id": "osm:node/4681428385",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/4681428385",
+            "name": "Murugan Idli Shop"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681428385",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4681428385:coordinates",
+          "subject_id": "osm:node/4681428385",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0378221,
+            "longitude": 80.2301551
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681428385",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4681428385:categories",
+          "subject_id": "osm:node/4681428385",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681428385",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4681428385:dietary_options",
+          "subject_id": "osm:node/4681428385",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681428385",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/4681428385:osm_metadata",
+          "subject_id": "osm:node/4681428385",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "t.nagar",
+              "addr:housenumber": "9",
+              "addr:postcode": "600 017",
+              "addr:street": "Ramanathan Street",
+              "amenity": "restaurant",
+              "name": "Murugan Idli Shop",
+              "phone": "+914442128182"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2024-04-13T02:11:44Z",
+            "version": 3,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681428385",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/4681455945",
+      "provider": "OSM",
+      "provider_id": "node/4681455945",
+      "name": "Candose Ice Cream Palour",
+      "coordinates": {
+        "latitude": 13.039421,
+        "longitude": 80.2288253
+      },
+      "categories": [
+        "cafe"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/4681455945:identity",
+          "subject_id": "osm:node/4681455945",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/4681455945",
+            "name": "Candose Ice Cream Palour"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681455945",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4681455945:coordinates",
+          "subject_id": "osm:node/4681455945",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.039421,
+            "longitude": 80.2288253
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681455945",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4681455945:categories",
+          "subject_id": "osm:node/4681455945",
+          "field": "categories",
+          "value": [
+            "cafe"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681455945",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4681455945:dietary_options",
+          "subject_id": "osm:node/4681455945",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681455945",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/4681455945:osm_metadata",
+          "subject_id": "osm:node/4681455945",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "t.nagar",
+              "addr:housenumber": "28",
+              "addr:postcode": "600 017",
+              "addr:street": "Rameswaram Street",
+              "amenity": "cafe",
+              "cuisine": "italian",
+              "name": "Candose Ice Cream Palour",
+              "outdoor_seating": "no",
+              "phone": "+914442178384"
+            },
+            "opening_hours": null,
+            "cuisine": "italian",
+            "edited_at": "2024-04-13T02:11:44Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4681455945",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/4711359172",
+      "provider": "OSM",
+      "provider_id": "node/4711359172",
+      "name": "Cafeteria",
+      "coordinates": {
+        "latitude": 13.042971,
+        "longitude": 80.2333968
+      },
+      "categories": [
+        "cafe"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/4711359172:identity",
+          "subject_id": "osm:node/4711359172",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/4711359172",
+            "name": "Cafeteria"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4711359172",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4711359172:coordinates",
+          "subject_id": "osm:node/4711359172",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.042971,
+            "longitude": 80.2333968
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4711359172",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4711359172:categories",
+          "subject_id": "osm:node/4711359172",
+          "field": "categories",
+          "value": [
+            "cafe"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4711359172",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4711359172:dietary_options",
+          "subject_id": "osm:node/4711359172",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4711359172",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/4711359172:osm_metadata",
+          "subject_id": "osm:node/4711359172",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "T.Nagar,Chennai",
+              "addr:housenumber": "453",
+              "addr:postcode": "600017",
+              "addr:street": "Govindu Street",
+              "amenity": "cafe",
+              "cuisine": "regional",
+              "name": "Cafeteria",
+              "outdoor_seating": "yes",
+              "phone": "+9133578",
+              "smoking": "no",
+              "website": "www.ccd.com"
+            },
+            "opening_hours": null,
+            "cuisine": "regional",
+            "edited_at": "2024-04-14T02:49:39Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4711359172",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/4797659570",
+      "provider": "OSM",
+      "provider_id": "node/4797659570",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0363714,
+        "longitude": 80.2304855
+      },
+      "categories": [
+        "restaurant",
+        "chain"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/4797659570:identity",
+          "subject_id": "osm:node/4797659570",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/4797659570",
+            "name": "Adyar Ananda Bhavan"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4797659570",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4797659570:coordinates",
+          "subject_id": "osm:node/4797659570",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0363714,
+            "longitude": 80.2304855
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4797659570",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4797659570:categories",
+          "subject_id": "osm:node/4797659570",
+          "field": "categories",
+          "value": [
+            "restaurant",
+            "chain"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4797659570",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/4797659570:dietary_options",
+          "subject_id": "osm:node/4797659570",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4797659570",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/4797659570:osm_metadata",
+          "subject_id": "osm:node/4797659570",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "Chennai",
+              "addr:postcode": "600017",
+              "addr:street": "South Usman Road",
+              "amenity": "restaurant",
+              "brand": "Adyar Ananda Bhavan",
+              "brand:wikidata": "Q15178238",
+              "cuisine": "regional",
+              "name": "Adyar Ananda Bhavan",
+              "opening_hours": "09:00-21:30",
+              "panoramax": "23a9f86d-ef6f-4d62-b7e1-6f2b8312f8af",
+              "panoramax:0": "d400f4ce-74f5-4411-ad28-20b43e62baad",
+              "panoramax:1": "847b95ec-898c-4ef0-8ae5-75519fc36348",
+              "phone": "914423453036",
+              "shop": "confectionery",
+              "website": "https://aabsweets.com"
+            },
+            "opening_hours": "09:00-21:30",
+            "cuisine": "regional",
+            "edited_at": "2026-04-25T12:04:35Z",
+            "version": 9,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/4797659570",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/5230272395",
+      "provider": "OSM",
+      "provider_id": "node/5230272395",
+      "name": "Hotel Sabari",
+      "coordinates": {
+        "latitude": 13.0474926,
+        "longitude": 80.2400944
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/5230272395:identity",
+          "subject_id": "osm:node/5230272395",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/5230272395",
+            "name": "Hotel Sabari"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/5230272395",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/5230272395:coordinates",
+          "subject_id": "osm:node/5230272395",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0474926,
+            "longitude": 80.2400944
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/5230272395",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/5230272395:categories",
+          "subject_id": "osm:node/5230272395",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/5230272395",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/5230272395:dietary_options",
+          "subject_id": "osm:node/5230272395",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/5230272395",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/5230272395:osm_metadata",
+          "subject_id": "osm:node/5230272395",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "Chennai",
+              "addr:housenumber": "29",
+              "addr:postcode": "600017",
+              "addr:street": "Thirumalai Pillai Road, Thirumurthy Nagar, Parthasarathi Puram, T Nagar",
+              "amenity": "restaurant",
+              "name": "Hotel Sabari"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2017-11-15T12:23:37Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/5230272395",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/6235479733",
+      "provider": "OSM",
+      "provider_id": "node/6235479733",
+      "name": "Noodle Theory",
+      "coordinates": {
+        "latitude": 13.0456112,
+        "longitude": 80.2408779
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": [
+        "vegetarian"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "osm:node/6235479733:identity",
+          "subject_id": "osm:node/6235479733",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/6235479733",
+            "name": "Noodle Theory"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/6235479733",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/6235479733:coordinates",
+          "subject_id": "osm:node/6235479733",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0456112,
+            "longitude": 80.2408779
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/6235479733",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/6235479733:categories",
+          "subject_id": "osm:node/6235479733",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/6235479733",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/6235479733:dietary_options",
+          "subject_id": "osm:node/6235479733",
+          "field": "dietary_options",
+          "value": [
+            "vegetarian"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/6235479733",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/6235479733:osm_metadata",
+          "subject_id": "osm:node/6235479733",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "Chennai",
+              "addr:postcode": "600017",
+              "addr:street": "Gopathi Narayanaswami Road",
+              "amenity": "restaurant",
+              "capacity": "50",
+              "cuisine": "noodle",
+              "diet:vegetarian": "yes",
+              "name": "Noodle Theory",
+              "opening_hours": "Mo-Su 09:00-21:00",
+              "outdoor_seating": "no",
+              "wheelchair": "yes"
+            },
+            "opening_hours": "Mo-Su 09:00-21:00",
+            "cuisine": "noodle",
+            "edited_at": "2019-01-25T07:24:58Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/6235479733",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:node/9418560328",
+      "provider": "OSM",
+      "provider_id": "node/9418560328",
+      "name": "That Mallu Joint",
+      "coordinates": {
+        "latitude": 13.0416717,
+        "longitude": 80.2346309
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:node/9418560328:identity",
+          "subject_id": "osm:node/9418560328",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "node/9418560328",
+            "name": "That Mallu Joint"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/9418560328",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/9418560328:coordinates",
+          "subject_id": "osm:node/9418560328",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0416717,
+            "longitude": 80.2346309
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/9418560328",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/9418560328:categories",
+          "subject_id": "osm:node/9418560328",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/9418560328",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:node/9418560328:dietary_options",
+          "subject_id": "osm:node/9418560328",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/9418560328",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:node/9418560328:osm_metadata",
+          "subject_id": "osm:node/9418560328",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "cuisine": "indian",
+              "name": "That Mallu Joint"
+            },
+            "opening_hours": null,
+            "cuisine": "indian",
+            "edited_at": "2022-01-14T17:31:32Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "node"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/node/9418560328",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/1252873481",
+      "provider": "OSM",
+      "provider_id": "way/1252873481",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.037546,
+        "longitude": 80.2367583
+      },
+      "categories": [
+        "cafe",
+        "chain"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/1252873481:identity",
+          "subject_id": "osm:way/1252873481",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/1252873481",
+            "name": "Cafe Coffee Day"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873481",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/1252873481:coordinates",
+          "subject_id": "osm:way/1252873481",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.037546,
+            "longitude": 80.2367583
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873481",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/1252873481:categories",
+          "subject_id": "osm:way/1252873481",
+          "field": "categories",
+          "value": [
+            "cafe",
+            "chain"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873481",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/1252873481:dietary_options",
+          "subject_id": "osm:way/1252873481",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873481",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/1252873481:osm_metadata",
+          "subject_id": "osm:way/1252873481",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "cafe",
+              "brand": "Cafe Coffee Day",
+              "brand:wikidata": "Q5017235",
+              "building": "yes",
+              "cuisine": "coffee_shop",
+              "name": "Cafe Coffee Day",
+              "takeaway": "yes"
+            },
+            "opening_hours": null,
+            "cuisine": "coffee_shop",
+            "edited_at": "2024-02-20T14:04:21Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873481",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/1252873484",
+      "provider": "OSM",
+      "provider_id": "way/1252873484",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0372996,
+        "longitude": 80.2362712
+      },
+      "categories": [
+        "cafe",
+        "chain"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/1252873484:identity",
+          "subject_id": "osm:way/1252873484",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/1252873484",
+            "name": "Cafe Coffee Day"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873484",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/1252873484:coordinates",
+          "subject_id": "osm:way/1252873484",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0372996,
+            "longitude": 80.2362712
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873484",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/1252873484:categories",
+          "subject_id": "osm:way/1252873484",
+          "field": "categories",
+          "value": [
+            "cafe",
+            "chain"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873484",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/1252873484:dietary_options",
+          "subject_id": "osm:way/1252873484",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873484",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/1252873484:osm_metadata",
+          "subject_id": "osm:way/1252873484",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "cafe",
+              "brand": "Cafe Coffee Day",
+              "brand:wikidata": "Q5017235",
+              "building": "yes",
+              "cuisine": "coffee_shop",
+              "name": "Cafe Coffee Day",
+              "takeaway": "yes"
+            },
+            "opening_hours": null,
+            "cuisine": "coffee_shop",
+            "edited_at": "2024-02-20T14:04:21Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/1252873484",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/209513246",
+      "provider": "OSM",
+      "provider_id": "way/209513246",
+      "name": "Panagal Park",
+      "coordinates": {
+        "latitude": 13.0414253,
+        "longitude": 80.2330639
+      },
+      "categories": [
+        "park"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/209513246:identity",
+          "subject_id": "osm:way/209513246",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/209513246",
+            "name": "Panagal Park"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/209513246",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/209513246:coordinates",
+          "subject_id": "osm:way/209513246",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0414253,
+            "longitude": 80.2330639
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/209513246",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/209513246:categories",
+          "subject_id": "osm:way/209513246",
+          "field": "categories",
+          "value": [
+            "park"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/209513246",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/209513246:dietary_options",
+          "subject_id": "osm:way/209513246",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/209513246",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/209513246:osm_metadata",
+          "subject_id": "osm:way/209513246",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "historic:leisure": "park",
+              "leisure": "park",
+              "name": "Panagal Park",
+              "name:etymology:wikidata": "Q7129811",
+              "wikidata": "Q7129811",
+              "wikipedia": "en:Panagal Park"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2026-08-21T11:55:09Z",
+            "version": 8,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/209513246",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/23186292",
+      "provider": "OSM",
+      "provider_id": "way/23186292",
+      "name": "Jeeva Park",
+      "coordinates": {
+        "latitude": 13.0440022,
+        "longitude": 80.2377658
+      },
+      "categories": [
+        "park"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/23186292:identity",
+          "subject_id": "osm:way/23186292",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/23186292",
+            "name": "Jeeva Park"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186292",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186292:coordinates",
+          "subject_id": "osm:way/23186292",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0440022,
+            "longitude": 80.2377658
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186292",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186292:categories",
+          "subject_id": "osm:way/23186292",
+          "field": "categories",
+          "value": [
+            "park"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186292",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186292:dietary_options",
+          "subject_id": "osm:way/23186292",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186292",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/23186292:osm_metadata",
+          "subject_id": "osm:way/23186292",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "leisure": "park",
+              "name": "Jeeva Park",
+              "name:etymology:wikidata": "Q7117344"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2024-04-14T02:49:39Z",
+            "version": 6,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186292",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/23186293",
+      "provider": "OSM",
+      "provider_id": "way/23186293",
+      "name": "Ramakrishna Mission School Ground",
+      "coordinates": {
+        "latitude": 13.0432712,
+        "longitude": 80.2381145
+      },
+      "categories": [
+        "park"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/23186293:identity",
+          "subject_id": "osm:way/23186293",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/23186293",
+            "name": "Ramakrishna Mission School Ground"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186293",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186293:coordinates",
+          "subject_id": "osm:way/23186293",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0432712,
+            "longitude": 80.2381145
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186293",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186293:categories",
+          "subject_id": "osm:way/23186293",
+          "field": "categories",
+          "value": [
+            "park"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186293",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186293:dietary_options",
+          "subject_id": "osm:way/23186293",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186293",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/23186293:osm_metadata",
+          "subject_id": "osm:way/23186293",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "leisure": "park",
+              "name": "Ramakrishna Mission School Ground"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2023-08-09T15:20:46Z",
+            "version": 9,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186293",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/23186294",
+      "provider": "OSM",
+      "provider_id": "way/23186294",
+      "name": "Somasundaram ground",
+      "coordinates": {
+        "latitude": 13.0458886,
+        "longitude": 80.2343274
+      },
+      "categories": [
+        "park"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/23186294:identity",
+          "subject_id": "osm:way/23186294",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/23186294",
+            "name": "Somasundaram ground"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186294",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186294:coordinates",
+          "subject_id": "osm:way/23186294",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0458886,
+            "longitude": 80.2343274
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186294",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186294:categories",
+          "subject_id": "osm:way/23186294",
+          "field": "categories",
+          "value": [
+            "park"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186294",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/23186294:dietary_options",
+          "subject_id": "osm:way/23186294",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186294",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/23186294:osm_metadata",
+          "subject_id": "osm:way/23186294",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "leisure": "park",
+              "name": "Somasundaram ground"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2020-05-30T09:16:57Z",
+            "version": 3,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/23186294",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/28085766",
+      "provider": "OSM",
+      "provider_id": "way/28085766",
+      "name": "Natesan Park",
+      "coordinates": {
+        "latitude": 13.0375701,
+        "longitude": 80.2363965
+      },
+      "categories": [
+        "park"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/28085766:identity",
+          "subject_id": "osm:way/28085766",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/28085766",
+            "name": "Natesan Park"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085766",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/28085766:coordinates",
+          "subject_id": "osm:way/28085766",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0375701,
+            "longitude": 80.2363965
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085766",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/28085766:categories",
+          "subject_id": "osm:way/28085766",
+          "field": "categories",
+          "value": [
+            "park"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085766",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/28085766:dietary_options",
+          "subject_id": "osm:way/28085766",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085766",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/28085766:osm_metadata",
+          "subject_id": "osm:way/28085766",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "leisure": "park",
+              "name": "Natesan Park",
+              "name:etymology:wikidata": "Q5006734",
+              "name:ta": "நடேசன் பூங்கா",
+              "wikidata": "Q6968765",
+              "wikimedia_commons": "Category:Natesan Park",
+              "wikipedia": "en:Natesan Park"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2024-04-14T02:49:39Z",
+            "version": 11,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085766",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/28085769",
+      "provider": "OSM",
+      "provider_id": "way/28085769",
+      "name": "Corporation Ground",
+      "coordinates": {
+        "latitude": 13.0371628,
+        "longitude": 80.2356263
+      },
+      "categories": [
+        "park"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/28085769:identity",
+          "subject_id": "osm:way/28085769",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/28085769",
+            "name": "Corporation Ground"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085769",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/28085769:coordinates",
+          "subject_id": "osm:way/28085769",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0371628,
+            "longitude": 80.2356263
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085769",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/28085769:categories",
+          "subject_id": "osm:way/28085769",
+          "field": "categories",
+          "value": [
+            "park"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085769",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/28085769:dietary_options",
+          "subject_id": "osm:way/28085769",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085769",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/28085769:osm_metadata",
+          "subject_id": "osm:way/28085769",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "leisure": "park",
+              "name": "Corporation Ground"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2024-04-14T02:49:39Z",
+            "version": 5,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/28085769",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/354578081",
+      "provider": "OSM",
+      "provider_id": "way/354578081",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0470304,
+        "longitude": 80.2365322
+      },
+      "categories": [
+        "cafe",
+        "chain"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/354578081:identity",
+          "subject_id": "osm:way/354578081",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/354578081",
+            "name": "Cafe Coffee Day"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354578081",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354578081:coordinates",
+          "subject_id": "osm:way/354578081",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0470304,
+            "longitude": 80.2365322
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354578081",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354578081:categories",
+          "subject_id": "osm:way/354578081",
+          "field": "categories",
+          "value": [
+            "cafe",
+            "chain"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354578081",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354578081:dietary_options",
+          "subject_id": "osm:way/354578081",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354578081",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/354578081:osm_metadata",
+          "subject_id": "osm:way/354578081",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "cafe",
+              "brand": "Cafe Coffee Day",
+              "brand:wikidata": "Q5017235",
+              "brand:wikipedia": "en:Café Coffee Day",
+              "building": "yes",
+              "cuisine": "coffee_shop",
+              "name": "Cafe Coffee Day",
+              "takeaway": "yes"
+            },
+            "opening_hours": null,
+            "cuisine": "coffee_shop",
+            "edited_at": "2022-01-26T07:03:40Z",
+            "version": 3,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354578081",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/354769193",
+      "provider": "OSM",
+      "provider_id": "way/354769193",
+      "name": "Murugan Idli Shop",
+      "coordinates": {
+        "latitude": 13.0453849,
+        "longitude": 80.2328621
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/354769193:identity",
+          "subject_id": "osm:way/354769193",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/354769193",
+            "name": "Murugan Idli Shop"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354769193",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354769193:coordinates",
+          "subject_id": "osm:way/354769193",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0453849,
+            "longitude": 80.2328621
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354769193",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354769193:categories",
+          "subject_id": "osm:way/354769193",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354769193",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354769193:dietary_options",
+          "subject_id": "osm:way/354769193",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354769193",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/354769193:osm_metadata",
+          "subject_id": "osm:way/354769193",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "addr:city": "Chennai",
+              "addr:postcode": "600017",
+              "addr:street": "North Usman Road",
+              "amenity": "restaurant",
+              "building": "yes",
+              "cuisine": "South_Indian",
+              "delivery": "yes",
+              "name": "Murugan Idli Shop",
+              "takeaway": "yes"
+            },
+            "opening_hours": null,
+            "cuisine": "South_Indian",
+            "edited_at": "2015-09-09T04:12:56Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354769193",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/354771357",
+      "provider": "OSM",
+      "provider_id": "way/354771357",
+      "name": "D Cafe",
+      "coordinates": {
+        "latitude": 13.0467936,
+        "longitude": 80.2352757
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/354771357:identity",
+          "subject_id": "osm:way/354771357",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/354771357",
+            "name": "D Cafe"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354771357",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354771357:coordinates",
+          "subject_id": "osm:way/354771357",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0467936,
+            "longitude": 80.2352757
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354771357",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354771357:categories",
+          "subject_id": "osm:way/354771357",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354771357",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/354771357:dietary_options",
+          "subject_id": "osm:way/354771357",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354771357",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/354771357:osm_metadata",
+          "subject_id": "osm:way/354771357",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "building": "yes",
+              "name": "D Cafe"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2015-08-17T11:52:00Z",
+            "version": 2,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/354771357",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "osm:way/441568062",
+      "provider": "OSM",
+      "provider_id": "way/441568062",
+      "name": "Sri Krishna Sweets",
+      "coordinates": {
+        "latitude": 13.0432408,
+        "longitude": 80.2301269
+      },
+      "categories": [
+        "restaurant"
+      ],
+      "opening_windows": null,
+      "price": null,
+      "dietary_options": null,
+      "evidence": [
+        {
+          "evidence_id": "osm:way/441568062:identity",
+          "subject_id": "osm:way/441568062",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/441568062",
+            "name": "Sri Krishna Sweets"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/441568062",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/441568062:coordinates",
+          "subject_id": "osm:way/441568062",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0432408,
+            "longitude": 80.2301269
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/441568062",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/441568062:categories",
+          "subject_id": "osm:way/441568062",
+          "field": "categories",
+          "value": [
+            "restaurant"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/441568062",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/441568062:dietary_options",
+          "subject_id": "osm:way/441568062",
+          "field": "dietary_options",
+          "value": null,
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/441568062",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "UNKNOWN"
+        },
+        {
+          "evidence_id": "osm:way/441568062:osm_metadata",
+          "subject_id": "osm:way/441568062",
+          "field": "osm_metadata",
+          "value": {
+            "tags": {
+              "amenity": "restaurant",
+              "name": "Sri Krishna Sweets"
+            },
+            "opening_hours": null,
+            "cuisine": null,
+            "edited_at": "2016-09-09T07:12:56Z",
+            "version": 1,
+            "database_timestamp": "2026-10-06T19:32:20Z",
+            "coordinate_kind": "bbox_center"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/441568062",
+          "observed_at": "2026-10-06T19:33:45.285454Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

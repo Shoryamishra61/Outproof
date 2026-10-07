@@ -1,0 +1,192 @@
+"""Valhalla pedestrian facts bound to exact requested coordinates and endpoints."""
+
+import hashlib
+import json
+import math
+from datetime import UTC, datetime
+from typing import Protocol
+
+import httpx
+from ground_rule.models import CompilationFailure, Coordinates, Evidence, RouteFact
+
+
+class RoutingProvider(Protocol):
+    async def route(
+        self, from_id: str, to_id: str, start: Coordinates, end: Coordinates
+    ) -> RouteFact | CompilationFailure: ...
+
+
+def route_request(start: Coordinates, end: Coordinates) -> dict:
+    return dict(
+        locations=[
+            dict(lat=p.latitude, lon=p.longitude, type="break", search_cutoff=100)
+            for p in (Coordinates.model_validate(start), Coordinates.model_validate(end))
+        ],
+        costing="pedestrian",
+        units="kilometers",
+    )
+
+
+def normalize_valhalla(
+    payload: object,
+    *,
+    from_id: str,
+    to_id: str,
+    start: Coordinates,
+    end: Coordinates,
+    route_id: str,
+    endpoint: str,
+    observed_at: datetime,
+) -> RouteFact | CompilationFailure:
+    try:
+        if not isinstance(payload, dict):
+            raise ValueError("Invalid route response")
+        code = payload.get("error_code")
+        unreachable = type(code) is int and code in {170, 171, 441, 442}
+        if (
+            (code is not None and not unreachable)
+            or (unreachable and payload.get("trip") is not None)
+            or (payload.get("id") is not None and payload["id"] != route_id)
+        ):
+            raise ValueError("Conflicting provider error or response identity")
+        duration = None
+        distance = None
+        if not unreachable:
+            trip = payload["trip"]
+            if (
+                payload.get("id") != route_id
+                or type(trip["status"]) is not int
+                or trip["status"] != 0
+                or trip["units"] != "kilometers"
+                or len(trip["legs"]) != 1
+                or len(trip["locations"]) != 2
+            ):
+                raise ValueError("Route identity, units or leg structure mismatch")
+            for location, expected in zip(trip["locations"], (start, end), strict=True):
+                actual = Coordinates(latitude=location["lat"], longitude=location["lon"])
+                if (
+                    abs(actual.latitude - expected.latitude) > 0.000001
+                    or abs(actual.longitude - expected.longitude) > 0.000001
+                ):
+                    raise ValueError("Route coordinates mismatch")
+            summary = trip["summary"]
+            seconds, kilometers = summary["time"], summary["length"]
+            if any(
+                type(value) not in {int, float} or not math.isfinite(value) or value < 0
+                for value in (seconds, kilometers)
+            ):
+                raise ValueError("Unknown or unsafe route metric")
+            if (seconds == 0 or kilometers == 0) and start != end:
+                raise ValueError(
+                    "Zero route metric cannot establish travel between distinct points"
+                )
+            if trip["legs"][0]["summary"] != summary:
+                raise ValueError("Trip and single-leg summaries conflict")
+            # Ferries/tolls may introduce unmodeled mandatory costs; never call them free walks.
+            for field in ("has_ferry", "has_toll"):
+                if type(summary.get(field)) is not bool:
+                    raise ValueError("Unknown paid route segments")
+                if summary[field]:
+                    return CompilationFailure(
+                        code="UNSUPPORTED_CONSTRAINT",
+                        message="Walking route has a ferry/toll with unsupported mandatory cost",
+                    )
+            duration = math.ceil(seconds)
+            distance = float(kilometers * 1000)
+        value = dict(
+            from_id=from_id,
+            to_id=to_id,
+            from_coordinates=start.model_dump(),
+            to_coordinates=end.model_dump(),
+            reachable=not unreachable,
+            duration_seconds=duration,
+            distance_meters=distance,
+        )
+        evidence = Evidence(
+            evidence_id=f"{route_id}:walking_route",
+            subject_id=route_id,
+            field="walking_route",
+            value=value,
+            source="VALHALLA",
+            source_ref=endpoint,
+            observed_at=observed_at,
+            expires_at=None,
+            confidence="MEDIUM",
+        )
+        metadata = Evidence(
+            evidence_id=f"{route_id}:metadata",
+            subject_id=route_id,
+            field="valhalla_metadata",
+            value=dict(
+                costing="pedestrian",
+                units="kilometers",
+                error_code=code,
+                response_id=payload.get("id"),
+                request=route_request(start, end),
+            ),
+            source="VALHALLA",
+            source_ref=endpoint,
+            observed_at=observed_at,
+            expires_at=None,
+            confidence="MEDIUM",
+        )
+        return RouteFact(
+            route_id=route_id,
+            from_id=from_id,
+            to_id=to_id,
+            reachable=not unreachable,
+            duration_seconds=duration,
+            distance_meters=distance,
+            evidence=(evidence, metadata),
+        )
+    except (ValueError, TypeError, KeyError, OverflowError):
+        return CompilationFailure(
+            code="SOURCE_TEMPORARILY_UNAVAILABLE", message="Malformed or mismatched Valhalla facts"
+        )
+
+
+class ValhallaRoutingProvider:
+    def __init__(self, client: httpx.AsyncClient, base_url: str) -> None:
+        self.client = client
+        self.endpoint = base_url.rstrip("/") + "/route"
+
+    async def route(
+        self, from_id: str, to_id: str, start: Coordinates, end: Coordinates
+    ) -> RouteFact | CompilationFailure:
+        request = route_request(start, end)
+        identity = json.dumps([from_id, to_id, request, self.endpoint], sort_keys=True)
+        route_id = "valhalla:" + hashlib.sha256(identity.encode()).hexdigest()[:24]
+        try:
+            response = await self.client.post(
+                self.endpoint,
+                json=request | {"id": route_id},
+                timeout=30,
+                headers={
+                    "X-Client-Id": "ground-rule-development",
+                    "User-Agent": "GroundRule/0.1 (bounded development evaluation)",
+                },
+            )
+            # Documented no-path errors use HTTP 400; other statuses remain provider failures.
+            if response.status_code not in {200, 400}:
+                response.raise_for_status()
+            payload = response.json()
+            if response.status_code == 400 and (
+                not isinstance(payload, dict)
+                or type(payload.get("error_code")) is not int
+                or payload["error_code"] not in {170, 171, 441, 442}
+            ):
+                raise ValueError("HTTP error cannot assert reachable route facts")
+            return normalize_valhalla(
+                payload,
+                from_id=from_id,
+                to_id=to_id,
+                start=start,
+                end=end,
+                route_id=route_id,
+                endpoint=self.endpoint,
+                observed_at=datetime.now(UTC),
+            )
+        except (httpx.HTTPError, ValueError):
+            return CompilationFailure(
+                code="SOURCE_TEMPORARILY_UNAVAILABLE", message="Valhalla request failed"
+            )

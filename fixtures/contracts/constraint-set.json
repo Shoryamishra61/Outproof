@@ -1,0 +1,29 @@
+{
+  "currency_code": "INR",
+  "budget_minor_units": 50000,
+  "budget_scope": "PER_PERSON",
+  "duration_max_minutes": 90,
+  "party_mode": "FRIEND",
+  "party_size": 2,
+  "vibes": [
+    "Talk"
+  ],
+  "hard_constraints": [
+    {
+      "kind": "EXCLUDE_CATEGORY",
+      "value": "mall"
+    }
+  ],
+  "soft_constraints": [
+    {
+      "preference": "quiet"
+    }
+  ],
+  "max_walking_minutes": 20,
+  "max_walking_meters": 2500.0,
+  "return_by_local": null,
+  "locale": "en-IN",
+  "origin": null,
+  "departure_at": null,
+  "strict_budget": true
+}

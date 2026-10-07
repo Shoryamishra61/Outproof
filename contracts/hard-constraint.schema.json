@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "enum": [
+        "EXCLUDE_CATEGORY",
+        "DIETARY",
+        "ACCESSIBILITY",
+        "UNSUPPORTED"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "value": {
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Value",
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "value"
+  ],
+  "title": "HardConstraint",
+  "type": "object"
+}

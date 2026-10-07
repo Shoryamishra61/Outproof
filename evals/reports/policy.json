@@ -1,0 +1,813 @@
+{
+  "scope": "synthetic deterministic policy fixtures; zero real outings",
+  "cases": 85,
+  "passed": 85,
+  "failed": [],
+  "results": [
+    {
+      "id": "420-per-person-under-500",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "mandatory-amount-49999",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "mandatory-amount-50000",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "mandatory-amount-50001",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "mandatory-amount-52000",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ESTIMATED-35000",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "BOUNDED-48000",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "BOUNDED-55000",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "unknown-price-True",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "CURRENCY",
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "unknown-price-False",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "CURRENCY",
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "scope-TOTAL-80000-45000",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "scope-PER_PERSON-45000-80000",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "scope-TOTAL-45000-80000",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "currency-USD",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "CURRENCY",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "currency-GBP",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "CURRENCY",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "currency-JPY",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "CURRENCY",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "confirmed-free",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "unknown-ticket-on-free-outing",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "duration-20-50-25",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DURATION"
+      ],
+      "passed": true
+    },
+    {
+      "id": "duration-20-45-25",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "duration-20-46-25",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DURATION"
+      ],
+      "passed": true
+    },
+    {
+      "id": "missing-return",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "STRUCTURE"
+      ],
+      "passed": true
+    },
+    {
+      "id": "unreachable-0",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "unreachable-1",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "420-plus-mandatory-100",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "mixed-currencies-between-stops",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "CURRENCY",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "unreachable-intermediate",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "BUDGET",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "closing-at-9",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "closing-at-49",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "closing-at-50",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "unknown-hours",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "positive-exclusion-mall",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "forbidden-mall",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "EXCLUSIONS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "positive-exclusion-alcohol",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "forbidden-alcohol",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "EXCLUSIONS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "positive-exclusion-chain",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "forbidden-chain",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "EXCLUSIONS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "absence-is-not-exclusion-proof",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "EXCLUSIONS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "supported-vegetarian",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "unsupported-vegetarian",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DIETARY"
+      ],
+      "passed": true
+    },
+    {
+      "id": "supported-vegan",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "unsupported-vegan",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DIETARY"
+      ],
+      "passed": true
+    },
+    {
+      "id": "allergy safe",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DIETARY"
+      ],
+      "passed": true
+    },
+    {
+      "id": "wheelchair",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DIETARY"
+      ],
+      "passed": true
+    },
+    {
+      "id": "safety guarantee",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DIETARY"
+      ],
+      "passed": true
+    },
+    {
+      "id": "max_walking_minutes-19",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "WALKING"
+      ],
+      "passed": true
+    },
+    {
+      "id": "max_walking_minutes-20",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "max_walking_meters-1299.0",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "WALKING"
+      ],
+      "passed": true
+    },
+    {
+      "id": "max_walking_meters-1300.0",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "return-deadline-59",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "RETURN_TRIP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "return-deadline-60",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "repeated-local-hour",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "optional-unknown-dessert",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "stale-identity",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "GROUNDING"
+      ],
+      "passed": true
+    },
+    {
+      "id": "stale-coordinates",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "GROUNDING"
+      ],
+      "passed": true
+    },
+    {
+      "id": "stale-categories",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "EXCLUSIONS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "stale-dietary_options",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DIETARY"
+      ],
+      "passed": true
+    },
+    {
+      "id": "stale-price",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "stale-opening_window",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "stale-walking_route",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "conflicting-id",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "GROUNDING",
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "PRICE_CONFIDENCE",
+        "BUDGET",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "conflicting-price",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "GROUNDING",
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "PRICE_CONFIDENCE",
+        "BUDGET",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "wrong-subject",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "future",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "expired",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "low-confidence",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "community",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "missing-price-proof",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "STRUCTURE"
+      ],
+      "passed": true
+    },
+    {
+      "id": "incomplete-cost",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ungrounded-provider_id",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "GROUNDING"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ungrounded-coordinates",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "GROUNDING",
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "ungrounded-name",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "GROUNDING"
+      ],
+      "passed": true
+    },
+    {
+      "id": "unknown-party-size",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "structured-departure-mutated",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "DURATION",
+        "RETURN_TRIP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "boolean-is-not-zero-price-evidence",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-optionality-True",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-optionality-None",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-optionality-false",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "invalid-optionality-0",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "PRICE_CONFIDENCE",
+        "BUDGET"
+      ],
+      "passed": true
+    },
+    {
+      "id": "conflicting-fact-in-another-evidence-bucket",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "GROUNDING",
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "PRICE_CONFIDENCE",
+        "BUDGET",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "osm-is-not-routing-truth",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "explicit-nonstrict-estimate",
+      "expected_accepted": true,
+      "accepted": true,
+      "failed_codes": [],
+      "passed": true
+    },
+    {
+      "id": "350-unknown-cannot-assert-an-amount",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "STRUCTURE"
+      ],
+      "passed": true
+    },
+    {
+      "id": "route-evidence-for-a-different-origin",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    },
+    {
+      "id": "route-evidence-for-a-different-destination",
+      "expected_accepted": false,
+      "accepted": false,
+      "failed_codes": [
+        "ROUTING",
+        "DURATION",
+        "RETURN_TRIP",
+        "WALKING",
+        "OPENING_HOURS"
+      ],
+      "passed": true
+    }
+  ]
+}

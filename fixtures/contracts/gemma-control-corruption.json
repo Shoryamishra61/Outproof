@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "historical_failure": true,
+  "source": "Phase 1 unconstrained expanded-model echo, preserved in evals/reports/phase-1.md",
+  "record_scope": "Recorded changed fields, not a reconstruction of the complete original response",
+  "authoritative_budget_minor_units": 50000,
+  "observed_budget_minor_units": 100000,
+  "authoritative_departure_at": null,
+  "observed_departure_was_invented": true
+}

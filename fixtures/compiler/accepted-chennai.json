@@ -1,0 +1,500 @@
+{
+  "mode": "FIXTURE",
+  "description": "Entirely synthetic; no real venue, price, hours, route or outing observation",
+  "as_of": "2026-10-07T01:00:00+00:00",
+  "controls": {
+    "currency_code": "INR",
+    "budget_minor_units": 50000,
+    "budget_scope": "PER_PERSON",
+    "duration_max_minutes": 90,
+    "party_mode": "FRIEND",
+    "party_size": 2,
+    "vibes": [
+      "Food",
+      "Talk"
+    ],
+    "hard_constraints": [
+      {
+        "kind": "DIETARY",
+        "value": "vegetarian"
+      },
+      {
+        "kind": "EXCLUDE_CATEGORY",
+        "value": "mall"
+      }
+    ],
+    "soft_constraints": [
+      {
+        "preference": "quiet"
+      }
+    ],
+    "max_walking_minutes": 30,
+    "max_walking_meters": 2500.0,
+    "return_by_local": null,
+    "locale": "en-IN",
+    "origin": {
+      "latitude": 13.0418,
+      "longitude": 80.2341
+    },
+    "departure_at": "2026-10-07T01:00:00+00:00",
+    "strict_budget": true
+  },
+  "places": [
+    {
+      "place_id": "fixture:cafe-1",
+      "provider": "FIXTURE",
+      "provider_id": "fixture-cafe-1",
+      "name": "FIXTURE Neem Courtyard Cafe",
+      "coordinates": {
+        "latitude": 13.044,
+        "longitude": 80.234
+      },
+      "categories": [
+        "cafe"
+      ],
+      "dietary_options": [
+        "vegetarian",
+        "vegan"
+      ],
+      "price": {
+        "confidence": "VERIFIED",
+        "lower": {
+          "currency_code": "INR",
+          "minor_units": 41000
+        },
+        "upper": {
+          "currency_code": "INR",
+          "minor_units": 41000
+        },
+        "scope": "PER_PERSON",
+        "evidence": [
+          {
+            "evidence_id": "fixture:cafe-1:price",
+            "subject_id": "fixture:cafe-1",
+            "field": "price",
+            "value": {
+              "currency_code": "INR",
+              "lower_minor_units": 41000,
+              "upper_minor_units": 41000,
+              "scope": "PER_PERSON",
+              "covers_all_mandatory_costs": true
+            },
+            "source": "FIXTURE",
+            "source_ref": "FIXTURE synthetic compiler observation",
+            "observed_at": "2026-10-07T01:00:00+00:00",
+            "expires_at": null,
+            "confidence": "HIGH"
+          }
+        ]
+      },
+      "opening_windows": [
+        {
+          "opens_at": "2026-10-07T01:00:00+00:00",
+          "closes_at": "2026-10-07T05:00:00+00:00",
+          "evidence": [
+            {
+              "evidence_id": "fixture:cafe-1:opening_window",
+              "subject_id": "fixture:cafe-1",
+              "field": "opening_window",
+              "value": [
+                "2026-10-07T01:00:00+00:00",
+                "2026-10-07T05:00:00+00:00"
+              ],
+              "source": "FIXTURE",
+              "source_ref": "FIXTURE synthetic compiler observation",
+              "observed_at": "2026-10-07T01:00:00+00:00",
+              "expires_at": null,
+              "confidence": "HIGH"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fixture:cafe-1:identity",
+          "subject_id": "fixture:cafe-1",
+          "field": "identity",
+          "value": {
+            "provider": "FIXTURE",
+            "provider_id": "fixture-cafe-1",
+            "name": "FIXTURE Neem Courtyard Cafe"
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:coordinates",
+          "subject_id": "fixture:cafe-1",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.044,
+            "longitude": 80.234
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:categories",
+          "subject_id": "fixture:cafe-1",
+          "field": "categories",
+          "value": [
+            "cafe"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:excluded_categories",
+          "subject_id": "fixture:cafe-1",
+          "field": "excluded_categories",
+          "value": [
+            "mall",
+            "alcohol",
+            "chain"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:dietary_options",
+          "subject_id": "fixture:cafe-1",
+          "field": "dietary_options",
+          "value": [
+            "vegetarian",
+            "vegan"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-1:fit",
+          "subject_id": "fixture:cafe-1",
+          "field": "soft_fit",
+          "value": [
+            "quiet",
+            "talk"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "place_id": "fixture:cafe-2",
+      "provider": "FIXTURE",
+      "provider_id": "fixture-cafe-2",
+      "name": "FIXTURE Banyan Vegetarian Kitchen",
+      "coordinates": {
+        "latitude": 13.045,
+        "longitude": 80.235
+      },
+      "categories": [
+        "cafe"
+      ],
+      "dietary_options": [
+        "vegetarian",
+        "vegan"
+      ],
+      "price": {
+        "confidence": "VERIFIED",
+        "lower": {
+          "currency_code": "INR",
+          "minor_units": 43000
+        },
+        "upper": {
+          "currency_code": "INR",
+          "minor_units": 43000
+        },
+        "scope": "PER_PERSON",
+        "evidence": [
+          {
+            "evidence_id": "fixture:cafe-2:price",
+            "subject_id": "fixture:cafe-2",
+            "field": "price",
+            "value": {
+              "currency_code": "INR",
+              "lower_minor_units": 43000,
+              "upper_minor_units": 43000,
+              "scope": "PER_PERSON",
+              "covers_all_mandatory_costs": true
+            },
+            "source": "FIXTURE",
+            "source_ref": "FIXTURE synthetic compiler observation",
+            "observed_at": "2026-10-07T01:00:00+00:00",
+            "expires_at": null,
+            "confidence": "HIGH"
+          }
+        ]
+      },
+      "opening_windows": [
+        {
+          "opens_at": "2026-10-07T01:00:00+00:00",
+          "closes_at": "2026-10-07T05:00:00+00:00",
+          "evidence": [
+            {
+              "evidence_id": "fixture:cafe-2:opening_window",
+              "subject_id": "fixture:cafe-2",
+              "field": "opening_window",
+              "value": [
+                "2026-10-07T01:00:00+00:00",
+                "2026-10-07T05:00:00+00:00"
+              ],
+              "source": "FIXTURE",
+              "source_ref": "FIXTURE synthetic compiler observation",
+              "observed_at": "2026-10-07T01:00:00+00:00",
+              "expires_at": null,
+              "confidence": "HIGH"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fixture:cafe-2:identity",
+          "subject_id": "fixture:cafe-2",
+          "field": "identity",
+          "value": {
+            "provider": "FIXTURE",
+            "provider_id": "fixture-cafe-2",
+            "name": "FIXTURE Banyan Vegetarian Kitchen"
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-2:coordinates",
+          "subject_id": "fixture:cafe-2",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.045,
+            "longitude": 80.235
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-2:categories",
+          "subject_id": "fixture:cafe-2",
+          "field": "categories",
+          "value": [
+            "cafe"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-2:excluded_categories",
+          "subject_id": "fixture:cafe-2",
+          "field": "excluded_categories",
+          "value": [
+            "mall",
+            "alcohol",
+            "chain"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-2:dietary_options",
+          "subject_id": "fixture:cafe-2",
+          "field": "dietary_options",
+          "value": [
+            "vegetarian",
+            "vegan"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "fixture:cafe-2:fit",
+          "subject_id": "fixture:cafe-2",
+          "field": "soft_fit",
+          "value": [
+            "quiet",
+            "talk"
+          ],
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "fixture-route-1-0",
+      "from_id": "origin",
+      "to_id": "fixture:cafe-1",
+      "reachable": true,
+      "duration_seconds": 480,
+      "distance_meters": 600.0,
+      "evidence": [
+        {
+          "evidence_id": "fixture-route-1-0:walking_route",
+          "subject_id": "fixture-route-1-0",
+          "field": "walking_route",
+          "value": {
+            "from_id": "origin",
+            "to_id": "fixture:cafe-1",
+            "reachable": true,
+            "duration_seconds": 480,
+            "distance_meters": 600.0,
+            "from_coordinates": {
+              "latitude": 13.0418,
+              "longitude": 80.2341
+            },
+            "to_coordinates": {
+              "latitude": 13.044,
+              "longitude": 80.234
+            }
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "route_id": "fixture-route-1-1",
+      "from_id": "fixture:cafe-1",
+      "to_id": "origin",
+      "reachable": true,
+      "duration_seconds": 540,
+      "distance_meters": 650.0,
+      "evidence": [
+        {
+          "evidence_id": "fixture-route-1-1:walking_route",
+          "subject_id": "fixture-route-1-1",
+          "field": "walking_route",
+          "value": {
+            "from_id": "fixture:cafe-1",
+            "to_id": "origin",
+            "reachable": true,
+            "duration_seconds": 540,
+            "distance_meters": 650.0,
+            "from_coordinates": {
+              "latitude": 13.044,
+              "longitude": 80.234
+            },
+            "to_coordinates": {
+              "latitude": 13.0418,
+              "longitude": 80.2341
+            }
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "route_id": "fixture-route-2-0",
+      "from_id": "origin",
+      "to_id": "fixture:cafe-2",
+      "reachable": true,
+      "duration_seconds": 480,
+      "distance_meters": 600.0,
+      "evidence": [
+        {
+          "evidence_id": "fixture-route-2-0:walking_route",
+          "subject_id": "fixture-route-2-0",
+          "field": "walking_route",
+          "value": {
+            "from_id": "origin",
+            "to_id": "fixture:cafe-2",
+            "reachable": true,
+            "duration_seconds": 480,
+            "distance_meters": 600.0,
+            "from_coordinates": {
+              "latitude": 13.0418,
+              "longitude": 80.2341
+            },
+            "to_coordinates": {
+              "latitude": 13.045,
+              "longitude": 80.235
+            }
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "route_id": "fixture-route-2-1",
+      "from_id": "fixture:cafe-2",
+      "to_id": "origin",
+      "reachable": true,
+      "duration_seconds": 540,
+      "distance_meters": 650.0,
+      "evidence": [
+        {
+          "evidence_id": "fixture-route-2-1:walking_route",
+          "subject_id": "fixture-route-2-1",
+          "field": "walking_route",
+          "value": {
+            "from_id": "fixture:cafe-2",
+            "to_id": "origin",
+            "reachable": true,
+            "duration_seconds": 540,
+            "distance_meters": 650.0,
+            "from_coordinates": {
+              "latitude": 13.045,
+              "longitude": 80.235
+            },
+            "to_coordinates": {
+              "latitude": 13.0418,
+              "longitude": 80.2341
+            }
+          },
+          "source": "FIXTURE",
+          "source_ref": "FIXTURE synthetic compiler observation",
+          "observed_at": "2026-10-07T01:00:00+00:00",
+          "expires_at": null,
+          "confidence": "HIGH"
+        }
+      ]
+    }
+  ]
+}
