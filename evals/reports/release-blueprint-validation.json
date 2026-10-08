@@ -1,0 +1,17 @@
+{
+  "http_status": 200,
+  "result": {
+    "plan": {
+      "databases": null,
+      "envGroups": null,
+      "keyValue": null,
+      "services": [
+        "outproof-api",
+        "outproof-web"
+      ],
+      "totalActions": 2,
+      "workflows": null
+    },
+    "valid": true
+  }
+}

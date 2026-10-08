@@ -1,6 +1,7 @@
 """Bounded OSM discovery; provider tags never become inferred operational facts."""
 
 from datetime import UTC, datetime
+from time import monotonic
 from typing import Protocol
 
 import httpx
@@ -12,6 +13,11 @@ class PlacesProvider(Protocol):
     async def discover(
         self, origin: Coordinates, radius_meters: int
     ) -> tuple[PlaceCandidate, ...] | CompilationFailure: ...
+
+
+class OverpassAvailability:
+    def __init__(self) -> None:
+        self.retry_at = 0.0
 
 
 def overpass_query(origin: Coordinates, radius_meters: int) -> str:
@@ -154,24 +160,34 @@ class OverpassPlacesProvider:
         self,
         client: httpx.AsyncClient,
         endpoint: str = "https://overpass-api.de/api/interpreter",
+        availability: OverpassAvailability | None = None,
     ) -> None:
         self.client = client
         self.endpoint = endpoint
+        self.availability = availability
 
     async def discover(
         self, origin: Coordinates, radius_meters: int
     ) -> tuple[PlaceCandidate, ...] | CompilationFailure:
         query = overpass_query(origin, radius_meters)
+        if self.availability and self.availability.retry_at > monotonic():
+            return CompilationFailure(
+                code="SOURCE_TEMPORARILY_UNAVAILABLE",
+                message="Discovery provider cooling down after an outage; retry later",
+            )
         try:
             response = await self.client.post(
                 self.endpoint,
                 data={"data": query},
                 timeout=40,
                 headers={"User-Agent": "GroundRule/0.1 (bounded development evaluation)"},
+                follow_redirects=False,
             )
             response.raise_for_status()
             return normalize_overpass(response.json(), observed_at=datetime.now(UTC))
         except (httpx.HTTPError, ValueError):
+            if self.availability:
+                self.availability.retry_at = monotonic() + 60
             return CompilationFailure(
                 code="SOURCE_TEMPORARILY_UNAVAILABLE", message="Overpass request failed"
             )

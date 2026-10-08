@@ -1,0 +1,43 @@
+{
+  "scope": "real remote Gemma inference over two synthetic validated candidates; zero physical outings",
+  "executed_at": "2026-10-08T20:46:05.847006+00:00",
+  "model": {
+    "name": "gemma4:e2b-it-qat",
+    "model": "gemma4:e2b-it-qat",
+    "modified_at": "2026-10-06T23:34:58.8575884+05:30",
+    "size": 4336358185,
+    "digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "4.6B",
+      "quantization_level": "Q4_0",
+      "context_length": 131072,
+      "embedding_length": 1536
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ]
+  },
+  "authentication": {
+    "missing": 401,
+    "wrong": 401,
+    "admin": 404,
+    "correct": 200
+  },
+  "elapsed_ms": 58852.89,
+  "selection": {
+    "selected_plan_id": "template-B:6df9514812d329eb0646542a",
+    "reason": "Selected for your soft preferences."
+  },
+  "candidate_count": 2,
+  "runtime": "dedicated local Ollama port 11436 behind authenticated bounded proxy and temporary HTTPS tunnel"
+}

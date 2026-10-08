@@ -44,6 +44,29 @@ def test_invalid_price_candidates_removed(count: int) -> None:
     assert isinstance(result, tuple) and len(result) == 2 - count
 
 
+def test_missing_price_or_hours_never_spends_routing_quota() -> None:
+    class NoRoute(FixtureProviders):
+        async def route(self, *args: object) -> object:
+            pytest.fail("Candidate without price/hours must be rejected before routing")
+
+    provider = NoRoute()
+    provider.places = tuple(p.model_copy(update={"price": None}) for p in provider.places)
+    assert valid(provider) == ()
+    provider = NoRoute()
+    provider.places = tuple(
+        p.model_copy(
+            update={
+                "opening_windows": None,
+                "evidence": tuple(
+                    e for e in p.evidence if e.field not in {"opening_hours", "timezone"}
+                ),
+            }
+        )
+        for p in provider.places
+    )
+    assert valid(provider) == ()
+
+
 @pytest.mark.parametrize("stage", ["enrichment", "routing", "discovery"])
 def test_provider_failure(stage: str) -> None:
     class Broken(FixtureProviders):

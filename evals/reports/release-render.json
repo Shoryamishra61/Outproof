@@ -1,0 +1,24 @@
+{
+  "executed_at": "2026-10-08T20:33:29.979990+00:00",
+  "ci_run": "https://github.com/Shoryamishra61/Outproof/actions/runs/37840031120",
+  "services": [
+    {
+      "name": "outproof-api",
+      "id": "srv-db3vs6ub7d7c739r2sq0",
+      "type": "web_service",
+      "plan": "free",
+      "url": "https://outproof-api.onrender.com",
+      "dashboardUrl": "https://dashboard.render.com/web/srv-db3vs6ub7d7c739r2sq0"
+    },
+    {
+      "name": "outproof-web",
+      "id": "srv-db3vs8eb7d7c739r31l0",
+      "type": "static_site",
+      "plan": "static-free",
+      "url": "https://outproof-web.onrender.com",
+      "dashboardUrl": "https://dashboard.render.com/static/srv-db3vs8eb7d7c739r31l0"
+    }
+  ],
+  "configuration_update_status": 200,
+  "api_deploy_id": "dep-db3vs94s728c73fe9vug"
+}

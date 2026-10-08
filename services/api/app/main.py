@@ -32,7 +32,7 @@ from app.live import GATE, LiveEnrichmentProvider, LivePlacesProvider
 from app.model_connection import model_connection
 from app.observability import configure
 from app.parser import parse_constraints
-from app.places import PlacesProvider
+from app.places import OverpassAvailability, PlacesProvider
 from app.ranker import LocalGemma, ModelProvider
 from app.routing import RoutingProvider, ValhallaRoutingProvider
 from app.source_discovery import SerpSourceDiscovery
@@ -64,6 +64,11 @@ def create_app(
     clock: Callable[[], datetime] = lambda: datetime.now(UTC),
 ) -> FastAPI:
     configure()
+    logging.getLogger("httpx").setLevel(logging.WARNING)
+    technical_logger = logging.getLogger("app")
+    technical_logger.setLevel(logging.INFO)
+    if not technical_logger.handlers:
+        technical_logger.addHandler(logging.StreamHandler())
     app = FastAPI(title="Ground Rule", version="0.1.0")
     origins = [s.strip() for s in os.getenv("GROUND_RULE_CORS_ORIGINS", "").split(",") if s.strip()]
     if "*" in origins:
@@ -82,6 +87,7 @@ def create_app(
     ready_lock = asyncio.Lock()
     recent: dict[str, deque[float]] = {}
     salt = secrets.token_bytes(32)
+    overpass_availability = OverpassAvailability()
     search = SerpSourceDiscovery(
         os.getenv("SERPAPI_API_KEY") if os.getenv("GROUND_RULE_SERPAPI_ENABLED") == "true" else None
     )
@@ -310,6 +316,7 @@ def create_app(
                                     "OVERPASS_URL", "https://overpass-api.de/api/interpreter"
                                 ),
                                 search=search,
+                                availability=overpass_availability,
                             )
                             enrichment = live_enrichment or LiveEnrichmentProvider(clock=clock)
                             routing = live_routing or ValhallaRoutingProvider(

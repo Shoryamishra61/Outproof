@@ -14,7 +14,7 @@ from ground_rule.models import (
     PlaceCandidate,
     ValidationResult,
 )
-from ground_rule.plans import build_candidates
+from ground_rule.plans import build_candidates, has_category_evidence
 from ground_rule.policy import validate_plan
 from ground_rule.proof import place_sources
 
@@ -147,14 +147,22 @@ async def valid_candidate_plans(
         if any(sources.get(e.evidence_id) != e for e in place_sources(original)):
             continue
         places.append(candidate)
-    operational_candidates = [
+    # Missing admission/price or hours cannot be repaired by routing or ranking.
+    places = [
         p
         for p in places
         if p.price is not None
-        or p.opening_windows is not None
-        or any(e.field == "public_access" for e in p.evidence)
-    ]
-    places = operational_candidates[:12] if operational_candidates else places[:12]
+        and p.price.upper is not None
+        and has_category_evidence(p, as_of, allow_fixture)
+        and (
+            p.opening_windows
+            or (
+                p.opening_windows is None
+                and any(e.field == "opening_hours" for e in p.evidence)
+                and any(e.field == "timezone" for e in p.evidence)
+            )
+        )
+    ][:12]
     if not places:
         return failure or ()
     legs = [("origin", p.place_id, controls.origin, p.coordinates) for p in places]

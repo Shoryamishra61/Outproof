@@ -15,7 +15,7 @@ from ground_rule.models import (
     PriceEvidence,
 )
 
-from app.places import OverpassPlacesProvider
+from app.places import OverpassAvailability, OverpassPlacesProvider
 from app.source_discovery import SerpSourceDiscovery
 
 PARK_SOURCE = "https://sbg.nparks.gov.sg/visit/general-info/"
@@ -147,10 +147,14 @@ class LivePlacesProvider:
     """One reviewed public garden entrance; other regions retain generic discovery only."""
 
     def __init__(
-        self, client: httpx.AsyncClient, endpoint: str, search: SerpSourceDiscovery | None = None
+        self,
+        client: httpx.AsyncClient,
+        endpoint: str,
+        search: SerpSourceDiscovery | None = None,
+        availability: OverpassAvailability | None = None,
     ) -> None:
         self.client = client
-        self.discovery = OverpassPlacesProvider(client, endpoint)
+        self.discovery = OverpassPlacesProvider(client, endpoint, availability)
         self.search = search
 
     async def discover(

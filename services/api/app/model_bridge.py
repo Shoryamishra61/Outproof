@@ -4,12 +4,28 @@ import asyncio
 import json
 import os
 import secrets
+from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager, nullcontext
 
 import httpx
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
-app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+
+@asynccontextmanager
+async def lifespan(app: FastAPI) -> AsyncIterator[None]:
+    if os.name == "nt":
+        import ctypes
+
+        ctypes.windll.kernel32.SetThreadExecutionState(0x80000001)
+    try:
+        yield
+    finally:
+        if os.name == "nt":
+            ctypes.windll.kernel32.SetThreadExecutionState(0x80000000)
+
+
+app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
 busy = asyncio.Lock()
 
 
@@ -22,7 +38,7 @@ async def proxy(operation: str, request: Request) -> JSONResponse:
         return JSONResponse(status_code=401, content={"error": "Authentication required"})
     if (operation, request.method) not in {("tags", "GET"), ("chat", "POST")}:
         return JSONResponse(status_code=404, content={"error": "Unsupported operation"})
-    if busy.locked():
+    if operation == "chat" and busy.locked():
         return JSONResponse(status_code=429, content={"error": "Model busy"})
     model = os.getenv("GEMMA_MODEL", "gemma4:e2b-it-qat")
     try:
@@ -58,6 +74,7 @@ async def proxy(operation: str, request: Request) -> JSONResponse:
                 "format": payload.get("format"),
                 "stream": False,
                 "think": False,
+                "keep_alive": "30m",
                 "options": {
                     "temperature": 0,
                     "seed": 42,
@@ -67,8 +84,14 @@ async def proxy(operation: str, request: Request) -> JSONResponse:
                     ),
                 },
             }
-        async with busy, httpx.AsyncClient(trust_env=False, timeout=125) as client:
-            url = "http://127.0.0.1:11434/api/" + operation
+        async with (
+            busy if operation == "chat" else nullcontext(),
+            httpx.AsyncClient(trust_env=False, timeout=125) as client,
+        ):
+            port = int(os.getenv("OLLAMA_LOCAL_PORT", "11436"))
+            if not 1 <= port <= 65535:
+                raise ValueError("Invalid local model port")
+            url = f"http://127.0.0.1:{port}/api/" + operation
             response = await (
                 client.get(url) if operation == "tags" else client.post(url, json=payload)
             )

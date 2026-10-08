@@ -3,18 +3,20 @@
 Measures verified compilation vs safe typed failure.
 """
 
+import argparse
 import asyncio
 import json
 import logging
+import os
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
-from time import perf_counter
+from time import monotonic, perf_counter
 
 import httpx
 from app.compilation import compile_internal
-from app.live import LiveEnrichmentProvider
-from app.places import OverpassPlacesProvider
+from app.live import LiveEnrichmentProvider, LivePlacesProvider
+from app.places import OverpassAvailability
 from app.ranker import LocalGemma
 from app.routing import ValhallaRoutingProvider
 from ground_rule.models import (
@@ -43,6 +45,7 @@ async def evaluate_scenario(
     client: httpx.AsyncClient,
     ranker: LocalGemma,
     clock: Callable[[], datetime] = lambda: datetime.now(UTC),
+    availability: OverpassAvailability | None = None,
 ) -> dict:
     s_id = scenario["id"]
     city = scenario["city"]
@@ -80,26 +83,33 @@ async def evaluate_scenario(
         strict_budget=raw_controls.get("strict_budget", True),
     )
 
-    discovery = OverpassPlacesProvider(client)
+    discovery = LivePlacesProvider(
+        client,
+        os.getenv("OVERPASS_URL", "https://overpass-api.de/api/interpreter"),
+        availability=availability,
+    )
     enrichment = LiveEnrichmentProvider(clock=clock)
     routing = ValhallaRoutingProvider(client, "https://valhalla1.openstreetmap.de")
 
     compile_started = perf_counter()
     try:
-        result = await compile_internal(
-            controls,
-            discovery,
-            enrichment,
-            routing,
-            ranker,
-            as_of=now,
-            mode="LIVE",
-            clock=clock,
+        result = await asyncio.wait_for(
+            compile_internal(
+                controls,
+                discovery,
+                enrichment,
+                routing,
+                ranker,
+                as_of=now,
+                mode="LIVE",
+                clock=clock,
+            ),
+            timeout=45,
         )
     except Exception as exc:
         result = CompilationFailure(
             code="SOURCE_TEMPORARILY_UNAVAILABLE",
-            message=f"Provider or execution error: {exc}",
+            message=f"Provider or execution error category: {type(exc).__name__}",
         )
     compile_latency_ms = round((perf_counter() - compile_started) * 1000, 2)
     hard_violations = 0
@@ -134,6 +144,9 @@ async def evaluate_scenario(
             "outcome": outcome,
             "plan_id": plan_id,
             "venue": result.plan.stops[0].place.name if result.plan.stops else None,
+            "provenance": [e.model_dump(mode="json") for e in result.proof.sources],
+            "gate_breakdown": [c.model_dump(mode="json") for c in result.proof.validation.checks],
+            "compiled_at": result.compiled_at.isoformat(),
             "duration_minutes": round(result.proof.total_duration_seconds / 60, 1),
             "cost_minor_units": result.proof.cost.upper.minor_units
             if result.proof.cost.upper
@@ -147,7 +160,11 @@ async def evaluate_scenario(
             "multiple_plans_errors": multiple_default_plans,
         }
     else:
-        outcome = "SAFE_FAILURE"
+        outcome = (
+            "TEMPORARY_PROVIDER_ERROR"
+            if result.code == "SOURCE_TEMPORARILY_UNAVAILABLE"
+            else "TYPED_REJECTION"
+        )
         summary = {
             "id": s_id,
             "city": city,
@@ -161,10 +178,20 @@ async def evaluate_scenario(
             "multiple_plans_errors": multiple_default_plans,
         }
 
+    summary.update(
+        locale=controls.locale,
+        model=ranker.model,
+        retry_count=0,
+        input_case=scenario,
+        source_mode="LIVE",
+        trace=f"global:{s_id}",
+    )
     return summary
 
 
-async def run_global_evaluation() -> dict:
+async def run_global_evaluation(output: Path) -> dict:
+    if output.exists():
+        raise ValueError("Refusing to overwrite prior observations")
     cases_path = Path("evals/cases/global_scenarios.jsonl")
     scenarios = load_scenarios(cases_path)
     logger.info(
@@ -175,11 +202,19 @@ async def run_global_evaluation() -> dict:
         return datetime.now(UTC)
 
     results = []
+    availability = OverpassAvailability()
 
     async with httpx.AsyncClient(trust_env=False, timeout=30.0) as client:
-        ranker = LocalGemma(client, "gemma4:e2b-it-qat", "http://127.0.0.1:11434")
+        ranker = LocalGemma(
+            client,
+            os.getenv("GEMMA_MODEL", "gemma4:e2b-it-qat"),
+            os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434"),
+            api_key=os.getenv("GEMMA_API_KEY"),
+        )
 
         for idx, scenario in enumerate(scenarios, start=1):
+            while availability.retry_at > monotonic():
+                await asyncio.sleep(min(5, availability.retry_at - monotonic()))
             logger.info(
                 "[%d/%d] Running scenario %s (%s)...",
                 idx,
@@ -187,13 +222,23 @@ async def run_global_evaluation() -> dict:
                 scenario["id"],
                 scenario["city"],
             )
-            summary = await evaluate_scenario(scenario, client, ranker, clock=now_clock)
+            summary = await evaluate_scenario(
+                scenario, client, ranker, clock=now_clock, availability=availability
+            )
             results.append(summary)
+            output.with_suffix(".partial.json").write_text(
+                json.dumps(
+                    {"executed_at": datetime.now(UTC).isoformat(), "results": results}, indent=2
+                )
+                + "\n",
+                encoding="utf-8",
+            )
             # Brief pause between scenarios to avoid rate limits
             await asyncio.sleep(0.3)
 
     successful = [r for r in results if r["outcome"] == "SUCCESS"]
-    safe_failures = [r for r in results if r["outcome"] == "SAFE_FAILURE"]
+    safe_failures = [r for r in results if r["outcome"] != "SUCCESS"]
+    provider_errors = [r for r in results if r["outcome"] == "TEMPORARY_PROVIDER_ERROR"]
     total_hard_violations = sum(r["hard_violations"] for r in results)
     total_hallucinated = sum(r["hallucinated_venues"] for r in results)
     total_price_errors = sum(r["unknown_price_errors"] for r in results)
@@ -215,14 +260,17 @@ async def run_global_evaluation() -> dict:
         "cities": cities,
         "metrics": {
             "successful_compilations": len(successful),
-            "safe_typed_failures": len(safe_failures),
+            "typed_rejections": len(safe_failures) - len(provider_errors),
+            "temporary_provider_errors": len(provider_errors),
+            "accepted_population": len(successful),
             "hard_violations": total_hard_violations,
             "hallucinated_displayed_venues": total_hallucinated,
             "unknown_prices_presented_as_guaranteed": total_price_errors,
             "multiple_default_plans": total_multiple_plans,
             "average_latency_ms": avg_latency,
             "target_gates_passed": (
-                total_hard_violations == 0
+                len(successful) > 0
+                and total_hard_violations == 0
                 and total_hallucinated == 0
                 and total_price_errors == 0
                 and total_multiple_plans == 0
@@ -232,80 +280,29 @@ async def run_global_evaluation() -> dict:
         "results": results,
     }
 
-    # Write JSON report
-    json_path = Path("evals/reports/global-eval-results.json")
-    json_path.parent.mkdir(parents=True, exist_ok=True)
-    json_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-    # Write Markdown report
-    md_path = Path("evals/reports/global-eval-results.md")
-    md_content = f"""# Global Evaluation Report: 50 Scenarios across {len(cities)} Cities
-
-Evaluated At: {report["evaluated_at"]}
-
-## Summary Metrics
-
-| Metric | Target | Actual | Gate Status |
-|---|---|---|---|
-| Total Scenarios | >=50 | {len(results)} | PASS |
-| Global Cities Covered | >=10 | {len(cities)} | PASS |
-| Hard Policy Violations | 0 | {total_hard_violations} | PASS |
-| Hallucinated Displayed Venues | 0 | {total_hallucinated} | PASS |
-| Unknown Prices Shown as Guaranteed | 0 | {total_price_errors} | PASS |
-| Multiple Default Plans Displayed | 0 | {total_multiple_plans} | PASS |
-| Successful Verified Compiles | - | {len(successful)} | RECORDED |
-| Safe Typed Failures | - | {len(safe_failures)} | RECORDED |
-| Average Latency | - | {avg_latency} ms | RECORDED |
-
-## Core Engineering Law Compliance
-
-> **LLMs interpret. Data grounds. Code verifies.**
-
-Across all 50 global scenarios in 19 cities:
-1. **0 Hard Violations**: Every accepted plan satisfies all 11 deterministic checks.
-2. **0 Hallucinations**: Every displayed POI is grounded to an authoritative OSM record.
-3. **0 Guesswork**: Unproven commercial places in external cities fail closed with typed
-   domain errors (`NO_GROUNDED_CANDIDATES`, `NO_BUDGET_VERIFIED_PLAN`, etc.) rather than
-   fabricating menu prices, hours, or indoor mall status.
-4. **Exactly One Plan**: Every successful compilation returns exactly one verified plan
-   with deterministic Plan Proof.
-
-## Failure Breakdown (Safe Closed Failures)
-
-| Typed Failure Code | Count | Semantic Justification |
-|---|---|---|
-"""
-    for code, count in sorted(failure_breakdown.items()):
-        md_content += (
-            f"| `{code}` | {count} | "
-            "Grounded facts incomplete; failed closed per AGENTS.md invariant |\n"
-        )
-
-    md_content += f"""
-## Cities Tested ({len(cities)})
-
-{", ".join(cities)}
-
-## Detailed Scenario Results
-
-| ID | City | Outcome | Venue / Error | Latency |
-|---|---|---|---|---|
-"""
-    for r in results:
-        venue_or_err = r.get("venue") or f"`{r.get('failure_code')}`"
-        md_content += (
-            f"| {r['id']} | {r['city']} | {r['outcome']} | {venue_or_err} | "
-            f"{r['latency_ms']} ms |\n"
-        )
-
-    md_path.write_text(md_content, encoding="utf-8")
-    print(
-        f"Global eval complete: {len(results)} scenarios, "
-        f"{len(successful)} success, {len(safe_failures)} safe failures, 0 violations."
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    output.with_suffix(".md").write_text(
+        f"# Fresh global source evaluation\n\n{report['evaluated_at']} UTC. "
+        f"{len(results)} actual live attempts across {len(cities)} cities. "
+        f"{len(successful)} accepted; "
+        f"{len(safe_failures) - len(provider_errors)} typed rejections; "
+        f"{len(provider_errors)} temporary provider errors.\n\n"
+        "Unsupported facts remain unknown. "
+        "Zero accepted cases cannot establish successful global coverage. "
+        "Generated/control tests and physical outings are excluded. "
+        "The JSON contains inputs, status, source mode, "
+        "retry counts, model identifier, latency and full provenance/gate breakdown "
+        "where a plan was accepted.\n",
+        encoding="utf-8",
     )
+    print(json.dumps(report["metrics"]))
     return report
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=Path("evals/reports/FINAL_GLOBAL_EVAL.json"))
+    args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-    asyncio.run(run_global_evaluation())
+    asyncio.run(run_global_evaluation(args.output))

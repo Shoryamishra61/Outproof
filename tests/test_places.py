@@ -153,3 +153,27 @@ def test_provider_success_is_normalized() -> None:
             )
 
     asyncio.run(run())
+
+
+def test_outage_cooldown_prevents_repeated_requests_and_recovers() -> None:
+    from app.places import OverpassAvailability
+
+    calls = 0
+
+    def handle(request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        return httpx.Response(429 if calls == 1 else 200, json=response())
+
+    async def run() -> None:
+        availability = OverpassAvailability()
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handle)) as client:
+            provider = OverpassPlacesProvider(client, availability=availability)
+            for _ in range(3):
+                assert isinstance(await provider.discover(ORIGIN, 1000), CompilationFailure)
+            assert calls == 1
+            availability.retry_at = 0
+            assert not isinstance(await provider.discover(ORIGIN, 1000), CompilationFailure)
+            assert calls == 2
+
+    asyncio.run(run())
