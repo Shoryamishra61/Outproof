@@ -1,0 +1,4782 @@
+{
+  "scope": "LIVE discovery plus bounded official-source investigation; NOT a compiler/global/field benchmark",
+  "observed_at": "2026-10-07T08:29:35.858974+00:00",
+  "discovery_artifacts": [
+    "evals/reports/discovery-chennai-live-2.json",
+    "evals/reports/discovery-chennai-expanded-live-1.json"
+  ],
+  "response_records": 289,
+  "unique_identities": 273,
+  "positive_vegetarian_count": 19,
+  "complete_price_count": 0,
+  "candidates": [
+    {
+      "place_id": "osm:node/10307972067",
+      "provider_id": "node/10307972067",
+      "name": "Omar Khayyam",
+      "coordinates": {
+        "latitude": 13.0408892,
+        "longitude": 80.2317501
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10307972067"
+      ]
+    },
+    {
+      "place_id": "osm:node/10307972083",
+      "provider_id": "node/10307972083",
+      "name": "Hot Chips",
+      "coordinates": {
+        "latitude": 13.0408527,
+        "longitude": 80.2311764
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10307972083"
+      ]
+    },
+    {
+      "place_id": "osm:node/10308012367",
+      "provider_id": "node/10308012367",
+      "name": "Nic Nac",
+      "coordinates": {
+        "latitude": 13.0406949,
+        "longitude": 80.2322275
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10308012367"
+      ]
+    },
+    {
+      "place_id": "osm:node/12473051001",
+      "provider_id": "node/12473051001",
+      "name": "Paati Veedu",
+      "coordinates": {
+        "latitude": 13.0477044,
+        "longitude": 80.2390445
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12473051001"
+      ]
+    },
+    {
+      "place_id": "osm:node/13265521716",
+      "provider_id": "node/13265521716",
+      "name": "Pudukkottai Ayya Chettinadu Mess",
+      "coordinates": {
+        "latitude": 13.0391705,
+        "longitude": 80.2389414
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13265521716"
+      ]
+    },
+    {
+      "place_id": "osm:node/13311063201",
+      "provider_id": "node/13311063201",
+      "name": "ஹாட் சிபஎஸ்",
+      "coordinates": {
+        "latitude": 13.0413033,
+        "longitude": 80.2348192
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13311063201"
+      ]
+    },
+    {
+      "place_id": "osm:node/13742612724",
+      "provider_id": "node/13742612724",
+      "name": "Aavin parlour",
+      "coordinates": {
+        "latitude": 13.040618,
+        "longitude": 80.2395851
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13742612724"
+      ]
+    },
+    {
+      "place_id": "osm:node/13742637360",
+      "provider_id": "node/13742637360",
+      "name": "New Andhra Meals Hotel",
+      "coordinates": {
+        "latitude": 13.0406713,
+        "longitude": 80.2394335
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13742637360"
+      ]
+    },
+    {
+      "place_id": "osm:node/13743048380",
+      "provider_id": "node/13743048380",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0409378,
+        "longitude": 80.2376226
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13743048380"
+      ]
+    },
+    {
+      "place_id": "osm:node/13760433043",
+      "provider_id": "node/13760433043",
+      "name": "சபா காபி & டீ நேரம்",
+      "coordinates": {
+        "latitude": 13.0352011,
+        "longitude": 80.2301862
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13760433043"
+      ]
+    },
+    {
+      "place_id": "osm:node/14005877596",
+      "provider_id": "node/14005877596",
+      "name": "Nasi Kandar Pelita",
+      "coordinates": {
+        "latitude": 13.0399141,
+        "longitude": 80.2418278
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/14005877596"
+      ]
+    },
+    {
+      "place_id": "osm:node/2000840330",
+      "provider_id": "node/2000840330",
+      "name": "Banana Leaf",
+      "coordinates": {
+        "latitude": 13.0408188,
+        "longitude": 80.2380816
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2000840330"
+      ]
+    },
+    {
+      "place_id": "osm:node/2001148133",
+      "provider_id": "node/2001148133",
+      "name": "Nalas Aappakadai",
+      "coordinates": {
+        "latitude": 13.0414192,
+        "longitude": 80.2381571
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2001148133"
+      ]
+    },
+    {
+      "place_id": "osm:node/2270331348",
+      "provider_id": "node/2270331348",
+      "name": "Panagal Park",
+      "coordinates": {
+        "latitude": 13.0410311,
+        "longitude": 80.2332635
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2270331348"
+      ]
+    },
+    {
+      "place_id": "osm:node/3508291445",
+      "provider_id": "node/3508291445",
+      "name": "Indian Cofee House",
+      "coordinates": {
+        "latitude": 13.0348438,
+        "longitude": 80.2305246
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/3508291445"
+      ]
+    },
+    {
+      "place_id": "osm:node/353206130",
+      "provider_id": "node/353206130",
+      "name": "Barbecue Nation",
+      "coordinates": {
+        "latitude": 13.0454388,
+        "longitude": 80.2331563
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/353206130"
+      ]
+    },
+    {
+      "place_id": "osm:node/3736887372",
+      "provider_id": "node/3736887372",
+      "name": "Grill Box BBQ",
+      "coordinates": {
+        "latitude": 13.0455027,
+        "longitude": 80.2355696
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/3736887372"
+      ]
+    },
+    {
+      "place_id": "osm:node/4011491489",
+      "provider_id": "node/4011491489",
+      "name": "Naidu Andhra Mess",
+      "coordinates": {
+        "latitude": 13.0353775,
+        "longitude": 80.2343301
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4011491489"
+      ]
+    },
+    {
+      "place_id": "osm:node/4241509490",
+      "provider_id": "node/4241509490",
+      "name": "absolute barbeques ",
+      "coordinates": {
+        "latitude": 13.045426,
+        "longitude": 80.2412295
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4241509490"
+      ]
+    },
+    {
+      "place_id": "osm:node/4241530290",
+      "provider_id": "node/4241530290",
+      "name": "madras coffee house",
+      "coordinates": {
+        "latitude": 13.0469371,
+        "longitude": 80.2368552
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4241530290"
+      ]
+    },
+    {
+      "place_id": "osm:node/4681428385",
+      "provider_id": "node/4681428385",
+      "name": "Murugan Idli Shop",
+      "coordinates": {
+        "latitude": 13.0378221,
+        "longitude": 80.2301551
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4681428385"
+      ]
+    },
+    {
+      "place_id": "osm:node/4681455945",
+      "provider_id": "node/4681455945",
+      "name": "Candose Ice Cream Palour",
+      "coordinates": {
+        "latitude": 13.039421,
+        "longitude": 80.2288253
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4681455945"
+      ]
+    },
+    {
+      "place_id": "osm:node/4711359172",
+      "provider_id": "node/4711359172",
+      "name": "Cafeteria",
+      "coordinates": {
+        "latitude": 13.042971,
+        "longitude": 80.2333968
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4711359172"
+      ]
+    },
+    {
+      "place_id": "osm:node/4797659570",
+      "provider_id": "node/4797659570",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0363714,
+        "longitude": 80.2304855
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4797659570"
+      ]
+    },
+    {
+      "place_id": "osm:node/5230272395",
+      "provider_id": "node/5230272395",
+      "name": "Hotel Sabari",
+      "coordinates": {
+        "latitude": 13.0474926,
+        "longitude": 80.2400944
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5230272395"
+      ]
+    },
+    {
+      "place_id": "osm:node/6235479733",
+      "provider_id": "node/6235479733",
+      "name": "Noodle Theory",
+      "coordinates": {
+        "latitude": 13.0456112,
+        "longitude": 80.2408779
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6235479733"
+      ]
+    },
+    {
+      "place_id": "osm:node/9418560328",
+      "provider_id": "node/9418560328",
+      "name": "That Mallu Joint",
+      "coordinates": {
+        "latitude": 13.0416717,
+        "longitude": 80.2346309
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/9418560328"
+      ]
+    },
+    {
+      "place_id": "osm:way/1252873481",
+      "provider_id": "way/1252873481",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.037546,
+        "longitude": 80.2367583
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1252873481"
+      ]
+    },
+    {
+      "place_id": "osm:way/1252873484",
+      "provider_id": "way/1252873484",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0372996,
+        "longitude": 80.2362712
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1252873484"
+      ]
+    },
+    {
+      "place_id": "osm:way/209513246",
+      "provider_id": "way/209513246",
+      "name": "Panagal Park",
+      "coordinates": {
+        "latitude": 13.0414253,
+        "longitude": 80.2330639
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/209513246"
+      ]
+    },
+    {
+      "place_id": "osm:way/23186292",
+      "provider_id": "way/23186292",
+      "name": "Jeeva Park",
+      "coordinates": {
+        "latitude": 13.0440022,
+        "longitude": 80.2377658
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/23186292"
+      ]
+    },
+    {
+      "place_id": "osm:way/23186293",
+      "provider_id": "way/23186293",
+      "name": "Ramakrishna Mission School Ground",
+      "coordinates": {
+        "latitude": 13.0432712,
+        "longitude": 80.2381145
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/23186293"
+      ]
+    },
+    {
+      "place_id": "osm:way/23186294",
+      "provider_id": "way/23186294",
+      "name": "Somasundaram ground",
+      "coordinates": {
+        "latitude": 13.0458886,
+        "longitude": 80.2343274
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/23186294"
+      ]
+    },
+    {
+      "place_id": "osm:way/28085766",
+      "provider_id": "way/28085766",
+      "name": "Natesan Park",
+      "coordinates": {
+        "latitude": 13.0375701,
+        "longitude": 80.2363965
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/28085766"
+      ]
+    },
+    {
+      "place_id": "osm:way/28085769",
+      "provider_id": "way/28085769",
+      "name": "Corporation Ground",
+      "coordinates": {
+        "latitude": 13.0371628,
+        "longitude": 80.2356263
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/28085769"
+      ]
+    },
+    {
+      "place_id": "osm:way/354578081",
+      "provider_id": "way/354578081",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0470304,
+        "longitude": 80.2365322
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/354578081"
+      ]
+    },
+    {
+      "place_id": "osm:way/354769193",
+      "provider_id": "way/354769193",
+      "name": "Murugan Idli Shop",
+      "coordinates": {
+        "latitude": 13.0453849,
+        "longitude": 80.2328621
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/354769193"
+      ]
+    },
+    {
+      "place_id": "osm:way/354771357",
+      "provider_id": "way/354771357",
+      "name": "D Cafe",
+      "coordinates": {
+        "latitude": 13.0467936,
+        "longitude": 80.2352757
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/354771357"
+      ]
+    },
+    {
+      "place_id": "osm:way/441568062",
+      "provider_id": "way/441568062",
+      "name": "Sri Krishna Sweets",
+      "coordinates": {
+        "latitude": 13.0432408,
+        "longitude": 80.2301269
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/441568062"
+      ]
+    },
+    {
+      "place_id": "osm:node/10139491414",
+      "provider_id": "node/10139491414",
+      "name": "Konar Kadai",
+      "coordinates": {
+        "latitude": 13.07648,
+        "longitude": 80.2643566
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10139491414"
+      ]
+    },
+    {
+      "place_id": "osm:node/10173145886",
+      "provider_id": "node/10173145886",
+      "name": "Manjal",
+      "coordinates": {
+        "latitude": 13.0453571,
+        "longitude": 80.2555131
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10173145886"
+      ]
+    },
+    {
+      "place_id": "osm:node/10261896854",
+      "provider_id": "node/10261896854",
+      "name": "Psychedelic Hues - Art house and Cafe",
+      "coordinates": {
+        "latitude": 13.0754835,
+        "longitude": 80.2588986
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10261896854"
+      ]
+    },
+    {
+      "place_id": "osm:node/10316739368",
+      "provider_id": "node/10316739368",
+      "name": "Six 'O' One",
+      "coordinates": {
+        "latitude": 13.0528083,
+        "longitude": 80.2496472
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10316739368"
+      ]
+    },
+    {
+      "place_id": "osm:node/10316946203",
+      "provider_id": "node/10316946203",
+      "name": "Chai Kings",
+      "coordinates": {
+        "latitude": 13.0577863,
+        "longitude": 80.2574861
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10316946203"
+      ]
+    },
+    {
+      "place_id": "osm:node/1053605071",
+      "provider_id": "node/1053605071",
+      "name": "Shankara Bhavan",
+      "coordinates": {
+        "latitude": 13.051775,
+        "longitude": 80.2430546
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1053605071"
+      ]
+    },
+    {
+      "place_id": "osm:node/10593554605",
+      "provider_id": "node/10593554605",
+      "name": "சங்கீதா",
+      "coordinates": {
+        "latitude": 13.0771123,
+        "longitude": 80.2613554
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10593554605"
+      ]
+    },
+    {
+      "place_id": "osm:node/10742709880",
+      "provider_id": "node/10742709880",
+      "name": "Hotel Shiva Sagar",
+      "coordinates": {
+        "latitude": 13.0847852,
+        "longitude": 80.2761096
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10742709880"
+      ]
+    },
+    {
+      "place_id": "osm:node/10742709884",
+      "provider_id": "node/10742709884",
+      "name": "Sri Vinayaga Tea Stall",
+      "coordinates": {
+        "latitude": 13.0848718,
+        "longitude": 80.2760315
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10742709884"
+      ]
+    },
+    {
+      "place_id": "osm:node/10742709889",
+      "provider_id": "node/10742709889",
+      "name": "Sri Magesh Chettinadu Restaurant",
+      "coordinates": {
+        "latitude": 13.0849943,
+        "longitude": 80.2760161
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10742709889"
+      ]
+    },
+    {
+      "place_id": "osm:node/10742858729",
+      "provider_id": "node/10742858729",
+      "name": "New Central Hotel",
+      "coordinates": {
+        "latitude": 13.0835958,
+        "longitude": 80.2762218
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10742858729"
+      ]
+    },
+    {
+      "place_id": "osm:node/10742858734",
+      "provider_id": "node/10742858734",
+      "name": "OSCAR Restaurant",
+      "coordinates": {
+        "latitude": 13.0835518,
+        "longitude": 80.2763247
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10742858734"
+      ]
+    },
+    {
+      "place_id": "osm:node/1080219492",
+      "provider_id": "node/1080219492",
+      "name": "Karaikudi",
+      "coordinates": {
+        "latitude": 13.0448865,
+        "longitude": 80.2644988
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1080219492"
+      ]
+    },
+    {
+      "place_id": "osm:node/1108029781",
+      "provider_id": "node/1108029781",
+      "name": "Twilight Takeout",
+      "coordinates": {
+        "latitude": 13.0544491,
+        "longitude": 80.2392199
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1108029781"
+      ]
+    },
+    {
+      "place_id": "osm:node/11178386321",
+      "provider_id": "node/11178386321",
+      "name": "Namma Veedu Vasanta Bhavan",
+      "coordinates": {
+        "latitude": 13.0774212,
+        "longitude": 80.2617168
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11178386321"
+      ]
+    },
+    {
+      "place_id": "osm:node/11306582873",
+      "provider_id": "node/11306582873",
+      "name": "Andhra Bhavan",
+      "coordinates": {
+        "latitude": 13.0809129,
+        "longitude": 80.2698337
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11306582873"
+      ]
+    },
+    {
+      "place_id": "osm:node/11309436649",
+      "provider_id": "node/11309436649",
+      "name": "Irfan Snack Bar",
+      "coordinates": {
+        "latitude": 13.0822249,
+        "longitude": 80.2779874
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11309436649"
+      ]
+    },
+    {
+      "place_id": "osm:node/11309436650",
+      "provider_id": "node/11309436650",
+      "name": "A1 Fast Food",
+      "coordinates": {
+        "latitude": 13.0822821,
+        "longitude": 80.278006
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11309436650"
+      ]
+    },
+    {
+      "place_id": "osm:node/11309436653",
+      "provider_id": "node/11309436653",
+      "name": "Kuberan Tiffin Center",
+      "coordinates": {
+        "latitude": 13.0822992,
+        "longitude": 80.2780088
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11309436653"
+      ]
+    },
+    {
+      "place_id": "osm:node/11309946622",
+      "provider_id": "node/11309946622",
+      "name": "Indian Railway Catering and Tourism Corporation",
+      "coordinates": {
+        "latitude": 13.0825495,
+        "longitude": 80.275948
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11309946622"
+      ]
+    },
+    {
+      "place_id": "osm:node/11386758484",
+      "provider_id": "node/11386758484",
+      "name": "Central Biriyani",
+      "coordinates": {
+        "latitude": 13.0827405,
+        "longitude": 80.2748749
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11386758484"
+      ]
+    },
+    {
+      "place_id": "osm:node/11386758485",
+      "provider_id": "node/11386758485",
+      "name": "Star Biryani",
+      "coordinates": {
+        "latitude": 13.0824383,
+        "longitude": 80.2749268
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11386758485"
+      ]
+    },
+    {
+      "place_id": "osm:node/11386758486",
+      "provider_id": "node/11386758486",
+      "name": "Madras Coffee House",
+      "coordinates": {
+        "latitude": 13.0827681,
+        "longitude": 80.2748713
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11386758486"
+      ]
+    },
+    {
+      "place_id": "osm:node/11617872869",
+      "provider_id": "node/11617872869",
+      "name": "Writer's Cafe",
+      "coordinates": {
+        "latitude": 13.0542899,
+        "longitude": 80.2573889
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11617872869"
+      ]
+    },
+    {
+      "place_id": "osm:node/1177974039",
+      "provider_id": "node/1177974039",
+      "name": "Cream Centre",
+      "coordinates": {
+        "latitude": 13.0671869,
+        "longitude": 80.2460438
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1177974039"
+      ]
+    },
+    {
+      "place_id": "osm:node/11828671526",
+      "provider_id": "node/11828671526",
+      "name": "Basil with a twist",
+      "coordinates": {
+        "latitude": 13.0496674,
+        "longitude": 80.24228
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11828671526"
+      ]
+    },
+    {
+      "place_id": "osm:node/11828671527",
+      "provider_id": "node/11828671527",
+      "name": "Happy Bum Pets",
+      "coordinates": {
+        "latitude": 13.0506072,
+        "longitude": 80.2428243
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11828671527"
+      ]
+    },
+    {
+      "place_id": "osm:node/11834576825",
+      "provider_id": "node/11834576825",
+      "name": "Chicking",
+      "coordinates": {
+        "latitude": 13.0631465,
+        "longitude": 80.2440699
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11834576825"
+      ]
+    },
+    {
+      "place_id": "osm:node/11834587756",
+      "provider_id": "node/11834587756",
+      "name": "Ponnusamy Hotel",
+      "coordinates": {
+        "latitude": 13.0609702,
+        "longitude": 80.245495
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/11834587756"
+      ]
+    },
+    {
+      "place_id": "osm:node/12146020762",
+      "provider_id": "node/12146020762",
+      "name": "Aavin Booth",
+      "coordinates": {
+        "latitude": 13.0813864,
+        "longitude": 80.2626494
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12146020762"
+      ]
+    },
+    {
+      "place_id": "osm:node/12281652111",
+      "provider_id": "node/12281652111",
+      "name": "Crafe",
+      "coordinates": {
+        "latitude": 13.0525907,
+        "longitude": 80.2359545
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12281652111"
+      ]
+    },
+    {
+      "place_id": "osm:node/12290460802",
+      "provider_id": "node/12290460802",
+      "name": "The Madras Grand",
+      "coordinates": {
+        "latitude": 13.075221,
+        "longitude": 80.2560383
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12290460802"
+      ]
+    },
+    {
+      "place_id": "osm:node/12369185745",
+      "provider_id": "node/12369185745",
+      "name": "broadlands hotel",
+      "coordinates": {
+        "latitude": 13.0630503,
+        "longitude": 80.2734469
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12369185745"
+      ]
+    },
+    {
+      "place_id": "osm:node/12546654989",
+      "provider_id": "node/12546654989",
+      "name": "Abid's Restaurant",
+      "coordinates": {
+        "latitude": 13.0716807,
+        "longitude": 80.2504038
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12546654989"
+      ]
+    },
+    {
+      "place_id": "osm:node/12548068101",
+      "provider_id": "node/12548068101",
+      "name": "Palimar Hotel",
+      "coordinates": {
+        "latitude": 13.072631,
+        "longitude": 80.2522631
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12548068101"
+      ]
+    },
+    {
+      "place_id": "osm:node/12568401589",
+      "provider_id": "node/12568401589",
+      "name": "BBQ Bro's",
+      "coordinates": {
+        "latitude": 13.0564212,
+        "longitude": 80.2741982
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12568401589"
+      ]
+    },
+    {
+      "place_id": "osm:node/12672392768",
+      "provider_id": "node/12672392768",
+      "name": "Golden Dragon",
+      "coordinates": {
+        "latitude": 13.0583978,
+        "longitude": 80.2473021
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12672392768"
+      ]
+    },
+    {
+      "place_id": "osm:node/12672392769",
+      "provider_id": "node/12672392769",
+      "name": "Southern Spice",
+      "coordinates": {
+        "latitude": 13.0582098,
+        "longitude": 80.2470479
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12672392769"
+      ]
+    },
+    {
+      "place_id": "osm:node/12672392770",
+      "provider_id": "node/12672392770",
+      "name": "Anise",
+      "coordinates": {
+        "latitude": 13.0581405,
+        "longitude": 80.247065
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12672392770"
+      ]
+    },
+    {
+      "place_id": "osm:node/12679858901",
+      "provider_id": "node/12679858901",
+      "name": "The Entrance Cafe",
+      "coordinates": {
+        "latitude": 13.0832543,
+        "longitude": 80.2384331
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12679858901"
+      ]
+    },
+    {
+      "place_id": "osm:node/13463452901",
+      "provider_id": "node/13463452901",
+      "name": "Nasi and Mee",
+      "coordinates": {
+        "latitude": 13.0608518,
+        "longitude": 80.2498334
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13463452901"
+      ]
+    },
+    {
+      "place_id": "osm:node/13728746131",
+      "provider_id": "node/13728746131",
+      "name": "Splendour - Vestin Park",
+      "coordinates": {
+        "latitude": 13.0676932,
+        "longitude": 80.2590521
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13728746131"
+      ]
+    },
+    {
+      "place_id": "osm:node/13730065763",
+      "provider_id": "node/13730065763",
+      "name": "China Town Restaurant",
+      "coordinates": {
+        "latitude": 13.0645981,
+        "longitude": 80.2583294
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13730065763"
+      ]
+    },
+    {
+      "place_id": "osm:node/13730065764",
+      "provider_id": "node/13730065764",
+      "name": "Writers Cafe",
+      "coordinates": {
+        "latitude": 13.0646172,
+        "longitude": 80.258384
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13730065764"
+      ]
+    },
+    {
+      "place_id": "osm:node/13742137567",
+      "provider_id": "node/13742137567",
+      "name": "Nandhana Palace",
+      "coordinates": {
+        "latitude": 13.0702663,
+        "longitude": 80.272575
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13742137567"
+      ]
+    },
+    {
+      "place_id": "osm:node/13743101396",
+      "provider_id": "node/13743101396",
+      "name": "Chai Leela",
+      "coordinates": {
+        "latitude": 13.0637457,
+        "longitude": 80.2354599
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13743101396"
+      ]
+    },
+    {
+      "place_id": "osm:node/13743101397",
+      "provider_id": "node/13743101397",
+      "name": "Signature Cafe",
+      "coordinates": {
+        "latitude": 13.0662311,
+        "longitude": 80.2313717
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13743101397"
+      ]
+    },
+    {
+      "place_id": "osm:node/13743101398",
+      "provider_id": "node/13743101398",
+      "name": "Southwest Coffee Roasters",
+      "coordinates": {
+        "latitude": 13.0570549,
+        "longitude": 80.2346359
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13743101398"
+      ]
+    },
+    {
+      "place_id": "osm:node/13996678604",
+      "provider_id": "node/13996678604",
+      "name": "New Suprabha Hotel",
+      "coordinates": {
+        "latitude": 13.0697091,
+        "longitude": 80.2317143
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13996678604"
+      ]
+    },
+    {
+      "place_id": "osm:node/14119512130",
+      "provider_id": "node/14119512130",
+      "name": "Sri Krishna Sweets Restaurant",
+      "coordinates": {
+        "latitude": 13.0394148,
+        "longitude": 80.254983
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/14119512130"
+      ]
+    },
+    {
+      "place_id": "osm:node/14119518427",
+      "provider_id": "node/14119518427",
+      "name": "Eleven Eleven Select",
+      "coordinates": {
+        "latitude": 13.0395643,
+        "longitude": 80.2537457
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/14119518427"
+      ]
+    },
+    {
+      "place_id": "osm:node/1685079568",
+      "provider_id": "node/1685079568",
+      "name": "Asli Punjabi Rasoi Ghar",
+      "coordinates": {
+        "latitude": 13.038511,
+        "longitude": 80.2551167
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1685079568"
+      ]
+    },
+    {
+      "place_id": "osm:node/1728641528",
+      "provider_id": "node/1728641528",
+      "name": "Curries and Chutneys",
+      "coordinates": {
+        "latitude": 13.0651778,
+        "longitude": 80.2589417
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1728641528"
+      ]
+    },
+    {
+      "place_id": "osm:node/1875969687",
+      "provider_id": "node/1875969687",
+      "name": "Amethyst",
+      "coordinates": {
+        "latitude": 13.057334,
+        "longitude": 80.259754
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1875969687"
+      ]
+    },
+    {
+      "place_id": "osm:node/1928542139",
+      "provider_id": "node/1928542139",
+      "name": "Texas Fiesta",
+      "coordinates": {
+        "latitude": 13.06004,
+        "longitude": 80.253221
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1928542139"
+      ]
+    },
+    {
+      "place_id": "osm:node/1990726878",
+      "provider_id": "node/1990726878",
+      "name": "Freeze Zone",
+      "coordinates": {
+        "latitude": 13.0428655,
+        "longitude": 80.259599
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1990726878"
+      ]
+    },
+    {
+      "place_id": "osm:node/1990726883",
+      "provider_id": "node/1990726883",
+      "name": "Gangotree",
+      "coordinates": {
+        "latitude": 13.0471789,
+        "longitude": 80.2546452
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1990726883"
+      ]
+    },
+    {
+      "place_id": "osm:node/1992398105",
+      "provider_id": "node/1992398105",
+      "name": "Mash",
+      "coordinates": {
+        "latitude": 13.061691,
+        "longitude": 80.248271
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/1992398105"
+      ]
+    },
+    {
+      "place_id": "osm:node/2296731083",
+      "provider_id": "node/2296731083",
+      "name": "Murudi's Hotel",
+      "coordinates": {
+        "latitude": 13.0755331,
+        "longitude": 80.2693697
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2296731083"
+      ]
+    },
+    {
+      "place_id": "osm:node/2394717810",
+      "provider_id": "node/2394717810",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0835203,
+        "longitude": 80.2400173
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2394717810"
+      ]
+    },
+    {
+      "place_id": "osm:node/2394720835",
+      "provider_id": "node/2394720835",
+      "name": "Cream & Fudge",
+      "coordinates": {
+        "latitude": 13.08286,
+        "longitude": 80.2418285
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2394720835"
+      ]
+    },
+    {
+      "place_id": "osm:node/301725737",
+      "provider_id": "node/301725737",
+      "name": "Tangerine",
+      "coordinates": {
+        "latitude": 13.0392554,
+        "longitude": 80.2556216
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/301725737"
+      ]
+    },
+    {
+      "place_id": "osm:node/301725738",
+      "provider_id": "node/301725738",
+      "name": "Ente Keralam",
+      "coordinates": {
+        "latitude": 13.0421141,
+        "longitude": 80.2558968
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/301725738"
+      ]
+    },
+    {
+      "place_id": "osm:node/301725751",
+      "provider_id": "node/301725751",
+      "name": "Suriyas",
+      "coordinates": {
+        "latitude": 13.0383186,
+        "longitude": 80.2566708
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/301725751"
+      ]
+    },
+    {
+      "place_id": "osm:node/301816128",
+      "provider_id": "node/301816128",
+      "name": "Midnight Express",
+      "coordinates": {
+        "latitude": 13.0409358,
+        "longitude": 80.2586973
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/301816128"
+      ]
+    },
+    {
+      "place_id": "osm:node/3379346350",
+      "provider_id": "node/3379346350",
+      "name": "Jeyasri Pure Veg",
+      "coordinates": {
+        "latitude": 13.0659239,
+        "longitude": 80.2681364
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/3379346350"
+      ]
+    },
+    {
+      "place_id": "osm:node/339125302",
+      "provider_id": "node/339125302",
+      "name": "Okadeys",
+      "coordinates": {
+        "latitude": 13.0384527,
+        "longitude": 80.2567668
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/339125302"
+      ]
+    },
+    {
+      "place_id": "osm:node/339129986",
+      "provider_id": "node/339129986",
+      "name": "Amaravati",
+      "coordinates": {
+        "latitude": 13.0451417,
+        "longitude": 80.2592552
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/339129986"
+      ]
+    },
+    {
+      "place_id": "osm:node/339130052",
+      "provider_id": "node/339130052",
+      "name": "Kalpaka",
+      "coordinates": {
+        "latitude": 13.0468725,
+        "longitude": 80.2605083
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/339130052"
+      ]
+    },
+    {
+      "place_id": "osm:node/344405874",
+      "provider_id": "node/344405874",
+      "name": "Little Italy",
+      "coordinates": {
+        "latitude": 13.0609985,
+        "longitude": 80.2475712
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/344405874"
+      ]
+    },
+    {
+      "place_id": "osm:node/344408914",
+      "provider_id": "node/344408914",
+      "name": "Pizza Hut",
+      "coordinates": {
+        "latitude": 13.065426,
+        "longitude": 80.2432841
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/344408914"
+      ]
+    },
+    {
+      "place_id": "osm:node/344408915",
+      "provider_id": "node/344408915",
+      "name": "Mainland China",
+      "coordinates": {
+        "latitude": 13.0659169,
+        "longitude": 80.2421706
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/344408915"
+      ]
+    },
+    {
+      "place_id": "osm:node/347444889",
+      "provider_id": "node/347444889",
+      "name": "Annapurna",
+      "coordinates": {
+        "latitude": 13.0747305,
+        "longitude": 80.2626235
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/347444889"
+      ]
+    },
+    {
+      "place_id": "osm:node/353977800",
+      "provider_id": "node/353977800",
+      "name": "Sparkys Diner",
+      "coordinates": {
+        "latitude": 13.0729298,
+        "longitude": 80.2526113
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/353977800"
+      ]
+    },
+    {
+      "place_id": "osm:node/354959926",
+      "provider_id": "node/354959926",
+      "name": "Maharaja",
+      "coordinates": {
+        "latitude": 13.0633479,
+        "longitude": 80.2739101
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/354959926"
+      ]
+    },
+    {
+      "place_id": "osm:node/357189520",
+      "provider_id": "node/357189520",
+      "name": "Don Pepe, Copper Chimney",
+      "coordinates": {
+        "latitude": 13.0458581,
+        "longitude": 80.258173
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/357189520"
+      ]
+    },
+    {
+      "place_id": "osm:node/360806894",
+      "provider_id": "node/360806894",
+      "name": "Wangs Kitchen",
+      "coordinates": {
+        "latitude": 13.0610272,
+        "longitude": 80.2481523
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/360806894"
+      ]
+    },
+    {
+      "place_id": "osm:node/361176093",
+      "provider_id": "node/361176093",
+      "name": "Casa Picola",
+      "coordinates": {
+        "latitude": 13.0607599,
+        "longitude": 80.2512477
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/361176093"
+      ]
+    },
+    {
+      "place_id": "osm:node/361176408",
+      "provider_id": "node/361176408",
+      "name": "Barista",
+      "coordinates": {
+        "latitude": 13.0607136,
+        "longitude": 80.2509829
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/361176408"
+      ]
+    },
+    {
+      "place_id": "osm:node/365351250",
+      "provider_id": "node/365351250",
+      "name": "Mathsya",
+      "coordinates": {
+        "latitude": 13.0750359,
+        "longitude": 80.2581673
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/365351250"
+      ]
+    },
+    {
+      "place_id": "osm:node/366845051",
+      "provider_id": "node/366845051",
+      "name": "Ajnabee Snacks",
+      "coordinates": {
+        "latitude": 13.0677438,
+        "longitude": 80.2566293
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/366845051"
+      ]
+    },
+    {
+      "place_id": "osm:node/366849874",
+      "provider_id": "node/366849874",
+      "name": "Asli Punjabi Rasoi Ghar",
+      "coordinates": {
+        "latitude": 13.0650516,
+        "longitude": 80.2589124
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/366849874"
+      ]
+    },
+    {
+      "place_id": "osm:node/367869160",
+      "provider_id": "node/367869160",
+      "name": "Bombay Halwa House",
+      "coordinates": {
+        "latitude": 13.0688689,
+        "longitude": 80.2717553
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/367869160"
+      ]
+    },
+    {
+      "place_id": "osm:node/3686383394",
+      "provider_id": "node/3686383394",
+      "name": "Kaidhi Kitchen",
+      "coordinates": {
+        "latitude": 13.0445136,
+        "longitude": 80.2614492
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/3686383394"
+      ]
+    },
+    {
+      "place_id": "osm:node/3696257961",
+      "provider_id": "node/3696257961",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0485453,
+        "longitude": 80.2457412
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/3696257961"
+      ]
+    },
+    {
+      "place_id": "osm:node/370317723",
+      "provider_id": "node/370317723",
+      "name": "Noodle House",
+      "coordinates": {
+        "latitude": 13.0654928,
+        "longitude": 80.2431296
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/370317723"
+      ]
+    },
+    {
+      "place_id": "osm:node/378688582",
+      "provider_id": "node/378688582",
+      "name": "Paprika",
+      "coordinates": {
+        "latitude": 13.0460421,
+        "longitude": 80.2476349
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/378688582"
+      ]
+    },
+    {
+      "place_id": "osm:node/378688585",
+      "provider_id": "node/378688585",
+      "name": "Aqua",
+      "coordinates": {
+        "latitude": 13.0529661,
+        "longitude": 80.2500813
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/378688585"
+      ]
+    },
+    {
+      "place_id": "osm:node/378688588",
+      "provider_id": "node/378688588",
+      "name": "Lotus",
+      "coordinates": {
+        "latitude": 13.0528789,
+        "longitude": 80.2498533
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/378688588"
+      ]
+    },
+    {
+      "place_id": "osm:node/378691598",
+      "provider_id": "node/378691598",
+      "name": "Hip Asia",
+      "coordinates": {
+        "latitude": 13.0630743,
+        "longitude": 80.2612723
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/378691598"
+      ]
+    },
+    {
+      "place_id": "osm:node/384700520",
+      "provider_id": "node/384700520",
+      "name": "Bombay Halwa House",
+      "coordinates": {
+        "latitude": 13.0851955,
+        "longitude": 80.2449931
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/384700520"
+      ]
+    },
+    {
+      "place_id": "osm:node/384700521",
+      "provider_id": "node/384700521",
+      "name": "Thaali Corner",
+      "coordinates": {
+        "latitude": 13.0851761,
+        "longitude": 80.2447589
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/384700521"
+      ]
+    },
+    {
+      "place_id": "osm:node/386780832",
+      "provider_id": "node/386780832",
+      "name": "Coffee Central",
+      "coordinates": {
+        "latitude": 13.0470673,
+        "longitude": 80.2455216
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/386780832"
+      ]
+    },
+    {
+      "place_id": "osm:node/386890406",
+      "provider_id": "node/386890406",
+      "name": "Parvathi Bhavan",
+      "coordinates": {
+        "latitude": 13.0387921,
+        "longitude": 80.2570003
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/386890406"
+      ]
+    },
+    {
+      "place_id": "osm:node/4335525920",
+      "provider_id": "node/4335525920",
+      "name": "Isabel Hospital Canteen",
+      "coordinates": {
+        "latitude": 13.0387128,
+        "longitude": 80.2624199
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4335525920"
+      ]
+    },
+    {
+      "place_id": "osm:node/4335525921",
+      "provider_id": "node/4335525921",
+      "name": "Tea Shop",
+      "coordinates": {
+        "latitude": 13.03836,
+        "longitude": 80.2621637
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4335525921"
+      ]
+    },
+    {
+      "place_id": "osm:node/4355633301",
+      "provider_id": "node/4355633301",
+      "name": "Vasantha Bhavan",
+      "coordinates": {
+        "latitude": 13.0621968,
+        "longitude": 80.2457245
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4355633301"
+      ]
+    },
+    {
+      "place_id": "osm:node/4544639994",
+      "provider_id": "node/4544639994",
+      "name": "Absolem",
+      "coordinates": {
+        "latitude": 13.0463171,
+        "longitude": 80.246437
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4544639994"
+      ]
+    },
+    {
+      "place_id": "osm:node/4798026739",
+      "provider_id": "node/4798026739",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0770838,
+        "longitude": 80.2609259
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4798026739"
+      ]
+    },
+    {
+      "place_id": "osm:node/4799154411",
+      "provider_id": "node/4799154411",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0585503,
+        "longitude": 80.2766839
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4799154411"
+      ]
+    },
+    {
+      "place_id": "osm:node/4799154413",
+      "provider_id": "node/4799154413",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0823797,
+        "longitude": 80.2749374
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4799154413"
+      ]
+    },
+    {
+      "place_id": "osm:node/4799176112",
+      "provider_id": "node/4799176112",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0858295,
+        "longitude": 80.2541479
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4799176112"
+      ]
+    },
+    {
+      "place_id": "osm:node/4903254021",
+      "provider_id": "node/4903254021",
+      "name": "வசந்த பவன்",
+      "coordinates": {
+        "latitude": 13.0770717,
+        "longitude": 80.2611367
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4903254021"
+      ]
+    },
+    {
+      "place_id": "osm:node/5079356668",
+      "provider_id": "node/5079356668",
+      "name": "Impala Food center",
+      "coordinates": {
+        "latitude": 13.0775405,
+        "longitude": 80.2619973
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5079356668"
+      ]
+    },
+    {
+      "place_id": "osm:node/5079379086",
+      "provider_id": "node/5079379086",
+      "name": "புஹாரி",
+      "coordinates": {
+        "latitude": 13.0777234,
+        "longitude": 80.2615255
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5079379086"
+      ]
+    },
+    {
+      "place_id": "osm:node/5737223329",
+      "provider_id": "node/5737223329",
+      "name": "Kova Alankar Vilas",
+      "coordinates": {
+        "latitude": 13.0808614,
+        "longitude": 80.2675812
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5737223329"
+      ]
+    },
+    {
+      "place_id": "osm:node/5744866562",
+      "provider_id": "node/5744866562",
+      "name": "Rawther Restaurant",
+      "coordinates": {
+        "latitude": 13.0689007,
+        "longitude": 80.256646
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5744866562"
+      ]
+    },
+    {
+      "place_id": "osm:node/5744866568",
+      "provider_id": "node/5744866568",
+      "name": "IndCafe",
+      "coordinates": {
+        "latitude": 13.0680696,
+        "longitude": 80.2563969
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5744866568"
+      ]
+    },
+    {
+      "place_id": "osm:node/5744866570",
+      "provider_id": "node/5744866570",
+      "name": "Palmshore",
+      "coordinates": {
+        "latitude": 13.0695817,
+        "longitude": 80.2572161
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5744866570"
+      ]
+    },
+    {
+      "place_id": "osm:node/623010739",
+      "provider_id": "node/623010739",
+      "name": "Cafe Caffee Day",
+      "coordinates": {
+        "latitude": 13.0688594,
+        "longitude": 80.2572278
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/623010739"
+      ]
+    },
+    {
+      "place_id": "osm:node/6297565846",
+      "provider_id": "node/6297565846",
+      "name": "Buhari Hotel",
+      "coordinates": {
+        "latitude": 13.0473514,
+        "longitude": 80.2447632
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6297565846"
+      ]
+    },
+    {
+      "place_id": "osm:node/6313846485",
+      "provider_id": "node/6313846485",
+      "name": "பாரதி மெஸ்",
+      "coordinates": {
+        "latitude": 13.0586043,
+        "longitude": 80.2767198
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6313846485"
+      ]
+    },
+    {
+      "place_id": "osm:node/6356473263",
+      "provider_id": "node/6356473263",
+      "name": "The Thickshake Factory",
+      "coordinates": {
+        "latitude": 13.0470852,
+        "longitude": 80.2453529
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6356473263"
+      ]
+    },
+    {
+      "place_id": "osm:node/6979962072",
+      "provider_id": "node/6979962072",
+      "name": "Blah Bistro",
+      "coordinates": {
+        "latitude": 13.0654508,
+        "longitude": 80.243297
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6979962072"
+      ]
+    },
+    {
+      "place_id": "osm:node/7136008686",
+      "provider_id": "node/7136008686",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0495809,
+        "longitude": 80.2572224
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7136008686"
+      ]
+    },
+    {
+      "place_id": "osm:node/7222914141",
+      "provider_id": "node/7222914141",
+      "name": "Kappa Chakka Kandhari",
+      "coordinates": {
+        "latitude": 13.0642227,
+        "longitude": 80.2479976
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7222914141"
+      ]
+    },
+    {
+      "place_id": "osm:node/7255708050",
+      "provider_id": "node/7255708050",
+      "name": "Anjappar",
+      "coordinates": {
+        "latitude": 13.0557267,
+        "longitude": 80.2485052
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7255708050"
+      ]
+    },
+    {
+      "place_id": "osm:node/7255753339",
+      "provider_id": "node/7255753339",
+      "name": "Surabh",
+      "coordinates": {
+        "latitude": 13.0568503,
+        "longitude": 80.2428855
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7255753339"
+      ]
+    },
+    {
+      "place_id": "osm:node/7255775716",
+      "provider_id": "node/7255775716",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0554045,
+        "longitude": 80.2496804
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7255775716"
+      ]
+    },
+    {
+      "place_id": "osm:node/7261248830",
+      "provider_id": "node/7261248830",
+      "name": "Mylapore Filter Coffee",
+      "coordinates": {
+        "latitude": 13.0555258,
+        "longitude": 80.2458215
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7261248830"
+      ]
+    },
+    {
+      "place_id": "osm:node/7263945405",
+      "provider_id": "node/7263945405",
+      "name": "Madras Coffee House",
+      "coordinates": {
+        "latitude": 13.0557506,
+        "longitude": 80.2471927
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7263945405"
+      ]
+    },
+    {
+      "place_id": "osm:node/7263967744",
+      "provider_id": "node/7263967744",
+      "name": "Thalappakatti",
+      "coordinates": {
+        "latitude": 13.0539386,
+        "longitude": 80.250339
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7263967744"
+      ]
+    },
+    {
+      "place_id": "osm:node/7263972901",
+      "provider_id": "node/7263972901",
+      "name": "Madras Curry Cup",
+      "coordinates": {
+        "latitude": 13.0533468,
+        "longitude": 80.2494941
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7263972901"
+      ]
+    },
+    {
+      "place_id": "osm:node/7271141689",
+      "provider_id": "node/7271141689",
+      "name": "Aathirai",
+      "coordinates": {
+        "latitude": 13.0585809,
+        "longitude": 80.241796
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7271141689"
+      ]
+    },
+    {
+      "place_id": "osm:node/7602598775",
+      "provider_id": "node/7602598775",
+      "name": "park",
+      "coordinates": {
+        "latitude": 13.0668847,
+        "longitude": 80.2414517
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/7602598775"
+      ]
+    },
+    {
+      "place_id": "osm:node/762597556",
+      "provider_id": "node/762597556",
+      "name": "Hotel Raj Bhavan",
+      "coordinates": {
+        "latitude": 13.0558502,
+        "longitude": 80.248
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/762597556"
+      ]
+    },
+    {
+      "place_id": "osm:node/8523245673",
+      "provider_id": "node/8523245673",
+      "name": "Burmese Cafe",
+      "coordinates": {
+        "latitude": 13.0557253,
+        "longitude": 80.2470491
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/8523245673"
+      ]
+    },
+    {
+      "place_id": "osm:node/8639416762",
+      "provider_id": "node/8639416762",
+      "name": "Tamu Tamu",
+      "coordinates": {
+        "latitude": 13.0475624,
+        "longitude": 80.2544953
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/8639416762"
+      ]
+    },
+    {
+      "place_id": "osm:node/864565806",
+      "provider_id": "node/864565806",
+      "name": "Sandys",
+      "coordinates": {
+        "latitude": 13.0610992,
+        "longitude": 80.2482881
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/864565806"
+      ]
+    },
+    {
+      "place_id": "osm:node/9348174752",
+      "provider_id": "node/9348174752",
+      "name": "The Baristo Brew",
+      "coordinates": {
+        "latitude": 13.0609645,
+        "longitude": 80.2469181
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/9348174752"
+      ]
+    },
+    {
+      "place_id": "osm:node/9418560326",
+      "provider_id": "node/9418560326",
+      "name": "Ek Aur Paratha",
+      "coordinates": {
+        "latitude": 13.0482571,
+        "longitude": 80.2534355
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/9418560326"
+      ]
+    },
+    {
+      "place_id": "osm:node/9559749692",
+      "provider_id": "node/9559749692",
+      "name": "Arasi Restaurant",
+      "coordinates": {
+        "latitude": 13.0635552,
+        "longitude": 80.2763834
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/9559749692"
+      ]
+    },
+    {
+      "place_id": "osm:node/9920387334",
+      "provider_id": "node/9920387334",
+      "name": "Fusili Reasons",
+      "coordinates": {
+        "latitude": 13.0799423,
+        "longitude": 80.2441589
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/9920387334"
+      ]
+    },
+    {
+      "place_id": "osm:way/1021331583",
+      "provider_id": "way/1021331583",
+      "name": "Vivekananda Park",
+      "coordinates": {
+        "latitude": 13.0491313,
+        "longitude": 80.2803651
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1021331583"
+      ]
+    },
+    {
+      "place_id": "osm:way/1089831758",
+      "provider_id": "way/1089831758",
+      "name": "Naval Park",
+      "coordinates": {
+        "latitude": 13.0694063,
+        "longitude": 80.2851977
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1089831758"
+      ]
+    },
+    {
+      "place_id": "osm:way/1107911281",
+      "provider_id": "way/1107911281",
+      "name": "Tamil Nadu Police Canteen, Pudupet",
+      "coordinates": {
+        "latitude": 13.0686272,
+        "longitude": 80.2622518
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1107911281"
+      ]
+    },
+    {
+      "place_id": "osm:way/1122926993",
+      "provider_id": "way/1122926993",
+      "name": "Annalakshmi",
+      "coordinates": {
+        "latitude": 13.071084,
+        "longitude": 80.2520356
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1122926993"
+      ]
+    },
+    {
+      "place_id": "osm:way/1130587017",
+      "provider_id": "way/1130587017",
+      "name": "Napier Park",
+      "coordinates": {
+        "latitude": 13.0734784,
+        "longitude": 80.2730007
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1130587017"
+      ]
+    },
+    {
+      "place_id": "osm:way/1155176839",
+      "provider_id": "way/1155176839",
+      "name": "Hotel Shree Venkateshwara",
+      "coordinates": {
+        "latitude": 13.0846473,
+        "longitude": 80.2760987
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1155176839"
+      ]
+    },
+    {
+      "place_id": "osm:way/1354608421",
+      "provider_id": "way/1354608421",
+      "name": "Bharani Bhavan",
+      "coordinates": {
+        "latitude": 13.0706274,
+        "longitude": 80.231578
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1354608421"
+      ]
+    },
+    {
+      "place_id": "osm:way/1541240454",
+      "provider_id": "way/1541240454",
+      "name": "Mayor Sathiyamoorthy Park",
+      "coordinates": {
+        "latitude": 13.0743819,
+        "longitude": 80.2510549
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1541240454"
+      ]
+    },
+    {
+      "place_id": "osm:way/1552015237",
+      "provider_id": "way/1552015237",
+      "name": "Kalaingar Centenary Park",
+      "coordinates": {
+        "latitude": 13.0426987,
+        "longitude": 80.2480685
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/1552015237"
+      ]
+    },
+    {
+      "place_id": "osm:way/214711576",
+      "provider_id": "way/214711576",
+      "name": "Langs Garden Park",
+      "coordinates": {
+        "latitude": 13.0721986,
+        "longitude": 80.2671425
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/214711576"
+      ]
+    },
+    {
+      "place_id": "osm:way/214739133",
+      "provider_id": "way/214739133",
+      "name": "Avin, Snacks and Eateries",
+      "coordinates": {
+        "latitude": 13.0827667,
+        "longitude": 80.2758984
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/214739133"
+      ]
+    },
+    {
+      "place_id": "osm:way/217954833",
+      "provider_id": "way/217954833",
+      "name": "Children's Road Safety and Traffic Park",
+      "coordinates": {
+        "latitude": 13.0674746,
+        "longitude": 80.2847564
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/217954833"
+      ]
+    },
+    {
+      "place_id": "osm:way/23186307",
+      "provider_id": "way/23186307",
+      "name": "Independence Day Park",
+      "coordinates": {
+        "latitude": 13.0563945,
+        "longitude": 80.2422282
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/23186307"
+      ]
+    },
+    {
+      "place_id": "osm:way/23892256",
+      "provider_id": "way/23892256",
+      "name": "People's Park",
+      "coordinates": {
+        "latitude": 13.0895456,
+        "longitude": 80.2720251
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/23892256"
+      ]
+    },
+    {
+      "place_id": "osm:way/23954915",
+      "provider_id": "way/23954915",
+      "name": "Kalaignar Noorandu Poonga",
+      "coordinates": {
+        "latitude": 13.050612,
+        "longitude": 80.2540109
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/23954915"
+      ]
+    },
+    {
+      "place_id": "osm:way/24375590",
+      "provider_id": "way/24375590",
+      "name": "Haddows Road Park",
+      "coordinates": {
+        "latitude": 13.0632226,
+        "longitude": 80.2485809
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/24375590"
+      ]
+    },
+    {
+      "place_id": "osm:way/25808365",
+      "provider_id": "way/25808365",
+      "name": "Semmozhi Poonga",
+      "coordinates": {
+        "latitude": 13.050644,
+        "longitude": 80.2515356
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/25808365"
+      ]
+    },
+    {
+      "place_id": "osm:way/28137710",
+      "provider_id": "way/28137710",
+      "name": "Park 113",
+      "coordinates": {
+        "latitude": 13.047801,
+        "longitude": 80.2506784
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/28137710"
+      ]
+    },
+    {
+      "place_id": "osm:way/31726931",
+      "provider_id": "way/31726931",
+      "name": "M.G.R Memorial",
+      "coordinates": {
+        "latitude": 13.0644246,
+        "longitude": 80.2850437
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/31726931"
+      ]
+    },
+    {
+      "place_id": "osm:way/31726933",
+      "provider_id": "way/31726933",
+      "name": "Anna Memorial",
+      "coordinates": {
+        "latitude": 13.0656924,
+        "longitude": 80.2848846
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/31726933"
+      ]
+    },
+    {
+      "place_id": "osm:way/355106055",
+      "provider_id": "way/355106055",
+      "name": "One MB",
+      "coordinates": {
+        "latitude": 13.0496693,
+        "longitude": 80.2398122
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/355106055"
+      ]
+    },
+    {
+      "place_id": "osm:way/355106136",
+      "provider_id": "way/355106136",
+      "name": "Ibaco",
+      "coordinates": {
+        "latitude": 13.0498402,
+        "longitude": 80.2401224
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/355106136"
+      ]
+    },
+    {
+      "place_id": "osm:way/355662204",
+      "provider_id": "way/355662204",
+      "name": "Amma Canteen",
+      "coordinates": {
+        "latitude": 13.0723411,
+        "longitude": 80.2313491
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/355662204"
+      ]
+    },
+    {
+      "place_id": "osm:way/364109422",
+      "provider_id": "way/364109422",
+      "name": "Anandha Bhavan",
+      "coordinates": {
+        "latitude": 13.0599622,
+        "longitude": 80.2744408
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/364109422"
+      ]
+    },
+    {
+      "place_id": "osm:way/393560234",
+      "provider_id": "way/393560234",
+      "name": "Pachayappas Ground",
+      "coordinates": {
+        "latitude": 13.0728721,
+        "longitude": 80.232663
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/393560234"
+      ]
+    },
+    {
+      "place_id": "osm:way/416886379",
+      "provider_id": "way/416886379",
+      "name": "Chettinad Saiva Bhavan",
+      "coordinates": {
+        "latitude": 13.0448051,
+        "longitude": 80.2611219
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/416886379"
+      ]
+    },
+    {
+      "place_id": "osm:way/47497688",
+      "provider_id": "way/47497688",
+      "name": "Annie Besant Park",
+      "coordinates": {
+        "latitude": 13.0504101,
+        "longitude": 80.2805345
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/47497688"
+      ]
+    },
+    {
+      "place_id": "osm:way/540616695",
+      "provider_id": "way/540616695",
+      "name": "Vidyodaya School Play Ground",
+      "coordinates": {
+        "latitude": 13.050461,
+        "longitude": 80.2409539
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/540616695"
+      ]
+    },
+    {
+      "place_id": "osm:way/552095637",
+      "provider_id": "way/552095637",
+      "name": "Mayor Sundar Rao Naidu Park",
+      "coordinates": {
+        "latitude": 13.0650502,
+        "longitude": 80.260715
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/552095637"
+      ]
+    },
+    {
+      "place_id": "osm:way/609666748",
+      "provider_id": "way/609666748",
+      "name": "Hotel Raaj Bhavan",
+      "coordinates": {
+        "latitude": 13.0642057,
+        "longitude": 80.2433062
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/609666748"
+      ]
+    },
+    {
+      "place_id": "osm:way/657856747",
+      "provider_id": "way/657856747",
+      "name": "Chetpat Eco Park",
+      "coordinates": {
+        "latitude": 13.0756155,
+        "longitude": 80.2424707
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/657856747"
+      ]
+    },
+    {
+      "place_id": "osm:node/10611601106",
+      "provider_id": "node/10611601106",
+      "name": "4 am Bonda Shop",
+      "coordinates": {
+        "latitude": 13.0736757,
+        "longitude": 80.2208569
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10611601106"
+      ]
+    },
+    {
+      "place_id": "osm:node/10611606706",
+      "provider_id": "node/10611606706",
+      "name": "Akka Shop",
+      "coordinates": {
+        "latitude": 13.1117167,
+        "longitude": 80.2266215
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10611606706"
+      ]
+    },
+    {
+      "place_id": "osm:node/10611620606",
+      "provider_id": "node/10611620606",
+      "name": "FNF Smoke Shop",
+      "coordinates": {
+        "latitude": 13.085191,
+        "longitude": 80.2203288
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/10611620606"
+      ]
+    },
+    {
+      "place_id": "osm:node/12167603124",
+      "provider_id": "node/12167603124",
+      "name": "Buhari Hotel",
+      "coordinates": {
+        "latitude": 13.079622,
+        "longitude": 80.2243634
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12167603124"
+      ]
+    },
+    {
+      "place_id": "osm:node/12543232801",
+      "provider_id": "node/12543232801",
+      "name": "Arul Chettinad Hotel",
+      "coordinates": {
+        "latitude": 13.0737596,
+        "longitude": 80.2259631
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12543232801"
+      ]
+    },
+    {
+      "place_id": "osm:node/12841106303",
+      "provider_id": "node/12841106303",
+      "name": "Khalids biriyani",
+      "coordinates": {
+        "latitude": 13.0856268,
+        "longitude": 80.1997052
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12841106303"
+      ]
+    },
+    {
+      "place_id": "osm:node/12841106601",
+      "provider_id": "node/12841106601",
+      "name": "Chai Kings - Thirumangalam Metro",
+      "coordinates": {
+        "latitude": 13.085677,
+        "longitude": 80.2013868
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/12841106601"
+      ]
+    },
+    {
+      "place_id": "osm:node/13253593301",
+      "provider_id": "node/13253593301",
+      "name": "Parambriyam",
+      "coordinates": {
+        "latitude": 13.088221,
+        "longitude": 80.2178044
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13253593301"
+      ]
+    },
+    {
+      "place_id": "osm:node/13463453201",
+      "provider_id": "node/13463453201",
+      "name": "Gowri Krishna",
+      "coordinates": {
+        "latitude": 13.0882779,
+        "longitude": 80.2178099
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13463453201"
+      ]
+    },
+    {
+      "place_id": "osm:node/13738159020",
+      "provider_id": "node/13738159020",
+      "name": "Ganesh Chat & Chai Bandar",
+      "coordinates": {
+        "latitude": 13.0824498,
+        "longitude": 80.2152575
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13738159020"
+      ]
+    },
+    {
+      "place_id": "osm:node/13937483300",
+      "provider_id": "node/13937483300",
+      "name": "Geetham",
+      "coordinates": {
+        "latitude": 13.0702667,
+        "longitude": 80.2052092
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13937483300"
+      ]
+    },
+    {
+      "place_id": "osm:node/13955229801",
+      "provider_id": "node/13955229801",
+      "name": "Mubarak Briyani",
+      "coordinates": {
+        "latitude": 13.0737953,
+        "longitude": 80.2263068
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13955229801"
+      ]
+    },
+    {
+      "place_id": "osm:node/13956836801",
+      "provider_id": "node/13956836801",
+      "name": "Rasoee Dhaba",
+      "coordinates": {
+        "latitude": 13.0795677,
+        "longitude": 80.2259692
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13956836801"
+      ]
+    },
+    {
+      "place_id": "osm:node/13968685201",
+      "provider_id": "node/13968685201",
+      "name": "Lokmat Bahia",
+      "coordinates": {
+        "latitude": 13.0701946,
+        "longitude": 80.2053623
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13968685201"
+      ]
+    },
+    {
+      "place_id": "osm:node/13968689301",
+      "provider_id": "node/13968689301",
+      "name": "காரைக்குடி செட்டிநாடு மெஸ்",
+      "coordinates": {
+        "latitude": 13.0700913,
+        "longitude": 80.2042857
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13968689301"
+      ]
+    },
+    {
+      "place_id": "osm:node/13968689501",
+      "provider_id": "node/13968689501",
+      "name": "பாலாஐி கஃபே",
+      "coordinates": {
+        "latitude": 13.0701335,
+        "longitude": 80.2042028
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13968689501"
+      ]
+    },
+    {
+      "place_id": "osm:node/13968699201",
+      "provider_id": "node/13968699201",
+      "name": "Aasife biriyani",
+      "coordinates": {
+        "latitude": 13.0714691,
+        "longitude": 80.2033537
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13968699201"
+      ]
+    },
+    {
+      "place_id": "osm:node/13988435676",
+      "provider_id": "node/13988435676",
+      "name": "Sathya Food",
+      "coordinates": {
+        "latitude": 13.0851133,
+        "longitude": 80.2024068
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13988435676"
+      ]
+    },
+    {
+      "place_id": "osm:node/13988479496",
+      "provider_id": "node/13988479496",
+      "name": "Madras Coffee House",
+      "coordinates": {
+        "latitude": 13.0851212,
+        "longitude": 80.2023842
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/13988479496"
+      ]
+    },
+    {
+      "place_id": "osm:node/14123771199",
+      "provider_id": "node/14123771199",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0807968,
+        "longitude": 80.1974175
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/14123771199"
+      ]
+    },
+    {
+      "place_id": "osm:node/14123771200",
+      "provider_id": "node/14123771200",
+      "name": "Anjappar Chettinad Restaurant",
+      "coordinates": {
+        "latitude": 13.0807376,
+        "longitude": 80.1975456
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/14123771200"
+      ]
+    },
+    {
+      "place_id": "osm:node/14123779505",
+      "provider_id": "node/14123779505",
+      "name": "Pizza Hut",
+      "coordinates": {
+        "latitude": 13.080837,
+        "longitude": 80.1968551
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/14123779505"
+      ]
+    },
+    {
+      "place_id": "osm:node/2394701226",
+      "provider_id": "node/2394701226",
+      "name": "Cream & Fudge",
+      "coordinates": {
+        "latitude": 13.0907453,
+        "longitude": 80.2184356
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2394701226"
+      ]
+    },
+    {
+      "place_id": "osm:node/2394703603",
+      "provider_id": "node/2394703603",
+      "name": "Nalas Appakadai",
+      "coordinates": {
+        "latitude": 13.0883486,
+        "longitude": 80.2178412
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2394703603"
+      ]
+    },
+    {
+      "place_id": "osm:node/2394723955",
+      "provider_id": "node/2394723955",
+      "name": "Al Najeeb",
+      "coordinates": {
+        "latitude": 13.0900655,
+        "longitude": 80.2444917
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2394723955"
+      ]
+    },
+    {
+      "place_id": "osm:node/2398060288",
+      "provider_id": "node/2398060288",
+      "name": "KimLing",
+      "coordinates": {
+        "latitude": 13.0846594,
+        "longitude": 80.2126022
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2398060288"
+      ]
+    },
+    {
+      "place_id": "osm:node/2398071952",
+      "provider_id": "node/2398071952",
+      "name": "Savoury Sea Shell",
+      "coordinates": {
+        "latitude": 13.0875854,
+        "longitude": 80.2182684
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2398071952"
+      ]
+    },
+    {
+      "place_id": "osm:node/2613603183",
+      "provider_id": "node/2613603183",
+      "name": "Cafe Coffee Day",
+      "coordinates": {
+        "latitude": 13.0868942,
+        "longitude": 80.2019157
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/2613603183"
+      ]
+    },
+    {
+      "place_id": "osm:node/366073581",
+      "provider_id": "node/366073581",
+      "name": "Hotel Sangeetha",
+      "coordinates": {
+        "latitude": 13.0718703,
+        "longitude": 80.2030731
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/366073581"
+      ]
+    },
+    {
+      "place_id": "osm:node/3961459332",
+      "provider_id": "node/3961459332",
+      "name": "Coffee Tales",
+      "coordinates": {
+        "latitude": 13.08175,
+        "longitude": 80.224869
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/3961459332"
+      ]
+    },
+    {
+      "place_id": "osm:node/3961459333",
+      "provider_id": "node/3961459333",
+      "name": "Zaitoon",
+      "coordinates": {
+        "latitude": 13.0835126,
+        "longitude": 80.225507
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/3961459333"
+      ]
+    },
+    {
+      "place_id": "osm:node/4232045988",
+      "provider_id": "node/4232045988",
+      "name": "The Rock Restaurant",
+      "coordinates": {
+        "latitude": 13.091467,
+        "longitude": 80.2180657
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4232045988"
+      ]
+    },
+    {
+      "place_id": "osm:node/4270297092",
+      "provider_id": "node/4270297092",
+      "name": "Sangeetha Veg. Restaurant",
+      "coordinates": {
+        "latitude": 13.0701906,
+        "longitude": 80.2246466
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4270297092"
+      ]
+    },
+    {
+      "place_id": "osm:node/4797659568",
+      "provider_id": "node/4797659568",
+      "name": "Adyar Anand Bhavan",
+      "coordinates": {
+        "latitude": 13.0849504,
+        "longitude": 80.2036178
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4797659568"
+      ]
+    },
+    {
+      "place_id": "osm:node/4799176115",
+      "provider_id": "node/4799176115",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0843038,
+        "longitude": 80.2249226
+      },
+      "positive_vegetarian": true,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4799176115"
+      ]
+    },
+    {
+      "place_id": "osm:node/4948882565",
+      "provider_id": "node/4948882565",
+      "name": "Dindigul Thalappakatti Restaurant",
+      "coordinates": {
+        "latitude": 13.0823097,
+        "longitude": 80.2095947
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4948882565"
+      ]
+    },
+    {
+      "place_id": "osm:node/4948911363",
+      "provider_id": "node/4948911363",
+      "name": "Starbucks",
+      "coordinates": {
+        "latitude": 13.0850924,
+        "longitude": 80.2124356
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/4948911363"
+      ]
+    },
+    {
+      "place_id": "osm:node/5227400230",
+      "provider_id": "node/5227400230",
+      "name": "Amma Unavagam",
+      "coordinates": {
+        "latitude": 13.0852612,
+        "longitude": 80.1989719
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5227400230"
+      ]
+    },
+    {
+      "place_id": "osm:node/5282323260",
+      "provider_id": "node/5282323260",
+      "name": "Karthick Tiffin Center",
+      "coordinates": {
+        "latitude": 13.0850191,
+        "longitude": 80.2030337
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5282323260"
+      ]
+    },
+    {
+      "place_id": "osm:node/5318547955",
+      "provider_id": "node/5318547955",
+      "name": "Nathans Cafe (Veg)",
+      "coordinates": {
+        "latitude": 13.0702196,
+        "longitude": 80.2041095
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5318547955"
+      ]
+    },
+    {
+      "place_id": "osm:node/5400381037",
+      "provider_id": "node/5400381037",
+      "name": "Adyar Ananda Bhavan",
+      "coordinates": {
+        "latitude": 13.0713977,
+        "longitude": 80.20342
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/5400381037"
+      ]
+    },
+    {
+      "place_id": "osm:node/577362175",
+      "provider_id": "node/577362175",
+      "name": "Aavin",
+      "coordinates": {
+        "latitude": 13.0671848,
+        "longitude": 80.2057726
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/577362175"
+      ]
+    },
+    {
+      "place_id": "osm:node/6039274064",
+      "provider_id": "node/6039274064",
+      "name": "Food Finger",
+      "coordinates": {
+        "latitude": 13.087552,
+        "longitude": 80.1932926
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6039274064"
+      ]
+    },
+    {
+      "place_id": "osm:node/6039331089",
+      "provider_id": "node/6039331089",
+      "name": "Hotel Bhukara",
+      "coordinates": {
+        "latitude": 13.0874492,
+        "longitude": 80.1980697
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6039331089"
+      ]
+    },
+    {
+      "place_id": "osm:node/6637689502",
+      "provider_id": "node/6637689502",
+      "name": "The Perf Ice Candy",
+      "coordinates": {
+        "latitude": 13.0879425,
+        "longitude": 80.1947286
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6637689502"
+      ]
+    },
+    {
+      "place_id": "osm:node/6760732842",
+      "provider_id": "node/6760732842",
+      "name": "A2B",
+      "coordinates": {
+        "latitude": 13.0684153,
+        "longitude": 80.2041932
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/6760732842"
+      ]
+    },
+    {
+      "place_id": "osm:node/8418648279",
+      "provider_id": "node/8418648279",
+      "name": "GKS Santhi Bavan",
+      "coordinates": {
+        "latitude": 13.1031362,
+        "longitude": 80.2079955
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/8418648279"
+      ]
+    },
+    {
+      "place_id": "osm:node/9022356735",
+      "provider_id": "node/9022356735",
+      "name": "Shri Rajasthani Dhaba",
+      "coordinates": {
+        "latitude": 13.0848937,
+        "longitude": 80.2048073
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/node/9022356735"
+      ]
+    },
+    {
+      "place_id": "osm:way/217745309",
+      "provider_id": "way/217745309",
+      "name": "Gill Nagar Park",
+      "coordinates": {
+        "latitude": 13.0640565,
+        "longitude": 80.2247145
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/217745309"
+      ]
+    },
+    {
+      "place_id": "osm:way/217760905",
+      "provider_id": "way/217760905",
+      "name": "Chennai Corporation Park",
+      "coordinates": {
+        "latitude": 13.0691787,
+        "longitude": 80.2227281
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/217760905"
+      ]
+    },
+    {
+      "place_id": "osm:way/217926522",
+      "provider_id": "way/217926522",
+      "name": "Childrens Park",
+      "coordinates": {
+        "latitude": 13.0839959,
+        "longitude": 80.2319495
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/217926522"
+      ]
+    },
+    {
+      "place_id": "osm:way/23970154",
+      "provider_id": "way/23970154",
+      "name": "Bougainvilla Park",
+      "coordinates": {
+        "latitude": 13.0917593,
+        "longitude": 80.2212506
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/23970154"
+      ]
+    },
+    {
+      "place_id": "osm:way/24240071",
+      "provider_id": "way/24240071",
+      "name": "Anna Nagar Tower Park",
+      "coordinates": {
+        "latitude": 13.0866141,
+        "longitude": 80.2142635
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/24240071"
+      ]
+    },
+    {
+      "place_id": "osm:way/26748565",
+      "provider_id": "way/26748565",
+      "name": "Mehta Nagar Ground",
+      "coordinates": {
+        "latitude": 13.0703023,
+        "longitude": 80.2275305
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/26748565"
+      ]
+    },
+    {
+      "place_id": "osm:way/274364913",
+      "provider_id": "way/274364913",
+      "name": "SAF Games Village Park",
+      "coordinates": {
+        "latitude": 13.0646307,
+        "longitude": 80.2083191
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/274364913"
+      ]
+    },
+    {
+      "place_id": "osm:way/30851611",
+      "provider_id": "way/30851611",
+      "name": "Thiru Vi Ka Park",
+      "coordinates": {
+        "latitude": 13.0786272,
+        "longitude": 80.225091
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/30851611"
+      ]
+    },
+    {
+      "place_id": "osm:way/30853229",
+      "provider_id": "way/30853229",
+      "name": "Crescent Ground",
+      "coordinates": {
+        "latitude": 13.0815187,
+        "longitude": 80.2204206
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/30853229"
+      ]
+    },
+    {
+      "place_id": "osm:way/32550892",
+      "provider_id": "way/32550892",
+      "name": "Jai Nagar Park, Koyambedu",
+      "coordinates": {
+        "latitude": 13.0689835,
+        "longitude": 80.2078282
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/32550892"
+      ]
+    },
+    {
+      "place_id": "osm:way/32550895",
+      "provider_id": "way/32550895",
+      "name": "Jai Nagar Park, Koyambedu",
+      "coordinates": {
+        "latitude": 13.0692911,
+        "longitude": 80.207058
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/32550895"
+      ]
+    },
+    {
+      "place_id": "osm:way/354516774",
+      "provider_id": "way/354516774",
+      "name": "Amma Unavagam",
+      "coordinates": {
+        "latitude": 13.1030337,
+        "longitude": 80.2091475
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/354516774"
+      ]
+    },
+    {
+      "place_id": "osm:way/354983948",
+      "provider_id": "way/354983948",
+      "name": "Pastry Boutique",
+      "coordinates": {
+        "latitude": 13.0848856,
+        "longitude": 80.2346553
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/354983948"
+      ]
+    },
+    {
+      "place_id": "osm:way/423653430",
+      "provider_id": "way/423653430",
+      "name": "The Rock Restaurant",
+      "coordinates": {
+        "latitude": 13.0914894,
+        "longitude": 80.2179321
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": true,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/423653430"
+      ]
+    },
+    {
+      "place_id": "osm:way/469517284",
+      "provider_id": "way/469517284",
+      "name": "ABC Rohini park",
+      "coordinates": {
+        "latitude": 13.0890063,
+        "longitude": 80.1980576
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/469517284"
+      ]
+    },
+    {
+      "place_id": "osm:way/552025621",
+      "provider_id": "way/552025621",
+      "name": "Thirunagar Park",
+      "coordinates": {
+        "latitude": 13.1008343,
+        "longitude": 80.2039573
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/552025621"
+      ]
+    },
+    {
+      "place_id": "osm:way/554594979",
+      "provider_id": "way/554594979",
+      "name": "Gandhi park",
+      "coordinates": {
+        "latitude": 13.0938707,
+        "longitude": 80.196111
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/554594979"
+      ]
+    },
+    {
+      "place_id": "osm:way/554595345",
+      "provider_id": "way/554595345",
+      "name": "I block Park",
+      "coordinates": {
+        "latitude": 13.0937707,
+        "longitude": 80.1997284
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/554595345"
+      ]
+    },
+    {
+      "place_id": "osm:way/554596118",
+      "provider_id": "way/554596118",
+      "name": "J Block park",
+      "coordinates": {
+        "latitude": 13.0898534,
+        "longitude": 80.1996548
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/554596118"
+      ]
+    },
+    {
+      "place_id": "osm:way/554596123",
+      "provider_id": "way/554596123",
+      "name": "Brinley garden park",
+      "coordinates": {
+        "latitude": 13.0897709,
+        "longitude": 80.2016829
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/554596123"
+      ]
+    },
+    {
+      "place_id": "osm:way/554677106",
+      "provider_id": "way/554677106",
+      "name": "ICF playground",
+      "coordinates": {
+        "latitude": 13.09697,
+        "longitude": 80.2138582
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/554677106"
+      ]
+    },
+    {
+      "place_id": "osm:way/634143710",
+      "provider_id": "way/634143710",
+      "name": "Government Park",
+      "coordinates": {
+        "latitude": 13.0907169,
+        "longitude": 80.2250566
+      },
+      "positive_vegetarian": false,
+      "raw_hours_present": false,
+      "complete_normalized_price_present": false,
+      "positive_exclusions_present": false,
+      "pre_route_decision": "INSUFFICIENT_MANDATORY_COST_EVIDENCE",
+      "observation_refs": [
+        "https://www.openstreetmap.org/way/634143710"
+      ]
+    }
+  ],
+  "source_retrievals": [
+    {
+      "source_ref": "https://paativeedu.com/restaurant.html",
+      "final_url": "https://paativeedu.com/restaurant.html",
+      "retrieved_at": "2026-10-07T08:29:36.760576+00:00",
+      "http_status": 200,
+      "sha256": "6b51e76548b95bb263b119dca2e30713e6b1ffbf9762a4d76347aaecf2c16e5e",
+      "bytes": 18493,
+      "content_type": "text/html",
+      "latency_ms": 789.66,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://www.thenoodletheory.com/",
+      "final_url": "https://www.thenoodletheory.com/",
+      "retrieved_at": "2026-10-07T08:29:36.618681+00:00",
+      "http_status": 200,
+      "sha256": "13304daf2e2586d258542284a1e984f8087f48a643fe3e8264d052ce3672e1a9",
+      "bytes": 421145,
+      "content_type": "text/html; charset=UTF-8",
+      "latency_ms": 600.57,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://noodletheory.dotpe.in/order",
+      "final_url": "https://noodletheory.dotpe.in/order",
+      "retrieved_at": "2026-10-07T08:29:36.545338+00:00",
+      "http_status": 200,
+      "sha256": "05790f513f05ae993f679b47ebef80b3ef93795a841bb453f6ea65561f4be184",
+      "bytes": 14033,
+      "content_type": "text/html; charset=utf-8",
+      "latency_ms": 524.62,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://www.aabsweets.com/order/",
+      "final_url": "https://www.aabsweets.com/order/",
+      "retrieved_at": "2026-10-07T08:29:36.714635+00:00",
+      "http_status": 200,
+      "sha256": "c2e75e643a5592ce8553ac68a58b1662e2d56b29c78e35a5ef35d1dcc9a07cff",
+      "bytes": 345915,
+      "content_type": "text/html; charset=utf-8",
+      "latency_ms": 690.66,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://amethystchennai.com/wildgarden.html",
+      "final_url": "https://amethystchennai.com/wildgarden.html",
+      "retrieved_at": "2026-10-07T08:29:37.395779+00:00",
+      "http_status": 200,
+      "sha256": "e1cfe662d42f02d474eb8752a7fb24b9645aac94d88074f32880bf7994a1bff1",
+      "bytes": 4231,
+      "content_type": "text/html",
+      "latency_ms": 1368.43,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://amethystchennai.com/menu/AmethystMenu.pdf",
+      "final_url": "https://amethystchennai.com/menu/AmethystMenu.pdf",
+      "retrieved_at": "2026-10-07T08:29:41.385484+00:00",
+      "http_status": 200,
+      "sha256": "e7cbef3bc0fb982d6bece71a2f22bd366b0d4f8087f5da399881696bc8aeb0f7",
+      "bytes": 1756870,
+      "content_type": "application/pdf",
+      "latency_ms": 5355.69,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://poppadum.in/",
+      "final_url": "https://poppadum.in/",
+      "retrieved_at": "2026-10-07T08:29:37.358196+00:00",
+      "http_status": 200,
+      "sha256": "4daef2aafcbfd0514ca643235a0378fd0099cbeb667ad4b23833ee3096f06cdc",
+      "bytes": 20993,
+      "content_type": "text/html; charset=UTF-8",
+      "latency_ms": 1325.05,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://www.episodescafe.in/cafemenu",
+      "final_url": "https://www.episodescafe.in/cafemenu",
+      "retrieved_at": "2026-10-07T08:29:37.242103+00:00",
+      "http_status": 200,
+      "sha256": "e7c0e80fb9ea64ede9444e37cdbf0877457c45e96bbc4b77c8c4f94ce8a4650a",
+      "bytes": 36707,
+      "content_type": "text/html; charset=UTF-8",
+      "latency_ms": 1205.77,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://dcafes.com/",
+      "final_url": "https://dcafes.com/",
+      "retrieved_at": "2026-10-07T08:29:36.722637+00:00",
+      "http_status": 403,
+      "sha256": "69eacef2f355c22ff53745adb39ff0076d2093a767a72e38070ca83c7c5569df",
+      "bytes": 5768,
+      "content_type": "text/html",
+      "latency_ms": 683.19,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://overflowcoffee.in/menu/",
+      "final_url": "https://overflowcoffee.in/menu/",
+      "retrieved_at": "2026-10-07T08:29:36.687644+00:00",
+      "http_status": 403,
+      "sha256": "69eacef2f355c22ff53745adb39ff0076d2093a767a72e38070ca83c7c5569df",
+      "bytes": 5768,
+      "content_type": "text/html",
+      "latency_ms": 644.24,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    },
+    {
+      "source_ref": "https://chennaicorporation.gov.in/departments/health/index.htm",
+      "final_url": "https://chennaicorporation.gov.in/departments/health/index.htm",
+      "retrieved_at": "2026-10-07T08:29:36.593329+00:00",
+      "http_status": 200,
+      "sha256": "3323b4509e90b4b83530790014b4223ea7b2c3c8d814051ca7fc57ccc0104857",
+      "bytes": 54153,
+      "content_type": "text/html",
+      "latency_ms": 547.26,
+      "limitation": "Retrieval is not proof that operational facts are current; full page is not rehosted"
+    }
+  ],
+  "accepted_real_plans": 0,
+  "ranker_calls": 0,
+  "route_calls_this_search": 0,
+  "public_compilation_available": false
+}

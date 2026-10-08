@@ -1,7 +1,6 @@
 """Local Gemma selection over revalidated plans; model text cannot introduce venue facts."""
 
 import json
-import re
 from datetime import datetime
 from pathlib import Path
 from typing import Literal, Protocol
@@ -12,6 +11,7 @@ from ground_rule.policy import validate_plan
 from pydantic import ValidationError
 
 from app.compiler import ValidCandidatePlan
+from app.model_connection import model_connection
 
 
 class RankSelection(Contract):
@@ -26,16 +26,23 @@ class ModelProvider(Protocol):
 
 class LocalGemma:
     def __init__(
-        self, client: httpx.AsyncClient, model: str, base_url: str = "http://127.0.0.1:11434"
+        self,
+        client: httpx.AsyncClient,
+        model: str,
+        base_url: str = "http://127.0.0.1:11434",
+        api_key: str | None = None,
     ) -> None:
-        if not re.fullmatch(r"http://(?:127\.0\.0\.1|localhost|\[::1\]):\d+", base_url):
-            raise ValueError("Gemma requires a loopback URL")
-        self.client, self.model, self.base_url = client, model, base_url
+        self.base_url, self.headers = model_connection(base_url, api_key)
+        self.client, self.model = client, model
 
     async def generate(self, request: dict[str, object]) -> str | CompilationFailure:
         try:
             response = await self.client.post(
-                self.base_url + "/api/chat", json={**request, "model": self.model}, timeout=120
+                self.base_url + "/api/chat",
+                json={**request, "model": self.model},
+                timeout=120,
+                headers=self.headers,
+                follow_redirects=False,
             )
             response.raise_for_status()
             payload = response.json()

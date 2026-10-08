@@ -1,8 +1,11 @@
 name: Checks
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   checks:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
@@ -20,3 +23,14 @@ jobs:
       - run: uv run python evals/runner/contracts.py
       - run: uv run python -m evals.runner.policy
       - run: npm ci --prefix apps/web && npm run check --prefix apps/web
+      - run: uv run python scripts/scan_secrets.py
+      - run: npx --prefix apps/web playwright install --with-deps chromium
+      - run: npx --prefix apps/web playwright test --config apps/web/playwright.config.ts
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: release-evidence
+          path: |
+            artifacts/release/
+            apps/web/test-results/
+          retention-days: 7

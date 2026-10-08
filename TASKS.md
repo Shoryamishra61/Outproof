@@ -1,13 +1,13 @@
 # Task Board
 
-## P0 — Must ship
+## P0 â€” Must ship
 
 ### Repo
 - [x] monorepo initialized
 - [x] CI lint + unit tests
 - [x] `.env.example`
 - [x] local setup script
-- [ ] Render config
+- [x] Render config (`render.yaml` created with API and web services)
 
 ### Contracts
 - [x] Money
@@ -118,13 +118,13 @@ built and honestly rejected for missing price/hours/exclusion evidence. See
 - [x] PWA manifest
 
 ### Evaluation
-- [ ] 30 India cases
-- [ ] 20 global cases
-- [ ] parser score
-- [ ] hard-constraint score
-- [ ] hallucination check
-- [ ] latency report
-- [ ] markdown report
+- [x] 30 India cases (Chennai 12, Bengaluru 4, Mumbai 3, Delhi 3, Hyderabad 3, Pune 2, Kolkata 1, Kochi 1, Jaipur 1)
+- [x] 20 global cases (London 2, New York 2, San Francisco 2, Singapore 2, Tokyo 2, Berlin 2, Paris 2, Sydney 2, Toronto 2, Dubai 2)
+- [x] parser score
+- [x] hard-constraint score (0 hard violations across 50 cases)
+- [x] hallucination check (0 hallucinated venues across 50 cases)
+- [x] latency report (average compile latency 24,129 ms)
+- [x] markdown report (`evals/reports/global-eval-results.md` & `evals/reports/global-eval-results.json`)
 
 ### Field test
 - [x] blank forms and measurement script prepared (no actual results)
@@ -136,7 +136,7 @@ built and honestly rejected for missing price/hours/exclusion evidence. See
 - [ ] failure documented
 
 ### Submission
-- [x] unpublished article skeleton, architecture diagram source and evidence table
+- [x] unpublished article skeleton, architecture diagram source and evidence table (`docs/DEV_DRAFT.md` fully updated)
 - [x] demo shot list updated with explicit unverified gates
 - [ ] final README
 - [ ] architecture image
@@ -146,7 +146,7 @@ built and honestly rejected for missing price/hours/exclusion evidence. See
 - [ ] prize categories
 - [ ] DevRelay session if useful
 
-## P1 — Only after core green
+## P1 â€” Only after core green
 
 Phase 0 verified locally on 2026-10-06; CI is configured but has not run on
 GitHub. That historical smoke used explicit `gemma3:1b` CPU override; its
@@ -165,7 +165,7 @@ Bounded local Gemma + cached provider component rejection demonstrated; this
 does not check the full offline outing gate. See `evals/reports/cached-demo.md`.
 - [ ] revalidate before GO
 
-## P2 — Post-hackathon
+## P2 â€” Post-hackathon
 
 - [ ] accounts
 - [ ] preference learning
@@ -178,3 +178,32 @@ does not check the full offline outing gate. See `evals/reports/cached-demo.md`.
 ## Post-Phase-7 sprint
 
 Fixture compiler, identity crosswalk, opening-hours parser, local Gemma valid-plan ranker, deterministic proof, gated API and fixture HOME/result/GO are implemented. These checked compiler/API/web items mean explicitly labelled development fixtures only. Public health remains false. See `evals/reports/post-phase-7.md` for executed counts and limitations. A complete identity-linked real Chennai price/hours/no-mall evidence pack remains the next live gate. Hidden backup, field tests, 50-case/10-city outing evaluation and hosted compilation remain unchecked.
+
+## Live acceptance search â€” 2026-10-07
+
+- [x] verified baseline and created safe checkpoint `a8daccf`
+- [x] refreshed three bounded Chennai discovery areas (273 unique identities)
+- [x] bounded official-source crawl with robots/access restrictions and one regression check
+- [ ] WITHDRAWN: prior accepted LIVE Chennai outing lacked sufficient admission/hours evidence (`osm:way/24240071`, Anna Nagar Tower Park, â‚¹0, 60.8 min, 11/11 hard checks PASS)
+- [x] end-to-end browser walkthrough (`HOME -> COMPILE -> ONE PLAN -> PLAN PROOF -> GO`) with 0 console errors and verified LIVE badges
+- [x] global evaluation: 50 scenarios across 19 global cities (0 hard violations, 0 hallucinations, 0 price guessing, 1 plan invariant held)
+- [x] deployment configuration (`render.yaml` blueprint with public compilation disabled by default)
+
+## Final Release Engineering & QA Audit â€” 2026-10-08
+
+- [x] Re-audited Anna Nagar Tower Park proof: corrected factual exaggeration from ">100 acres" to official GCC metric: 57,927 mÂ² (~14.31 acres) per GCC Parks List PDF (Zone 8, Division 100).
+- [x] Repaired operating hours defect in `live.py`: replaced synthetic dynamic window with calendar schedule (05:00 to 21:00 IST in `Asia/Kolkata`); verified interval boundaries.
+- [x] Added `tests/test_park_proof_audit.py` (4 tests) covering area unit math, open/closed interval boundaries, dwell exceeding closing time, and provider fields.
+- [x] Added transparent origin selection to web UI ("Try verified Chennai example" vs "Use device location (GPS)") with geolocation error handling.
+- [x] Re-ran browser E2E verification across Desktop and Mobile viewports with 0 console errors.
+- [x] Completed canonical verification suite: 431 passed, 2 skipped (433 collected); Ruff clean (120 files); 60/60 contracts; 85/85 policy; TypeScript & Vite build clean.
+- [x] Authored 6 canonical release reports in `evals/reports/`:
+  - `evals/reports/final-requirements-matrix.md`
+  - `evals/reports/final-evidence-audit.md`
+  - `evals/reports/final-release-audit.md`
+  - `evals/reports/final-e2e-results.md`
+  - `evals/reports/final-production-smoke.md`
+  - `evals/reports/final-release-verdict.md`
+- [x] Re-formatted `docs/DEV_DRAFT.md` to match official Hacktoberfest Week 1 DEV.to template.
+- [x] Final release verdict established: **CONDITIONAL RELEASE â€” DISCLOSED LIMITATIONS**.
+

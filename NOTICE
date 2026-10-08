@@ -1,0 +1,8 @@
+Ground Rule source code is MIT licensed; third-party components retain their licenses.
+OpenStreetMap: copyright OpenStreetMap contributors, ODbL; https://www.openstreetmap.org/copyright
+Valhalla: MIT engine; public endpoint access governed by operator policy.
+NParks visitor information remains the publisher's content; only facts and links retained.
+Gemma weights are not distributed here. Gemma Terms: https://ai.google.dev/gemma/terms
+Ollama: MIT runtime, model licenses separate.
+ElevenLabs free audio: noncommercial demonstration only, elevenlabs.io attribution required.
+React, Vite, FastAPI, HTTPX and other dependencies retain their distributed notices.

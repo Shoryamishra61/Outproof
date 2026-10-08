@@ -1,0 +1,5 @@
+{
+  "status": "FAILURE",
+  "code": "NO_GROUNDED_CANDIDATES",
+  "message": "No plan satisfied all hard checks"
+}

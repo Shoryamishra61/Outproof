@@ -7,12 +7,19 @@ dependencies = [
   "httpx>=0.28,<1",
   "opening-hours-py==2.1.4",
   "pydantic>=2.10,<3",
+  "sentry-sdk>=2.71.0",
   "tzdata>=2025.2",
   "uvicorn>=0.34,<1",
 ]
 
 [dependency-groups]
-dev = ["jsonschema>=4.23,<5", "pytest>=8,<10", "ruff>=0.11,<1"]
+dev = [
+    "hypothesis>=6.168.5",
+    "jsonschema>=4.23,<5",
+    "pip-audit>=2.10.1",
+    "pytest>=8,<10",
+    "ruff>=0.11,<1",
+]
 
 [build-system]
 requires = ["setuptools>=75,<83"]

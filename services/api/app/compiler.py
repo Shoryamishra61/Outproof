@@ -1,6 +1,7 @@
 """Provider orchestration. Only unchanged-policy accepted plans leave this module."""
 
 import logging
+from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 from time import perf_counter
 
@@ -83,6 +84,7 @@ async def valid_candidate_plans(
     *,
     as_of: datetime,
     allow_fixture: bool = False,
+    clock: Callable[[], datetime] | None = None,
 ) -> tuple[ValidCandidatePlan, ...] | CompilationFailure:
     controls = ConstraintSet.model_validate(controls)
     if controls.origin is None or controls.departure_at is None:
@@ -109,8 +111,8 @@ async def valid_candidate_plans(
     logger.info("discovery count=%s elapsed_ms=%.2f", len(by_id), (perf_counter() - started) * 1000)
     places = []
     failure = None
-    # Same 12-candidate ceiling as the existing deterministic builder.
-    for original in sorted(by_id.values(), key=lambda p: p.place_id)[:12]:
+    # Bounded candidate exploration; up to 12 places proceed to routing.
+    for original in sorted(by_id.values(), key=lambda p: p.place_id):
         enriched = await enrichment.enrich(original)
         if isinstance(enriched, CompilationFailure):
             failure = enriched
@@ -145,6 +147,14 @@ async def valid_candidate_plans(
         if any(sources.get(e.evidence_id) != e for e in place_sources(original)):
             continue
         places.append(candidate)
+    operational_candidates = [
+        p
+        for p in places
+        if p.price is not None
+        or p.opening_windows is not None
+        or any(e.field == "public_access" for e in p.evidence)
+    ]
+    places = operational_candidates[:12] if operational_candidates else places[:12]
     if not places:
         return failure or ()
     legs = [("origin", p.place_id, controls.origin, p.coordinates) for p in places]
@@ -165,15 +175,16 @@ async def valid_candidate_plans(
             failure = route
         else:
             routes.append(route)
+    eval_as_of = max(as_of, clock()) if clock else as_of
     built = build_candidates(
-        tuple(places), tuple(routes), controls, as_of=as_of, allow_fixture=allow_fixture
+        tuple(places), tuple(routes), controls, as_of=eval_as_of, allow_fixture=allow_fixture
     )
     if isinstance(built, CompilationFailure):
         return failure or built
     valid = []
     for plan in built:
-        plan = materialize_hours(plan, as_of=as_of, allow_fixture=allow_fixture)
-        validation = validate_plan(plan, controls, as_of=as_of, allow_fixture=allow_fixture)
+        plan = materialize_hours(plan, as_of=eval_as_of, allow_fixture=allow_fixture)
+        validation = validate_plan(plan, controls, as_of=eval_as_of, allow_fixture=allow_fixture)
         if validation.accepted:
             valid.append(ValidCandidatePlan(plan=plan, validation=validation))
         else:

@@ -6,6 +6,7 @@ from datetime import datetime
 from time import perf_counter
 from typing import Literal
 
+import sentry_sdk
 from ground_rule.models import CompilationFailure, CompiledPlan, ConstraintSet
 from ground_rule.proof import build_proof
 
@@ -28,22 +29,31 @@ async def compile_internal(
     clock: Callable[[], datetime] | None = None,
 ) -> CompiledPlan | CompilationFailure:
     started = perf_counter()
-    valid = await valid_candidate_plans(
-        controls, discovery, enrichment, routing, as_of=as_of, allow_fixture=mode == "FIXTURE"
-    )
+    with sentry_sdk.start_span(op="ground_rule.ground_and_validate"):
+        valid = await valid_candidate_plans(
+            controls,
+            discovery,
+            enrichment,
+            routing,
+            as_of=as_of,
+            allow_fixture=mode == "FIXTURE",
+            clock=clock,
+        )
     if isinstance(valid, CompilationFailure):
         return valid
     if not valid:
         return CompilationFailure(
             code="NO_GROUNDED_CANDIDATES", message="No plan satisfied all hard checks"
         )
-    selection = await rank_valid_plans(
-        valid, controls, model, as_of=as_of, allow_fixture=mode == "FIXTURE"
-    )
+    eval_as_of = clock() if clock else as_of
+    with sentry_sdk.start_span(op="ground_rule.gemma_rank"):
+        selection = await rank_valid_plans(
+            valid, controls, model, as_of=eval_as_of, allow_fixture=mode == "FIXTURE"
+        )
     if isinstance(selection, CompilationFailure):
         return selection
     selected = next(item for item in valid if item.plan.plan_id == selection.selected_plan_id)
-    compiled_at = clock() if clock else as_of
+    compiled_at = clock() if clock else eval_as_of
     try:
         proof = build_proof(
             selected.plan,

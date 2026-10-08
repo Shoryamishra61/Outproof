@@ -1,0 +1,32 @@
+{
+  "url": "https://rca-photograph-occupations-flag.trycloudflare.com",
+  "unauthenticated": 401,
+  "authenticated": 200,
+  "model": {
+    "name": "gemma4:e2b-it-qat",
+    "model": "gemma4:e2b-it-qat",
+    "modified_at": "2026-10-06T23:34:58.8575884+05:30",
+    "size": 4336358185,
+    "digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "gemma4",
+      "families": [
+        "gemma4"
+      ],
+      "parameter_size": "4.6B",
+      "quantization_level": "Q4_0",
+      "context_length": 131072,
+      "embedding_length": 1536
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "audio",
+      "tools",
+      "thinking"
+    ]
+  },
+  "availability": "temporary tunnel; local host must remain awake"
+}

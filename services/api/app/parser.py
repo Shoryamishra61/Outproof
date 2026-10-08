@@ -21,6 +21,8 @@ from ground_rule.models import (
 )
 from pydantic import AwareDatetime, Field, ValidationError
 
+from app.model_connection import model_connection
+
 Preference = Literal[
     "quiet",
     "cheap",
@@ -305,18 +307,21 @@ def parse_constraints(
     *,
     model: str,
     base_url: str = "http://127.0.0.1:11434",
+    api_key: str | None = None,
 ) -> ConstraintSet | CompilationFailure:
     """One bounded local call. No retries, fallback model, or private prompt logging."""
     if len(text) > 4000:
         return CompilationFailure(
             code="UNSUPPORTED_CONSTRAINT", message="Free text exceeds 4000 characters"
         )
-    if not re.fullmatch(r"http://(?:127\.0\.0\.1|localhost|\[::1\]):\d+", base_url):
-        raise ValueError("The local Gemma path requires a loopback Ollama URL")
+    base_url, headers = model_connection(base_url, api_key)
     try:
         with httpx.Client(timeout=120, trust_env=False) as client:
             response = client.post(
-                base_url + "/api/chat", json=model_request(controls, text, model)
+                base_url + "/api/chat",
+                json=model_request(controls, text, model),
+                headers=headers,
+                follow_redirects=False,
             )
             response.raise_for_status()
             payload = response.json()

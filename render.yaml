@@ -1,0 +1,68 @@
+services:
+  - type: web
+    name: outproof-api
+    runtime: python
+    plan: free
+    region: singapore
+    branch: master
+    autoDeployTrigger: checksPass
+    buildCommand: pip install uv==0.11.9 && uv sync --locked --no-dev
+    startCommand: uv run --no-sync uvicorn app.main:app --host 0.0.0.0 --port $PORT --no-access-log
+    healthCheckPath: /v1/health/live
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.13
+      - key: PYTHONPATH
+        value: services/api:packages/domain/src
+      - key: GROUND_RULE_ENV
+        value: production
+      - key: GROUND_RULE_COMPILATION_ENABLED
+        value: 'true'
+      - key: GROUND_RULE_LIVE_MODE
+        value: 'true'
+      - key: GROUND_RULE_FIXTURE_MODE
+        value: 'false'
+      - key: GROUND_RULE_CORS_ORIGINS
+        sync: false
+      - key: GROUND_RULE_ALLOWED_HOSTS
+        sync: false
+      - key: GEMMA_MODEL
+        value: gemma4:e2b-it-qat
+      - key: OLLAMA_BASE_URL
+        sync: false
+      - key: GEMMA_API_KEY
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+      - key: GROUND_RULE_SERPAPI_ENABLED
+        value: 'false'
+      - key: SERPAPI_API_KEY
+        sync: false
+  - type: web
+    name: outproof-web
+    runtime: static
+    branch: master
+    autoDeployTrigger: checksPass
+    buildCommand: npm ci --prefix apps/web && npm run build --prefix apps/web
+    staticPublishPath: apps/web/dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        sync: false
+      - key: VITE_GROUND_RULE_LIVE_MODE
+        value: 'true'
+      - key: VITE_GROUND_RULE_FIXTURE_MODE
+        value: 'false'
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

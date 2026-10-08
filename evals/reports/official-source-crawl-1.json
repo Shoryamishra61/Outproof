@@ -1,0 +1,353 @@
+{
+  "scope": "PUBLIC_CRAWL_LEADS_ONLY_NOT_POLICY_EVIDENCE",
+  "executed_at": "2026-10-07T08:36:09.823361+00:00",
+  "limits": {
+    "sites": 12,
+    "pages_per_site": 3,
+    "bytes_per_page": 1000000
+  },
+  "sites": [
+    {
+      "root": "https://paativeedu.com/",
+      "robots_status": 404,
+      "pages": [
+        {
+          "source_ref": "https://paativeedu.com/",
+          "http_status": 200,
+          "final_url": "https://paativeedu.com/",
+          "observed_at": "2026-10-07T08:35:59.772769+00:00",
+          "sha256": "a3d57fd8172c98db7aac8c1410a96e856635313f566fc515f08de71230552d34",
+          "bytes": 20987,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        },
+        {
+          "source_ref": "https://paativeedu.com/about.html",
+          "http_status": 200,
+          "final_url": "https://paativeedu.com/about.html",
+          "observed_at": "2026-10-07T08:35:59.856269+00:00",
+          "sha256": "4806fb9dc84f1f9c42d5bb328fa7fef16987ec2e26261477b7aa8313b7abed43",
+          "bytes": 14862,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        },
+        {
+          "source_ref": "https://paativeedu.com/restaurant.html",
+          "http_status": 200,
+          "final_url": "https://paativeedu.com/restaurant.html",
+          "observed_at": "2026-10-07T08:35:59.936115+00:00",
+          "sha256": "6b51e76548b95bb263b119dca2e30713e6b1ffbf9762a4d76347aaecf2c16e5e",
+          "bytes": 18493,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        }
+      ]
+    },
+    {
+      "root": "https://www.aabsweets.com/order/",
+      "robots_status": 404,
+      "pages": [
+        {
+          "source_ref": "https://www.aabsweets.com/order/",
+          "http_status": 200,
+          "final_url": "https://www.aabsweets.com/order/",
+          "observed_at": "2026-10-07T08:36:00.086716+00:00",
+          "sha256": "c2e75e643a5592ce8553ac68a58b1662e2d56b29c78e35a5ef35d1dcc9a07cff",
+          "bytes": 345915,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": true,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": false
+        },
+        {
+          "source_ref": "https://www.aabsweets.com/order/about-us",
+          "http_status": 200,
+          "final_url": "https://www.aabsweets.com/order/about-us",
+          "observed_at": "2026-10-07T08:36:00.156167+00:00",
+          "sha256": "8b9748bfbd12dcd16910655148514576c8e5c9b2147cbe3909da0d59249f3b48",
+          "bytes": 575481,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": true,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        },
+        {
+          "source_ref": "https://www.aabsweets.com/order/locations",
+          "http_status": 200,
+          "final_url": "https://www.aabsweets.com/order/locations",
+          "observed_at": "2026-10-07T08:36:00.264785+00:00",
+          "sha256": "316809a061ece57fc5bf0b62d97a5a6f381fadb2f1a46487fe3f7665bf072f9f",
+          "bytes": 315407,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": false
+        }
+      ]
+    },
+    {
+      "root": "https://www.vasantabhavan.in/",
+      "robots_status": 404,
+      "pages": [
+        {
+          "source_ref": "https://www.vasantabhavan.in/",
+          "http_status": 200,
+          "final_url": "https://www.vasantabhavan.in/",
+          "observed_at": "2026-10-07T08:36:00.515131+00:00",
+          "sha256": "61327abb97cabed31a0f2da8e12a101aa66944ba6315cfb5ade9e10780511ad9",
+          "bytes": 93463,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        },
+        {
+          "source_ref": "https://www.vasantabhavan.in/about-us",
+          "http_status": 200,
+          "final_url": "https://www.vasantabhavan.in/about-us",
+          "observed_at": "2026-10-07T08:36:00.623186+00:00",
+          "sha256": "b0e5a59f8850ad20dce8eba719d6d3751e1e760722f79205ce49c2fc1909cc76",
+          "bytes": 78317,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        },
+        {
+          "source_ref": "https://www.vasantabhavan.in/menu",
+          "http_status": 200,
+          "final_url": "https://www.vasantabhavan.in/menu",
+          "observed_at": "2026-10-07T08:36:00.673303+00:00",
+          "sha256": "89dcdddbd9881dbad4ae02b6cf4bec8c127770af69f1094b446f7644de7b0f8a",
+          "bytes": 77137,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        }
+      ]
+    },
+    {
+      "root": "https://crafeindia.com/",
+      "robots_status": 200,
+      "pages": [
+        {
+          "source_ref": "https://crafeindia.com/",
+          "status": "ROBOTS_DISALLOWED"
+        }
+      ]
+    },
+    {
+      "root": "https://www.mashrestocafe.com/",
+      "robots_status": 404,
+      "pages": [
+        {
+          "source_ref": "https://www.mashrestocafe.com/",
+          "http_status": 200,
+          "final_url": "https://www.mashrestocafe.com/",
+          "observed_at": "2026-10-07T08:36:02.348442+00:00",
+          "sha256": "45096a17400e3d18f7534503eaa86960dd90b4d60ae534aa69a3113acddc19fc",
+          "bytes": 7779,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": false
+        }
+      ]
+    },
+    {
+      "root": "https://www.kappachakkakandhari.com/",
+      "status": "ROBOTS_UNAVAILABLE",
+      "http_status": 301
+    },
+    {
+      "root": "https://www.thenoodletheory.com/",
+      "robots_status": 200,
+      "pages": [
+        {
+          "source_ref": "https://www.thenoodletheory.com/",
+          "http_status": 200,
+          "final_url": "https://www.thenoodletheory.com/",
+          "observed_at": "2026-10-07T08:36:03.086483+00:00",
+          "sha256": "c2b27cedb136eebc1f0bb3dc465bcf053bec5745dcb3cba15e3c0782d2126d5f",
+          "bytes": 421838,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": false,
+          "vegetarian_signal": true
+        },
+        {
+          "source_ref": "https://www.thenoodletheory.com/contact",
+          "http_status": 200,
+          "final_url": "https://www.thenoodletheory.com/contact",
+          "observed_at": "2026-10-07T08:36:03.454778+00:00",
+          "sha256": "1981faaaa3f550f6ecc8ba1443624b72b20213f5765fea75055c7e4f55e275db",
+          "bytes": 457860,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": false,
+          "vegetarian_signal": true
+        }
+      ]
+    },
+    {
+      "root": "https://amethystchennai.com/wildgarden.html",
+      "status": "CRAWL_DELAY_EXCEEDS_PROBE_BOUND"
+    },
+    {
+      "root": "https://www.episodescafe.in/cafemenu",
+      "robots_status": 200,
+      "pages": [
+        {
+          "source_ref": "https://www.episodescafe.in/cafemenu",
+          "http_status": 200,
+          "final_url": "https://www.episodescafe.in/cafemenu",
+          "observed_at": "2026-10-07T08:36:05.970377+00:00",
+          "sha256": "e7c0e80fb9ea64ede9444e37cdbf0877457c45e96bbc4b77c8c4f94ce8a4650a",
+          "bytes": 36707,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": true,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        }
+      ]
+    },
+    {
+      "root": "https://poppadum.in/",
+      "robots_status": 200,
+      "pages": [
+        {
+          "source_ref": "https://poppadum.in/",
+          "http_status": 200,
+          "final_url": "https://poppadum.in/",
+          "observed_at": "2026-10-07T08:36:07.268399+00:00",
+          "sha256": "4daef2aafcbfd0514ca643235a0378fd0099cbeb667ad4b23833ee3096f06cdc",
+          "bytes": 20993,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": true,
+          "tax_charge_signal": true,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        },
+        {
+          "source_ref": "https://poppadum.in/menu",
+          "http_status": 200,
+          "final_url": "https://poppadum.in/menu",
+          "observed_at": "2026-10-07T08:36:07.649730+00:00",
+          "sha256": "348afc44897e0c4570fcfeca92fa54767f23412724b975add170fa48c0a393b1",
+          "bytes": 12823,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": true,
+          "tax_charge_signal": true,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        }
+      ]
+    },
+    {
+      "root": "https://www.shreemithai.com/",
+      "robots_status": 200,
+      "pages": [
+        {
+          "source_ref": "https://www.shreemithai.com/",
+          "http_status": 200,
+          "final_url": "https://www.shreemithai.com/",
+          "observed_at": "2026-10-07T08:36:08.288080+00:00",
+          "sha256": "d28276cd1414314ec004ee6da4d5a5194427b5855c26767c8c73ba699204c141",
+          "bytes": 388078,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": true,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": false
+        },
+        {
+          "source_ref": "https://www.shreemithai.com/pages/contact-us",
+          "http_status": 200,
+          "final_url": "https://www.shreemithai.com/pages/contact-us",
+          "observed_at": "2026-10-07T08:36:08.598552+00:00",
+          "sha256": "4a273dadeeb36f284fad243f1b1c71385cdada6b966b4fd4d1c23d3cac82ef8b",
+          "bytes": 205540,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": true,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": false
+        },
+        {
+          "source_ref": "https://www.shreemithai.com/pages/about-us",
+          "http_status": 200,
+          "final_url": "https://www.shreemithai.com/pages/about-us",
+          "observed_at": "2026-10-07T08:36:08.840277+00:00",
+          "sha256": "ee61428ef6b71f8164dfeb3df845cf8f9bf4e786324748ff09c3864d829bcb04",
+          "bytes": 207642,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": true,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": false
+        }
+      ]
+    },
+    {
+      "root": "https://www.lemontreehotels.com/lemon-tree-hotel/chennai/hotels-in-chennai/restaurants",
+      "robots_status": 200,
+      "pages": [
+        {
+          "source_ref": "https://www.lemontreehotels.com/lemon-tree-hotel/chennai/hotels-in-chennai/restaurants",
+          "http_status": 200,
+          "final_url": "https://www.lemontreehotels.com/lemon-tree-hotel/chennai/hotels-in-chennai/restaurants",
+          "observed_at": "2026-10-07T08:36:09.456207+00:00",
+          "sha256": "1f851b323b61d6b1f48afaf81d06f8d0726fea442bdc84e61ba197ecc23dffe9",
+          "bytes": 174738,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": true
+        },
+        {
+          "source_ref": "https://www.lemontreehotels.com/lemon-tree-hotel/chennai/hotels-in-chennai/contact-us",
+          "http_status": 200,
+          "final_url": "https://www.lemontreehotels.com/lemon-tree-hotel/chennai/hotels-in-chennai/contact-us",
+          "observed_at": "2026-10-07T08:36:09.747185+00:00",
+          "sha256": "89ca0739158a122d3c4671b5c914a1fcb2ff61d29c8078ad5ceb92f769c803ab",
+          "bytes": 136715,
+          "status": "HTML_LEADS_ONLY",
+          "numeric_currency_signal": false,
+          "tax_charge_signal": false,
+          "hours_signal": true,
+          "vegetarian_signal": false
+        },
+        {
+          "source_ref": "https://www.lemontreehotels.com/uploads/dinemenugallery/665045244c05es1.jpg",
+          "http_status": 200,
+          "final_url": "https://www.lemontreehotels.com/uploads/dinemenugallery/665045244c05es1.jpg",
+          "observed_at": "2026-10-07T08:36:09.823361+00:00",
+          "sha256": "cf9f145cfc3577341c7c20d30207dc20e1295994bcd308988f63f518d5763cf6",
+          "bytes": 34562,
+          "status": "DOCUMENT_NEEDS_REVIEW"
+        }
+      ]
+    }
+  ]
+}

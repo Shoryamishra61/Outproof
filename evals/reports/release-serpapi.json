@@ -1,0 +1,21 @@
+{
+  "executed_at": "2026-10-08T20:27:10.642067+00:00",
+  "scope": "live search passed through independent authoritative normalizer",
+  "leads": [
+    {
+      "evidence_id": "osm:node/602215681:source_discovery",
+      "subject_id": "osm:node/602215681",
+      "field": "source_discovery",
+      "value": {
+        "official_url": "https://sbg.nparks.gov.sg/",
+        "use": "lead only; claims independently fetched"
+      },
+      "source": "SERPAPI",
+      "source_ref": "https://sbg.nparks.gov.sg/",
+      "observed_at": "2026-10-08T20:27:10.642067Z",
+      "expires_at": "2026-10-09T20:27:10.642067Z",
+      "confidence": "LOW"
+    }
+  ],
+  "price_confidence": "VERIFIED"
+}

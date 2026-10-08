@@ -1,0 +1,83 @@
+"""Authenticated, bounded proxy for the two Ollama calls used by Ground Rule."""
+
+import asyncio
+import json
+import os
+import secrets
+
+import httpx
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+
+app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+busy = asyncio.Lock()
+
+
+@app.api_route("/api/{operation}", methods=["GET", "POST"])
+async def proxy(operation: str, request: Request) -> JSONResponse:
+    key = os.getenv("GEMMA_API_KEY", "")
+    if not key or not secrets.compare_digest(
+        request.headers.get("Authorization", ""), "Bearer " + key
+    ):
+        return JSONResponse(status_code=401, content={"error": "Authentication required"})
+    if (operation, request.method) not in {("tags", "GET"), ("chat", "POST")}:
+        return JSONResponse(status_code=404, content={"error": "Unsupported operation"})
+    if busy.locked():
+        return JSONResponse(status_code=429, content={"error": "Model busy"})
+    model = os.getenv("GEMMA_MODEL", "gemma4:e2b-it-qat")
+    try:
+        payload: dict = {}
+        if operation == "chat":
+            body = bytearray()
+            async for chunk in request.stream():
+                body.extend(chunk)
+                if len(body) > 20000:
+                    raise ValueError("Oversized request")
+            payload = json.loads(body)
+            if (
+                not isinstance(payload, dict)
+                or payload.get("model") != model
+                or payload.get("stream") is not False
+            ):
+                raise ValueError("Unsupported request")
+            messages = payload.get("messages")
+            if (
+                not isinstance(messages, list)
+                or not 1 <= len(messages) <= 2
+                or any(
+                    not isinstance(m, dict)
+                    or m.get("role") != "user"
+                    or not isinstance(m.get("content"), str)
+                    for m in messages
+                )
+            ):
+                raise ValueError("Unsupported messages")
+            payload = {
+                "model": model,
+                "messages": messages,
+                "format": payload.get("format"),
+                "stream": False,
+                "think": False,
+                "options": {
+                    "temperature": 0,
+                    "seed": 42,
+                    "num_ctx": 4096,
+                    "num_predict": min(
+                        512, max(1, int(payload.get("options", {}).get("num_predict", 384)))
+                    ),
+                },
+            }
+        async with busy, httpx.AsyncClient(trust_env=False, timeout=125) as client:
+            url = "http://127.0.0.1:11434/api/" + operation
+            response = await (
+                client.get(url) if operation == "tags" else client.post(url, json=payload)
+            )
+            response.raise_for_status()
+            output = response.json()
+            if operation == "tags":
+                output = {"models": [m for m in output["models"] if m["name"] == model]}
+            return JSONResponse(content=output)
+    except (httpx.HTTPError, ValueError, KeyError, TypeError, AttributeError):
+        return JSONResponse(
+            status_code=503, content={"error": "Model unavailable or request invalid"}
+        )

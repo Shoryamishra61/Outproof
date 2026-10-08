@@ -1,0 +1,12 @@
+{
+  "executed_at": "2026-10-08T20:27:15.586239+00:00",
+  "http_status": 200,
+  "request_id": "vNSBPHbITF1ZXyNMpxlj",
+  "voice": "EXAVITQu4vr4xnSDxMaL",
+  "model": "eleven_multilingual_v2",
+  "characters": 130,
+  "bytes": 111639,
+  "sha256": "77cd33f3be21798e7755ed2df3f7bd0fc8a78433df868167eea4b5575fb98b19",
+  "text": "Your outing is checked. Open the walking map, follow the route to the garden entrance, and put your phone away when you are ready.",
+  "license": "noncommercial free-tier demo; elevenlabs.io attribution"
+}

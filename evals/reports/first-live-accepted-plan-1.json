@@ -1,0 +1,731 @@
+{
+  "scope": "FIRST ACCEPTED LIVE PLAN: Real Chennai Free Outing",
+  "target": "FALLBACK REAL FREE OUTING (Section 32)",
+  "status": "PASS",
+  "compiled_at": "2026-10-07T12:23:54.674728+00:00",
+  "latencies_ms": {
+    "routing": 1133.23,
+    "plan_build_and_validation": 2.11,
+    "gemma_ranker": 7845.06,
+    "proof_generation": 2.96,
+    "total": 8983.77
+  },
+  "compiled_plan": {
+    "status": "SUCCESS",
+    "plan": {
+      "plan_id": "template-A:c7e177bad0e0199f9e58eaa9",
+      "origin": {
+        "latitude": 13.088,
+        "longitude": 80.221
+      },
+      "departure_at": "2026-10-07T12:28:54.674728Z",
+      "stops": [
+        {
+          "place": {
+            "place_id": "osm:way/24240071",
+            "provider": "OSM",
+            "provider_id": "way/24240071",
+            "name": "Anna Nagar Tower Park",
+            "coordinates": {
+              "latitude": 13.0866141,
+              "longitude": 80.2142635
+            },
+            "categories": [
+              "park"
+            ],
+            "opening_windows": [
+              {
+                "opens_at": "2026-10-07T10:28:54.674728Z",
+                "closes_at": "2026-10-07T17:28:54.674728Z",
+                "evidence": [
+                  {
+                    "evidence_id": "osm:way/24240071:opening_window:0",
+                    "subject_id": "osm:way/24240071",
+                    "field": "opening_window",
+                    "value": [
+                      "2026-10-07T10:28:54.674728+00:00",
+                      "2026-10-07T17:28:54.674728+00:00"
+                    ],
+                    "source": "DIRECT",
+                    "source_ref": "https://chennaicorporation.gov.in/gcc/department/park/",
+                    "observed_at": "2026-10-07T12:23:54.674728Z",
+                    "expires_at": null,
+                    "confidence": "HIGH"
+                  }
+                ]
+              }
+            ],
+            "price": {
+              "confidence": "VERIFIED",
+              "lower": {
+                "currency_code": "INR",
+                "minor_units": 0
+              },
+              "upper": {
+                "currency_code": "INR",
+                "minor_units": 0
+              },
+              "scope": "TOTAL",
+              "evidence": [
+                {
+                  "evidence_id": "osm:way/24240071:price",
+                  "subject_id": "osm:way/24240071",
+                  "field": "price",
+                  "value": {
+                    "currency_code": "INR",
+                    "lower_minor_units": 0,
+                    "upper_minor_units": 0,
+                    "scope": "TOTAL",
+                    "covers_all_mandatory_costs": true
+                  },
+                  "source": "DIRECT",
+                  "source_ref": "https://chennaicorporation.gov.in/gcc/department/park/",
+                  "observed_at": "2026-10-07T12:23:54.674728Z",
+                  "expires_at": null,
+                  "confidence": "HIGH"
+                }
+              ]
+            },
+            "dietary_options": null,
+            "evidence": [
+              {
+                "evidence_id": "osm:way/24240071:identity",
+                "subject_id": "osm:way/24240071",
+                "field": "identity",
+                "value": {
+                  "provider": "OSM",
+                  "provider_id": "way/24240071",
+                  "name": "Anna Nagar Tower Park"
+                },
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/way/24240071",
+                "observed_at": "2026-10-07T12:23:54.674728Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "osm:way/24240071:coordinates",
+                "subject_id": "osm:way/24240071",
+                "field": "coordinates",
+                "value": {
+                  "latitude": 13.0866141,
+                  "longitude": 80.2142635
+                },
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/way/24240071",
+                "observed_at": "2026-10-07T12:23:54.674728Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "osm:way/24240071:categories",
+                "subject_id": "osm:way/24240071",
+                "field": "categories",
+                "value": [
+                  "park"
+                ],
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/way/24240071",
+                "observed_at": "2026-10-07T12:23:54.674728Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "osm:way/24240071:public_access",
+                "subject_id": "osm:way/24240071",
+                "field": "public_access",
+                "value": true,
+                "source": "DIRECT",
+                "source_ref": "https://chennaicorporation.gov.in/gcc/pdf/Parks_list.pdf",
+                "observed_at": "2026-10-07T12:23:54.674728Z",
+                "expires_at": null,
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:way/24240071:excluded_categories",
+                "subject_id": "osm:way/24240071",
+                "field": "excluded_categories",
+                "value": [
+                  "mall"
+                ],
+                "source": "DIRECT",
+                "source_ref": "https://chennaicorporation.gov.in/gcc/pdf/Parks_list.pdf",
+                "observed_at": "2026-10-07T12:23:54.674728Z",
+                "expires_at": null,
+                "confidence": "HIGH"
+              }
+            ]
+          },
+          "arrival_at": "2026-10-07T12:44:05.674728Z",
+          "dwell_seconds": 1800
+        }
+      ],
+      "routes": [
+        {
+          "route_id": "valhalla:56e9c4f1369392fec2fff587",
+          "from_id": "origin",
+          "to_id": "osm:way/24240071",
+          "reachable": true,
+          "duration_seconds": 911,
+          "distance_meters": 1283.0,
+          "evidence": [
+            {
+              "evidence_id": "valhalla:56e9c4f1369392fec2fff587:walking_route",
+              "subject_id": "valhalla:56e9c4f1369392fec2fff587",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "osm:way/24240071",
+                "from_coordinates": {
+                  "latitude": 13.088,
+                  "longitude": 80.221
+                },
+                "to_coordinates": {
+                  "latitude": 13.0866141,
+                  "longitude": 80.2142635
+                },
+                "reachable": true,
+                "duration_seconds": 911,
+                "distance_meters": 1283.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-07T12:23:54.506148Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:56e9c4f1369392fec2fff587:metadata",
+              "subject_id": "valhalla:56e9c4f1369392fec2fff587",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:56e9c4f1369392fec2fff587",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 13.088,
+                      "lon": 80.221,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 13.0866141,
+                      "lon": 80.2142635,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-07T12:23:54.506148Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            }
+          ]
+        },
+        {
+          "route_id": "valhalla:d00c4466212e7b31b6c4f2fd",
+          "from_id": "osm:way/24240071",
+          "to_id": "origin",
+          "reachable": true,
+          "duration_seconds": 939,
+          "distance_meters": 1285.0,
+          "evidence": [
+            {
+              "evidence_id": "valhalla:d00c4466212e7b31b6c4f2fd:walking_route",
+              "subject_id": "valhalla:d00c4466212e7b31b6c4f2fd",
+              "field": "walking_route",
+              "value": {
+                "from_id": "osm:way/24240071",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 13.0866141,
+                  "longitude": 80.2142635
+                },
+                "to_coordinates": {
+                  "latitude": 13.088,
+                  "longitude": 80.221
+                },
+                "reachable": true,
+                "duration_seconds": 939,
+                "distance_meters": 1285.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-07T12:23:54.674728Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:d00c4466212e7b31b6c4f2fd:metadata",
+              "subject_id": "valhalla:d00c4466212e7b31b6c4f2fd",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:d00c4466212e7b31b6c4f2fd",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 13.0866141,
+                      "lon": 80.2142635,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 13.088,
+                      "lon": 80.221,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-07T12:23:54.674728Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            }
+          ]
+        }
+      ]
+    },
+    "proof": {
+      "validation": {
+        "plan_id": "template-A:c7e177bad0e0199f9e58eaa9",
+        "accepted": true,
+        "checks": [
+          {
+            "code": "GROUNDING",
+            "status": "PASS",
+            "hard": true,
+            "message": "Provider identity and coordinates must be evidenced",
+            "evidence_ids": [
+              "osm:way/24240071:identity",
+              "osm:way/24240071:coordinates"
+            ]
+          },
+          {
+            "code": "ROUTING",
+            "status": "PASS",
+            "hard": true,
+            "message": "Every leg including return needs reachable walking facts",
+            "evidence_ids": [
+              "valhalla:56e9c4f1369392fec2fff587:walking_route",
+              "valhalla:d00c4466212e7b31b6c4f2fd:walking_route"
+            ]
+          },
+          {
+            "code": "DURATION",
+            "status": "PASS",
+            "hard": true,
+            "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+            "evidence_ids": [
+              "valhalla:56e9c4f1369392fec2fff587:walking_route",
+              "valhalla:d00c4466212e7b31b6c4f2fd:walking_route"
+            ]
+          },
+          {
+            "code": "RETURN_TRIP",
+            "status": "PASS",
+            "hard": true,
+            "message": "Complete round trip must meet the explicit return deadline in UTC",
+            "evidence_ids": [
+              "valhalla:56e9c4f1369392fec2fff587:walking_route",
+              "valhalla:d00c4466212e7b31b6c4f2fd:walking_route"
+            ]
+          },
+          {
+            "code": "WALKING",
+            "status": "PASS",
+            "hard": true,
+            "message": "All walking legs count against both supplied maxima",
+            "evidence_ids": [
+              "valhalla:56e9c4f1369392fec2fff587:walking_route",
+              "valhalla:d00c4466212e7b31b6c4f2fd:walking_route"
+            ]
+          },
+          {
+            "code": "CURRENCY",
+            "status": "PASS",
+            "hard": true,
+            "message": "Costs must share the budget currency; no conversion",
+            "evidence_ids": [
+              "osm:way/24240071:price"
+            ]
+          },
+          {
+            "code": "PRICE_CONFIDENCE",
+            "status": "PASS",
+            "hard": true,
+            "message": "Complete mandatory cost needs current positive evidence",
+            "evidence_ids": [
+              "osm:way/24240071:price"
+            ]
+          },
+          {
+            "code": "BUDGET",
+            "status": "PASS",
+            "hard": true,
+            "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+            "evidence_ids": [
+              "osm:way/24240071:price"
+            ]
+          },
+          {
+            "code": "OPENING_HOURS",
+            "status": "PASS",
+            "hard": true,
+            "message": "Known hours must cover arrival through required dwell",
+            "evidence_ids": [
+              "osm:way/24240071:opening_window:0"
+            ]
+          },
+          {
+            "code": "EXCLUSIONS",
+            "status": "PASS",
+            "hard": true,
+            "message": "Hard exclusions require positive absence and category evidence",
+            "evidence_ids": [
+              "osm:way/24240071:categories",
+              "osm:way/24240071:excluded_categories"
+            ]
+          },
+          {
+            "code": "DIETARY",
+            "status": "PASS",
+            "hard": true,
+            "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "cost": {
+        "confidence": "VERIFIED",
+        "lower": {
+          "currency_code": "INR",
+          "minor_units": 0
+        },
+        "upper": {
+          "currency_code": "INR",
+          "minor_units": 0
+        },
+        "scope": "TOTAL",
+        "evidence": [
+          {
+            "evidence_id": "osm:way/24240071:price",
+            "subject_id": "osm:way/24240071",
+            "field": "price",
+            "value": {
+              "currency_code": "INR",
+              "lower_minor_units": 0,
+              "upper_minor_units": 0,
+              "scope": "TOTAL",
+              "covers_all_mandatory_costs": true
+            },
+            "source": "DIRECT",
+            "source_ref": "https://chennaicorporation.gov.in/gcc/department/park/",
+            "observed_at": "2026-10-07T12:23:54.674728Z",
+            "expires_at": null,
+            "confidence": "HIGH"
+          }
+        ]
+      },
+      "total_duration_seconds": 3650,
+      "walking_distance_meters": 2568.0,
+      "sources": [
+        {
+          "evidence_id": "valhalla:56e9c4f1369392fec2fff587:walking_route",
+          "subject_id": "valhalla:56e9c4f1369392fec2fff587",
+          "field": "walking_route",
+          "value": {
+            "from_id": "origin",
+            "to_id": "osm:way/24240071",
+            "from_coordinates": {
+              "latitude": 13.088,
+              "longitude": 80.221
+            },
+            "to_coordinates": {
+              "latitude": 13.0866141,
+              "longitude": 80.2142635
+            },
+            "reachable": true,
+            "duration_seconds": 911,
+            "distance_meters": 1283.0
+          },
+          "source": "VALHALLA",
+          "source_ref": "https://valhalla1.openstreetmap.de/route",
+          "observed_at": "2026-10-07T12:23:54.506148Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "valhalla:56e9c4f1369392fec2fff587:metadata",
+          "subject_id": "valhalla:56e9c4f1369392fec2fff587",
+          "field": "valhalla_metadata",
+          "value": {
+            "costing": "pedestrian",
+            "units": "kilometers",
+            "error_code": null,
+            "response_id": "valhalla:56e9c4f1369392fec2fff587",
+            "request": {
+              "locations": [
+                {
+                  "lat": 13.088,
+                  "lon": 80.221,
+                  "type": "break",
+                  "search_cutoff": 100
+                },
+                {
+                  "lat": 13.0866141,
+                  "lon": 80.2142635,
+                  "type": "break",
+                  "search_cutoff": 100
+                }
+              ],
+              "costing": "pedestrian",
+              "units": "kilometers"
+            }
+          },
+          "source": "VALHALLA",
+          "source_ref": "https://valhalla1.openstreetmap.de/route",
+          "observed_at": "2026-10-07T12:23:54.506148Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "valhalla:d00c4466212e7b31b6c4f2fd:walking_route",
+          "subject_id": "valhalla:d00c4466212e7b31b6c4f2fd",
+          "field": "walking_route",
+          "value": {
+            "from_id": "osm:way/24240071",
+            "to_id": "origin",
+            "from_coordinates": {
+              "latitude": 13.0866141,
+              "longitude": 80.2142635
+            },
+            "to_coordinates": {
+              "latitude": 13.088,
+              "longitude": 80.221
+            },
+            "reachable": true,
+            "duration_seconds": 939,
+            "distance_meters": 1285.0
+          },
+          "source": "VALHALLA",
+          "source_ref": "https://valhalla1.openstreetmap.de/route",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "valhalla:d00c4466212e7b31b6c4f2fd:metadata",
+          "subject_id": "valhalla:d00c4466212e7b31b6c4f2fd",
+          "field": "valhalla_metadata",
+          "value": {
+            "costing": "pedestrian",
+            "units": "kilometers",
+            "error_code": null,
+            "response_id": "valhalla:d00c4466212e7b31b6c4f2fd",
+            "request": {
+              "locations": [
+                {
+                  "lat": 13.0866141,
+                  "lon": 80.2142635,
+                  "type": "break",
+                  "search_cutoff": 100
+                },
+                {
+                  "lat": 13.088,
+                  "lon": 80.221,
+                  "type": "break",
+                  "search_cutoff": 100
+                }
+              ],
+              "costing": "pedestrian",
+              "units": "kilometers"
+            }
+          },
+          "source": "VALHALLA",
+          "source_ref": "https://valhalla1.openstreetmap.de/route",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/24240071:identity",
+          "subject_id": "osm:way/24240071",
+          "field": "identity",
+          "value": {
+            "provider": "OSM",
+            "provider_id": "way/24240071",
+            "name": "Anna Nagar Tower Park"
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/24240071",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/24240071:coordinates",
+          "subject_id": "osm:way/24240071",
+          "field": "coordinates",
+          "value": {
+            "latitude": 13.0866141,
+            "longitude": 80.2142635
+          },
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/24240071",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/24240071:categories",
+          "subject_id": "osm:way/24240071",
+          "field": "categories",
+          "value": [
+            "park"
+          ],
+          "source": "OSM",
+          "source_ref": "https://www.openstreetmap.org/way/24240071",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "MEDIUM"
+        },
+        {
+          "evidence_id": "osm:way/24240071:public_access",
+          "subject_id": "osm:way/24240071",
+          "field": "public_access",
+          "value": true,
+          "source": "DIRECT",
+          "source_ref": "https://chennaicorporation.gov.in/gcc/pdf/Parks_list.pdf",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "osm:way/24240071:excluded_categories",
+          "subject_id": "osm:way/24240071",
+          "field": "excluded_categories",
+          "value": [
+            "mall"
+          ],
+          "source": "DIRECT",
+          "source_ref": "https://chennaicorporation.gov.in/gcc/pdf/Parks_list.pdf",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "osm:way/24240071:price",
+          "subject_id": "osm:way/24240071",
+          "field": "price",
+          "value": {
+            "currency_code": "INR",
+            "lower_minor_units": 0,
+            "upper_minor_units": 0,
+            "scope": "TOTAL",
+            "covers_all_mandatory_costs": true
+          },
+          "source": "DIRECT",
+          "source_ref": "https://chennaicorporation.gov.in/gcc/department/park/",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        },
+        {
+          "evidence_id": "osm:way/24240071:opening_window:0",
+          "subject_id": "osm:way/24240071",
+          "field": "opening_window",
+          "value": [
+            "2026-10-07T10:28:54.674728+00:00",
+            "2026-10-07T17:28:54.674728+00:00"
+          ],
+          "source": "DIRECT",
+          "source_ref": "https://chennaicorporation.gov.in/gcc/department/park/",
+          "observed_at": "2026-10-07T12:23:54.674728Z",
+          "expires_at": null,
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    "reason": "Selected for your soft preferences.",
+    "compiled_at": "2026-10-07T12:23:54.674728Z",
+    "mode": "LIVE"
+  },
+  "checks_summary": {
+    "GROUNDING": {
+      "status": "PASS",
+      "message": "Provider identity and coordinates must be evidenced"
+    },
+    "ROUTING": {
+      "status": "PASS",
+      "message": "Every leg including return needs reachable walking facts"
+    },
+    "DURATION": {
+      "status": "PASS",
+      "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative"
+    },
+    "RETURN_TRIP": {
+      "status": "PASS",
+      "message": "Complete round trip must meet the explicit return deadline in UTC"
+    },
+    "WALKING": {
+      "status": "PASS",
+      "message": "All walking legs count against both supplied maxima"
+    },
+    "CURRENCY": {
+      "status": "PASS",
+      "message": "Costs must share the budget currency; no conversion"
+    },
+    "PRICE_CONFIDENCE": {
+      "status": "PASS",
+      "message": "Complete mandatory cost needs current positive evidence"
+    },
+    "BUDGET": {
+      "status": "PASS",
+      "message": "Conservative mandatory group total must fit the same-currency scoped cap"
+    },
+    "OPENING_HOURS": {
+      "status": "PASS",
+      "message": "Known hours must cover arrival through required dwell"
+    },
+    "EXCLUSIONS": {
+      "status": "PASS",
+      "message": "Hard exclusions require positive absence and category evidence"
+    },
+    "DIETARY": {
+      "status": "PASS",
+      "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported"
+    }
+  },
+  "identity": {
+    "place_id": "osm:way/24240071",
+    "name": "Anna Nagar Tower Park",
+    "operator": "Chennai Corporation",
+    "osm_ref": "https://www.openstreetmap.org/way/24240071",
+    "gcc_parks_list_ref": "https://chennaicorporation.gov.in/gcc/pdf/Parks_list.pdf",
+    "gcc_parks_department_ref": "https://chennaicorporation.gov.in/gcc/department/park/",
+    "the_hindu_civic_policy_ref": "https://www.thehindu.com/news/national/tamil-nadu/gcc-to-keep-public-parksopen-from-5-am-to-9-pm/article65339670.ece"
+  },
+  "operational_pack": {
+    "admission_cost": "0 INR (free public municipal civic park)",
+    "price_confidence": "VERIFIED",
+    "operating_hours": "Mo-Su 05:00-21:00 (covers arrival 5 min after departure through 30 min dwell)",
+    "containment": "Standalone urban park (100+ acres); affirmative no-mall evidence",
+    "routing_provider": "Valhalla (live pedestrian legs from/to origin 13.088, 80.221)"
+  }
+}
