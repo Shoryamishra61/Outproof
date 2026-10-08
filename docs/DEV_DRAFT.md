@@ -4,7 +4,7 @@ published: false
 tags: devchallenge, hf26challenge
 ---
 
-*Author-review draft for the Hacktoberfest Week 1 Touch Grass challenge. Live release evidence and demo links are being assembled; do not publish this checkpoint.*
+*This is a submission for the [Hacktoberfest Week 1 Challenge: Touch Grass](https://dev.to/challenges/hacktoberfest-week1-2026-10-05/).*
 
 ## What I Built
 
@@ -18,11 +18,15 @@ The public interface has one constraint form, one accepted plan, a source ledger
 
 ## Demo
 
-Repository: [Outproof / Ground Rule](https://github.com/Shoryamishra61/Outproof).
+[Open the live application](https://outproof-web.onrender.com/) and [watch the public execution recording](https://outproof-web.onrender.com/demo.html). The recording shows software execution, not a physical outing. Its final public asset link must pass the release smoke before publication.
 
-Public deployment and a genuine live video are pending verification in this checkpoint. Add only the URLs recorded in FINAL_PRODUCTION_SMOKE.md and the final demo artifact. No physical outing footage has been recorded.
+## Code
 
-## My Experience
+[Outproof / Ground Rule](https://github.com/Shoryamishra61/Outproof). The public repository was created during the challenge period. Source is MIT licensed; model, map and audio terms remain separate in `NOTICE`.
+
+## How I Built It
+
+Python/Pydantic owns typed boundaries and deterministic policy. React/TypeScript keeps the interface small. Gemma 4 E2B, served through Ollama, parses language and ranks only surviving plan IDs. The browser checks the proof contract again and rechecks evidence, the visit interval and the effective return deadline before GO.
 
 The most useful bug I found was a proof that looked complete. An earlier Anna Nagar Tower Park plan linked to a municipal register, assigned zero admission, and used a general citywide park schedule as venue-specific hours. Eleven passing checks could not rescue those unsupported inputs.
 
@@ -30,11 +34,15 @@ I withdrew the acceptance. The civic register supports a real area—57,927 squa
 
 The same principle shaped routing. The compiler routes to a reviewed pedestrian gate, not the centre of a park polygon. It retrieves both directions separately, checks the complete dwell interval and return, and retains the real observation timestamps. A stale route does not become fresh because the model or adapter touched it again.
 
-The automated campaign currently includes 4,096 distinct controlled compiler journeys, 300 adversarial cases and 100 actual Chromium journeys across ten widths. These counts describe software tests with synthetic providers, not thousands of real outings. Canonical Python/TypeScript/schema/policy checks were executed; the final release reports will give exact final counts, failures, skips, public smoke results and global accepted/rejected/provider-error breakdown.
+Two less visible failures mattered too: freshly fetched observations were incorrectly compared against the request-start clock, and opening windows were clipped to the original dwell interval, invalidating GO after a few seconds of reading. I reproduced both failures, corrected their shared causes, and retained closure, expiry and daylight-saving regressions.
 
-Real Gemma 4 E2B inference ran on the existing laptop. The first cold ranker smoke took about 115 seconds, so the under-30-second target is not established. A secured temporary tunnel can make that machine reachable from the API, but it depends on the laptop and has no stable-hosting guarantee. I am keeping that limitation visible rather than calling a model listing proof of reliable inference.
+The release checks passed 4,879 Python tests, 17 schema checks, 60 structural and 85 policy fixtures, plus the TypeScript build. The campaign includes 4,096 distinct controlled compiler journeys, 300 adversarial cases, 300 property examples, four critical-gate mutants detected and 124 controlled Chromium journeys across ten widths. These describe software checks with controlled providers, not thousands of real outings.
 
-## Why Open Innovation Matters
+The real global campaign attempted 50 cases across 19 cities: zero accepted, 40 typed refusals and ten provider failures. That does not demonstrate worldwide operation. Separately, three supported real public compiles passed, including parser and ranker execution; their small warm sample had a 4.01-second median. A clean browser reached GO in about four seconds.
+
+Real Gemma 4 E2B inference runs on the existing RTX 3050 laptop. The first cold ranker smoke took about 115 seconds, so consistently sub-30-second performance is not established. An authenticated, bounded temporary tunnel connects it to the deployed API, but depends on the laptop and has no stable-hosting guarantee. A real proxy outage made production readiness fail; restarting restored authenticated operation while anonymous access stayed denied. Both Render services were rolled back to a known green build and a fresh public browser passed afterward.
+
+## Why Does Open Innovation Matter?
 
 Open weights make the model boundary inspectable and replaceable. I can run the same Gemma model locally, test malformed outputs, constrain its schema, and compare its ranking with deterministic validation. The policy code owns admissibility; the model owns subjective selection. A model swap cannot authorize a price or invent an opening window.
 
@@ -42,10 +50,14 @@ OpenStreetMap supplies independently inspectable identities and gate coordinates
 
 This is not completely offline: fresh place and routing evidence require network access. The web shell can be cached, but a cached shell is not an offline verified outing. The model being local also does not mean third-party map providers never receive location: routing needs coordinates, disclosed in the app. Raw prompts and exact GPS are excluded from technical Sentry events, and persistent outing history is not stored.
 
-## Partners and limitations
+## My Agent Session
 
-Only integrations with executed evidence will be listed in the final article. Render/Gemma/source discovery/tracing/voice and any bounded Backboard experiment are tracked separately in PARTNER_ELIGIBILITY.md. GitHub Actions is not proof that a Copilot agent was used. No physical Arduino UNO Q is available. Unnecessary databases, orchestration frameworks and unapproved training are excluded.
+[Read the genuine Copilot review](https://github.com/Shoryamishra61/Outproof/blob/master/docs/agent-sessions/copilot-parser-review.md). It identified a dietary-negation issue that informed a tested correction. Entire captured that actual session through supported manual attachment after noninteractive hooks did not fire. Automatic capture is not claimed, and private credential-containing chat was not imported.
+
+## Prize Categories
+
+Demonstrated uses are Render, Gemma, Sentry technical agent spans, SerpApi official-link discovery, ElevenLabs opt-in voice, GitHub Copilot development review and Entire manual session capture. [The evidence ledger](https://github.com/Shoryamishra61/Outproof/blob/master/docs/PARTNER_ELIGIBILITY.md) describes exactly what ran; judges determine qualification. Backboard authenticated but refused chat inference because its free credits cover Memory/RAG; HTTP 200 was not model success. No physical Arduino UNO Q is available. Unnecessary databases, orchestration frameworks and unapproved training are excluded.
 
 All new cash spending is capped at zero. Existing free quotas and credits are used with bounded calls and no automatic top-up. Three physical India field trials have **not** happened. Screen Ratio, physical departure time, safe access and worldwide coverage are not claimed. The supported product is a small evidenced loop, with honest rejection where the world cannot yet be proved.
 
-The final author review must confirm actual public availability, replace the pending demo section with verified links, check partner claims against the ledger, and publish one DEV entry using the challenge template and tags. This draft has not been published.
+The final author review must confirm the fresh public links and final verdict, keep these limitations visible, check partner claims against the ledger, and publish one DEV entry using the challenge template and tags. This draft has not been published.

@@ -168,7 +168,7 @@ def create_app(
             "fixture_enabled": fixture_enabled,
             "live_enabled": live_enabled,
             "verified_live_regions": ["Singapore Botanic Gardens Tanglin entrance corridor"],
-            "live_evidence_available": True,
+            "live_evidence_configured": live_enabled,
             "model": os.getenv("GEMMA_MODEL", "gemma4:e2b-it-qat"),
             "offline_compilation": False,
             "optional_integrations": {

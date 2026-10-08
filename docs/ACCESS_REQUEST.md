@@ -1,5 +1,7 @@
 # Release access checkpoint
 
+Current resolution: GitHub and free Render services are operating; Gemma authenticated temporary transport, SerpApi discovery, ElevenLabs generation/playback, Sentry production grounding/model spans, Copilot review and Entire manual capture have actual evidence. No additional keys are required for the supported release. The user confirmed **no existing Cloudflare domain** and **no UNO Q hardware**. Stable hosting remains unavailable at the $0 ceiling; no purchase is requested or assumed. Backboard free credits cannot fund chat inference, so it is blocked without enabling billing. Physical field trials remain unexecuted. The table below preserves the earlier access request; current evidence is in `PARTNER_ELIGIBILITY.md` and uppercase final reports.
+
 2026-10-09 IST. No new cash spending authorized. Credentials stay in ignored `.env.release` or provider secrets.
 
 | Priority | Capability | Current state | Missing access / configuration | Cost / blocked task |

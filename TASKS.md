@@ -1,5 +1,24 @@
 # Task Board
 
+## Current overnight release — 2026-10-09 IST
+
+This section supersedes earlier phase claims below, including withdrawn Anna Nagar acceptance, worldwide success, disabled public compilation and unexecuted CI. Uppercase final reports are authoritative for current evidence.
+
+- [x] Free public Render frontend/API; actual supported NParks/OSM/Valhalla/Gemma/proof/GO browser execution
+- [x] 4,879 Python checks; 17 schemas; 60 structural / 85 policy fixtures; Ruff/TS/build
+- [x] 4,096 distinct controlled compiler journeys; 300 adversarial; 300 property examples; four critical-gate mutants detected
+- [x] 124 controlled Chromium journeys; GPS/error/retry/cancel/keyboard/mobile/zoom/audio; stale return deadline rejected
+- [x] 50 fresh real global attempts across 19 cities: zero accepted, 40 refused, 10 provider failures; no global operational claim
+- [x] 20 bounded real production probes with three supported compiles, one parser plus ranker
+- [x] Actual authenticated proxy outage/restart and public readiness recovery; known-green API/web rollback and live browser afterward
+- [x] Actual Sentry grounding/rank spans, SerpApi discovery, ElevenLabs generation/playback, Copilot review and manual Entire capture
+- [x] Backboard failure investigated: Memory/RAG-only free credits block chat; no billing enabled, no successful inference claim
+- [x] 65-second actual public demo recorded; local range/decode/viewport/focus/audio checks passed; release reports and DEV draft prepared
+- [ ] Fresh public demo-asset playback and final deployment SHA/CI verification (in progress)
+- [ ] Stable/always-on model hosting: no existing domain, no paid hosting authorized; protected temporary fallback disclosed
+- [ ] Three physical India trials and field Screen Ratio: UNEXECUTED/unmeasured
+- [ ] Author's final DEV review and publication: reserved to the user
+
 ## P0 â€” Must ship
 
 ### Repo

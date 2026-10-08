@@ -1,0 +1,11 @@
+# Browser evidence
+
+2026-10-08T21:32:13.887344+00:00. Controlled Chromium: **124 passed**, zero skipped/unexpected/flaky, 78.24 s. Command: `npx playwright test` from `apps/web`; artifact `artifacts/release/browser-results.json`. Ten viewport widths (320–3840px) exercise success, budget/currency/walk/time rejection, denied/manual GPS, cancel, offline and malformed output. Three widths additionally exercise granted/low-accuracy/timeout GPS, retry, rapid submit, stale-response discard, 200% CSS zoom, decoded voice playback and reload clearing GO.
+
+These use controlled providers and do not establish live venue facts. Initial zoom overflow failures were preserved in local logs; audio/button sizing was fixed and the complete suite rerun without skips.
+
+Real public browser runs: corrected source-clock build PASS (3958 ms to GO), known-green rollback PASS (4335 ms), forward-restored 65-second demonstration PASS. The recording intentionally pauses to read proof; its 22857 ms GO time includes those pauses and is not a performance benchmark. Actual native audio decoding/playback, proof expansion, walking map, next/back, mobile 390px and absence of JavaScript exceptions were asserted. See receipt/trace/screenshots in each public artifact directory.
+
+`node scripts/record_public_demo.mjs` runs the genuine public assertions; `PUBLIC_RUN_LABEL` chooses the artifact directory and `DEMO_RECORDING=true` adds recording pauses. A separate intercepted-response timestamp test against the deployed UI rejected an expired effective return deadline within the freshness window (`release-departure-browser.json`); that test is explicitly controlled, not live inference.
+
+Visual thesis: field notebook. Signature decisions: paper/grass tokens, ruled one-plan proof ledger, one large GO instruction. Reviewed actual GO/mobile screenshots show no horizontal overflow. Source audit ran with `ui_audit.py`; three medium accessible-name heuristics correspond to wrapped native labels exercised by browser label queries. Demo-page audit reported no findings. Keyboard and visible-focus paths were executed. Human screen-reader sessions, physical field Screen Ratio and physical safety are UNEXECUTED/unmeasured.

@@ -1,0 +1,24 @@
+{
+  "executed_at": "2026-10-08T20:59:10.298Z",
+  "url": "https://outproof-web.onrender.com",
+  "scope": "real public browser execution; no physical outing",
+  "errors": [],
+  "requests": [
+    {
+      "status": 409,
+      "request_id": "1088b314707d4b65b0270e91e5af3312",
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No plan satisfied all hard checks"
+      }
+    }
+  ],
+  "version": {
+    "version": "0.1.0",
+    "commit": "4a01cfab51c9d31efb52bc47945adeafa826bcc1",
+    "environment": "production"
+  },
+  "status": "FAIL",
+  "failure": "TimeoutError: locator.waitFor: Timeout 190000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: 'One verified plan.', exact: true }) to be visible\u001b[22m\n"
+}

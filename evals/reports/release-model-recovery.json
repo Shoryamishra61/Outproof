@@ -1,0 +1,31 @@
+{
+  "executed_at": "2026-10-08T21:24:15.682930+00:00",
+  "scope": "actual owned proxy process interruption/restart; no physical network disconnection or Ollama daemon kill",
+  "status": "PASS",
+  "rows": [
+    {
+      "stage": "before",
+      "model_authenticated": 200
+    },
+    {
+      "stage": "proxy_interruption",
+      "model_status": 502
+    },
+    {
+      "stage": "production_unready",
+      "http_status": 503,
+      "compilation_available": false
+    },
+    {
+      "stage": "proxy_recovered",
+      "authenticated": 200,
+      "anonymous": 401,
+      "process_id": 4408
+    },
+    {
+      "stage": "production_ready_recovered",
+      "http_status": 200,
+      "compilation_available": true
+    }
+  ]
+}

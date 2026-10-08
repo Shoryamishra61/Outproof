@@ -65,6 +65,9 @@ def test_liveness_is_distinct_from_ready_and_requests_are_bounded(
             transport=httpx.ASGITransport(app=app), base_url="http://test"
         ) as client:
             assert (await client.get("/v1/health/live")).status_code == 200
+            capabilities = (await client.get("/v1/capabilities")).json()
+            assert capabilities["live_evidence_configured"]
+            assert "live_evidence_available" not in capabilities
             ready = await client.get("/v1/health/ready")
             assert ready.status_code == 503 and not ready.json()["live_evidence_available"]
             for _ in range(6):

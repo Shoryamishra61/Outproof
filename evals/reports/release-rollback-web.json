@@ -1,0 +1,18 @@
+{
+  "executed_at": "2026-10-08T21:26:18.499878+00:00",
+  "action": "rollback",
+  "service": "web",
+  "http_status": 201,
+  "result": {
+    "id": "dep-db40kuij9qps73fnf2h0",
+    "commit": {
+      "id": "1c0da9fe5af88f8d997057ab153562039d4ee86a",
+      "message": "Preserve return deadline through proof and departure checks",
+      "createdAt": "2026-10-08T21:20:31Z"
+    },
+    "status": "update_in_progress",
+    "trigger": "rollback",
+    "createdAt": "2026-10-08T21:26:18.41127Z",
+    "updatedAt": "2026-10-08T21:26:18.41127Z"
+  }
+}

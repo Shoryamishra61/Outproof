@@ -1,0 +1,24 @@
+{
+  "executed_at": "2026-10-08T21:03:47.728Z",
+  "url": "https://outproof-web.onrender.com",
+  "scope": "real public browser execution; no physical outing",
+  "errors": [],
+  "requests": [
+    {
+      "status": 409,
+      "request_id": "af4cc68888a14326a8b1337e248c3803",
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No plan satisfied all hard checks"
+      }
+    }
+  ],
+  "version": {
+    "version": "0.1.0",
+    "commit": "4a01cfab51c9d31efb52bc47945adeafa826bcc1",
+    "environment": "production"
+  },
+  "status": "FAIL",
+  "failure": "Error: No plan satisfied all hard checks"
+}

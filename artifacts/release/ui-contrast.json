@@ -1,0 +1,10 @@
+{
+  "scope": "CSS token contrast against paper; disabled controls excluded; native browser media controls not audited",
+  "ratios": {
+    "ink": 11.86,
+    "muted": 5.95,
+    "grass": 9.39,
+    "focus": 5.69,
+    "native_link": 8.4
+  }
+}

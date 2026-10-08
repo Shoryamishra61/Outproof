@@ -1,0 +1,11 @@
+{
+  "executed_at": "2026-10-08T21:28:18.729Z",
+  "scope": "controlled response/timestamp boundary against deployed UI; response intercepted; not real inference or source refresh",
+  "status": "PASS",
+  "rows": [
+    {
+      "assertion": "expired effective return deadline rejects GO even within 60-second freshness window",
+      "status": "PASS"
+    }
+  ]
+}

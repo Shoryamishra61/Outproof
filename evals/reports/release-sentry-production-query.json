@@ -1,0 +1,67 @@
+{
+  "executed_at": "2026-10-08T21:26:42.600501+00:00",
+  "http_status": 200,
+  "result": {
+    "data": [
+      {
+        "span.op": "http.server",
+        "count()": 76.0
+      },
+      {
+        "span.op": "ground_rule.gemma_rank",
+        "count()": 1.0
+      },
+      {
+        "span.op": "ground_rule.ground_and_validate",
+        "count()": 1.0
+      }
+    ],
+    "meta": {
+      "fields": {
+        "span.op": "string",
+        "count()": "integer"
+      },
+      "units": {
+        "span.op": null,
+        "count()": null
+      },
+      "isMetricsData": false,
+      "isMetricsExtractedData": false,
+      "tips": {},
+      "datasetReason": "unchanged",
+      "dataset": "spans",
+      "dataScanned": "full",
+      "bytesScanned": 5461005,
+      "routingHint": "eyJ2IjogMSwgInRpZXIiOiAxLCAidHMiOiAxNzkxNDk0ODAyfQ==",
+      "accuracy": {
+        "confidence": [
+          {
+            "count()": "high"
+          },
+          {
+            "count()": "high"
+          },
+          {
+            "count()": "high"
+          }
+        ]
+      },
+      "ingestion": {
+        "status": "healthy",
+        "delaySeconds": 159.735190082,
+        "completeThrough": 1791494642820.531
+      }
+    },
+    "confidence": [
+      {
+        "count()": "high"
+      },
+      {
+        "count()": "high"
+      },
+      {
+        "count()": "high"
+      }
+    ]
+  }
+}
