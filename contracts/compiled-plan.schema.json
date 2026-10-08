@@ -678,6 +678,19 @@
       "title": "Reason",
       "type": "string"
     },
+    "return_by_local": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Return By Local"
+    },
     "status": {
       "const": "SUCCESS",
       "default": "SUCCESS",

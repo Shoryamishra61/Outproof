@@ -61,6 +61,7 @@ summary { cursor: pointer; font-weight: 650; min-height: 44px; }
 .secondary { color: var(--grass); background: transparent; margin: 0.5rem 0 0.5rem 0.5rem; }
 .secondary:hover:not(:disabled) { color: var(--paper); }
 .go { max-width: 32rem; }
+.go > a { display: block; width: fit-content; min-height: 44px; margin-top: var(--space); }
 @media (max-width: 420px) {
   main { padding: var(--space); }
   .controls { gap: 0 0.7rem; }

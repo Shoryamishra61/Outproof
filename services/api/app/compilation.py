@@ -68,6 +68,7 @@ async def compile_internal(
             reason=selection.reason,
             compiled_at=compiled_at,
             mode=mode,
+            return_by_local=controls.return_by_local,
         )
     except ValueError:
         return CompilationFailure(

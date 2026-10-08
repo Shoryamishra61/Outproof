@@ -60,6 +60,7 @@ function canStart(value: CompiledPlan): boolean {
   const now = Date.now();
   if (now < Date.parse(value.compiled_at) || now - Date.parse(value.compiled_at) > 60000) return false;
   if (!value.proof.sources.every(s => sourceState(s) === 'Observation retained')) return false;
+  if (value.return_by_local && now + value.proof.total_duration_seconds * 1000 > Date.parse(value.return_by_local)) return false;
   let arrival = now;
   for (const [i, stop] of value.plan.stops.entries()) {
     arrival += (value.plan.routes[i].duration_seconds ?? 0) * 1000;
@@ -158,7 +159,7 @@ function App() {
   const navFrom = navPoints[Math.floor(step/2)];
   const navTo = navPoints[Math.floor(step/2)+1];
   const actions = result ? result.plan.routes.flatMap((route, index) => [
-    { destination: index < result.plan.stops.length ? result.plan.stops[index].place.name ?? 'Destination' : 'Origin', action: `Walk ${Math.ceil((route.duration_seconds ?? 0) / 60)} minutes.` },
+    { destination: index < result.plan.stops.length ? result.plan.stops[index].place.name ?? 'Destination' : 'Origin', action: `Walk ${Math.ceil((route.duration_seconds ?? 0) / 60)} ${Math.ceil((route.duration_seconds ?? 0) / 60) === 1 ? 'minute' : 'minutes'}.` },
     ...(index < result.plan.stops.length ? [{ destination: result.plan.stops[index].place.name ?? 'Destination', action: `Spend ${result.plan.stops[index].dwell_seconds / 60} minutes here.` }] : []),
   ]) : [];
   return <main>

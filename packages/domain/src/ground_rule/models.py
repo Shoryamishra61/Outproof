@@ -346,9 +346,16 @@ class CompiledPlan(Contract):
     reason: NonEmptyStr
     compiled_at: AwareDatetime
     mode: Literal["LIVE", "FIXTURE", "CACHED"]
+    return_by_local: AwareDatetime | None = None
 
     @model_validator(mode="after")
     def proof_matches_plan(self) -> Self:
+        if self.return_by_local is not None and (
+            self.plan.departure_at.astimezone(UTC)
+            + timedelta(seconds=self.proof.total_duration_seconds)
+            > self.return_by_local.astimezone(UTC)
+        ):
+            raise ValueError("Compiled round trip exceeds the retained return deadline")
         if self.plan.plan_id != self.proof.validation.plan_id:
             raise ValueError("Plan and proof identifiers differ")
         if self.plan.total_duration_seconds != self.proof.total_duration_seconds:
