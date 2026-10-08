@@ -148,12 +148,13 @@ async def valid_candidate_plans(
             continue
         places.append(candidate)
     # Missing admission/price or hours cannot be repaired by routing or ranking.
+    prefilter_as_of = max(as_of, clock()) if clock else as_of
     places = [
         p
         for p in places
         if p.price is not None
         and p.price.upper is not None
-        and has_category_evidence(p, as_of, allow_fixture)
+        and has_category_evidence(p, prefilter_as_of, allow_fixture)
         and (
             p.opening_windows
             or (

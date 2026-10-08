@@ -4,6 +4,7 @@ exclusions: [] unless malls, alcohol places or chains are forbidden.
 "No mall" or "mall nahi" means mall. "Malls are fine" means [].
 dietary: vegetarian for veg/vegetarian; vegan for vegan; otherwise null.
 unsupported: explicit allergy safety, wheelchair accessibility or personal safety.
+Explicit food/meal required or must eat needs food requirement; never replace it with a park.
 A clock-only return deadline needs time clarification, never an invented date.
 preferences: only stated wishes: quiet/shaant, cheap/sasta, low walking/zyada walk
 nahi, optional coffee, optional food/khana zaroori nahi, talk/baat, romantic,

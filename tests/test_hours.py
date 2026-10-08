@@ -94,3 +94,11 @@ def test_derived_window_keeps_original_observation_provenance() -> None:
         )
         is None
     )
+
+
+def test_derived_window_allows_departure_delay_but_never_crosses_lunch_closure() -> None:
+    record = observation("opening_hours", "Mo-Su 09:00-12:00,14:00-18:00")
+    arrival = datetime(2026, 10, 7, 10, 0, tzinfo=UTC)
+    window = windows_from_hours(record, arrival, arrival + timedelta(minutes=30), "UTC")[0]
+    assert window.closes_at == datetime(2026, 10, 7, 12, 0, tzinfo=UTC)
+    assert window.closes_at >= arrival + timedelta(minutes=31)

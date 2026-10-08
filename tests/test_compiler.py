@@ -1,4 +1,5 @@
 import asyncio
+from datetime import timedelta
 
 import pytest
 from app.compiler import valid_candidate_plans
@@ -65,6 +66,35 @@ def test_missing_price_or_hours_never_spends_routing_quota() -> None:
         for p in provider.places
     )
     assert valid(provider) == ()
+
+
+def test_observation_during_discovery_uses_current_clock_for_prefilter() -> None:
+    provider = FixtureProviders()
+    provider.places = tuple(
+        p.model_copy(
+            update={
+                "evidence": tuple(
+                    e.model_copy(update={"observed_at": provider.as_of + timedelta(seconds=1)})
+                    if e.field == "categories"
+                    else e
+                    for e in p.evidence
+                )
+            }
+        )
+        for p in provider.places
+    )
+    result = asyncio.run(
+        valid_candidate_plans(
+            provider.controls,
+            provider,
+            provider,
+            provider,
+            as_of=provider.as_of,
+            allow_fixture=True,
+            clock=lambda: provider.as_of + timedelta(seconds=2),
+        )
+    )
+    assert isinstance(result, tuple) and len(result) == 2
 
 
 @pytest.mark.parametrize("stage", ["enrichment", "routing", "discovery"])

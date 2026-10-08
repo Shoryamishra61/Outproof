@@ -1,0 +1,3121 @@
+{
+  "evaluation": "GLOBAL_EVALUATION_50_SCENARIOS",
+  "evaluated_at": "2026-10-08T20:52:59.212215+00:00",
+  "total_scenarios": 50,
+  "total_cities": 19,
+  "cities": [
+    "Bengaluru",
+    "Berlin",
+    "Chennai",
+    "Delhi",
+    "Dubai",
+    "Hyderabad",
+    "Jaipur",
+    "Kochi",
+    "Kolkata",
+    "London",
+    "Mumbai",
+    "New York",
+    "Paris",
+    "Pune",
+    "San Francisco",
+    "Singapore",
+    "Sydney",
+    "Tokyo",
+    "Toronto"
+  ],
+  "metrics": {
+    "successful_compilations": 0,
+    "typed_rejections": 40,
+    "temporary_provider_errors": 10,
+    "accepted_population": 0,
+    "hard_violations": 0,
+    "hallucinated_displayed_venues": 0,
+    "unknown_prices_presented_as_guaranteed": 0,
+    "multiple_default_plans": 0,
+    "average_latency_ms": 5028.45,
+    "target_gates_passed": false
+  },
+  "failure_breakdown": {
+    "NO_GROUNDED_CANDIDATES": 40,
+    "SOURCE_TEMPORARILY_UNAVAILABLE": 10
+  },
+  "results": [
+    {
+      "id": "in-che-01",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3352.09,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-01",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Anna Nagar, Chennai",
+        "origin": {
+          "latitude": 13.088,
+          "longitude": 80.221
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "quiet solo park walk under 90 minutes, no malls, zero budget",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-01"
+    },
+    {
+      "id": "in-che-02",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3364.54,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-02",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Anna Nagar Tower, Chennai",
+        "origin": {
+          "latitude": 13.0866,
+          "longitude": 80.2142
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Talk"
+          ],
+          "max_walking_minutes": 40,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "walk with friend to talk, 1 hour max, free, quiet green area",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-02"
+    },
+    {
+      "id": "in-che-03",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3119.5,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-03",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "T. Nagar, Chennai",
+        "origin": {
+          "latitude": 13.0418,
+          "longitude": 80.2341
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 50000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 30,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "vegetarian food and talk with friend, 500 per person, no mall, quiet place",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-03"
+    },
+    {
+      "id": "in-che-04",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2823.86,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-04",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Besant Nagar, Chennai",
+        "origin": {
+          "latitude": 12.9992,
+          "longitude": 80.2707
+        },
+        "controls": {
+          "duration_max_minutes": 75,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Chill"
+          ],
+          "max_walking_minutes": 45,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "solo beach promenade walk 75 min, strictly zero rupees",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-04"
+    },
+    {
+      "id": "in-che-05",
+      "city": "Chennai",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 6746.73,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-05",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Mylapore, Chennai",
+        "origin": {
+          "latitude": 13.0336,
+          "longitude": 80.2687
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 20000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "traditional veg tiffin under 200 INR solo within 60 min",
+        "expected_hard": [
+          "vegetarian"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-05"
+    },
+    {
+      "id": "in-che-06",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3245.58,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-06",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Alwarpet, Chennai",
+        "origin": {
+          "latitude": 13.033,
+          "longitude": 80.2503
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 40000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "DATE",
+          "party_size": 2,
+          "vibes": [
+            "Talk",
+            "Chill"
+          ],
+          "max_walking_minutes": 30,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "quiet coffee date, 400 INR each, standalone cafe only, no malls",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-06"
+    },
+    {
+      "id": "in-che-07",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3218.4,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-07",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Adyar, Chennai",
+        "origin": {
+          "latitude": 13.0064,
+          "longitude": 80.2575
+        },
+        "controls": {
+          "duration_max_minutes": 120,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "GROUP",
+          "party_size": 4,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "group of 4 exploring parks in Adyar, 2 hours, 0 budget",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-07"
+    },
+    {
+      "id": "in-che-08",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3928.39,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-08",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Nungambakkam, Chennai",
+        "origin": {
+          "latitude": 13.0604,
+          "longitude": 80.2396
+        },
+        "controls": {
+          "duration_max_minutes": 45,
+          "budget_minor_units": 15000,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 20,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "quick 45m solo snack, strict 150 INR total cap, veg only, no mall",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-08"
+    },
+    {
+      "id": "in-che-09",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2826.22,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-09",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Velachery, Chennai",
+        "origin": {
+          "latitude": 12.9801,
+          "longitude": 80.2228
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 30000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Talk"
+          ],
+          "max_walking_minutes": 30,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Velachery chat with friend 1 hour, strictly avoid Phoenix mall",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-09"
+    },
+    {
+      "id": "in-che-10",
+      "city": "Chennai",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 12263.22,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-10",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "OMR Thoraipakkam, Chennai",
+        "origin": {
+          "latitude": 12.9392,
+          "longitude": 80.2348
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 25000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Chill"
+          ],
+          "max_walking_minutes": 40,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "solo post-work decompression on OMR, 250 INR, 90 mins",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-10"
+    },
+    {
+      "id": "in-che-11",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 5342.16,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-11",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Marina Beach, Chennai",
+        "origin": {
+          "latitude": 13.05,
+          "longitude": 80.2824
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Move"
+          ],
+          "max_walking_minutes": 50,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "brisk morning walk along beach promenade, 0 rupees, 1 hour",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-11"
+    },
+    {
+      "id": "in-che-12",
+      "city": "Chennai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3649.16,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-che-12",
+        "city": "Chennai",
+        "country": "IN",
+        "location": "Guindy, Chennai",
+        "origin": {
+          "latitude": 13.0067,
+          "longitude": 80.2206
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "nature exploration in Guindy, free entry only, no malls, 90 min",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-che-12"
+    },
+    {
+      "id": "in-blr-01",
+      "city": "Bengaluru",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No named grounded supported POIs in this response",
+      "latency_ms": 3138.61,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-blr-01",
+        "city": "Bengaluru",
+        "country": "IN",
+        "location": "Indiranagar, Bengaluru",
+        "origin": {
+          "latitude": 12.9784,
+          "longitude": 80.6408
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 60000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 30,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Indiranagar 100ft rd cafe, 600 INR cap per person, veg food, quiet chat",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-blr-01"
+    },
+    {
+      "id": "in-blr-02",
+      "city": "Bengaluru",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3969.09,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-blr-02",
+        "city": "Bengaluru",
+        "country": "IN",
+        "location": "Koramangala, Bengaluru",
+        "origin": {
+          "latitude": 12.9352,
+          "longitude": 77.6245
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 35000,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Chill"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Koramangala 4th block solo coffee, 350 INR total max, standalone shop",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-blr-02"
+    },
+    {
+      "id": "in-blr-03",
+      "city": "Bengaluru",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 8259.46,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-blr-03",
+        "city": "Bengaluru",
+        "country": "IN",
+        "location": "Cubbon Park, Bengaluru",
+        "origin": {
+          "latitude": 12.9763,
+          "longitude": 77.5929
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Explore",
+            "Move"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Cubbon Park morning stroll with friend, 90 min, zero cost, tranquil paths",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-blr-03"
+    },
+    {
+      "id": "in-blr-04",
+      "city": "Bengaluru",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3287.98,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-blr-04",
+        "city": "Bengaluru",
+        "country": "IN",
+        "location": "Whitefield, Bengaluru",
+        "origin": {
+          "latitude": 12.9698,
+          "longitude": 77.75
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 50000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "DATE",
+          "party_size": 2,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 20,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Whitefield dinner date, vegetarian, avoid mall food courts, 500 per person",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-blr-04"
+    },
+    {
+      "id": "in-bom-01",
+      "city": "Mumbai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3409.35,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-bom-01",
+        "city": "Mumbai",
+        "country": "IN",
+        "location": "Marine Drive, Mumbai",
+        "origin": {
+          "latitude": 18.9438,
+          "longitude": 72.8232
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Chill",
+            "Move"
+          ],
+          "max_walking_minutes": 45,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Marine Drive sunset promenade walk, free outing, 1 hour",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-bom-01"
+    },
+    {
+      "id": "in-bom-02",
+      "city": "Mumbai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3647.78,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-bom-02",
+        "city": "Mumbai",
+        "country": "IN",
+        "location": "Bandra West, Mumbai",
+        "origin": {
+          "latitude": 19.0596,
+          "longitude": 72.8295
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 50000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 30,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Bandra Pali Hill cafe hangout, 500 INR each, quiet spot, standalone",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-bom-02"
+    },
+    {
+      "id": "in-bom-03",
+      "city": "Mumbai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2538.4,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-bom-03",
+        "city": "Mumbai",
+        "country": "IN",
+        "location": "Colaba, Mumbai",
+        "origin": {
+          "latitude": 18.9067,
+          "longitude": 72.8147
+        },
+        "controls": {
+          "duration_max_minutes": 75,
+          "budget_minor_units": 30000,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 40,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Colaba architectural stroll + tea, veg, 300 INR total budget",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-bom-03"
+    },
+    {
+      "id": "in-del-01",
+      "city": "Delhi",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2970.48,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-del-01",
+        "city": "Delhi",
+        "country": "IN",
+        "location": "Lodhi Gardens, Delhi",
+        "origin": {
+          "latitude": 28.5933,
+          "longitude": 77.2197
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Explore",
+            "Talk"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Lodhi garden morning historical walk with friend, free, quiet green",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-del-01"
+    },
+    {
+      "id": "in-del-02",
+      "city": "Delhi",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 9413.85,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-del-02",
+        "city": "Delhi",
+        "country": "IN",
+        "location": "Connaught Place, Delhi",
+        "origin": {
+          "latitude": 28.6315,
+          "longitude": 77.2167
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 40000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "CP inner circle veg bite, 400 INR max, solo 60m",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-del-02"
+    },
+    {
+      "id": "in-del-03",
+      "city": "Delhi",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2843.68,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-del-03",
+        "city": "Delhi",
+        "country": "IN",
+        "location": "Hauz Khas Village, Delhi",
+        "origin": {
+          "latitude": 28.5535,
+          "longitude": 77.1944
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 50000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "DATE",
+          "party_size": 2,
+          "vibes": [
+            "Chill",
+            "Talk"
+          ],
+          "max_walking_minutes": 35,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Hauz khas lake view date, 500 per person, quiet spot away from clubs",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-del-03"
+    },
+    {
+      "id": "in-hyd-01",
+      "city": "Hyderabad",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2572.14,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-hyd-01",
+        "city": "Hyderabad",
+        "country": "IN",
+        "location": "Jubilee Hills, Hyderabad",
+        "origin": {
+          "latitude": 17.4319,
+          "longitude": 78.4073
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 50000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 30,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Jubilee hills cafe chat, veg, under 500 each, quiet garden setting",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-hyd-01"
+    },
+    {
+      "id": "in-hyd-02",
+      "city": "Hyderabad",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 13759.59,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-hyd-02",
+        "city": "Hyderabad",
+        "country": "IN",
+        "location": "Banjara Hills, Hyderabad",
+        "origin": {
+          "latitude": 17.4156,
+          "longitude": 78.4357
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 30000,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Chill"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Banjara hills solo coffee stop, 300 INR total, standalone outlet",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-hyd-02"
+    },
+    {
+      "id": "in-hyd-03",
+      "city": "Hyderabad",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 5159.36,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-hyd-03",
+        "city": "Hyderabad",
+        "country": "IN",
+        "location": "Hussain Sagar, Hyderabad",
+        "origin": {
+          "latitude": 17.4239,
+          "longitude": 78.4738
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Move"
+          ],
+          "max_walking_minutes": 45,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Necklace road lake walk, free public path, 60 minutes with friend",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-hyd-03"
+    },
+    {
+      "id": "in-pnq-01",
+      "city": "Pune",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 4893.01,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-pnq-01",
+        "city": "Pune",
+        "country": "IN",
+        "location": "Koregaon Park, Pune",
+        "origin": {
+          "latitude": 18.5362,
+          "longitude": 73.894
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 45000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 35,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "KP lane 7 bakery and tea, veg, under 450 each, shaded quiet street",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-pnq-01"
+    },
+    {
+      "id": "in-pnq-02",
+      "city": "Pune",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 5223.64,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-pnq-02",
+        "city": "Pune",
+        "country": "IN",
+        "location": "FC Road, Pune",
+        "origin": {
+          "latitude": 18.5284,
+          "longitude": 73.8417
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 20000,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "FC road quick student snack, veg, 200 INR total cap, 1 hr",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-pnq-02"
+    },
+    {
+      "id": "in-ccu-01",
+      "city": "Kolkata",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3522.5,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-ccu-01",
+        "city": "Kolkata",
+        "country": "IN",
+        "location": "Victoria Memorial, Kolkata",
+        "origin": {
+          "latitude": 22.5448,
+          "longitude": 88.3426
+        },
+        "controls": {
+          "duration_max_minutes": 75,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 50,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Maidan open grounds walk with friend, free public grounds, 75 min",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-ccu-01"
+    },
+    {
+      "id": "in-cok-01",
+      "city": "Kochi",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 7329.87,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-cok-01",
+        "city": "Kochi",
+        "country": "IN",
+        "location": "Fort Kochi, Kochi",
+        "origin": {
+          "latitude": 9.9658,
+          "longitude": 76.2421
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 35000,
+          "currency_code": "INR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Explore",
+            "Chill"
+          ],
+          "max_walking_minutes": 45,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Fort Kochi heritage lane walk and tea, solo, 350 INR, peaceful",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-cok-01"
+    },
+    {
+      "id": "in-jai-01",
+      "city": "Jaipur",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3169.25,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-IN",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "in-jai-01",
+        "city": "Jaipur",
+        "country": "IN",
+        "location": "Central Park, Jaipur",
+        "origin": {
+          "latitude": 26.9038,
+          "longitude": 75.8083
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 0,
+          "currency_code": "INR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Move"
+          ],
+          "max_walking_minutes": 45,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Jaipur Central park jogging track walk, 0 rupees, 1 hour solo",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:in-jai-01"
+    },
+    {
+      "id": "gb-lon-01",
+      "city": "London",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 4045.03,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "gb-lon-01",
+        "city": "London",
+        "country": "GB",
+        "location": "Hyde Park, London",
+        "origin": {
+          "latitude": 51.5073,
+          "longitude": -0.1657
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "GBP",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Hyde Park quiet walk, 90 min, zero budget, Royal Parks open space",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:gb-lon-01"
+    },
+    {
+      "id": "gb-lon-02",
+      "city": "London",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 13409.25,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "gb-lon-02",
+        "city": "London",
+        "country": "GB",
+        "location": "Soho, London",
+        "origin": {
+          "latitude": 51.5136,
+          "longitude": -0.1365
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1000,
+          "currency_code": "GBP",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegan"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Soho coffee with colleague, vegan bite under 10 GBP each, standalone cafe",
+        "expected_hard": [
+          "vegan",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:gb-lon-02"
+    },
+    {
+      "id": "us-nyc-01",
+      "city": "New York",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3041.54,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "us-nyc-01",
+        "city": "New York",
+        "country": "US",
+        "location": "Central Park, New York",
+        "origin": {
+          "latitude": 40.7829,
+          "longitude": -73.9654
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "USD",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Chill",
+            "Talk"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Central park ramble with friend, free public park, 90 minutes",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:us-nyc-01"
+    },
+    {
+      "id": "us-nyc-02",
+      "city": "New York",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3261.2,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "us-nyc-02",
+        "city": "New York",
+        "country": "US",
+        "location": "Greenwich Village, New York",
+        "origin": {
+          "latitude": 40.7336,
+          "longitude": -74.0027
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1500,
+          "currency_code": "USD",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Village corner bakery coffee, vegetarian, 15 USD cap, 1 hour",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:us-nyc-02"
+    },
+    {
+      "id": "us-sfo-01",
+      "city": "San Francisco",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 9261.95,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "us-sfo-01",
+        "city": "San Francisco",
+        "country": "US",
+        "location": "Golden Gate Park, San Francisco",
+        "origin": {
+          "latitude": 37.7694,
+          "longitude": -122.4862
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "USD",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Golden Gate park botanical paths walk, zero dollars, solo explore 90m",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:us-sfo-01"
+    },
+    {
+      "id": "us-sfo-02",
+      "city": "San Francisco",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2935.32,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "us-sfo-02",
+        "city": "San Francisco",
+        "country": "US",
+        "location": "Mission District, San Francisco",
+        "origin": {
+          "latitude": 37.7599,
+          "longitude": -122.4148
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1800,
+          "currency_code": "USD",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "DATE",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegan"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Mission vegan cafe date, under 18 USD per person, quiet corner",
+        "expected_hard": [
+          "vegan",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:us-sfo-02"
+    },
+    {
+      "id": "sg-sin-01",
+      "city": "Singapore",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2576.1,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "sg-sin-01",
+        "city": "Singapore",
+        "country": "SG",
+        "location": "Gardens by the Bay, Singapore",
+        "origin": {
+          "latitude": 1.2816,
+          "longitude": 103.8636
+        },
+        "controls": {
+          "duration_max_minutes": 75,
+          "budget_minor_units": 0,
+          "currency_code": "SGD",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 50,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "outdoor garden trail walk in Singapore, free public park access, 75 min",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:sg-sin-01"
+    },
+    {
+      "id": "sg-sin-02",
+      "city": "Singapore",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 9179.89,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "sg-sin-02",
+        "city": "Singapore",
+        "country": "SG",
+        "location": "Tanjong Pagar, Singapore",
+        "origin": {
+          "latitude": 1.2764,
+          "longitude": 103.8458
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1200,
+          "currency_code": "SGD",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 20,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "shophouse kopi break, veg snack under 12 SGD, standalone street entrance",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:sg-sin-02"
+    },
+    {
+      "id": "jp-tyo-01",
+      "city": "Tokyo",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 5170.21,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "jp-tyo-01",
+        "city": "Tokyo",
+        "country": "JP",
+        "location": "Yoyogi Park, Tokyo",
+        "origin": {
+          "latitude": 35.6717,
+          "longitude": 139.6949
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "JPY",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Chill",
+            "Move"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Yoyogi park peaceful green walk, 0 yen, 90 minutes solo",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:jp-tyo-01"
+    },
+    {
+      "id": "jp-tyo-02",
+      "city": "Tokyo",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 4756.59,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "jp-tyo-02",
+        "city": "Tokyo",
+        "country": "JP",
+        "location": "Kichijoji, Tokyo",
+        "origin": {
+          "latitude": 35.7032,
+          "longitude": 139.5796
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1200,
+          "currency_code": "JPY",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Kichijoji alley kissaten tea, 1200 JPY each, quiet retro cafe",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:jp-tyo-02"
+    },
+    {
+      "id": "de-ber-01",
+      "city": "Berlin",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3873.79,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "de-ber-01",
+        "city": "Berlin",
+        "country": "DE",
+        "location": "Tiergarten, Berlin",
+        "origin": {
+          "latitude": 52.5145,
+          "longitude": 13.3501
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "EUR",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Großer Tiergarten wooded walk, free public park, 90 mins",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:de-ber-01"
+    },
+    {
+      "id": "de-ber-02",
+      "city": "Berlin",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 4012.34,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "de-ber-02",
+        "city": "Berlin",
+        "country": "DE",
+        "location": "Mitte, Berlin",
+        "origin": {
+          "latitude": 52.5284,
+          "longitude": 13.3986
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1000,
+          "currency_code": "EUR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegan"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Mitte vegan bakery espresso, 10 EUR max, standalone cafe, 1 hour",
+        "expected_hard": [
+          "vegan",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:de-ber-02"
+    },
+    {
+      "id": "fr-par-01",
+      "city": "Paris",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 13197.7,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "fr-par-01",
+        "city": "Paris",
+        "country": "FR",
+        "location": "Jardin du Luxembourg, Paris",
+        "origin": {
+          "latitude": 48.8462,
+          "longitude": 2.3372
+        },
+        "controls": {
+          "duration_max_minutes": 75,
+          "budget_minor_units": 0,
+          "currency_code": "EUR",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Chill"
+          ],
+          "max_walking_minutes": 45,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Luxembourg garden fountain stroll, free public garden, quiet reading spot",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:fr-par-01"
+    },
+    {
+      "id": "fr-par-02",
+      "city": "Paris",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 5176.38,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "fr-par-02",
+        "city": "Paris",
+        "country": "FR",
+        "location": "Le Marais, Paris",
+        "origin": {
+          "latitude": 48.8575,
+          "longitude": 2.3582
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1200,
+          "currency_code": "EUR",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Marais street cafe chat, vegetarian, 12 EUR each, avoid commercial centers",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:fr-par-02"
+    },
+    {
+      "id": "au-syd-01",
+      "city": "Sydney",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3713.71,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "au-syd-01",
+        "city": "Sydney",
+        "country": "AU",
+        "location": "Royal Botanic Garden, Sydney",
+        "origin": {
+          "latitude": -33.8642,
+          "longitude": 151.2166
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "AUD",
+          "budget_scope": "TOTAL",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Explore"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Sydney Botanic Garden harbor views, free public entry, 90 mins",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:au-syd-01"
+    },
+    {
+      "id": "au-syd-02",
+      "city": "Sydney",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3729.91,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "au-syd-02",
+        "city": "Sydney",
+        "country": "AU",
+        "location": "Surry Hills, Sydney",
+        "origin": {
+          "latitude": -33.8861,
+          "longitude": 151.2117
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1500,
+          "currency_code": "AUD",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Food"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Surry Hills specialty coffee, veg, 15 AUD max, standalone cafe",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:au-syd-02"
+    },
+    {
+      "id": "ca-tor-01",
+      "city": "Toronto",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 3744.09,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "ca-tor-01",
+        "city": "Toronto",
+        "country": "CA",
+        "location": "High Park, Toronto",
+        "origin": {
+          "latitude": 43.6465,
+          "longitude": -79.4637
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 0,
+          "currency_code": "CAD",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Move",
+            "Explore"
+          ],
+          "max_walking_minutes": 60,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "High Park trail walk, free municipal park, 90 min solo",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:ca-tor-01"
+    },
+    {
+      "id": "ca-tor-02",
+      "city": "Toronto",
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "failure_code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+      "failure_message": "Overpass request failed",
+      "latency_ms": 8284.74,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "ca-tor-02",
+        "city": "Toronto",
+        "country": "CA",
+        "location": "Queen West, Toronto",
+        "origin": {
+          "latitude": 43.6487,
+          "longitude": -79.4102
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 1400,
+          "currency_code": "CAD",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Food",
+            "Talk"
+          ],
+          "max_walking_minutes": 25,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegan"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Queen West vegan cafe catchup, 14 CAD per person, quiet spot",
+        "expected_hard": [
+          "vegan",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:ca-tor-02"
+    },
+    {
+      "id": "ae-dxb-01",
+      "city": "Dubai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2562.74,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "ae-dxb-01",
+        "city": "Dubai",
+        "country": "AE",
+        "location": "Dubai Marina Walk, Dubai",
+        "origin": {
+          "latitude": 25.0772,
+          "longitude": 55.1396
+        },
+        "controls": {
+          "duration_max_minutes": 60,
+          "budget_minor_units": 0,
+          "currency_code": "AED",
+          "budget_scope": "TOTAL",
+          "party_mode": "SOLO",
+          "party_size": 1,
+          "vibes": [
+            "Move"
+          ],
+          "max_walking_minutes": 50,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": []
+        },
+        "text": "Marina promenade waterside walk, public path, 60 mins 0 AED",
+        "expected_hard": [
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:ae-dxb-01"
+    },
+    {
+      "id": "ae-dxb-02",
+      "city": "Dubai",
+      "outcome": "TYPED_REJECTION",
+      "failure_code": "NO_GROUNDED_CANDIDATES",
+      "failure_message": "No plan satisfied all hard checks",
+      "latency_ms": 2501.92,
+      "hard_violations": 0,
+      "hallucinated_venues": 0,
+      "unknown_price_errors": 0,
+      "multiple_plans_errors": 0,
+      "locale": "en-US",
+      "model": "gemma4:e2b-it-qat",
+      "retry_count": 0,
+      "input_case": {
+        "id": "ae-dxb-02",
+        "city": "Dubai",
+        "country": "AE",
+        "location": "Alserkal Avenue, Dubai",
+        "origin": {
+          "latitude": 25.1416,
+          "longitude": 55.2274
+        },
+        "controls": {
+          "duration_max_minutes": 90,
+          "budget_minor_units": 4500,
+          "currency_code": "AED",
+          "budget_scope": "PER_PERSON",
+          "party_mode": "FRIEND",
+          "party_size": 2,
+          "vibes": [
+            "Chill",
+            "Talk"
+          ],
+          "max_walking_minutes": 35,
+          "strict_budget": true,
+          "hard_constraints": [
+            {
+              "kind": "DIETARY",
+              "value": "vegetarian"
+            },
+            {
+              "kind": "EXCLUDE_CATEGORY",
+              "value": "mall"
+            }
+          ],
+          "soft_constraints": [
+            {
+              "preference": "quiet"
+            }
+          ]
+        },
+        "text": "Alserkal warehouse art gallery cafe, 45 AED each, avoid Dubai mall",
+        "expected_hard": [
+          "vegetarian",
+          "exclude:mall"
+        ],
+        "expected_invariants": [
+          "one_default_plan",
+          "budget_not_exceeded",
+          "duration_not_exceeded",
+          "all_places_grounded"
+        ]
+      },
+      "source_mode": "LIVE",
+      "trace": "global:ae-dxb-02"
+    }
+  ]
+}

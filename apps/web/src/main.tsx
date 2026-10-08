@@ -28,8 +28,8 @@ function sourceState(source: Evidence) {
   if ((source.expires_at && Date.now() >= Date.parse(source.expires_at)) || elapsed >= (ageHours[source.field] ?? Infinity)) return 'Stale — revalidation required';
   return 'Observation retained';
 }
-function acceptedPlan(value: unknown, controls: ConstraintSet): value is CompiledPlan {
-  if (!isCompiled(value) || value.status !== 'SUCCESS') return false;
+function acceptedPlan(value: unknown, controls: ConstraintSet, mode: CompiledPlan['mode']): value is CompiledPlan {
+  if (!isCompiled(value) || value.status !== 'SUCCESS' || value.mode !== mode) return false;
   const { plan, proof } = value;
   const sources = new Set(proof.sources.map(e => e.evidence_id));
   const codes = new Set<string>(proof.validation.checks.map(c => c.code));
@@ -88,7 +88,7 @@ function App() {
   const [originMode, setOriginMode] = useState<'demo' | 'device' | 'manual'>('demo');
   const [latitude, setLatitude] = useState(1.3068);
   const [longitude, setLongitude] = useState(103.819);
-  const [deviceCoords, setDeviceCoords] = useState<{ latitude: number; longitude: number } | null>(null);
+  const [deviceCoords, setDeviceCoords] = useState<{ latitude: number; longitude: number; accuracy: number } | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [text, setText] = useState('');
   const [error, setError] = useState('');
@@ -117,7 +117,7 @@ function App() {
     if (pending.current || isLocating || (originMode === 'device' && !deviceCoords)) return;
     const isLive = liveMode;
     const origin = originMode === 'manual' ? { latitude, longitude } : originMode === 'device' && deviceCoords
-      ? deviceCoords
+      ? { latitude: deviceCoords.latitude, longitude: deviceCoords.longitude }
       : isLive
       ? { latitude: 1.3068, longitude: 103.819 }
       : { latitude: 13.0418, longitude: 80.2341 };
@@ -137,7 +137,7 @@ function App() {
       const response = await fetch(`${apiBase}/v1/plans/compile`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: controller.signal, body: JSON.stringify({ mode, controls, free_text: text }) });
       const body: unknown = await response.json();
       if (pending.current !== controller) return;
-      if (!response.ok || !acceptedPlan(body, controls)) {
+      if (!response.ok || !acceptedPlan(body, controls, mode)) {
         const failureMessage = isFailure(body)
           ? body.message
           : 'The response could not be verified. No plan displayed.';
@@ -198,20 +198,21 @@ function App() {
                   navigator.geolocation.getCurrentPosition(
                     pos => {
                       if (locationRequest.current !== requestId) return;
-                      setDeviceCoords({ latitude: Number(pos.coords.latitude.toFixed(6)), longitude: Number(pos.coords.longitude.toFixed(6)) });
                       setIsLocating(false);
+                      if (!Number.isFinite(pos.coords.accuracy) || pos.coords.accuracy > 100) { setError('Location accuracy is too low. Retry GPS or enter coordinates.'); return; }
+                      setDeviceCoords({ latitude: Number(pos.coords.latitude.toFixed(6)), longitude: Number(pos.coords.longitude.toFixed(6)), accuracy: pos.coords.accuracy });
                     },
                     err => {
                       if (locationRequest.current !== requestId) return;
                       setIsLocating(false);
                       setError(`Location access unavailable (${err.message}). Choose an example or enter coordinates.`);
                     },
-                    { timeout: 8000 }
+                    { timeout: 8000, maximumAge: 0, enableHighAccuracy: true }
                   );
                 }
               }}
             />
-            {isLocating ? 'Detecting your device location…' : deviceCoords ? `Device location (${deviceCoords.latitude}, ${deviceCoords.longitude})` : 'Use my current location (GPS)'}
+              {isLocating ? 'Detecting your device location…' : deviceCoords ? `Device location (${deviceCoords.latitude}, ${deviceCoords.longitude}), accuracy ±${Math.ceil(deviceCoords.accuracy)} m` : 'Use my current location (GPS)'}
           </label>
           <label className="check"><input type="radio" name="origin-mode" checked={originMode === 'manual'} onChange={() => { locationRequest.current++; setIsLocating(false); setOriginMode('manual'); setError(''); }} />Enter coordinates</label>
           {originMode === 'manual' && <div className="controls"><label>Latitude<input type="number" required min="-90" max="90" step="any" value={latitude} onChange={e => setLatitude(e.target.valueAsNumber)} /></label><label>Longitude<input type="number" required min="-180" max="180" step="any" value={longitude} onChange={e => setLongitude(e.target.valueAsNumber)} /></label></div>}

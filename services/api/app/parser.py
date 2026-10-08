@@ -37,14 +37,18 @@ Preference = Literal[
     "short outing",
 ]
 Unsupported = Literal[
-    "allergy safety", "wheelchair accessibility", "personal safety", "time clarification"
+    "allergy safety",
+    "wheelchair accessibility",
+    "personal safety",
+    "time clarification",
+    "food requirement",
 ]
 
 
 class ParserAdditions(Contract):
     exclusions: tuple[Literal["mall", "alcohol", "chain"], ...] = Field(max_length=3)
     dietary: Literal["vegetarian", "vegan"] | None
-    unsupported: tuple[Unsupported, ...] = Field(max_length=4)
+    unsupported: tuple[Unsupported, ...] = Field(max_length=5)
     preferences: tuple[Preference, ...] = Field(max_length=11)
     party_size: PositiveInt | None
     max_walking_minutes: NonNegativeInt | None
@@ -55,6 +59,12 @@ class ParserAdditions(Contract):
 def protected_requirements(text: str) -> tuple[Unsupported, ...]:
     """Retain explicit high-stakes requirements even when the model omits them."""
     requirements: list[Unsupported] = []
+    if re.search(
+        r"\b(?:food|meal|dinner|lunch|breakfast)\s+(?:is\s+)?(?:required|mandatory)\b|\bmust\s+eat\b",
+        text,
+        re.I,
+    ):
+        requirements.append("food requirement")
     if re.search(r"\ballerg\w*\b|\banaphyl\w*\b", text, re.I):
         requirements.append("allergy safety")
     if re.search(r"\bwheelchair\b|\baccessible\b|\baccessibility\b", text, re.I):
@@ -102,15 +112,21 @@ def merge_additions(
                 code="MODEL_OUTPUT_INVALID",
                 message="Explicit exclusion conflicts with model extraction",
             )
-    dietary_words = re.findall(r"\b(?:vegetarian|vegan|veg)\b", text, re.I)
-    negated_diet = re.search(
-        r"\b(?:do not|don't)\s+require\s+(?:vegetarian|vegan|veg)\b", text, re.I
+    # Remove only explicit non-requirements; a different party member's diet remains protected.
+    dietary_text = re.sub(
+        r"\b(?:do not|don't|don’t)\s+require\s+(?:vegetarian|vegan|veg)\b|"
+        r"\b(?:vegetarian|vegan|veg)\s+(?:is\s+)?not\s+required\b|"
+        r"\b(?:i am|i'm|i’m)\s+not\s+(?:a\s+)?(?:vegetarian|vegan|veg)\b",
+        "",
+        text,
+        flags=re.I,
     )
+    dietary_words = re.findall(r"\b(?:vegetarian|vegan|veg)\b", dietary_text, re.I)
     required_diet = (
         "vegan" if any(word.casefold() == "vegan" for word in dietary_words) else "vegetarian"
     )
-    if (dietary_words and not negated_diet and additions.dietary != required_diet) or (
-        additions.dietary is not None and (not dietary_words or negated_diet)
+    if (dietary_words and additions.dietary != required_diet) or (
+        additions.dietary is not None and not dietary_words
     ):
         return CompilationFailure(
             code="MODEL_OUTPUT_INVALID",

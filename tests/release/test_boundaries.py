@@ -82,3 +82,11 @@ def test_adversarial_boundary(fault: str, index: int) -> None:
     )
     assert not result.accepted
     assert any(c.status == "FAIL" for c in result.checks)
+    required_gate = {
+        "budget": "BUDGET",
+        "currency": "CURRENCY",
+        "duration": "DURATION",
+        "walking": "WALKING",
+    }.get(fault)
+    if required_gate:
+        assert any(c.code == required_gate and c.status == "FAIL" for c in result.checks)

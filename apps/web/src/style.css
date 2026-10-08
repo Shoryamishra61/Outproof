@@ -15,7 +15,8 @@
   line-height: 1.6;
 }
 * { box-sizing: border-box; }
-body { margin: 0; }
+body { margin: 0; overflow-wrap: anywhere; }
+audio { display: block; width: 100%; max-width: 24rem; }
 main { max-width: 46rem; margin: 0 auto; padding: calc(var(--space) * 2) calc(var(--space) * 1.25); }
 .eyebrow { font-size: 0.85rem; font-weight: 650; letter-spacing: 0.03em; }
 h1 { font-family: Georgia, serif; font-size: clamp(1.7rem, 4vw, 2.5rem); line-height: 1.15; font-weight: 500; }
@@ -24,7 +25,7 @@ h1 { margin: 1.2rem 0 0.6rem; }
 section { margin-top: calc(var(--space) * 2); border-top: 2px solid var(--grass); padding-top: var(--space); }
 h2 { font-size: 1.25rem; }
 .status { border-left: 3px solid var(--grass); padding-left: var(--space); overflow-wrap: anywhere; }
-button { font: inherit; font-weight: 600; padding: 0.65rem 1rem; min-height: 44px; color: var(--paper); background: var(--grass); border: 2px solid var(--grass); border-radius: var(--radius); box-shadow: var(--shadow); cursor: pointer; }
+button { font: inherit; font-weight: 600; padding: 0.65rem 1rem; min-height: 44px; max-width: 100%; color: var(--paper); background: var(--grass); border: 2px solid var(--grass); border-radius: var(--radius); box-shadow: var(--shadow); cursor: pointer; }
 button:hover:not(:disabled) { background: var(--ink); }
 button:active:not(:disabled) { border-color: var(--focus); }
 button:disabled { opacity: 0.6; cursor: wait; }

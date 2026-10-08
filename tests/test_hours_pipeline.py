@@ -87,7 +87,7 @@ def test_window_projection_uses_elapsed_time_across_fold() -> None:
         evidence_id="hours",
         subject_id=stop.place.place_id,
         field="opening_hours",
-        value="24/7",
+        value="Su 00:00-03:00",
         source="FIXTURE",
         source_ref="FIXTURE hours",
         observed_at=fixture.as_of,
@@ -109,5 +109,9 @@ def test_window_projection_uses_elapsed_time_across_fold() -> None:
         plan.model_copy(update={"stops": (stop,)}), as_of=fixture.as_of, allow_fixture=True
     )
     window = result.stops[0].place.opening_windows[0]
-    assert window.closes_at - window.opens_at == timedelta(minutes=45)
+    assert window.opens_at == datetime(2026, 11, 1, 5, 15, tzinfo=UTC)
+    assert window.closes_at == datetime(2026, 11, 1, 8, 0, tzinfo=UTC)
+    assert stop.arrival_at.astimezone(UTC) + timedelta(seconds=stop.dwell_seconds) == datetime(
+        2026, 11, 1, 6, 0, tzinfo=UTC
+    )
     assert validate_plan(result, fixture.controls, as_of=fixture.as_of, allow_fixture=True).accepted

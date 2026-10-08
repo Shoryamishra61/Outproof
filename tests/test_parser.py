@@ -329,6 +329,42 @@ def test_negated_exclusion_is_not_a_missing_hard_requirement() -> None:
     assert not result.hard_constraints
 
 
+@pytest.mark.parametrize(
+    "text", ["I'm not vegan", "I’m not vegan", "Vegetarian is not required", "I don't require veg"]
+)
+def test_explicit_dietary_nonrequirement_does_not_add_a_requirement(text: str) -> None:
+    result = parse_output(json.dumps(empty_additions()), controls(), text)
+    assert isinstance(result, ConstraintSet) and not result.hard_constraints
+    invented = {**empty_additions(), "dietary": "vegan"}
+    assert isinstance(parse_output(json.dumps(invented), controls(), text), CompilationFailure)
+
+
+def test_negated_self_diet_does_not_erase_other_party_requirement() -> None:
+    text = "I'm not vegan, but my friend is vegan"
+    assert isinstance(
+        parse_output(json.dumps(empty_additions()), controls(), text), CompilationFailure
+    )
+    result = parse_output(json.dumps({**empty_additions(), "dietary": "vegan"}), controls(), text)
+    assert isinstance(result, ConstraintSet)
+    assert any(h.kind == "DIETARY" and h.value == "vegan" for h in result.hard_constraints)
+
+
+@pytest.mark.parametrize("text", ["Food required", "Meal is mandatory", "We must eat"])
+def test_required_food_survives_model_omission(text: str) -> None:
+    result = parse_output(json.dumps(empty_additions()), controls(), text)
+    assert isinstance(result, ConstraintSet)
+    assert any(
+        h.kind == "UNSUPPORTED" and h.value == "food requirement" for h in result.hard_constraints
+    )
+
+
+def test_optional_food_does_not_become_a_hard_requirement() -> None:
+    result = parse_output(
+        json.dumps(empty_additions()), controls(), "Food is optional, not required"
+    )
+    assert isinstance(result, ConstraintSet) and not result.hard_constraints
+
+
 def test_timeout_retains_specific_unsupported_requirement(monkeypatch: pytest.MonkeyPatch) -> None:
     def timeout(*args: object, **kwargs: object) -> None:
         raise httpx.ReadTimeout("test timeout")

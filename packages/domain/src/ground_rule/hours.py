@@ -54,7 +54,7 @@ def is_open_for_interval(
 def windows_from_hours(
     record: Evidence, arrival: datetime, departure: datetime, timezone: str
 ) -> tuple[OpeningWindow, ...] | None:
-    """Derive only the requested usable interval; preserve source observation time and reference."""
+    """Derive a supported continuous window; preserve observation time and reference."""
     record = Evidence.model_validate(record)
     if record.field != "opening_hours" or not isinstance(record.value, str):
         return None
@@ -64,6 +64,18 @@ def windows_from_hours(
     if state == "CLOSED":
         return ()
     arrival, departure = arrival.astimezone(UTC), departure.astimezone(UTC)
+    # Model latency delays GO; retain the next actual closure rather than the dwell end.
+    hours = OpeningHours(record.value, auto_country=False, auto_timezone=False)
+    zone = ZoneInfo(timezone)
+    limit = departure + timedelta(hours=24)
+    if record.expires_at and record.expires_at.astimezone(UTC) < limit:
+        limit = max(departure, record.expires_at.astimezone(UTC))
+    cursor = departure
+    while cursor < limit:
+        if hours.state(cursor.astimezone(zone).replace(tzinfo=None))[0] != State.OPEN:
+            break
+        cursor = min(cursor.replace(second=0, microsecond=0) + timedelta(minutes=1), limit)
+    departure = cursor
     derived = Evidence.model_validate(
         record.model_copy(
             update={
