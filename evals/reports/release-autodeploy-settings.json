@@ -1,0 +1,20 @@
+{
+  "api": {
+    "id": "srv-db3vs6ub7d7c739r2sq0",
+    "name": "outproof-api",
+    "repo": "https://github.com/Shoryamishra61/Outproof",
+    "branch": "master",
+    "autoDeploy": "no",
+    "autoDeployTrigger": "off",
+    "updatedAt": "2026-10-08T21:26:40.546622Z"
+  },
+  "web": {
+    "id": "srv-db3vs8eb7d7c739r31l0",
+    "name": "outproof-web",
+    "repo": "https://github.com/Shoryamishra61/Outproof",
+    "branch": "master",
+    "autoDeploy": "no",
+    "autoDeployTrigger": "off",
+    "updatedAt": "2026-10-08T21:26:19.200517Z"
+  }
+}

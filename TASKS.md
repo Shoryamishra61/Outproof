@@ -14,7 +14,7 @@ This section supersedes earlier phase claims below, including withdrawn Anna Nag
 - [x] Actual Sentry grounding/rank spans, SerpApi discovery, ElevenLabs generation/playback, Copilot review and manual Entire capture
 - [x] Backboard failure investigated: Memory/RAG-only free credits block chat; no billing enabled, no successful inference claim
 - [x] 65-second actual public demo recorded; local range/decode/viewport/focus/audio checks passed; release reports and DEV draft prepared
-- [ ] Fresh public demo-asset playback and final deployment SHA/CI verification (in progress)
+- [x] Fresh public demo-asset range/hash/decode/playback verified on checked deployed release; final evidence update gets its own CI/deployment check
 - [ ] Stable/always-on model hosting: no existing domain, no paid hosting authorized; protected temporary fallback disclosed
 - [ ] Three physical India trials and field Screen Ratio: UNEXECUTED/unmeasured
 - [ ] Author's final DEV review and publication: reserved to the user

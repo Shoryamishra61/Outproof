@@ -25,4 +25,6 @@ Copilot CLI 1.0.94 used the existing authenticated entitlement with no paid over
 
 Backboard's comparison used four synthetic sentences and four real local Gemma calls; only two local semantic outputs matched the oracle, and malformed/conflicting outputs failed closed. Four Backboard attempts did not run inference. Its diagnostic message explicitly required paid credits/subscription, which were not authorized. See `release-backboard-comparison.json`; do not describe it as a successful model comparison.
 
+A subsequent negation-specific prompt correction passed three actual authenticated Gemma parser calls, including a companion's independent vegetarian requirement (`release-parser-negation.json`). Deterministic hard guards were preserved. This does not change the historical comparison results or unblock Backboard. Entire's capture is local and manually attached; hosted semantic search and automatic checkpoint publication are not claimed.
+
 Evidence receipts are in `evals/reports/release-*.json` and `artifacts/release/public-corrected`. Published model/source/audio licenses remain separate from the repository MIT license; see `NOTICE`. No partner is allowed to weaken the acceptance boundary.

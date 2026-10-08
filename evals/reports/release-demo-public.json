@@ -1,0 +1,21 @@
+{
+  "executed_at": "2026-10-08T21:43:21.530Z",
+  "base_url": "https://outproof-web.onrender.com",
+  "status": "PASS",
+  "duration_seconds": 65.08,
+  "size_bytes": 3343359,
+  "sha256": "e1fd3b2873e16e8bebbba0590d3f05357d9bacc3d7499098b8c653b8179a45f3",
+  "http_status": 200,
+  "range_status": 206,
+  "viewports": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "video_decoded_and_played": true,
+  "voice_decoded_and_played": true,
+  "autoplay": false,
+  "keyboard_focus": true,
+  "console_errors": []
+}

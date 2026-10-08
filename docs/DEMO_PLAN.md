@@ -1,5 +1,7 @@
 # Demo Plan
 
+Current evidence: a 65.08-second actual public browser recording is served at `https://outproof-web.onrender.com/demo.html`. The original screen recording is silent; the actual generated GO cue is separately playable. Public decode/range/hash/mobile/focus/audio checks passed (`release-demo-public.json`). It shows supported SGD0 main-grounds compilation, source proof and GO; no physical outing footage exists. The older shot list below is superseded and its India/food scenario is not presented as working.
+
 ## Target: 45–60 seconds
 
 Status: shot list only; no accepted real compiler plan or field video yet.

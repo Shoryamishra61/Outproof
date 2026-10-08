@@ -1,0 +1,19 @@
+{
+  "executed_at": "2026-10-08T21:40:15.899053+00:00",
+  "action": "restore",
+  "service": "web",
+  "http_status": 201,
+  "result": {
+    "id": "dep-db40rfrbc2fs73c7v0kg",
+    "commit": {
+      "id": "173fe5d3c2ecfbfc7e1c0a85379d4b9aee0ff2ee",
+      "message": "Publish verified release evidence, public demo, and review-only DEV draft",
+      "createdAt": "2026-10-08T21:36:23Z"
+    },
+    "status": "build_in_progress",
+    "trigger": "api",
+    "createdAt": "2026-10-08T21:40:15.879018Z",
+    "updatedAt": "2026-10-08T21:40:15.879018Z",
+    "startedAt": "2026-10-08T21:40:15.877369Z"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "api": {
+    "id": "srv-db3vs6ub7d7c739r2sq0",
+    "name": "outproof-api",
+    "branch": "master",
+    "autoDeploy": "yes",
+    "autoDeployTrigger": "checksPass",
+    "updatedAt": "2026-10-08T21:41:17.590837Z"
+  },
+  "web": {
+    "id": "srv-db3vs8eb7d7c739r31l0",
+    "name": "outproof-web",
+    "branch": "master",
+    "autoDeploy": "yes",
+    "autoDeployTrigger": "checksPass",
+    "updatedAt": "2026-10-08T21:40:35.667082Z"
+  }
+}

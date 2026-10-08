@@ -1,0 +1,119 @@
+{
+  "executed_at": "2026-10-08T21:42:47.197219+00:00",
+  "scope": "three real authenticated Gemma parser calls on synthetic sentences; no live source claim",
+  "model": "gemma4:e2b-it-qat",
+  "before": "release-backboard-comparison.json recorded actual not-vegan parser failure",
+  "rows": [
+    {
+      "synthetic_sentence": "I'm not vegan",
+      "expected_dietary": null,
+      "status": "PASS",
+      "elapsed_ms": 2317.53,
+      "result": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "FRIEND",
+        "party_size": 2,
+        "vibes": [
+          "Food",
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": 30,
+        "max_walking_meters": 2500.0,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 13.0418,
+          "longitude": 80.2341
+        },
+        "departure_at": "2026-10-07T01:00:00Z",
+        "strict_budget": true
+      }
+    },
+    {
+      "synthetic_sentence": "vegetarian not required",
+      "expected_dietary": null,
+      "status": "PASS",
+      "elapsed_ms": 1240.25,
+      "result": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "FRIEND",
+        "party_size": 2,
+        "vibes": [
+          "Food",
+          "Talk"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          }
+        ],
+        "max_walking_minutes": 30,
+        "max_walking_meters": 2500.0,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 13.0418,
+          "longitude": 80.2341
+        },
+        "departure_at": "2026-10-07T01:00:00Z",
+        "strict_budget": true
+      }
+    },
+    {
+      "synthetic_sentence": "I'm not vegan; my friend is vegetarian",
+      "expected_dietary": "vegetarian",
+      "status": "PASS",
+      "elapsed_ms": 1278.01,
+      "result": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "FRIEND",
+        "party_size": 2,
+        "vibes": [
+          "Food",
+          "Talk"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [
+          {
+            "preference": "quiet"
+          },
+          {
+            "preference": "talk"
+          }
+        ],
+        "max_walking_minutes": 30,
+        "max_walking_meters": 2500.0,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 13.0418,
+          "longitude": 80.2341
+        },
+        "departure_at": "2026-10-07T01:00:00Z",
+        "strict_budget": true
+      }
+    }
+  ],
+  "status": "PASS"
+}

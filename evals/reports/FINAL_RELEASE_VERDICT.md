@@ -1,6 +1,6 @@
 # CONDITIONAL RELEASE — DISCLOSED LIMITATIONS
 
-2026-10-08T21:32:13.887344+00:00. Core supported public execution is evidenced; final documentation/asset deployment is being checked. This report supersedes historical lower-case verdicts and withdrawn Anna Nagar acceptances.
+Core supported public execution and the actual public demo assets are evidenced. This report supersedes historical lower-case verdicts and withdrawn Anna Nagar acceptances. Source/runtime SHAs are recorded per executed receipt; a final evidence update receives its own green CI and deployment verification.
 
 | Capability | Status | Evidence/limit |
 |---|---|---|
@@ -13,7 +13,7 @@
 | Mobile/desktop/keyboard | PASS in tested paths |124 controlled Chromium journeys and real public390px |
 | Observability | PASS | Actual production grounding/model spans; technical privacy filters |
 | Partner claims | LIMITED | Seven demonstrated uses; nine excluded/blocked; judges decide |
-| Demo | RECORDED, public asset smoke pending |65-second real public screen recording; no audio track/physical footage |
+| Demo | PASS |65.08-second real public screen recording; public range/decode/hash/playback verified; no audio track/physical footage |
 | Documents/DEV draft | PREPARED, author review pending | Official template/tags,never published |
 | Physical field trials | UNEXECUTED |0/3 India trials; Screen Ratio unmeasured |
 
@@ -21,4 +21,4 @@ Canonical:4,879 passed,2 opt-in external skips;17 schemas,60 structural,85 polic
 
 No new cash spend. Existing free quotas/credits only, no top-up/overages/training. No domain or physical board exists. Backboard chat needs credits beyond the available Memory/RAG-only balance; not claimed. Paid compute, optional stores/orchestration/training remain excluded. No known critical/high defect is concealed; uncertain facts fail closed.
 
-The user must fact-check and publish the prepared DEV draft once the final asset/SHA verification is appended. Keep coverage, uptime, cold-start and physical-trial limitations visible. Do not publish additional partner claims or call this a tested physical outing. Keep the inference laptop online for live judging. Publication/submission remains reserved to the user.
+The user must fact-check and publish the prepared DEV draft, confirming current public availability at publication. Keep coverage, uptime, cold-start and physical-trial limitations visible. Do not publish additional partner claims or call this a tested physical outing. Keep the inference laptop online for live judging. Publication/submission remains reserved to the user.

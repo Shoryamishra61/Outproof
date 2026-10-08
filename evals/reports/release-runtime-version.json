@@ -1,0 +1,30 @@
+{
+  "executed_at": "2026-10-08T21:39:27.868594+00:00",
+  "runtime_version": {
+    "version": "0.35.1"
+  },
+  "resident_models": {
+    "models": [
+      {
+        "name": "gemma4:e2b-it-qat",
+        "model": "gemma4:e2b-it-qat",
+        "size": 3928039094,
+        "digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "4.6B",
+          "quantization_level": "Q4_0"
+        },
+        "expires_at": "2026-10-09T03:27:45.3888266+05:30",
+        "size_vram": 1479320534,
+        "context_length": 4096
+      }
+    ]
+  },
+  "scope": "actual dedicated loopback Ollama runtime metadata; inference receipts separate"
+}
