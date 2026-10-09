@@ -1,0 +1,13 @@
+{
+  "executed_at": "2026-10-09T19:53:13.692Z",
+  "status": "PASS",
+  "url": "https://outproof-web.onrender.com/location-demo.webm",
+  "http_status": 200,
+  "range_status": 206,
+  "duration_seconds": 24.6,
+  "size_bytes": 1832741,
+  "sha256": "fd7203e5606e9c8d26b9883d242a3aa71bfb0f1b2a5311d334567ce2c889bd49",
+  "decoded_and_played": true,
+  "autoplay": false,
+  "scope": "Actual new public mobile origin recording playback; no physical trial"
+}

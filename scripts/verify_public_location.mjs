@@ -29,6 +29,15 @@ try{
  assert.ok(report.actual_initial_map_tiles>0);
  assert.equal(await page.locator('.leaflet-tile').first().getAttribute('referrerpolicy'),'strict-origin-when-cross-origin');
  assert.ok(await page.locator('.leaflet-control-attribution').getByRole('link',{name:'OpenStreetMap'}).isVisible());
+ report.map_attribution_contrast=await page.locator('.leaflet-control-attribution a').first().evaluate(link=>{
+  const fg=getComputedStyle(link).color.match(/[\d.]+/g).map(Number);
+  const bg=getComputedStyle(link.parentElement).backgroundColor.match(/[\d.]+/g).map(Number);
+  if(bg.length===4&&bg[3]!==1)return 0;
+  const luminance=rgb=>rgb.slice(0,3).map(v=>v/255).map(v=>v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);
+  const a=luminance(fg),b=luminance(bg);return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+ });
+ assert.ok(report.map_attribution_contrast>=4.5);
+
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  await page.screenshot({path:`${directory}/mobile.png`,fullPage:true});
  // Automated panning uses controlled imagery rather than forcing public tile traffic.

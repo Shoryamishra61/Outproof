@@ -86,6 +86,12 @@
       "high": 0,
       "medium_heuristic": 1,
       "manual_resolution": "Leaflet zoom/fade/marker animations and arrow pan animations disabled; global reduced-motion CSS retained"
+    },
+    "contrast_ratios": {
+      "ink_on_paper": 11.86,
+      "muted_on_paper": 5.95,
+      "paper_on_grass": 9.39,
+      "map_attribution_links_on_opaque_paper": 9.39
     }
   },
   "observed_failures": [
@@ -95,7 +101,9 @@
     "GPS accuracy text appears twice; assertion scoped to radio",
     "Initial quick-tunnel creation timed out; bounded HTTP/2 IPv4 retry established the protected tunnel",
     "Public origin smoke initially supplied an extra rejected field; frontend correctly refused that malformed contract. The test payload was corrected, then real lookup/map plus controlled origin submission passed",
-    "Current closed-time API audit expected NO_OPEN_PLAN but observed generic NO_GROUNDED_CANDIDATES; retained the failed audit and separately verified the actual refusal contract"
+    "Current closed-time API audit expected NO_OPEN_PLAN but observed generic NO_GROUNDED_CANDIDATES; retained the failed audit and separately verified the actual refusal contract",
+    "A later local browser recheck lost the Vite server during concurrent canonical build/browser activity; cause not confirmed. The failed log was retained and the browser suite rerun separately.",
+    "Sequential local run had one 30-second keyboard protocol timeout during transient laptop stalls (133 pass/1 fail); unchanged single-case recheck passed in 1.1 seconds, then the complete unchanged 134-case campaign passed in 1.4 minutes. No timeouts or assertions were relaxed. A concurrent readiness check temporarily failed, then actual readiness and full identity/authentication check recovered to PASS."
   ],
   "limitations": [
     "No physical device GPS calibration or India field test",
@@ -1198,6 +1206,44 @@
       "sha256": "fd7203e5606e9c8d26b9883d242a3aa71bfb0f1b2a5311d334567ce2c889bd49"
     },
     "public_asset": "https://outproof-web.onrender.com/location-demo.webm",
-    "public_playback": "PENDING_NEW_ASSET_DEPLOYMENT"
+    "public_playback": {
+      "executed_at": "2026-10-09T19:53:13.692Z",
+      "status": "PASS",
+      "url": "https://outproof-web.onrender.com/location-demo.webm",
+      "http_status": 200,
+      "range_status": 206,
+      "duration_seconds": 24.6,
+      "size_bytes": 1832741,
+      "sha256": "fd7203e5606e9c8d26b9883d242a3aa71bfb0f1b2a5311d334567ce2c889bd49",
+      "decoded_and_played": true,
+      "autoplay": false,
+      "scope": "Actual new public mobile origin recording playback; no physical trial"
+    }
+  },
+  "security": {
+    "production_npm_audit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "public_location_boundaries": {
+      "status": "PASS",
+      "scope": "Bounded actual production location request/CORS probes; not a load test",
+      "invalid_query": 422,
+      "oversize_body": 422,
+      "allowed_cors": 200,
+      "foreign_cors": 400
+    }
+  },
+  "final_local_campaign": {
+    "canonical_passed": 4900,
+    "skipped_opt_in": 2,
+    "browser_passed": 134,
+    "browser_failed": 0,
+    "keyboard_recheck_passed": 1,
+    "runtime_change_since_first_public_receipt": "Map attribution background/link contrast only; final public pixel check runs after final deployment"
   }
 }

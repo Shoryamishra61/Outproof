@@ -56,7 +56,8 @@ label span, .area span, small { color: var(--muted); font-size: 0.8rem; font-wei
 .origin-pin span { display: block; width: 24px; height: 24px; background: var(--grass); border: 3px solid var(--paper); border-radius: 50% 50% 50% 0; transform: rotate(-45deg); box-shadow: 0 1px 4px #20342780; }
 .selected-location { border-left: 3px solid var(--grass); padding-left: 0.7rem; }
 .leaflet-container { font: inherit; }
-.leaflet-container .leaflet-control-attribution { font-size: 0.7rem; color: var(--ink); }
+.leaflet-container .leaflet-control-attribution { font-size: 0.7rem; color: var(--ink); background: var(--paper); }
+.leaflet-container .leaflet-control-attribution a { color: var(--grass); }
 .leaflet-container .leaflet-control-zoom a { width: 44px; height: 44px; line-height: 44px; color: var(--ink); }
 fieldset { border: 0; padding: 0; margin: 0; }
 legend { font-weight: 650; }
