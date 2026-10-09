@@ -16,11 +16,11 @@ Requires Python 3.12+, Node 24, uv and Ollama. Dependencies are locked. Run `./s
 
 Use `.env.example` for variable names. Shells do not load env files automatically. Configure secrets in ignored local files or provider dashboards; never use frontend variables for credentials. Remote Ollama requires HTTPS plus `GEMMA_API_KEY`. The authenticated temporary laptop tunnel has no uptime guarantee; it is not stable hosting.
 
-`/v1/health/live` reports the process only. `/v1/health/ready` probes the configured model tag, authoritative source and route service, cached for 60 seconds. `/v1/version` exposes build SHA. Production forbids fixture mode.
+`/v1/health/live` reports the process only. `/v1/health/ready` probes the configured model tag and reviewed Singapore source/route, cached for 60 seconds; it does not establish selected-area or global compilation. `/v1/version` exposes build SHA. Production forbids fixture mode.
 
 ## Evidence
 
-The executed campaign records 4,900 Python tests, 4,096 distinct controlled compiler journeys, 300 adversarial cases and 134 controlled Chromium journeys. These are synthetic/control tests, not actual outings. Real public browser/API/Gemma/source/route/proof/GO runs passed. Twenty bounded production probes included three supported real compiles (one parser plus ranker), with a small warm median of 4.01 s. The initial cold local inference took about 115 s. See the [current verdict](evals/reports/FINAL_RELEASE_VERDICT.md) and [production report](evals/reports/FINAL_PRODUCTION_SMOKE.md), not superseded historical claims. Three physical outings remain unexecuted.
+The executed campaign records 4,903 Python tests, 4,096 distinct controlled compiler journeys, 300 adversarial cases and 135 controlled Chromium journeys. These are synthetic/control tests, not actual outings. Historical supported public browser/API/Gemma/source/route/proof/GO runs passed. Twenty bounded production probes included three supported real compiles (one parser plus ranker), with a small warm median of 4.01 s. The initial cold local inference took about 115 s. See the [current verdict](evals/reports/FINAL_RELEASE_VERDICT.md), [production report](evals/reports/FINAL_PRODUCTION_SMOKE.md) and [Potheri incident](evals/reports/release-potheri-incident.md). Three physical outings remain unexecuted.
 
 GitHub CI has executed successfully and Render deploys after checks pass. The measured runtime is `gemma4:e2b-it-qat`; no fallback model is silently substituted. [Deployment](docs/DEPLOYMENT.md), [operations](docs/OPERATIONS.md), [partner evidence](docs/PARTNER_ELIGIBILITY.md) and the unpublished [DEV draft](docs/DEV_DRAFT.md) document reproduction and limits.
 

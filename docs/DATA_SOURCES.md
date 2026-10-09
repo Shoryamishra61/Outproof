@@ -129,3 +129,9 @@ Avoid ungrounded "hidden gem" claims.
 ## Origin lookup and map imagery
 
 Photon/OpenStreetMap supports explicit starting-area search, and standard OpenStreetMap tiles support the origin picker. Neither is outing proof. Provider limits, attribution, privacy and test isolation are documented in [LOCATION_PICKER.md](LOCATION_PICKER.md).
+
+## Production discovery provider
+
+`OVERPASS_URL` selects the OSM discovery service. The production blueprint uses `https://maps.mail.ru/osm/tools/overpass/api/interpreter`, an instance listed in the [OSM public-instance register](https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances). A bounded Potheri query returned actual HTTP 200 and OSM identities on 2026-10-10 IST. This is discovery evidence, not admission, hours, accessibility or availability proof. The prior `overpass-api.de` endpoint worked from the developer computer but produced `ConnectError` from Render; TLS checks remain enabled.
+
+The query sends the starting coordinate and a 1 km radius to that provider, requests at most 8 MiB of query working memory and uses an identifying project User-Agent. Recovery requests are serialized, network/incomplete-response failures retain a 60-second cooldown, and no failed result becomes a plan. Public endpoints have no project uptime guarantee. Do not turn the controlled test campaign into live provider load.

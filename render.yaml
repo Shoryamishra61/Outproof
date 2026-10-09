@@ -28,6 +28,8 @@ services:
         sync: false
       - key: GEMMA_MODEL
         value: gemma4:e2b-it-qat
+      - key: OVERPASS_URL
+        value: https://maps.mail.ru/osm/tools/overpass/api/interpreter
       - key: OLLAMA_BASE_URL
         sync: false
       - key: GEMMA_API_KEY

@@ -244,7 +244,7 @@ Searchable origins do not check worldwide outing coverage or physical GPS/field 
 - [x] Reproduce production discovery failure while Singapore-only readiness returns success.
 - [x] Serialize discovery recovery probes, retain provider cooldown and add private-safe failure diagnostics.
 - [x] Distinguish API reachability, failed compilation and missing evidence in the UI/API.
-- [ ] Verify discovery recovery on the deployed build and document the production provider result.
+- [x] Verify discovery recovery on the deployed build and document the production provider result.
 - [ ] Verify an accepted Potheri outing with authoritative admission and operating-hours evidence.
 
 Thousands of controlled cases are not thousands of real outings. Potheri admission/hours remain unverified; no accepted Potheri plan is claimed.

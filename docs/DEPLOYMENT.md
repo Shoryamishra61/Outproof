@@ -29,4 +29,6 @@ The actual RTX 3050 Laptop GPU has 4096 MiB VRAM; this quantized model uses GPU 
 
 `GET /v1/health/live` checks the process. `/v1/health/ready` probes the model tag, official source and routing service with a 60-second cache; a listing alone is not inference evidence. `/v1/version` reports environment and commit. Legacy `/v1/health` is bootstrap information and deliberately does not claim compilation availability.
 
+Readiness explicitly covers only the reviewed Singapore source and route. It does not establish selected-area or global compilation. Potheri outage diagnostics and the configured `OVERPASS_URL` are documented in [the incident report](../evals/reports/release-potheri-incident.md). Provider failures expose a cooldown interval through `Retry-After`; logs retain exception class/status, not coordinates or raw queries. Restore the prior discovery provider by setting `OVERPASS_URL=https://overpass-api.de/api/interpreter` and redeploying a green build, then verify discovery from production before claiming recovery.
+
 The Cloudflare named tunnel has no existing domain route, so the authorized fallback is a temporary authenticated quick tunnel. Its hostname can change after restart. Update the server-side URL and redeploy if it changes. Render free services may sleep and incur cold starts. This release does not promise 24/7 availability.

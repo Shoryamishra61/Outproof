@@ -1,5 +1,7 @@
 # Conditional release handoff
 
+Latest Potheri incident: [executed repair report](release-potheri-incident.md). General discovery failed from Render despite Singapore-only readiness passing. Discovery recovered after replacing the unreachable endpoint; a real Potheri browser run found three identities but **no accepted outing**, because admission/hours evidence was insufficient. Current controlled checks: 4,903 Python and 135 browser cases. A separately future-dated supported Singapore API plan passed with real Gemma. Global and Potheri outing coverage remain BLOCKED; thousands of synthetic checks do not establish real-world acceptance.
+
 Latest starting-location repair: October 10, 2026 IST. [Executed report](release-location-picker.md) supersedes the older coordinate-entry UI and test counts below: 4,900 Python tests, 134 controlled browser cases, three real public origin searches, real map imagery, and restored protected Gemma connection. Current closed-time refusal and an explicitly future-dated API plan are reported separately; this is not a current accepted outing or physical field trial.
 
 Checkpoint: **October 9, 2026, 08:03 IST**. Target freeze remains October 10, 2026, 09:00 IST. Engineering for the evidenced supported loop is deployed; worldwide acceptance, permanent inference hosting and physical trials are not established.
