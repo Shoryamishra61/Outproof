@@ -2,7 +2,7 @@
 
 **Your limits in. One real plan out.** An open-weight Gemma outing compiler for Touch Grass.
 
-[Open Ground Rule](https://outproof-web.onrender.com/) · [65-second public execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
+[Open Ground Rule](https://outproof-web.onrender.com/) · [68-second public execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
 
 Live coverage is limited to the reviewed Singapore Botanic Gardens Tanglin entrance corridor, main grounds only. Official NParks admission/hours, an OSM pedestrian gate and independent Valhalla round trips ground the compiler. Other locations may yield a typed refusal; worldwide operation is not claimed.
 
