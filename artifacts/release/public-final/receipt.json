@@ -1,0 +1,14 @@
+{
+  "executed_at": "2026-10-09T02:10:00.596Z",
+  "url": "https://outproof-web.onrender.com",
+  "scope": "real public browser execution; no physical outing",
+  "errors": [],
+  "requests": [],
+  "version": {
+    "version": "0.1.0",
+    "commit": "0e22fce94a96229dbd31cff500e03b17f8d85eb9",
+    "environment": "production"
+  },
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n"
+}

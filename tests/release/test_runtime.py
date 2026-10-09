@@ -1,10 +1,13 @@
 import asyncio
+from types import SimpleNamespace
 
 import httpx
 import pytest
+from app.live import LivePlacesProvider
 from app.main import create_app, fixture_configuration_enabled, live_configuration_enabled
 from app.model_connection import model_connection
 from app.ranker import LocalGemma
+from app.routing import ValhallaRoutingProvider
 from ground_rule.models import CompilationFailure
 
 
@@ -38,6 +41,59 @@ def test_authenticated_remote_model_does_not_follow_redirects() -> None:
             )
             assert isinstance(await model.generate({}), CompilationFailure)
         assert len(calls) == 1
+
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize("source_available", [True, False])
+def test_concurrent_readiness_waits_for_one_real_probe(
+    monkeypatch: pytest.MonkeyPatch, source_available: bool
+) -> None:
+    async def run() -> None:
+        entered = asyncio.Event()
+        release = asyncio.Event()
+        calls = 0
+
+        async def discover(*args: object, **kwargs: object) -> list | CompilationFailure:
+            nonlocal calls
+            calls += 1
+            entered.set()
+            await release.wait()
+            return (
+                []
+                if source_available
+                else CompilationFailure(
+                    code="SOURCE_TEMPORARILY_UNAVAILABLE", message="Controlled source outage"
+                )
+            )
+
+        async def route(*args: object, **kwargs: object) -> SimpleNamespace:
+            return SimpleNamespace(reachable=True)
+
+        monkeypatch.setattr(LivePlacesProvider, "discover", discover)
+        monkeypatch.setattr(ValhallaRoutingProvider, "route", route)
+        async with httpx.AsyncClient() as model_client:
+            app = create_app(live_enabled=True, model=LocalGemma(model_client, "gemma4:e2b-it-qat"))
+            async with httpx.AsyncClient(
+                transport=httpx.ASGITransport(app=app), base_url="http://test"
+            ) as client:
+                first = asyncio.create_task(client.get("/v1/health/ready"))
+                await asyncio.wait_for(entered.wait(), timeout=1)
+                second = asyncio.create_task(client.get("/v1/health/ready"))
+                try:
+                    await asyncio.wait_for(asyncio.shield(second), timeout=0.05)
+                    pytest.fail("Readiness answered before the in-flight provider probe completed")
+                except TimeoutError:
+                    pass
+                finally:
+                    release.set()
+                    responses = await asyncio.gather(first, second)
+                assert calls == 1
+                assert responses[0].json() == responses[1].json()
+                assert all(r.status_code == (200 if source_available else 503) for r in responses)
+                assert responses[0].json()["compilation_available"] is source_available
+                assert (await client.get("/v1/health/ready")).json() == responses[0].json()
+                assert calls == 1
 
     asyncio.run(run())
 

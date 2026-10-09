@@ -5,7 +5,8 @@
 This section supersedes earlier phase claims below, including withdrawn Anna Nagar acceptance, worldwide success, disabled public compilation and unexecuted CI. Uppercase final reports are authoritative for current evidence.
 
 - [x] Free public Render frontend/API; actual supported NParks/OSM/Valhalla/Gemma/proof/GO browser execution
-- [x] 4,879 Python checks; 17 schemas; 60 structural / 85 policy fixtures; Ruff/TS/build
+- [x] Concurrent readiness callers share one completed provider probe; working and unavailable source regressions preserve real status
+- [x] 4,881 Python checks; 17 schemas; 60 structural / 85 policy fixtures; Ruff/TS/build
 - [x] 4,096 distinct controlled compiler journeys; 300 adversarial; 300 property examples; four critical-gate mutants detected
 - [x] 124 controlled Chromium journeys; GPS/error/retry/cancel/keyboard/mobile/zoom/audio; stale return deadline rejected
 - [x] 50 fresh real global attempts across 19 cities: zero accepted, 40 refused, 10 provider failures; no global operational claim

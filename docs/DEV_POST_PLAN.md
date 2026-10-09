@@ -1,5 +1,7 @@
 # DEV Post Plan
 
+Current submission text is [DEV_DRAFT.md](DEV_DRAFT.md). The older outline below is historical planning: its India field test and outside-heavy recording ideas were not executed. Use the actual public screen recording and disclosed narrow coverage, temporary model hosting and zero physical trials from the current draft and final reports.
+
 ## Working title
 
 **I Stopped Asking AI Where to Go. I Made It Prove the Plan First.**

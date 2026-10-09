@@ -1,5 +1,9 @@
 # Browser evidence
 
+Latest controlled rerun: **124 passed**, no skips/unexpected/flaky cases, 68.61 seconds (`release-readiness-concurrency.json`). An earlier rerun reused an existing Vite process and then encountered localhost connection refusals: 2 passed/122 failed. Its report, log and representative screenshot/trace are retained in `artifacts/release/browser-infra-failure`; dedicated test-server startup restored the full suite. Playwright now always starts its own frontend server.
+
+After an idle period, `public-final` failed before compilation while readiness was checking; it is retained. `public-final-retry` passed on deployed `0e22fce`, with 22.162 seconds to the live plan and 22.794 seconds to GO. A shared API readiness race was reproduced in two controlled cases and fixed: concurrent callers now await one provider probe, while real source failures still return 503. The public runner waits for an enabled button before checking keyboard focus and records the actual readiness response. Production verification of this correction is recorded separately.
+
 2026-10-08T21:32:13.887344+00:00. Controlled Chromium: **124 passed**, zero skipped/unexpected/flaky, 78.24 s. Command: `npx playwright test` from `apps/web`; artifact `artifacts/release/browser-results.json`. Ten viewport widths (320–3840px) exercise success, budget/currency/walk/time rejection, denied/manual GPS, cancel, offline and malformed output. Three widths additionally exercise granted/low-accuracy/timeout GPS, retry, rapid submit, stale-response discard, 200% CSS zoom, decoded voice playback and reload clearing GO.
 
 These use controlled providers and do not establish live venue facts. Initial zoom overflow failures were preserved in local logs; audio/button sizing was fixed and the complete suite rerun without skips.

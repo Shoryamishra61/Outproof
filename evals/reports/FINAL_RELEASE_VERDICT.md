@@ -17,7 +17,7 @@ Core supported public execution and the actual public demo assets are evidenced.
 | Documents/DEV draft | PREPARED, author review pending | Official template/tags,never published |
 | Physical field trials | UNEXECUTED |0/3 India trials; Screen Ratio unmeasured |
 
-Canonical:4,879 passed,2 opt-in external skips;17 schemas,60 structural,85 policy,TS/Vite/Ruff green. Generated:4,096 unique synthetic journeys (26 accepted,4,070 safely rejected),complete measured pairwise dimension coverage;300 adversarial;300 property examples;four critical-gate mutants detected. Browser:124 passed. Real global:50 attempts/19 cities,0 accepted/40 refused/10 provider failures. Warm public three-compile sample median4.01s/max5.24s; initial cold local inference~115s. No worldwide or consistent latency guarantee.
+Canonical:4,881 passed,2 opt-in external skips;17 schemas,60 structural,85 policy,TS/Vite/Ruff green. Generated:4,096 unique synthetic journeys (26 accepted,4,070 safely rejected),complete measured pairwise dimension coverage;300 adversarial;300 property examples;four critical-gate mutants detected. Browser:124 passed. Real global:50 attempts/19 cities,0 accepted/40 refused/10 provider failures. Warm public three-compile sample median4.01s/max5.24s; initial cold local inference~115s. No worldwide or consistent latency guarantee.
 
 No new cash spend. Existing free quotas/credits only, no top-up/overages/training. No domain or physical board exists. Backboard chat needs credits beyond the available Memory/RAG-only balance; not claimed. Paid compute, optional stores/orchestration/training remain excluded. No known critical/high defect is concealed; uncertain facts fail closed.
 

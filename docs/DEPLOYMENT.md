@@ -17,6 +17,16 @@ API configuration: `PYTHONPATH=services/api`, `GROUND_RULE_ENV=production`, comp
 
 Local `.env.release`, tools, model weights and credential files are ignored by Git. Env files must be loaded explicitly; shell and uvicorn do not automatically ingest arbitrary release files. Keep Ollama on loopback 11436 and the authenticated proxy on loopback 11435. Do not direct a public tunnel at raw Ollama.
 
+The installed release model is `gemma4:e2b-it-qat` (digest `07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c`), served by `.tools/ollama/ollama.exe` with model storage in `.tools/models`. This is separate from desktop Ollama's default port 11434. To inspect the already-running project server in PowerShell:
+
+```powershell
+$env:OLLAMA_HOST='http://127.0.0.1:11436'
+& .\.tools\ollama\ollama.exe list
+Invoke-RestMethod 'http://127.0.0.1:11436/api/ps'
+```
+
+The actual RTX 3050 Laptop GPU has 4096 MiB VRAM; this quantized model uses GPU and system RAM with a 4096-token context. No additional download is needed. The parser adapter is `services/api/app/parser.py`; ranking is `services/api/app/ranker.py`. The API validates both model outputs and never lets either invent source facts or bypass hard checks. An actual public run after an idle period took 22.162 seconds to the plan; this one measurement does not establish a general latency guarantee.
+
 `GET /v1/health/live` checks the process. `/v1/health/ready` probes the model tag, official source and routing service with a 60-second cache; a listing alone is not inference evidence. `/v1/version` reports environment and commit. Legacy `/v1/health` is bootstrap information and deliberately does not claim compilation availability.
 
 The Cloudflare named tunnel has no existing domain route, so the authorized fallback is a temporary authenticated quick tunnel. Its hostname can change after restart. Update the server-side URL and redeploy if it changes. Render free services may sleep and incur cold starts. This release does not promise 24/7 availability.

@@ -180,16 +180,12 @@ def create_app(
     @app.get("/v1/health/ready")
     async def readiness() -> JSONResponse:
         nonlocal ready_cache
-        if ready_cache and ready_cache[0] > monotonic():
-            value = ready_cache[1]
-            return JSONResponse(
-                status_code=200 if value["compilation_available"] else 503, content=value
-            )
-        if ready_lock.locked():
-            return JSONResponse(
-                status_code=503, content={"status": "checking", "compilation_available": False}
-            )
         async with ready_lock:
+            if ready_cache and ready_cache[0] > monotonic():
+                value = ready_cache[1]
+                return JSONResponse(
+                    status_code=200 if value["compilation_available"] else 503, content=value
+                )
             response = await probe_readiness()
             import json
 

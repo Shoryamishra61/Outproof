@@ -36,7 +36,7 @@ The same principle shaped routing. The compiler routes to a reviewed pedestrian 
 
 Two less visible failures mattered too: freshly fetched observations were incorrectly compared against the request-start clock, and opening windows were clipped to the original dwell interval, invalidating GO after a few seconds of reading. I reproduced both failures, corrected their shared causes, and retained closure, expiry and daylight-saving regressions.
 
-The release checks passed 4,879 Python tests, 17 schema checks, 60 structural and 85 policy fixtures, plus the TypeScript build. The campaign includes 4,096 distinct controlled compiler journeys, 300 adversarial cases, 300 property examples, four critical-gate mutants detected and 124 controlled Chromium journeys across ten widths. These describe software checks with controlled providers, not thousands of real outings.
+The release checks passed 4,881 Python tests, 17 schema checks, 60 structural and 85 policy fixtures, plus the TypeScript build. The campaign includes 4,096 distinct controlled compiler journeys, 300 adversarial cases, 300 property examples, four critical-gate mutants detected and 124 controlled Chromium journeys across ten widths. These describe software checks with controlled providers, not thousands of real outings.
 
 The real global campaign attempted 50 cases across 19 cities: zero accepted, 40 typed refusals and ten provider failures. That does not demonstrate worldwide operation. Separately, three supported real public compiles passed, including parser and ranker execution; their small warm sample had a 4.01-second median. A clean browser reached GO in about four seconds.
 

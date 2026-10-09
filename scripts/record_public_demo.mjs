@@ -9,10 +9,14 @@ const browser=await chromium.launch({headless:true});
 const context=await browser.newContext({viewport:{width:1440,height:900},recordVideo:{dir:directory,size:{width:1440,height:900}}});
 await context.tracing.start({screenshots:true,snapshots:true,sources:true});
 const page=await context.newPage();
-const report={executed_at:new Date().toISOString(),url:'https://outproof-web.onrender.com',scope:'real public browser execution; no physical outing',errors:[],requests:[]};
+const report={executed_at:new Date().toISOString(),url:'https://outproof-web.onrender.com',scope:'real public browser execution; no physical outing',errors:[],requests:[],readiness:[]};
 page.on('pageerror',error=>report.errors.push(error.message));
 let compiled;
 page.on('response',async response=>{
+ if(response.url().endsWith('/v1/health/ready')){
+  let body;try{body=await response.json();}catch{body={response_not_json:true};}
+  report.readiness.push({status:response.status(),body});
+ }
  if(response.url().endsWith('/v1/plans/compile')){
   const body=await response.json(); compiled=body;
   report.requests.push({status:response.status(),request_id:response.headers()['x-request-id'],body});
@@ -25,7 +29,13 @@ try{
  report.version=await (await context.request.get('https://outproof-api.onrender.com/v1/version')).json();
  const button=page.getByRole('button',{name:'Compile one live plan'});
  await button.waitFor({timeout:65000});
+ const retry=page.getByRole('button',{name:'Check connection',exact:true});
+ if(!await button.isEnabled()&&await retry.isVisible()){report.connection_retry_used=true;await retry.click();}
+ await page.waitForFunction(button=>!button.disabled,await button.elementHandle(),{timeout:65000});
  await page.screenshot({path:`${directory}/home.png`,fullPage:true});
+ await page.getByText('Add a rule or preference',{exact:true}).click();
+ report.parser_input="I prefer somewhere quiet. I'm not vegan.";
+ await page.getByLabel(/Anything else/).fill(report.parser_input);
  if(demo){await page.waitForTimeout(8000);await page.getByLabel('Budget in SGD',{exact:true}).fill('0');await page.waitForTimeout(8000);}
  await page.keyboard.press('Tab'); await button.focus(); assert.equal(await button.evaluate(e=>getComputedStyle(e).outlineStyle!=='none'),true);
  const started=Date.now();await page.keyboard.press('Enter');
