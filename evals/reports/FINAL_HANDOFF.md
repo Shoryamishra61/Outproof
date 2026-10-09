@@ -1,5 +1,7 @@
 # Conditional release handoff
 
+Latest starting-location repair: October 10, 2026 IST. [Executed report](release-location-picker.md) supersedes the older coordinate-entry UI and test counts below: 4,900 Python tests, 134 controlled browser cases, three real public origin searches, real map imagery, and restored protected Gemma connection. Current closed-time refusal and an explicitly future-dated API plan are reported separately; this is not a current accepted outing or physical field trial.
+
 Checkpoint: **October 9, 2026, 08:03 IST**. Target freeze remains October 10, 2026, 09:00 IST. Engineering for the evidenced supported loop is deployed; worldwide acceptance, permanent inference hosting and physical trials are not established.
 
 Product build: `c99a1f55f793c15941c3fd047393c9bb40ed12b7`, branch `master`. [CI 37874581558](https://github.com/Shoryamishra61/Outproof/actions/runs/37874581558) completed successfully. API deploy `dep-db452j942hec73c6ejlg` and web deploy `dep-db452jh42hec73c6ejug` were both observed live at that SHA. Both report `autoDeploy=yes` and `autoDeployTrigger=checksPass`. Subsequent evidence-only commits receive their own CI/deployment identity check; the local final receipt is `.tools/final-release-checkpoint.json`.

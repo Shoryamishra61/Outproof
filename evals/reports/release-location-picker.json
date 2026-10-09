@@ -1,7 +1,7 @@
 {
   "executed_at": "2026-10-09T19:37:17.118889+00:00",
   "scope": "Starting-point UI and lookup; controlled tests are not physical GPS or outings",
-  "status": "LOCAL_PASS_PUBLIC_PENDING",
+  "status": "PASS_WITH_DISCLOSED_LIMITATIONS",
   "canonical": {
     "pytest_passed": 4900,
     "skipped_opt_in": 2,
@@ -92,12 +92,1112 @@
     "Matching Chromium missing initially; installed official matching browser",
     "Author-introduced test selector encoding corrected",
     "Coarse GPS automatically opens map; recovery selector adjusted",
-    "GPS accuracy text appears twice; assertion scoped to radio"
+    "GPS accuracy text appears twice; assertion scoped to radio",
+    "Initial quick-tunnel creation timed out; bounded HTTP/2 IPv4 retry established the protected tunnel",
+    "Public origin smoke initially supplied an extra rejected field; frontend correctly refused that malformed contract. The test payload was corrected, then real lookup/map plus controlled origin submission passed",
+    "Current closed-time API audit expected NO_OPEN_PLAN but observed generic NO_GROUNDED_CANDIDATES; retained the failed audit and separately verified the actual refusal contract"
   ],
   "limitations": [
     "No physical device GPS calibration or India field test",
     "Photon public demo has no uptime guarantee; moderate traffic only",
     "Global origins do not extend verified outing coverage",
     "Laptop model bridge and temporary tunnel required restart during public readiness inspection"
-  ]
+  ],
+  "public_location": {
+    "executed_at": "2026-10-09T19:44:30.742Z",
+    "url": "https://outproof-web.onrender.com",
+    "scope": "Actual public origin search and initial map imagery; subsequent keyboard/payload check controlled; no physical GPS or outing",
+    "errors": [],
+    "searches": [
+      {
+        "query": "Anna Nagar Chennai",
+        "status": 200,
+        "results": [
+          {
+            "label": "Anna Nagar Tower Park, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.0865345,
+              "longitude": 80.2142503
+            }
+          },
+          {
+            "label": "Anna Nagar East, 2nd Avenue, Anna Nagar West, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.0846503,
+              "longitude": 80.2195323
+            }
+          },
+          {
+            "label": "Anna Nagar Tower, 10th Main Road, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.08507,
+              "longitude": 80.2086038
+            }
+          },
+          {
+            "label": "Chennai Chetpet, McNichols Road, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.0743424,
+              "longitude": 80.242421
+            }
+          },
+          {
+            "label": "Anna Nagar West, Thirumangalam Road, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.0985386,
+              "longitude": 80.2010061
+            }
+          }
+        ]
+      },
+      {
+        "query": "London United Kingdom",
+        "status": 200,
+        "results": [
+          {
+            "label": "London, England, United Kingdom",
+            "coordinates": {
+              "latitude": 51.5074456,
+              "longitude": -0.1277653
+            }
+          },
+          {
+            "label": "City of London, London, England, United Kingdom",
+            "coordinates": {
+              "latitude": 51.5156177,
+              "longitude": -0.0919983
+            }
+          },
+          {
+            "label": "Greater London, England, United Kingdom",
+            "coordinates": {
+              "latitude": 51.4893335,
+              "longitude": -0.1440551
+            }
+          },
+          {
+            "label": "London Borough of Camden, London, England, United Kingdom",
+            "coordinates": {
+              "latitude": 51.5427966,
+              "longitude": -0.1624803
+            }
+          },
+          {
+            "label": "London Borough of Hackney, London, England, United Kingdom",
+            "coordinates": {
+              "latitude": 51.5488819,
+              "longitude": -0.0476691
+            }
+          }
+        ]
+      },
+      {
+        "query": "Tokyo Japan",
+        "status": 200,
+        "results": [
+          {
+            "label": "Tokyo, Japan",
+            "coordinates": {
+              "latitude": 35.6768601,
+              "longitude": 139.7638947
+            }
+          },
+          {
+            "label": "National Diet Library - Tokyo Main, Route 4 Shinjuku Line, Tokyo, Japan",
+            "coordinates": {
+              "latitude": 35.6786024,
+              "longitude": 139.7442643
+            }
+          },
+          {
+            "label": "Tokyo International Airport, Tokyo, Japan",
+            "coordinates": {
+              "latitude": 35.5456924,
+              "longitude": 139.7760994
+            }
+          },
+          {
+            "label": "Tokyo Bay, Chiba Prefecture, Japan",
+            "coordinates": {
+              "latitude": 35.4700117,
+              "longitude": 139.8477024
+            }
+          },
+          {
+            "label": "TV Tokyo, 16, Nagoya, Aichi Prefecture, Japan",
+            "coordinates": {
+              "latitude": 35.1661831,
+              "longitude": 136.9096309
+            }
+          }
+        ]
+      }
+    ],
+    "version": {
+      "version": "0.1.0",
+      "commit": "0a817e44f38a6137317761e6cab6e484b571880b",
+      "environment": "production"
+    },
+    "actual_initial_map_tiles": 4,
+    "submitted_origin": {
+      "latitude": 13.086542713196428,
+      "longitude": 80.21770477294922
+    },
+    "status": "PASS"
+  },
+  "production_identity": {
+    "executed_at": "2026-10-09T19:42:00.088126+00:00",
+    "status": "PASS",
+    "commit": "0a817e44f38a6137317761e6cab6e484b571880b",
+    "ci": {
+      "conclusion": "success",
+      "databaseId": 37981543873,
+      "headSha": "0a817e44f38a6137317761e6cab6e484b571880b",
+      "status": "completed",
+      "url": "https://github.com/Shoryamishra61/Outproof/actions/runs/37981543873"
+    },
+    "services": {
+      "api": {
+        "id": "srv-db3vs6ub7d7c739r2sq0",
+        "type": "web_service",
+        "plan": "free",
+        "buildPlan": "starter",
+        "autoDeploy": "yes",
+        "autoDeployTrigger": "checksPass",
+        "deploy_id": "dep-db4k69bncjis73dnh3og",
+        "deploy_status": "live",
+        "commit": "0a817e44f38a6137317761e6cab6e484b571880b"
+      },
+      "web": {
+        "id": "srv-db3vs8eb7d7c739r31l0",
+        "type": "static_site",
+        "plan": null,
+        "buildPlan": "starter",
+        "autoDeploy": "yes",
+        "autoDeployTrigger": "checksPass",
+        "deploy_id": "dep-db4k69bncjis73dnh41g",
+        "deploy_status": "live",
+        "commit": "0a817e44f38a6137317761e6cab6e484b571880b"
+      }
+    },
+    "scope": "Actual release identity, free plan, autodeploy, HTTPS readiness and model authentication; inference/browser receipts separate",
+    "frontend": {
+      "url": "https://outproof-web.onrender.com",
+      "http_status": 200
+    },
+    "readiness": {
+      "url": "https://outproof-api.onrender.com/v1/health/ready",
+      "http_status": 200,
+      "result": {
+        "status": "ready",
+        "model_reachable": true,
+        "live_evidence_available": true,
+        "compilation_available": true,
+        "mode": "LIVE"
+      }
+    },
+    "version": {
+      "url": "https://outproof-api.onrender.com/v1/version",
+      "http_status": 200,
+      "result": {
+        "version": "0.1.0",
+        "commit": "0a817e44f38a6137317761e6cab6e484b571880b",
+        "environment": "production"
+      }
+    },
+    "gemma_model": [
+      {
+        "name": "gemma4:e2b-it-qat",
+        "digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+        "size": 4336358185
+      }
+    ],
+    "model_auth_statuses_missing_wrong_correct": [
+      401,
+      401,
+      200
+    ],
+    "demo_sha256": "e1fd3b2873e16e8bebbba0590d3f05357d9bacc3d7499098b8c653b8179a45f3"
+  },
+  "current_public_refusal": {
+    "executed_at": "2026-10-09T19:46:46.101Z",
+    "scope": "Actual current-time public browser compile and safe refusal; no accepted current outing",
+    "errors": [],
+    "http_status": 409,
+    "body": {
+      "status": "FAILURE",
+      "code": "NO_GROUNDED_CANDIDATES",
+      "message": "No plan satisfied all hard checks"
+    },
+    "request_id": "de5c08664ffd49ee823b76987ac73e4f",
+    "status": "PASS"
+  },
+  "production_model": {
+    "executed_at": "2026-10-09T19:45:08.203718+00:00",
+    "scope": "Actual production compiles: current-time closed-garden refusal and explicitly future-dated supported API plan; no current accepted browser outing, no physical trial",
+    "rows": [
+      {
+        "case": "current_time",
+        "departure_at": "2026-10-09T19:45:08.203718+00:00",
+        "http_status": 409,
+        "elapsed_ms": 20481,
+        "request_id": "992e142ae5d34cab8489d6d1a9e0aac7",
+        "body": {
+          "status": "FAILURE",
+          "code": "NO_GROUNDED_CANDIDATES",
+          "message": "No plan satisfied all hard checks"
+        },
+        "expected_closed_refusal": false
+      },
+      {
+        "case": "future_dated",
+        "departure_at": "2026-10-10T01:00:00+00:00",
+        "http_status": 200,
+        "elapsed_ms": 20619,
+        "request_id": "faa7ebdcb53c4c48a06b631882746974",
+        "body": {
+          "status": "SUCCESS",
+          "plan": {
+            "plan_id": "template-A:7f254314d9bd5c8a88cbb6b7",
+            "origin": {
+              "latitude": 1.3068,
+              "longitude": 103.819
+            },
+            "departure_at": "2026-10-10T01:00:00Z",
+            "stops": [
+              {
+                "place": {
+                  "place_id": "osm:node/602215681",
+                  "provider": "OSM",
+                  "provider_id": "node/602215681",
+                  "name": "Tanglin Gate",
+                  "coordinates": {
+                    "latitude": 1.3071437,
+                    "longitude": 103.8185997
+                  },
+                  "categories": [
+                    "park"
+                  ],
+                  "opening_windows": [
+                    {
+                      "opens_at": "2026-10-10T01:00:50Z",
+                      "closes_at": "2026-10-10T16:00:00Z",
+                      "evidence": [
+                        {
+                          "evidence_id": "osm:node/602215681:opening_hours:2026-10-10T01:00:50+00:00:2026-10-10T16:00:00+00:00",
+                          "subject_id": "osm:node/602215681",
+                          "field": "opening_window",
+                          "value": [
+                            "2026-10-10T01:00:50+00:00",
+                            "2026-10-10T16:00:00+00:00"
+                          ],
+                          "source": "DIRECT",
+                          "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                          "observed_at": "2026-10-09T19:45:32.271661Z",
+                          "expires_at": "2026-10-10T19:45:32.271661Z",
+                          "confidence": "HIGH"
+                        }
+                      ]
+                    }
+                  ],
+                  "price": {
+                    "confidence": "VERIFIED",
+                    "lower": {
+                      "currency_code": "SGD",
+                      "minor_units": 0
+                    },
+                    "upper": {
+                      "currency_code": "SGD",
+                      "minor_units": 0
+                    },
+                    "scope": "TOTAL",
+                    "evidence": [
+                      {
+                        "evidence_id": "osm:node/602215681:price",
+                        "subject_id": "osm:node/602215681",
+                        "field": "price",
+                        "value": {
+                          "currency_code": "SGD",
+                          "lower_minor_units": 0,
+                          "upper_minor_units": 0,
+                          "scope": "TOTAL",
+                          "covers_all_mandatory_costs": true
+                        },
+                        "source": "DIRECT",
+                        "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                        "observed_at": "2026-10-09T19:45:32.271661Z",
+                        "expires_at": "2026-10-10T19:45:32.271661Z",
+                        "confidence": "HIGH"
+                      }
+                    ]
+                  },
+                  "dietary_options": null,
+                  "evidence": [
+                    {
+                      "evidence_id": "osm:node/602215681:identity",
+                      "subject_id": "osm:node/602215681",
+                      "field": "identity",
+                      "value": {
+                        "provider": "OSM",
+                        "provider_id": "node/602215681",
+                        "name": "Tanglin Gate"
+                      },
+                      "source": "OSM",
+                      "source_ref": "https://www.openstreetmap.org/api/0.6/node/602215681.json",
+                      "observed_at": "2026-10-09T19:45:32.271661Z",
+                      "expires_at": "2026-10-10T19:45:32.271661Z",
+                      "confidence": "HIGH"
+                    },
+                    {
+                      "evidence_id": "osm:node/602215681:coordinates",
+                      "subject_id": "osm:node/602215681",
+                      "field": "coordinates",
+                      "value": {
+                        "latitude": 1.3071437,
+                        "longitude": 103.8185997
+                      },
+                      "source": "OSM",
+                      "source_ref": "https://www.openstreetmap.org/api/0.6/node/602215681.json",
+                      "observed_at": "2026-10-09T19:45:32.271661Z",
+                      "expires_at": "2026-10-10T19:45:32.271661Z",
+                      "confidence": "HIGH"
+                    },
+                    {
+                      "evidence_id": "osm:node/602215681:categories",
+                      "subject_id": "osm:node/602215681",
+                      "field": "categories",
+                      "value": [
+                        "park"
+                      ],
+                      "source": "DIRECT",
+                      "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                      "observed_at": "2026-10-09T19:45:32.271661Z",
+                      "expires_at": "2026-10-10T19:45:32.271661Z",
+                      "confidence": "HIGH"
+                    },
+                    {
+                      "evidence_id": "osm:node/602215681:public_access",
+                      "subject_id": "osm:node/602215681",
+                      "field": "public_access",
+                      "value": true,
+                      "source": "DIRECT",
+                      "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                      "observed_at": "2026-10-09T19:45:32.271661Z",
+                      "expires_at": "2026-10-10T19:45:32.271661Z",
+                      "confidence": "HIGH"
+                    },
+                    {
+                      "evidence_id": "osm:node/602215681:opening_hours",
+                      "subject_id": "osm:node/602215681",
+                      "field": "opening_hours",
+                      "value": "Mo-Su 05:00-24:00",
+                      "source": "DIRECT",
+                      "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                      "observed_at": "2026-10-09T19:45:32.271661Z",
+                      "expires_at": "2026-10-10T19:45:32.271661Z",
+                      "confidence": "HIGH"
+                    },
+                    {
+                      "evidence_id": "osm:node/602215681:timezone",
+                      "subject_id": "osm:node/602215681",
+                      "field": "timezone",
+                      "value": "Asia/Singapore",
+                      "source": "DIRECT",
+                      "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                      "observed_at": "2026-10-09T19:45:32.271661Z",
+                      "expires_at": "2026-10-10T19:45:32.271661Z",
+                      "confidence": "HIGH"
+                    },
+                    {
+                      "evidence_id": "osm:node/602215681:visit_scope",
+                      "subject_id": "osm:node/602215681",
+                      "field": "visit_scope",
+                      "value": "Main gardens only. No National Orchid Garden, paid attractions, food or parking.",
+                      "source": "DIRECT",
+                      "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                      "observed_at": "2026-10-09T19:45:32.271661Z",
+                      "expires_at": "2026-10-10T19:45:32.271661Z",
+                      "confidence": "HIGH"
+                    },
+                    {
+                      "evidence_id": "osm:node/602215681:parse_lineage",
+                      "subject_id": "osm:node/602215681",
+                      "field": "parse_lineage",
+                      "value": {
+                        "parser": "nparks-visitor-v1",
+                        "claims": [
+                          "The Gardens is free entry for everyone, everyday.",
+                          "Gardens 5am to 12mn daily",
+                          "Tanglin Entrance is served by Napier & Holland Road."
+                        ],
+                        "authority": "National Parks Board Singapore",
+                        "coordinate_kind": "entrance_node"
+                      },
+                      "source": "DIRECT",
+                      "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                      "observed_at": "2026-10-09T19:45:32.271661Z",
+                      "expires_at": "2026-10-10T19:45:32.271661Z",
+                      "confidence": "HIGH"
+                    }
+                  ]
+                },
+                "arrival_at": "2026-10-10T01:00:50Z",
+                "dwell_seconds": 1800
+              }
+            ],
+            "routes": [
+              {
+                "route_id": "valhalla:59336072570fc6569da2aa9e",
+                "from_id": "origin",
+                "to_id": "osm:node/602215681",
+                "reachable": true,
+                "duration_seconds": 50,
+                "distance_meters": 69.0,
+                "evidence": [
+                  {
+                    "evidence_id": "valhalla:59336072570fc6569da2aa9e:walking_route",
+                    "subject_id": "valhalla:59336072570fc6569da2aa9e",
+                    "field": "walking_route",
+                    "value": {
+                      "from_id": "origin",
+                      "to_id": "osm:node/602215681",
+                      "from_coordinates": {
+                        "latitude": 1.3068,
+                        "longitude": 103.819
+                      },
+                      "to_coordinates": {
+                        "latitude": 1.3071437,
+                        "longitude": 103.8185997
+                      },
+                      "reachable": true,
+                      "duration_seconds": 50,
+                      "distance_meters": 69.0
+                    },
+                    "source": "VALHALLA",
+                    "source_ref": "https://valhalla1.openstreetmap.de/route",
+                    "observed_at": "2026-10-09T19:45:47.896842Z",
+                    "expires_at": null,
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "valhalla:59336072570fc6569da2aa9e:metadata",
+                    "subject_id": "valhalla:59336072570fc6569da2aa9e",
+                    "field": "valhalla_metadata",
+                    "value": {
+                      "costing": "pedestrian",
+                      "units": "kilometers",
+                      "error_code": null,
+                      "response_id": "valhalla:59336072570fc6569da2aa9e",
+                      "request": {
+                        "locations": [
+                          {
+                            "lat": 1.3068,
+                            "lon": 103.819,
+                            "type": "break",
+                            "search_cutoff": 100
+                          },
+                          {
+                            "lat": 1.3071437,
+                            "lon": 103.8185997,
+                            "type": "break",
+                            "search_cutoff": 100
+                          }
+                        ],
+                        "costing": "pedestrian",
+                        "units": "kilometers"
+                      }
+                    },
+                    "source": "VALHALLA",
+                    "source_ref": "https://valhalla1.openstreetmap.de/route",
+                    "observed_at": "2026-10-09T19:45:47.896842Z",
+                    "expires_at": null,
+                    "confidence": "MEDIUM"
+                  }
+                ]
+              },
+              {
+                "route_id": "valhalla:fc723b9d20aab9e03db87fb3",
+                "from_id": "osm:node/602215681",
+                "to_id": "origin",
+                "reachable": true,
+                "duration_seconds": 50,
+                "distance_meters": 69.0,
+                "evidence": [
+                  {
+                    "evidence_id": "valhalla:fc723b9d20aab9e03db87fb3:walking_route",
+                    "subject_id": "valhalla:fc723b9d20aab9e03db87fb3",
+                    "field": "walking_route",
+                    "value": {
+                      "from_id": "osm:node/602215681",
+                      "to_id": "origin",
+                      "from_coordinates": {
+                        "latitude": 1.3071437,
+                        "longitude": 103.8185997
+                      },
+                      "to_coordinates": {
+                        "latitude": 1.3068,
+                        "longitude": 103.819
+                      },
+                      "reachable": true,
+                      "duration_seconds": 50,
+                      "distance_meters": 69.0
+                    },
+                    "source": "VALHALLA",
+                    "source_ref": "https://valhalla1.openstreetmap.de/route",
+                    "observed_at": "2026-10-09T19:45:48.059492Z",
+                    "expires_at": null,
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "valhalla:fc723b9d20aab9e03db87fb3:metadata",
+                    "subject_id": "valhalla:fc723b9d20aab9e03db87fb3",
+                    "field": "valhalla_metadata",
+                    "value": {
+                      "costing": "pedestrian",
+                      "units": "kilometers",
+                      "error_code": null,
+                      "response_id": "valhalla:fc723b9d20aab9e03db87fb3",
+                      "request": {
+                        "locations": [
+                          {
+                            "lat": 1.3071437,
+                            "lon": 103.8185997,
+                            "type": "break",
+                            "search_cutoff": 100
+                          },
+                          {
+                            "lat": 1.3068,
+                            "lon": 103.819,
+                            "type": "break",
+                            "search_cutoff": 100
+                          }
+                        ],
+                        "costing": "pedestrian",
+                        "units": "kilometers"
+                      }
+                    },
+                    "source": "VALHALLA",
+                    "source_ref": "https://valhalla1.openstreetmap.de/route",
+                    "observed_at": "2026-10-09T19:45:48.059492Z",
+                    "expires_at": null,
+                    "confidence": "MEDIUM"
+                  }
+                ]
+              }
+            ]
+          },
+          "proof": {
+            "validation": {
+              "plan_id": "template-A:7f254314d9bd5c8a88cbb6b7",
+              "accepted": true,
+              "checks": [
+                {
+                  "code": "GROUNDING",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Provider identity and coordinates must be evidenced",
+                  "evidence_ids": [
+                    "osm:node/602215681:identity",
+                    "osm:node/602215681:coordinates"
+                  ]
+                },
+                {
+                  "code": "ROUTING",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Every leg including return needs reachable walking facts",
+                  "evidence_ids": [
+                    "valhalla:59336072570fc6569da2aa9e:walking_route",
+                    "valhalla:fc723b9d20aab9e03db87fb3:walking_route"
+                  ]
+                },
+                {
+                  "code": "DURATION",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+                  "evidence_ids": [
+                    "valhalla:59336072570fc6569da2aa9e:walking_route",
+                    "valhalla:fc723b9d20aab9e03db87fb3:walking_route"
+                  ]
+                },
+                {
+                  "code": "RETURN_TRIP",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Complete round trip must meet the explicit return deadline in UTC",
+                  "evidence_ids": [
+                    "valhalla:59336072570fc6569da2aa9e:walking_route",
+                    "valhalla:fc723b9d20aab9e03db87fb3:walking_route"
+                  ]
+                },
+                {
+                  "code": "WALKING",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "All walking legs count against both supplied maxima",
+                  "evidence_ids": [
+                    "valhalla:59336072570fc6569da2aa9e:walking_route",
+                    "valhalla:fc723b9d20aab9e03db87fb3:walking_route"
+                  ]
+                },
+                {
+                  "code": "CURRENCY",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Costs must share the budget currency; no conversion",
+                  "evidence_ids": [
+                    "osm:node/602215681:price"
+                  ]
+                },
+                {
+                  "code": "PRICE_CONFIDENCE",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Complete mandatory cost needs current positive evidence",
+                  "evidence_ids": [
+                    "osm:node/602215681:price"
+                  ]
+                },
+                {
+                  "code": "BUDGET",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+                  "evidence_ids": [
+                    "osm:node/602215681:price"
+                  ]
+                },
+                {
+                  "code": "OPENING_HOURS",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Known hours must cover arrival through required dwell",
+                  "evidence_ids": [
+                    "osm:node/602215681:opening_hours:2026-10-10T01:00:50+00:00:2026-10-10T16:00:00+00:00"
+                  ]
+                },
+                {
+                  "code": "EXCLUSIONS",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Hard exclusions require positive absence and category evidence",
+                  "evidence_ids": []
+                },
+                {
+                  "code": "DIETARY",
+                  "status": "PASS",
+                  "hard": true,
+                  "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+                  "evidence_ids": []
+                }
+              ]
+            },
+            "cost": {
+              "confidence": "VERIFIED",
+              "lower": {
+                "currency_code": "SGD",
+                "minor_units": 0
+              },
+              "upper": {
+                "currency_code": "SGD",
+                "minor_units": 0
+              },
+              "scope": "TOTAL",
+              "evidence": [
+                {
+                  "evidence_id": "osm:node/602215681:price",
+                  "subject_id": "osm:node/602215681",
+                  "field": "price",
+                  "value": {
+                    "currency_code": "SGD",
+                    "lower_minor_units": 0,
+                    "upper_minor_units": 0,
+                    "scope": "TOTAL",
+                    "covers_all_mandatory_costs": true
+                  },
+                  "source": "DIRECT",
+                  "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                  "observed_at": "2026-10-09T19:45:32.271661Z",
+                  "expires_at": "2026-10-10T19:45:32.271661Z",
+                  "confidence": "HIGH"
+                }
+              ]
+            },
+            "total_duration_seconds": 1900,
+            "walking_distance_meters": 138.0,
+            "sources": [
+              {
+                "evidence_id": "valhalla:59336072570fc6569da2aa9e:walking_route",
+                "subject_id": "valhalla:59336072570fc6569da2aa9e",
+                "field": "walking_route",
+                "value": {
+                  "from_id": "origin",
+                  "to_id": "osm:node/602215681",
+                  "from_coordinates": {
+                    "latitude": 1.3068,
+                    "longitude": 103.819
+                  },
+                  "to_coordinates": {
+                    "latitude": 1.3071437,
+                    "longitude": 103.8185997
+                  },
+                  "reachable": true,
+                  "duration_seconds": 50,
+                  "distance_meters": 69.0
+                },
+                "source": "VALHALLA",
+                "source_ref": "https://valhalla1.openstreetmap.de/route",
+                "observed_at": "2026-10-09T19:45:47.896842Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "valhalla:59336072570fc6569da2aa9e:metadata",
+                "subject_id": "valhalla:59336072570fc6569da2aa9e",
+                "field": "valhalla_metadata",
+                "value": {
+                  "costing": "pedestrian",
+                  "units": "kilometers",
+                  "error_code": null,
+                  "response_id": "valhalla:59336072570fc6569da2aa9e",
+                  "request": {
+                    "locations": [
+                      {
+                        "lat": 1.3068,
+                        "lon": 103.819,
+                        "type": "break",
+                        "search_cutoff": 100
+                      },
+                      {
+                        "lat": 1.3071437,
+                        "lon": 103.8185997,
+                        "type": "break",
+                        "search_cutoff": 100
+                      }
+                    ],
+                    "costing": "pedestrian",
+                    "units": "kilometers"
+                  }
+                },
+                "source": "VALHALLA",
+                "source_ref": "https://valhalla1.openstreetmap.de/route",
+                "observed_at": "2026-10-09T19:45:47.896842Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "valhalla:fc723b9d20aab9e03db87fb3:walking_route",
+                "subject_id": "valhalla:fc723b9d20aab9e03db87fb3",
+                "field": "walking_route",
+                "value": {
+                  "from_id": "osm:node/602215681",
+                  "to_id": "origin",
+                  "from_coordinates": {
+                    "latitude": 1.3071437,
+                    "longitude": 103.8185997
+                  },
+                  "to_coordinates": {
+                    "latitude": 1.3068,
+                    "longitude": 103.819
+                  },
+                  "reachable": true,
+                  "duration_seconds": 50,
+                  "distance_meters": 69.0
+                },
+                "source": "VALHALLA",
+                "source_ref": "https://valhalla1.openstreetmap.de/route",
+                "observed_at": "2026-10-09T19:45:48.059492Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "valhalla:fc723b9d20aab9e03db87fb3:metadata",
+                "subject_id": "valhalla:fc723b9d20aab9e03db87fb3",
+                "field": "valhalla_metadata",
+                "value": {
+                  "costing": "pedestrian",
+                  "units": "kilometers",
+                  "error_code": null,
+                  "response_id": "valhalla:fc723b9d20aab9e03db87fb3",
+                  "request": {
+                    "locations": [
+                      {
+                        "lat": 1.3071437,
+                        "lon": 103.8185997,
+                        "type": "break",
+                        "search_cutoff": 100
+                      },
+                      {
+                        "lat": 1.3068,
+                        "lon": 103.819,
+                        "type": "break",
+                        "search_cutoff": 100
+                      }
+                    ],
+                    "costing": "pedestrian",
+                    "units": "kilometers"
+                  }
+                },
+                "source": "VALHALLA",
+                "source_ref": "https://valhalla1.openstreetmap.de/route",
+                "observed_at": "2026-10-09T19:45:48.059492Z",
+                "expires_at": null,
+                "confidence": "MEDIUM"
+              },
+              {
+                "evidence_id": "osm:node/602215681:identity",
+                "subject_id": "osm:node/602215681",
+                "field": "identity",
+                "value": {
+                  "provider": "OSM",
+                  "provider_id": "node/602215681",
+                  "name": "Tanglin Gate"
+                },
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/api/0.6/node/602215681.json",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:coordinates",
+                "subject_id": "osm:node/602215681",
+                "field": "coordinates",
+                "value": {
+                  "latitude": 1.3071437,
+                  "longitude": 103.8185997
+                },
+                "source": "OSM",
+                "source_ref": "https://www.openstreetmap.org/api/0.6/node/602215681.json",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:categories",
+                "subject_id": "osm:node/602215681",
+                "field": "categories",
+                "value": [
+                  "park"
+                ],
+                "source": "DIRECT",
+                "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:public_access",
+                "subject_id": "osm:node/602215681",
+                "field": "public_access",
+                "value": true,
+                "source": "DIRECT",
+                "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:opening_hours",
+                "subject_id": "osm:node/602215681",
+                "field": "opening_hours",
+                "value": "Mo-Su 05:00-24:00",
+                "source": "DIRECT",
+                "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:timezone",
+                "subject_id": "osm:node/602215681",
+                "field": "timezone",
+                "value": "Asia/Singapore",
+                "source": "DIRECT",
+                "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:visit_scope",
+                "subject_id": "osm:node/602215681",
+                "field": "visit_scope",
+                "value": "Main gardens only. No National Orchid Garden, paid attractions, food or parking.",
+                "source": "DIRECT",
+                "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:parse_lineage",
+                "subject_id": "osm:node/602215681",
+                "field": "parse_lineage",
+                "value": {
+                  "parser": "nparks-visitor-v1",
+                  "claims": [
+                    "The Gardens is free entry for everyone, everyday.",
+                    "Gardens 5am to 12mn daily",
+                    "Tanglin Entrance is served by Napier & Holland Road."
+                  ],
+                  "authority": "National Parks Board Singapore",
+                  "coordinate_kind": "entrance_node"
+                },
+                "source": "DIRECT",
+                "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:price",
+                "subject_id": "osm:node/602215681",
+                "field": "price",
+                "value": {
+                  "currency_code": "SGD",
+                  "lower_minor_units": 0,
+                  "upper_minor_units": 0,
+                  "scope": "TOTAL",
+                  "covers_all_mandatory_costs": true
+                },
+                "source": "DIRECT",
+                "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              },
+              {
+                "evidence_id": "osm:node/602215681:opening_hours:2026-10-10T01:00:50+00:00:2026-10-10T16:00:00+00:00",
+                "subject_id": "osm:node/602215681",
+                "field": "opening_window",
+                "value": [
+                  "2026-10-10T01:00:50+00:00",
+                  "2026-10-10T16:00:00+00:00"
+                ],
+                "source": "DIRECT",
+                "source_ref": "https://sbg.nparks.gov.sg/visit/general-info/",
+                "observed_at": "2026-10-09T19:45:32.271661Z",
+                "expires_at": "2026-10-10T19:45:32.271661Z",
+                "confidence": "HIGH"
+              }
+            ]
+          },
+          "reason": "Selected for your soft preferences.",
+          "compiled_at": "2026-10-09T19:45:49.616152Z",
+          "mode": "LIVE",
+          "return_by_local": null
+        },
+        "verified_one_future_plan": true
+      }
+    ],
+    "version": {
+      "version": "0.1.0",
+      "commit": "0a817e44f38a6137317761e6cab6e484b571880b",
+      "environment": "production"
+    },
+    "status": "FAIL",
+    "interpretation": "Actual future-dated API plan passed all eleven checks. The audit expecting the specific NO_OPEN_PLAN code failed: current no-valid-plan response uses NO_GROUNDED_CANDIDATES. The current browser separately verified this typed refusal, with no plan or GO displayed. No current accepted outing is claimed."
+  },
+  "model_connection_recovery": {
+    "executed_at": "2026-10-09T19:38:58.979023+00:00",
+    "url": "https://childhood-parameters-pitch-pest.trycloudflare.com",
+    "auth": [
+      401,
+      401,
+      200
+    ],
+    "scope": "Actual protected temporary public Gemma tunnel; laptop uptime required",
+    "models": [
+      {
+        "name": "gemma4:e2b-it-qat",
+        "model": "gemma4:e2b-it-qat",
+        "modified_at": "2026-10-06T23:34:58.8575884+05:30",
+        "size": 4336358185,
+        "digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "4.6B",
+          "quantization_level": "Q4_0",
+          "context_length": 131072,
+          "embedding_length": 1536
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "audio",
+          "tools",
+          "thinking"
+        ]
+      }
+    ],
+    "render_env_update_status": 200
+  },
+  "narrow_post_smoke_check": {
+    "passed": 10,
+    "failed": 0,
+    "scope": "Location tests rerun after controlled failure payload matched the strict schema"
+  },
+  "location_recording": {
+    "executed_at": "2026-10-09T19:47:58.571Z",
+    "scope": "Actual public mobile origin search and initial OSM map; no compilation, physical GPS or outing",
+    "errors": [],
+    "search": {
+      "results": [
+        {
+          "label": "Anna Nagar Tower Park, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.0865345,
+            "longitude": 80.2142503
+          }
+        },
+        {
+          "label": "Anna Nagar East, 2nd Avenue, Anna Nagar West, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.0846503,
+            "longitude": 80.2195323
+          }
+        },
+        {
+          "label": "Anna Nagar Tower, 10th Main Road, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.08507,
+            "longitude": 80.2086038
+          }
+        },
+        {
+          "label": "Chennai Chetpet, McNichols Road, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.0743424,
+            "longitude": 80.242421
+          }
+        },
+        {
+          "label": "Anna Nagar West, Thirumangalam Road, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.0985386,
+            "longitude": 80.2010061
+          }
+        }
+      ],
+      "attribution": "OpenStreetMap contributors / Photon"
+    },
+    "status": "PASS",
+    "playback": {
+      "executed_at": "2026-10-09T19:49:16.931Z",
+      "status": "PASS",
+      "scope": "Local fresh origin video decoding and playback only",
+      "duration_seconds": 24.6,
+      "size_bytes": 1832741,
+      "sha256": "fd7203e5606e9c8d26b9883d242a3aa71bfb0f1b2a5311d334567ce2c889bd49"
+    },
+    "public_asset": "https://outproof-web.onrender.com/location-demo.webm",
+    "public_playback": "PENDING_NEW_ASSET_DEPLOYMENT"
+  }
 }

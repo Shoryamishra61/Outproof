@@ -20,10 +20,14 @@ Use `.env.example` for variable names. Shells do not load env files automaticall
 
 ## Evidence
 
-The executed campaign records 4,881 Python tests, 4,096 distinct controlled compiler journeys, 300 adversarial cases and 124 controlled Chromium journeys. These are synthetic/control tests, not actual outings. Real public browser/API/Gemma/source/route/proof/GO runs passed. Twenty bounded production probes included three supported real compiles (one parser plus ranker), with a small warm median of 4.01 s. The initial cold local inference took about 115 s. See the [current verdict](evals/reports/FINAL_RELEASE_VERDICT.md) and [production report](evals/reports/FINAL_PRODUCTION_SMOKE.md), not superseded historical claims. Three physical outings remain unexecuted.
+The executed campaign records 4,900 Python tests, 4,096 distinct controlled compiler journeys, 300 adversarial cases and 134 controlled Chromium journeys. These are synthetic/control tests, not actual outings. Real public browser/API/Gemma/source/route/proof/GO runs passed. Twenty bounded production probes included three supported real compiles (one parser plus ranker), with a small warm median of 4.01 s. The initial cold local inference took about 115 s. See the [current verdict](evals/reports/FINAL_RELEASE_VERDICT.md) and [production report](evals/reports/FINAL_PRODUCTION_SMOKE.md), not superseded historical claims. Three physical outings remain unexecuted.
 
 GitHub CI has executed successfully and Render deploys after checks pass. The measured runtime is `gemma4:e2b-it-qat`; no fallback model is silently substituted. [Deployment](docs/DEPLOYMENT.md), [operations](docs/OPERATIONS.md), [partner evidence](docs/PARTNER_ELIGIBILITY.md) and the unpublished [DEV draft](docs/DEV_DRAFT.md) document reproduction and limits.
 
 MIT source code. Model/data/audio terms are separate: [NOTICE](NOTICE). OpenStreetMap © contributors, ODbL. Gemma weights are not redistributed. Free ElevenLabs audio is an opt-in, noncommercial attributed demo.
 
 Public repository: https://github.com/Shoryamishra61/Outproof . DEV article stays a draft pending author approval.
+
+Starting location: type a city, neighbourhood or landmark, select a match, or choose on the map. GPS has a fresh-fix retry and coarse-fix confirmation. [Location verification](evals/reports/release-location-picker.md) includes actual Chennai/London/Tokyo search; origin search does not establish worldwide outing coverage.
+
+[Fresh mobile location-search recording](https://outproof-web.onrender.com/location-demo.webm): real public search and initial map, separate from the older daytime plan/proof/GO recording. It is software execution, not physical GPS or an outing.

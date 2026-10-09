@@ -14,11 +14,11 @@ Its governing rule is simple: **LLMs interpret. Data grounds. Code verifies.** G
 
 This release deliberately has narrow live coverage: the Singapore Botanic Gardens Tanglin entrance corridor, main grounds only. The National Parks Board publishes affirmative free-admission and daily opening information. OpenStreetMap independently identifies a pedestrian entrance. Valhalla supplies an outbound route and a separately requested return route. Optional paid attractions, parking and food are excluded from the free outing. Other regions and unproven commercial stops can return a typed failure.
 
-The public interface has one constraint form, one accepted plan, a source ledger, and GO. GO offers one instruction at a time and a walking-map handoff. Optional ElevenLabs audio is an opt-in generic GO cue, not fabricated turn-by-turn guidance. It is an attributed noncommercial demonstration.
+The public interface has one constraint form, one accepted plan, a source ledger, and GO. Starting areas are searchable by name through Photon/OpenStreetMap, with a map pin and keyboard selection instead of numeric coordinate entry. GPS can request a fresh fix; coarse fixes need confirmation. Real public searches were verified for Chennai, London and Tokyo, which establishes origin lookup, not global outing acceptance. GO offers one instruction at a time and a walking-map handoff. Optional ElevenLabs audio is an opt-in generic GO cue, not fabricated turn-by-turn guidance. It is an attributed noncommercial demonstration.
 
 ## Demo
 
-[Open the live application](https://outproof-web.onrender.com/) and [watch the public execution recording](https://outproof-web.onrender.com/demo.html). The recording shows software execution, not a physical outing. Its final public asset link must pass the release smoke before publication.
+[Open the live application](https://outproof-web.onrender.com/) and [watch the public execution recording](https://outproof-web.onrender.com/demo.html). The daytime plan/proof/GO recording shows software execution, not a physical outing. A [fresh mobile location-search recording](https://outproof-web.onrender.com/location-demo.webm) separately shows the revised starting-area and map interface. Its final public asset link must pass the release smoke before publication.
 
 ## Code
 

@@ -24,7 +24,7 @@ for (const width of [360, 768, 1024, 1440]) {
     let submittedLongitude: number | undefined;
     await page.route('**/v1/plans/compile', route => {
       submittedLongitude = route.request().postDataJSON().controls.origin.longitude;
-      return route.fulfill({ status: 503, json: { status: 'FAILURE', code: 'SOURCE_TEMPORARILY_UNAVAILABLE', message: 'Controlled failure', rejected: [] } });
+      return route.fulfill({ status: 503, json: { status: 'FAILURE', code: 'SOURCE_TEMPORARILY_UNAVAILABLE', message: 'Controlled failure' } });
     });
     await page.getByRole('button', { name: 'Compile one fixture plan' }).click();
     await expect.poll(() => submittedLongitude).toBeGreaterThan(chennai.coordinates.longitude);
@@ -76,7 +76,7 @@ test('map pointer selects the exact submitted origin', async ({ page }) => {
   let origin: { latitude: number; longitude: number } | undefined;
   await page.route('**/v1/plans/compile', route => {
     origin = route.request().postDataJSON().controls.origin;
-    return route.fulfill({ status: 503, json: { status: 'FAILURE', code: 'SOURCE_TEMPORARILY_UNAVAILABLE', message: 'Controlled failure', rejected: [] } });
+    return route.fulfill({ status: 503, json: { status: 'FAILURE', code: 'SOURCE_TEMPORARILY_UNAVAILABLE', message: 'Controlled failure' } });
   });
   await page.getByRole('button', { name: 'Compile one fixture plan' }).click();
   await expect.poll(() => origin !== undefined).toBe(true);

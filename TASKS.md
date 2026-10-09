@@ -235,6 +235,6 @@ Fixture compiler, identity crosswalk, opening-hours parser, local Gemma valid-pl
 - [x] Add fresh GPS retry, coarse-fix confirmation and late-callback protection.
 - [x] Preserve origin-only geocoding boundary and deterministic outing validation.
 - [x] Add bounded provider, failure, keyboard, viewport and submitted-origin checks.
-- [ ] Verify the changed origin flow on the deployed public build (receipt follows).
+- [x] Verify the changed origin flow on the deployed public build (`release-location-picker.json`).
 
 Searchable origins do not check worldwide outing coverage or physical GPS/field trials. See `docs/LOCATION_PICKER.md`.
