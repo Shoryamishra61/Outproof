@@ -42,6 +42,8 @@ The real global campaign attempted 50 cases across 19 cities: zero accepted, 40 
 
 Real Gemma 4 E2B inference runs on the existing RTX 3050 laptop. The first cold ranker smoke took about 115 seconds, so consistently sub-30-second performance is not established. An authenticated, bounded temporary tunnel connects it to the deployed API, but depends on the laptop and has no stable-hosting guarantee. A real proxy outage made production readiness fail; restarting restored authenticated operation while anonymous access stayed denied. Both Render services were rolled back to a known green build and a fresh public browser passed afterward.
 
+A later first-visit check exposed a readiness race: a concurrent provider check briefly disabled the UI. Both healthy and unavailable-source regressions failed before the correction; the shared readiness probe now preserves its actual result for waiting callers. The corrected build passed independent CI and automatically deployed. A fresh public optional-text parser/ranker journey reached the plan in 5.93 seconds and GO in 6.33 seconds with all eleven checks passing; that one run is execution evidence, not a latency guarantee.
+
 ## Why Does Open Innovation Matter?
 
 Open weights make the model boundary inspectable and replaceable. I can run the same Gemma model locally, test malformed outputs, constrain its schema, and compare its ranking with deterministic validation. The policy code owns admissibility; the model owns subjective selection. A model swap cannot authorize a price or invent an opening window.

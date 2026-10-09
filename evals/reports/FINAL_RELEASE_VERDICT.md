@@ -2,6 +2,8 @@
 
 Core supported public execution and the actual public demo assets are evidenced. This report supersedes historical lower-case verdicts and withdrawn Anna Nagar acceptances. Source/runtime SHAs are recorded per executed receipt; a final evidence update receives its own green CI and deployment verification.
 
+Latest corrected product SHA `c99a1f55f793c15941c3fd047393c9bb40ed12b7` passed CI and was observed live on both services. Fresh real optional-text parser/ranker → one plan → proof → GO passed in 6.328s; model authentication remained 401/401/200. See `FINAL_HANDOFF.md`, `release-final-deployment.json` and `public-readiness-corrected`; later evidence-only revisions receive a current local identity receipt.
+
 | Capability | Status | Evidence/limit |
 |---|---|---|
 | Public HTTPS frontend and production API | PASS | Real clean-browser and20 bounded probes; free Render |

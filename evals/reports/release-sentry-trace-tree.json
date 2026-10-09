@@ -1,0 +1,36 @@
+{
+  "executed_at": "2026-10-09T02:26:57.970000+00:00",
+  "http_status": 200,
+  "trace_id": "499de96e862f4050b69a100aefa7d557",
+  "scope": "Actual production sampled span hierarchy; technical fields only",
+  "spans": [
+    {
+      "event_id": "88feeaf05ab9c2bf",
+      "op": "http.server",
+      "parent_span_id": null,
+      "start_timestamp": 1791494489.772527,
+      "end_timestamp": 1791494494.948147,
+      "duration": 5175.620079,
+      "children": [
+        {
+          "event_id": "822f5c5e03bc9af5",
+          "op": "ground_rule.ground_and_validate",
+          "parent_span_id": "88feeaf05ab9c2bf",
+          "start_timestamp": 1791494491.967583,
+          "end_timestamp": 1791494493.538715,
+          "duration": 1571.131945,
+          "children": []
+        },
+        {
+          "event_id": "b1fcf2c41f4557f4",
+          "op": "ground_rule.gemma_rank",
+          "parent_span_id": "88feeaf05ab9c2bf",
+          "start_timestamp": 1791494493.538801,
+          "end_timestamp": 1791494494.944477,
+          "duration": 1405.676126,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

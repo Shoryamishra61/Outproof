@@ -1,0 +1,74 @@
+{
+  "executed_at": "2026-10-09T02:30:59.585119+00:00",
+  "status": "PASS",
+  "commit": "c99a1f55f793c15941c3fd047393c9bb40ed12b7",
+  "ci": {
+    "conclusion": "success",
+    "databaseId": 37874581558,
+    "headSha": "c99a1f55f793c15941c3fd047393c9bb40ed12b7",
+    "status": "completed",
+    "url": "https://github.com/Shoryamishra61/Outproof/actions/runs/37874581558"
+  },
+  "services": {
+    "api": {
+      "id": "srv-db3vs6ub7d7c739r2sq0",
+      "type": "web_service",
+      "plan": "free",
+      "buildPlan": "starter",
+      "autoDeploy": "yes",
+      "autoDeployTrigger": "checksPass",
+      "deploy_id": "dep-db452j942hec73c6ejlg",
+      "deploy_status": "live",
+      "commit": "c99a1f55f793c15941c3fd047393c9bb40ed12b7"
+    },
+    "web": {
+      "id": "srv-db3vs8eb7d7c739r31l0",
+      "type": "static_site",
+      "plan": null,
+      "buildPlan": "starter",
+      "autoDeploy": "yes",
+      "autoDeployTrigger": "checksPass",
+      "deploy_id": "dep-db452jh42hec73c6ejug",
+      "deploy_status": "live",
+      "commit": "c99a1f55f793c15941c3fd047393c9bb40ed12b7"
+    }
+  },
+  "scope": "Actual release identity, free plan, autodeploy, HTTPS readiness and model authentication; inference/browser receipts separate",
+  "frontend": {
+    "url": "https://outproof-web.onrender.com",
+    "http_status": 200
+  },
+  "readiness": {
+    "url": "https://outproof-api.onrender.com/v1/health/ready",
+    "http_status": 200,
+    "result": {
+      "status": "ready",
+      "model_reachable": true,
+      "live_evidence_available": true,
+      "compilation_available": true,
+      "mode": "LIVE"
+    }
+  },
+  "version": {
+    "url": "https://outproof-api.onrender.com/v1/version",
+    "http_status": 200,
+    "result": {
+      "version": "0.1.0",
+      "commit": "c99a1f55f793c15941c3fd047393c9bb40ed12b7",
+      "environment": "production"
+    }
+  },
+  "gemma_model": [
+    {
+      "name": "gemma4:e2b-it-qat",
+      "digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+      "size": 4336358185
+    }
+  ],
+  "model_auth_statuses_missing_wrong_correct": [
+    401,
+    401,
+    200
+  ],
+  "demo_sha256": "e1fd3b2873e16e8bebbba0590d3f05357d9bacc3d7499098b8c653b8179a45f3"
+}

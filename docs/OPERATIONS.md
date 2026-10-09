@@ -4,6 +4,8 @@ Keep the inference laptop plugged in, awake, lid open and online. The proxy requ
 
 First inspect `/v1/version`, `/v1/health/live`, `/v1/health/ready` and the client request ID. Technical logs contain stage timings, validation/rejection status and request IDs. Sentry technical spans are sampled; absence of a sampled span is not evidence that a request never ran. No private prompt/GPS should be pasted into an incident record.
 
+The current release checkpoint is `evals/reports/FINAL_HANDOFF.md`; the latest local identity check is `.tools/final-release-checkpoint.json`. `uv run python .tools/final_release_checkpoint.py` is a read-only verification runner except for writing that sanitized receipt. Historical `.tools/bridge_recovery.py` is an executed outage experiment with an old fixed process ID, not a general restart command; do not rerun it blindly. Inspect current owned process command lines before restarting anything.
+
 | Failure | Recovery |
 |---|---|
 | Model unavailable | Check dedicated local `/api/tags`, model tag/digest, proxy authentication and tunnel. Restart only the owned release processes; keep desktop Ollama instances separate. |

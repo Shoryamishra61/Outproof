@@ -6,7 +6,7 @@ Executed use and contest eligibility are different. Only the judge determines el
 |---|---|---|
 | Render | Two free public services; actual LIVE browser compile/proof/GO; CI-gated deployment and recovery receipts | VERIFIED deployment; availability limited by free/laptop runtime |
 | Gemma | Actual Gemma 4 E2B local/remote parser and valid-plan ranker; digest and inference receipts | VERIFIED open-weight use |
-| Sentry Agent Tracing | Actual production HTTP, grounding/validation and Gemma ranking spans queried; allowlisted technical tracing and privacy tests | VERIFIED technical agent spans; no raw prompt tracing |
+| Sentry Agent Tracing | Actual production HTTP parent with linked grounding/validation and Gemma-rank child spans retrieved; allowlisted technical tracing and privacy tests | VERIFIED technical agent span hierarchy; no raw prompt tracing |
 | SerpApi | Real authorized official-link search and compiler provenance; snippets never determine facts | VERIFIED source discovery |
 | ElevenLabs | Real free-quota cue generation and decoded public-browser playback; opt-in and noncommercial attribution | VERIFIED generic voice cue |
 | GitHub Copilot | Actual read-only parser/ranker review; found dietary-negation issue and informed tested fix | VERIFIED development use; [sanitized session](agent-sessions/copilot-parser-review.md) |

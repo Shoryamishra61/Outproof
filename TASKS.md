@@ -16,6 +16,7 @@ This section supersedes earlier phase claims below, including withdrawn Anna Nag
 - [x] Backboard failure investigated: Memory/RAG-only free credits block chat; no billing enabled, no successful inference claim
 - [x] 65-second actual public demo recorded; local range/decode/viewport/focus/audio checks passed; release reports and DEV draft prepared
 - [x] Fresh public demo-asset range/hash/decode/playback verified on checked deployed release; final evidence update gets its own CI/deployment check
+- [x] Corrected readiness build passed independent CI, automatically deployed on both services and completed a fresh actual free-text parser/ranker/proof/GO journey; final handoff prepared
 - [ ] Stable/always-on model hosting: no existing domain, no paid hosting authorized; protected temporary fallback disclosed
 - [ ] Three physical India trials and field Screen Ratio: UNEXECUTED/unmeasured
 - [ ] Author's final DEV review and publication: reserved to the user
