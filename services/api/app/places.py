@@ -1,6 +1,9 @@
 """Bounded OSM discovery; provider tags never become inferred operational facts."""
 
+import asyncio
+import logging
 from datetime import UTC, datetime
+from math import ceil
 from time import monotonic
 from typing import Protocol
 
@@ -18,6 +21,7 @@ class PlacesProvider(Protocol):
 class OverpassAvailability:
     def __init__(self) -> None:
         self.retry_at = 0.0
+        self.lock = asyncio.Lock()
 
 
 def overpass_query(origin: Coordinates, radius_meters: int) -> str:
@@ -164,30 +168,57 @@ class OverpassPlacesProvider:
     ) -> None:
         self.client = client
         self.endpoint = endpoint
-        self.availability = availability
+        self.availability = availability or OverpassAvailability()
 
     async def discover(
         self, origin: Coordinates, radius_meters: int
     ) -> tuple[PlaceCandidate, ...] | CompilationFailure:
         query = overpass_query(origin, radius_meters)
-        if self.availability and self.availability.retry_at > monotonic():
+        async with self.availability.lock:
+            return await self._discover(query)
+
+    async def _discover(self, query: str) -> tuple[PlaceCandidate, ...] | CompilationFailure:
+        retry_seconds = ceil(self.availability.retry_at - monotonic())
+        if retry_seconds > 0:
             return CompilationFailure(
                 code="SOURCE_TEMPORARILY_UNAVAILABLE",
-                message="Discovery provider cooling down after an outage; retry later",
+                message=(
+                    f"Map discovery is temporarily unavailable. Retry in {retry_seconds} seconds; "
+                    "no nearby place has been verified."
+                ),
             )
         try:
             response = await self.client.post(
                 self.endpoint,
                 data={"data": query},
                 timeout=40,
-                headers={"User-Agent": "GroundRule/0.1 (bounded development evaluation)"},
+                headers={
+                    "User-Agent": "GroundRule/0.1 (https://github.com/Shoryamishra61/Outproof)"
+                },
                 follow_redirects=False,
             )
             response.raise_for_status()
-            return normalize_overpass(response.json(), observed_at=datetime.now(UTC))
-        except (httpx.HTTPError, ValueError):
-            if self.availability:
+            result = normalize_overpass(response.json(), observed_at=datetime.now(UTC))
+            if (
+                isinstance(result, CompilationFailure)
+                and result.code == "SOURCE_TEMPORARILY_UNAVAILABLE"
+            ):
                 self.availability.retry_at = monotonic() + 60
+            else:
+                self.availability.retry_at = 0
+            return result
+        except (httpx.HTTPError, ValueError) as error:
+            status = (
+                error.response.status_code if isinstance(error, httpx.HTTPStatusError) else None
+            )
+            logging.getLogger(__name__).warning(
+                "discovery failure kind=%s http_status=%s", type(error).__name__, status
+            )
+            self.availability.retry_at = monotonic() + 60
             return CompilationFailure(
-                code="SOURCE_TEMPORARILY_UNAVAILABLE", message="Overpass request failed"
+                code="SOURCE_TEMPORARILY_UNAVAILABLE",
+                message=(
+                    "Map discovery could not be reached. Retry in 60 seconds; "
+                    "no nearby place has been verified."
+                ),
             )

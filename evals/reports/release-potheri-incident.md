@@ -1,0 +1,11 @@
+# Potheri compilation incident
+
+On 2026-10-09 at 20:23 UTC, production `3dd2dd95` returned readiness HTTP 200 with `compilation_available=true`, then a Potheri compile returned HTTP 503 `SOURCE_TEMPORARILY_UNAVAILABLE` in 0.58 seconds (request `c4f933b4f1084f9a8ff20237b9480991`). The same bounded Overpass query returned HTTP 200 from the developer computer. Readiness checked only the reviewed Singapore source/route; it did not verify general discovery or a selected Potheri outing. The UI incorrectly described this as “live mode ready.”
+
+The repaired provider serializes recovery probes, preserves cooldown for network failures and incomplete query results, clears cooldown on complete valid responses, reports a retry interval and logs only exception class/HTTP status. Neither coordinates nor query text enter these diagnostics. Readiness now states its limited scope; the UI separately displays failed compilation. Missing evidence is distinguished from a temporary provider outage.
+
+The three named Potheri map identities found in the bounded query lack admission/price and operating-hours facts. These are discovery leads, not supported outings. A bounded official-source search found no sufficient venue-specific admission and hours proof. This does not prove no such source exists. Validation and exactly-one-plan rules remain unchanged.
+
+Local `./scripts/check.ps1`: 4,903 passed, two opt-in skips; 17 schemas, 60 structural cases, 85 policy cases, Ruff and TypeScript/Vite passed. `npx --prefix apps/web playwright test --config apps/web/playwright.config.ts`: 135 controlled browser checks passed, including a source outage followed by successful fixture recovery with controls retained. These are controlled automated checks, not real field usage. The first run exposed an unnecessary internal return-contract change; that change was removed and the entire command passed. Deployed verification is pending. Source UI audit: zero high findings; one pre-existing motion heuristic requires human review. Exact-value secret scan: 490 history blobs and 564 working files/bundles/reports/logs, zero leaks detected.
+
+Potheri accepted outing: BLOCKED by missing authoritative operational evidence. Physical trials: UNEXECUTED. Worldwide outing acceptance and permanent laptop inference availability remain unproven. No paid service was enabled.

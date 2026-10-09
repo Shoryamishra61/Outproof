@@ -93,6 +93,7 @@ function App() {
   const [isLocating, setIsLocating] = useState(false);
   const [text, setText] = useState('');
   const [error, setError] = useState('');
+  const [lastCompileFailed, setLastCompileFailed] = useState(false);
   const [result, setResult] = useState<CompiledPlan | null>(null);
   const [sent, setSent] = useState<ConstraintSet | null>(null);
   const [step, setStep] = useState(0);
@@ -154,7 +155,7 @@ function App() {
       max_walking_meters: null, return_by_local: null, locale: 'en-IN',
       origin, departure_at: new Date().toISOString(), strict_budget: true,
     };
-    setSent(controls); setError(''); setResult(null); setStep(0); setState('compiling');
+    setSent(controls); setError(''); setLastCompileFailed(false); setResult(null); setStep(0); setState('compiling');
     const controller = new AbortController(); pending.current = controller;
     const timeout = window.setTimeout(() => controller.abort(), 185000);
     try {
@@ -174,6 +175,7 @@ function App() {
       setResult(body); setState('result');
     } catch (cause) {
       if (pending.current !== controller) return;
+      setLastCompileFailed(true);
       setError(controller.signal.aborted ? 'Compilation stopped. Your controls are retained.' : cause instanceof Error ? cause.message : 'Compilation unavailable.');
       setState('home');
     } finally { window.clearTimeout(timeout); if (pending.current === controller) pending.current = null; }
@@ -236,7 +238,7 @@ function App() {
         {error && <p role="alert" className="status">{error}</p>}
         <button type="submit" disabled={connection !== 'ready' || isLocating || (originMode === 'device' && !deviceCoords) || (originMode === 'map' && !mapOrigin)}>{liveMode ? 'Compile one live plan' : 'Compile one fixture plan'}</button>
       </form>}
-      <p role="status" className="connection">{connection === 'checking' ? 'Checking API…' : connection === 'ready' ? (liveMode ? 'API connected · live mode ready' : 'API connected · live compilation disabled') : 'API unavailable'}</p>
+      <p role="status" className="connection">{lastCompileFailed ? 'Last compilation failed · no verified plan' : connection === 'checking' ? 'Checking API…' : connection === 'ready' ? (liveMode ? 'API reachable · Singapore source check passed; selected area checked on compile' : 'API connected · live compilation disabled') : 'API unavailable'}</p>
       {connection === 'unavailable' && <button type="button" onClick={() => setAttempt(attempt + 1)}>Check connection</button>}
     </>}
     {state === 'compiling' && <section aria-busy="true"><h1 ref={heading} tabIndex={-1}>Checking one outing.</h1><p role="status">Grounding sources, checking hard rules, then selecting a valid plan with Gemma.</p><button type="button" onClick={() => { pending.current?.abort(); pending.current = null; setError('Compilation stopped. Your controls are retained.'); setState('home'); }}>Cancel</button></section>}

@@ -177,3 +177,72 @@ def test_outage_cooldown_prevents_repeated_requests_and_recovers() -> None:
             assert calls == 2
 
     asyncio.run(run())
+
+
+def test_discovery_outage_has_private_safe_diagnostics(caplog: pytest.LogCaptureFixture) -> None:
+    async def run() -> None:
+        async with httpx.AsyncClient(
+            transport=httpx.MockTransport(lambda request: httpx.Response(403))
+        ) as client:
+            provider = OverpassPlacesProvider(client)
+            failed = await provider.discover(ORIGIN, 1000)
+            assert isinstance(failed, CompilationFailure) and "60 seconds" in failed.message
+            assert "kind=HTTPStatusError http_status=403" in caplog.text
+            assert str(ORIGIN.latitude) not in caplog.text and "around:" not in caplog.text
+            cooling = await provider.discover(ORIGIN, 1000)
+            assert isinstance(cooling, CompilationFailure) and "Retry in" in cooling.message
+
+    asyncio.run(run())
+
+
+def test_concurrent_outage_queries_share_cooldown() -> None:
+    async def run() -> None:
+        calls = 0
+
+        async def handle(request: httpx.Request) -> httpx.Response:
+            nonlocal calls
+            calls += 1
+            await asyncio.sleep(0)
+            return httpx.Response(503)
+
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handle)) as client:
+            provider = OverpassPlacesProvider(client)
+            results = await asyncio.gather(
+                provider.discover(ORIGIN, 1000), provider.discover(ORIGIN, 1000)
+            )
+            assert all(isinstance(result, CompilationFailure) for result in results)
+            assert calls == 1
+
+    asyncio.run(run())
+
+
+def test_incomplete_map_response_cools_down_but_empty_valid_response_does_not() -> None:
+    async def run() -> None:
+        payload = {"elements": [], "remark": "runtime error: timeout"}
+        calls = 0
+
+        def handle(request: httpx.Request) -> httpx.Response:
+            nonlocal calls
+            calls += 1
+            return httpx.Response(200, json=payload)
+
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handle)) as client:
+            provider = OverpassPlacesProvider(client)
+            for _ in range(2):
+                result = await provider.discover(ORIGIN, 1000)
+                assert (
+                    isinstance(result, CompilationFailure)
+                    and result.code == "SOURCE_TEMPORARILY_UNAVAILABLE"
+                )
+            assert calls == 1
+            provider.availability.retry_at = 0
+            payload.pop("remark")
+            for _ in range(2):
+                result = await provider.discover(ORIGIN, 1000)
+                assert (
+                    isinstance(result, CompilationFailure)
+                    and result.code == "NO_GROUNDED_CANDIDATES"
+                )
+            assert provider.availability.retry_at == 0 and calls == 3
+
+    asyncio.run(run())

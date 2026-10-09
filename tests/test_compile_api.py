@@ -320,5 +320,6 @@ def test_live_compile_rejects_unsupported_park_pack() -> None:
         assert resp.status_code == 409
         result = CompilationFailure.model_validate(resp.json())
         assert result.code == "NO_GROUNDED_CANDIDATES"
+        assert "admission/price" in result.message and "opening hours" in result.message
 
     asyncio.run(run_live())

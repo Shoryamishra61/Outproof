@@ -6,6 +6,7 @@ import secrets
 from collections import deque
 from collections.abc import Callable
 from datetime import UTC, datetime
+from math import ceil
 from time import monotonic, perf_counter
 from typing import Annotated, Literal
 from uuid import uuid4
@@ -83,7 +84,7 @@ def create_app(
         allow_origins=origins,
         allow_methods=["GET", "POST"],
         allow_headers=["Content-Type"],
-        expose_headers=["X-Request-ID"],
+        expose_headers=["X-Request-ID", "Retry-After"],
     )
     hosts = os.getenv("GROUND_RULE_ALLOWED_HOSTS", "*").split(",")
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=hosts)
@@ -262,6 +263,10 @@ def create_app(
                 "live_evidence_available": source_ready,
                 "compilation_available": ready,
                 "mode": ("FIXTURE" if fixture_enabled else "LIVE") if ready else None,
+                "readiness_scope": "reviewed Singapore source and route only"
+                if live_enabled
+                else "development fixtures only",
+                "global_compilation_verified": False,
             },
         )
 
@@ -400,7 +405,14 @@ def create_app(
                 else 409
             )
         )
-        return JSONResponse(status_code=status, content=result.model_dump(mode="json"))
+        retry_seconds = ceil(overpass_availability.retry_at - monotonic())
+        return JSONResponse(
+            status_code=status,
+            content=result.model_dump(mode="json"),
+            headers={"Retry-After": str(retry_seconds)}
+            if status == 503 and retry_seconds > 0
+            else None,
+        )
 
     return app
 

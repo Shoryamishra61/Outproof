@@ -92,6 +92,11 @@ def test_concurrent_readiness_waits_for_one_real_probe(
                 assert responses[0].json() == responses[1].json()
                 assert all(r.status_code == (200 if source_available else 503) for r in responses)
                 assert responses[0].json()["compilation_available"] is source_available
+                assert responses[0].json()["global_compilation_verified"] is False
+                assert (
+                    responses[0].json()["readiness_scope"]
+                    == "reviewed Singapore source and route only"
+                )
                 assert (await client.get("/v1/health/ready")).json() == responses[0].json()
                 assert calls == 1
 

@@ -1,5 +1,23 @@
 import { test, expect } from './fixtures';
 
+test('source outage is distinct from readiness and retains controls for recovery', async ({ page }) => {
+  await page.goto('/');
+  const submit = page.getByRole('button', { name: 'Compile one fixture plan' });
+  await expect(submit).toBeEnabled();
+  await page.route('**/v1/plans/compile', route => route.fulfill({
+    status: 503, contentType: 'application/json', headers: { 'Retry-After': '60' },
+    body: JSON.stringify({ status: 'FAILURE', code: 'SOURCE_TEMPORARILY_UNAVAILABLE', message: 'Map discovery could not be reached. Retry in 60 seconds; no nearby place has been verified.' }),
+  }));
+  await submit.click();
+  await expect(page.getByRole('alert')).toContainText('Retry in 60 seconds');
+  await expect(page.getByText('Last compilation failed · no verified plan', { exact: true })).toBeVisible();
+  await expect(page.getByLabel('Time incl. return (min)')).toHaveValue('90');
+  await expect(page.getByRole('heading', { name: 'One fixture plan.' })).toHaveCount(0);
+  await page.unroute('**/v1/plans/compile');
+  await submit.click();
+  await expect(page.getByRole('heading', { name: 'One fixture plan.' })).toBeVisible();
+});
+
 for (const width of [320, 390, 1440]) for (const path of ['gps', 'lowaccuracy', 'gpstimeout', 'retry', 'double', 'cancelstale', 'zoom', 'voice']) {
   test(`${path} recovery at ${width}`, async ({ page, context }) => {
     await page.setViewportSize({ width, height: 900 });

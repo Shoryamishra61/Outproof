@@ -43,7 +43,12 @@ async def compile_internal(
         return valid
     if not valid:
         return CompilationFailure(
-            code="NO_GROUNDED_CANDIDATES", message="No plan satisfied all hard checks"
+            code="NO_GROUNDED_CANDIDATES",
+            message=(
+                "No nearby outing could verify all hard rules, including admission/price, "
+                "opening hours and walking feasibility. This area may lack required source "
+                "evidence; retrying cannot supply unsupported facts."
+            ),
         )
     eval_as_of = clock() if clock else as_of
     with sentry_sdk.start_span(op="ground_rule.gemma_rank"):
