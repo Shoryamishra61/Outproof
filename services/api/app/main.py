@@ -28,6 +28,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError
 from app.compilation import compile_internal
 from app.enrichment import EnrichmentProvider
 from app.fixtures import FixtureProviders
+from app.geocoding import LocationResults, LocationSearchProvider
 from app.live import GATE, LiveEnrichmentProvider, LivePlacesProvider
 from app.model_connection import model_connection
 from app.observability import configure
@@ -50,6 +51,10 @@ class CompileRequest(Contract):
     controls: ConstraintSet
     free_text: Annotated[StrictStr, Field(max_length=4000)] = ""
     mode: Literal["FIXTURE", "LIVE"]
+
+
+class LocationSearchRequest(Contract):
+    query: Annotated[StrictStr, Field(min_length=2, max_length=160)]
 
 
 def create_app(
@@ -88,6 +93,7 @@ def create_app(
     recent: dict[str, deque[float]] = {}
     salt = secrets.token_bytes(32)
     overpass_availability = OverpassAvailability()
+    geocoder = LocationSearchProvider(os.getenv("GEOCODER_URL", "https://photon.komoot.io/api/"))
     search = SerpSourceDiscovery(
         os.getenv("SERPAPI_API_KEY") if os.getenv("GROUND_RULE_SERPAPI_ENABLED") == "true" else None
     )
@@ -153,6 +159,29 @@ def create_app(
     @app.get("/v1/health/live")
     def liveness() -> dict[str, str]:
         return {"status": "ok"}
+
+    @app.post("/v1/locations/search", response_model=LocationResults | CompilationFailure)
+    async def search_locations(request: Request) -> JSONResponse:
+        try:
+            payload = bytearray()
+            async for chunk in request.stream():
+                payload.extend(chunk)
+                if len(payload) > 2048:
+                    raise ValueError("Oversized search request")
+            query = LocationSearchRequest.model_validate_json(payload).query.strip()
+            if len(query) < 2:
+                raise ValueError("Search text is too short")
+        except (ValidationError, ValueError):
+            return JSONResponse(
+                status_code=422, content={"detail": "Enter a place or area (2–160 characters)"}
+            )
+        async with httpx.AsyncClient(trust_env=False) as client:
+            status, result = await geocoder.search(query, client)
+        return JSONResponse(
+            status_code=status,
+            content=result.model_dump(mode="json"),
+            headers={"Retry-After": "1"} if status == 429 else None,
+        )
 
     @app.get("/v1/version")
     def version() -> dict[str, str]:

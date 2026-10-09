@@ -125,3 +125,7 @@ Possible weak signals:
 - moderate review count
 
 Avoid ungrounded "hidden gem" claims.
+
+## Origin lookup and map imagery
+
+Photon/OpenStreetMap supports explicit starting-area search, and standard OpenStreetMap tiles support the origin picker. Neither is outing proof. Provider limits, attribution, privacy and test isolation are documented in [LOCATION_PICKER.md](LOCATION_PICKER.md).

@@ -228,3 +228,13 @@ Fixture compiler, identity crosswalk, opening-hours parser, local Gemma valid-pl
 - [x] Re-formatted `docs/DEV_DRAFT.md` to match official Hacktoberfest Week 1 DEV.to template.
 - [x] Final release verdict established: **CONDITIONAL RELEASE â€” DISCLOSED LIMITATIONS**.
 
+
+## Starting location repair — 2026-10-10
+
+- [x] Replace numeric coordinates with typed place/area search and an adjustable map pin.
+- [x] Add fresh GPS retry, coarse-fix confirmation and late-callback protection.
+- [x] Preserve origin-only geocoding boundary and deterministic outing validation.
+- [x] Add bounded provider, failure, keyboard, viewport and submitted-origin checks.
+- [ ] Verify the changed origin flow on the deployed public build (receipt follows).
+
+Searchable origins do not check worldwide outing coverage or physical GPS/field trials. See `docs/LOCATION_PICKER.md`.

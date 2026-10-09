@@ -29,6 +29,7 @@ try{
  report.version=await (await context.request.get('https://outproof-api.onrender.com/v1/version')).json();
  const button=page.getByRole('button',{name:'Compile one live plan'});
  await button.waitFor({timeout:65000});
+ await page.getByLabel('Try the Singapore example start',{exact:true}).check();
  const retry=page.getByRole('button',{name:'Check connection',exact:true});
  if(!await button.isEnabled()&&await retry.isVisible()){report.connection_retry_used=true;await retry.click();}
  await page.waitForFunction(button=>!button.disabled,await button.elementHandle(),{timeout:65000});

@@ -1,8 +1,8 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 import { resolve } from 'node:path';
 
 const widths = [320, 360, 375, 390, 768, 1024, 1280, 1440, 1920, 3840];
-const paths = ['success', 'budget', 'currency', 'walking', 'duration', 'geodenied', 'coordinates', 'cancel', 'offline', 'malformed'];
+const paths = ['success', 'budget', 'currency', 'walking', 'duration', 'geodenied', 'map', 'cancel', 'offline', 'malformed'];
 for (const width of widths) for (const path of paths) {
   test(`${path} at ${width}`, async ({ page, context }) => {
     await page.setViewportSize({ width, height: 900 });
@@ -24,12 +24,11 @@ for (const width of widths) for (const path of paths) {
       await expect(submit).toBeDisabled();
       await page.getByLabel(/Fixture Chennai example/).check();
     }
-    if (path === 'coordinates') {
-      await page.getByLabel('Enter coordinates').check();
-      await page.getByLabel('Latitude', { exact: true }).fill('91');
-      await submit.click();
-      await expect(page.getByRole('heading', { level: 1 })).toContainText('Set your limits');
-      expect(await page.getByLabel('Latitude', { exact: true }).evaluate((e: HTMLInputElement) => e.validity.rangeOverflow)).toBe(true);
+    if (path === 'map') {
+      await page.getByRole('button', { name: 'Choose on map', exact: true }).click();
+      await page.getByRole('button', { name: 'Use map centre as start' }).click();
+      await expect(submit).toBeEnabled();
+      await expect(page.getByRole('status').filter({ hasText: 'Starting point:' })).toContainText('Chosen starting point');
     } else if (path === 'cancel') {
       await page.route('**/v1/plans/compile', async route => { await new Promise(r => setTimeout(r, 500)); await route.abort(); });
       await submit.click();

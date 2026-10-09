@@ -54,3 +54,7 @@ Do not market as:
 - allergy guarantee
 - hygiene guarantee
 - medical guidance
+
+## Starting-area search and map
+
+Explicit search text is sent to Photon; use a public area or landmark. Map tiles send the visible tile area and site origin to OpenStreetMap. Search and GPS history are not persisted, and raw queries are not logged. A bounded, short-lived process-memory lookup cache uses hashed query keys. See `docs/LOCATION_PICKER.md` for limits and provider policy.

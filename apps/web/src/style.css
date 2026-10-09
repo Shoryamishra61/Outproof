@@ -40,6 +40,24 @@ label span, .area span, small { color: var(--muted); font-size: 0.8rem; font-wei
 .area { border-block: 1px solid var(--rule); padding-block: 0.5rem; }
 .origin-choice { border-block: 1px solid var(--rule); padding-block: 0.5rem; margin-bottom: var(--space); }
 .origin-choice .check { min-height: 44px; }
+.location-picker { margin-top: var(--space); }
+.location-search { display: flex; gap: 0.5rem; align-items: stretch; }
+.location-search input { flex: 1; }
+.location-search button { flex-shrink: 0; }
+.location-picker > label { margin-bottom: 0.3rem; }
+.location-help, .map-credit, .origin-map-panel > p { font-size: 0.8rem; color: var(--muted); }
+.location-results { list-style: none; padding: 0; margin: 0.5rem 0; border-block: 1px solid var(--rule); }
+.location-results button { width: 100%; text-align: left; background: transparent; color: var(--ink); border: 0; border-bottom: 1px solid var(--rule); border-radius: 0; font-weight: 400; }
+.location-results button:hover:not(:disabled) { background: var(--grass); color: var(--paper); }
+.map-toggle { margin-left: 0; }
+.origin-map { height: 280px; width: 100%; border: 1px solid var(--rule); isolation: isolate; background: var(--paper); }
+.origin-map-panel > button { margin-top: 0.5rem; }
+.origin-pin { background: transparent; }
+.origin-pin span { display: block; width: 24px; height: 24px; background: var(--grass); border: 3px solid var(--paper); border-radius: 50% 50% 50% 0; transform: rotate(-45deg); box-shadow: 0 1px 4px #20342780; }
+.selected-location { border-left: 3px solid var(--grass); padding-left: 0.7rem; }
+.leaflet-container { font: inherit; }
+.leaflet-container .leaflet-control-attribution { font-size: 0.7rem; color: var(--ink); }
+.leaflet-container .leaflet-control-zoom a { width: 44px; height: 44px; line-height: 44px; color: var(--ink); }
 fieldset { border: 0; padding: 0; margin: 0; }
 legend { font-weight: 650; }
 .check { display: flex; align-items: center; gap: 0.5rem; min-height: 44px; margin: 0; }
@@ -63,6 +81,7 @@ summary { cursor: pointer; font-weight: 650; min-height: 44px; }
 .go { max-width: 32rem; }
 .go > a { display: block; width: fit-content; min-height: 44px; margin-top: var(--space); }
 @media (max-width: 420px) {
+  .location-search { flex-direction: column; }
   main { padding: var(--space); }
   .controls { gap: 0 0.7rem; }
   label { font-size: 0.85rem; margin-bottom: 0.5rem; }

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 for (const width of [320, 390, 1440]) for (const path of ['gps', 'lowaccuracy', 'gpstimeout', 'retry', 'double', 'cancelstale', 'zoom', 'voice']) {
   test(`${path} recovery at ${width}`, async ({ page, context }) => {
@@ -20,11 +20,13 @@ for (const width of [320, 390, 1440]) for (const path of ['gps', 'lowaccuracy', 
       if (path !== 'gps') {
         await expect(page.getByRole('alert')).toContainText(path === 'lowaccuracy' ? 'accuracy is too low' : 'Controlled timeout');
         await expect(submit).toBeDisabled();
-        await page.getByLabel('Enter coordinates').check();
+        const chooseMap = page.getByRole('button', { name: 'Choose on map', exact: true });
+        if (await chooseMap.isVisible()) await chooseMap.click();
+        await page.getByRole('button', { name: 'Use map centre as start' }).click();
         await expect(submit).toBeEnabled();
         return;
       }
-      await expect(page.getByText(/accuracy ±12 m/)).toBeVisible();
+      await expect(page.getByRole('radio', { name: 'Device location · accuracy ±12 m', exact: true })).toBeVisible();
     }
     let requests = 0;
     page.on('request', request => { if (request.url().endsWith('/v1/plans/compile')) requests++; });

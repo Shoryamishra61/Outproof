@@ -1,0 +1,103 @@
+{
+  "executed_at": "2026-10-09T19:37:17.118889+00:00",
+  "scope": "Starting-point UI and lookup; controlled tests are not physical GPS or outings",
+  "status": "LOCAL_PASS_PUBLIC_PENDING",
+  "canonical": {
+    "pytest_passed": 4900,
+    "skipped_opt_in": 2,
+    "schemas": 17,
+    "structural_cases": 60,
+    "policy_cases": 85,
+    "ruff": "PASS",
+    "typescript_vite": "PASS"
+  },
+  "browser": {
+    "passed": 134,
+    "failed": 0,
+    "controlled_imagery": true,
+    "new_location_cases": 10
+  },
+  "real_source_lookup": {
+    "executed_at": "2026-10-09T19:18:58.422731+00:00",
+    "scope": "Real public-place geocoding only; no venue price/hours/outing assertion",
+    "status": 200,
+    "result": {
+      "results": [
+        {
+          "label": "Anna Nagar Tower Park, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.0865345,
+            "longitude": 80.2142503
+          }
+        },
+        {
+          "label": "Anna Nagar East, 2nd Avenue, Anna Nagar West, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.0846503,
+            "longitude": 80.2195323
+          }
+        },
+        {
+          "label": "Anna Nagar Tower, 10th Main Road, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.08507,
+            "longitude": 80.2086038
+          }
+        },
+        {
+          "label": "Chennai Chetpet, McNichols Road, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.0743424,
+            "longitude": 80.242421
+          }
+        },
+        {
+          "label": "Anna Nagar West, Thirumangalam Road, Chennai, Tamil Nadu, India",
+          "coordinates": {
+            "latitude": 13.0985386,
+            "longitude": 80.2010061
+          }
+        }
+      ],
+      "attribution": "OpenStreetMap contributors / Photon"
+    }
+  },
+  "ui": {
+    "thesis": "Field notebook with one selected origin",
+    "signature_decisions": [
+      "Plain place-search row",
+      "Grass-coloured pin",
+      "Explicit selected-origin line"
+    ],
+    "viewports": [
+      360,
+      768,
+      1024,
+      1440
+    ],
+    "keyboard_submitted_origin": "PASS",
+    "local_visual_review": [
+      390,
+      1440
+    ],
+    "overflow": false,
+    "page_errors": 0,
+    "audit": {
+      "high": 0,
+      "medium_heuristic": 1,
+      "manual_resolution": "Leaflet zoom/fade/marker animations and arrow pan animations disabled; global reduced-motion CSS retained"
+    }
+  },
+  "observed_failures": [
+    "Matching Chromium missing initially; installed official matching browser",
+    "Author-introduced test selector encoding corrected",
+    "Coarse GPS automatically opens map; recovery selector adjusted",
+    "GPS accuracy text appears twice; assertion scoped to radio"
+  ],
+  "limitations": [
+    "No physical device GPS calibration or India field test",
+    "Photon public demo has no uptime guarantee; moderate traffic only",
+    "Global origins do not extend verified outing coverage",
+    "Laptop model bridge and temporary tunnel required restart during public readiness inspection"
+  ]
+}

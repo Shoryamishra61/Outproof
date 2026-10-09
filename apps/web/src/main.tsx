@@ -5,6 +5,7 @@ import addFormats from 'ajv-formats';
 import compiledSchema from '../../../contracts/compiled-plan.schema.json';
 import failureSchema from '../../../contracts/compilation-failure.schema.json';
 import type { CompiledPlan, CompilationFailure, ConstraintSet, Evidence, Money } from '../../../contracts/domain';
+import { LocationPicker, type StartingPoint } from './LocationPicker';
 import './style.css';
 
 const ajv = new Ajv({ strict: false });
@@ -86,9 +87,8 @@ function App() {
   const [mall, setMall] = useState(!liveMode);
   const [quiet, setQuiet] = useState(true);
   const [walking, setWalking] = useState(liveMode ? 60 : 30);
-  const [originMode, setOriginMode] = useState<'demo' | 'device' | 'manual'>('demo');
-  const [latitude, setLatitude] = useState(1.3068);
-  const [longitude, setLongitude] = useState(103.819);
+  const [originMode, setOriginMode] = useState<'demo' | 'device' | 'map'>(fixtureMode ? 'demo' : 'map');
+  const [mapOrigin, setMapOrigin] = useState<StartingPoint | null>(null);
   const [deviceCoords, setDeviceCoords] = useState<{ latitude: number; longitude: number; accuracy: number } | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [text, setText] = useState('');
@@ -113,11 +113,35 @@ function App() {
   }, [attempt]);
   useEffect(() => { heading.current?.focus(); }, [state, step]);
   useEffect(() => () => pending.current?.abort(), []);
+  useEffect(() => () => { locationRequest.current++; }, []);
+  function requestLocation() {
+    setOriginMode('device'); setError(''); setDeviceCoords(null); setMapOrigin(null);
+    const requestId = ++locationRequest.current;
+    if (!window.isSecureContext || !('geolocation' in navigator)) {
+      setIsLocating(false); setError('GPS is unavailable here. Search for an area or choose on the map.'); return;
+    }
+    setIsLocating(true);
+    navigator.geolocation.getCurrentPosition(pos => {
+      if (locationRequest.current !== requestId) return;
+      setIsLocating(false);
+      const { latitude, longitude, accuracy } = pos.coords;
+      if (![latitude, longitude, accuracy].every(Number.isFinite) || Math.abs(latitude) > 90 || Math.abs(longitude) > 180 || accuracy < 0) {
+        setError('GPS returned an invalid location. Search for an area or choose on the map.'); return;
+      }
+      setMapOrigin({ latitude, longitude, label: accuracy > 100 ? `Approximate GPS area (±${Math.ceil(accuracy)} m) — confirm a point on the map` : `Current GPS location · accuracy ±${Math.ceil(accuracy)} m` });
+      if (accuracy > 100) { setError('Location accuracy is too low to use automatically. Move the pin or choose the map centre to confirm your starting point.'); return; }
+      setDeviceCoords({ latitude, longitude, accuracy });
+    }, err => {
+      if (locationRequest.current !== requestId) return;
+      setIsLocating(false);
+      setError(err.code === 1 ? 'Location access unavailable: permission was denied. Allow location in your browser settings, retry GPS, or search for an area.' : `Location access unavailable (${err.message}). Retry GPS, search for an area, or choose on the map.`);
+    }, { timeout: 15000, maximumAge: 0, enableHighAccuracy: true });
+  }
   async function compile(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (pending.current || isLocating || (originMode === 'device' && !deviceCoords)) return;
+    if (pending.current || isLocating || (originMode === 'device' && !deviceCoords) || (originMode === 'map' && !mapOrigin)) return;
     const isLive = liveMode;
-    const origin = originMode === 'manual' ? { latitude, longitude } : originMode === 'device' && deviceCoords
+    const origin = originMode === 'map' && mapOrigin ? { latitude: mapOrigin.latitude, longitude: mapOrigin.longitude } : originMode === 'device' && deviceCoords
       ? { latitude: deviceCoords.latitude, longitude: deviceCoords.longitude }
       : isLive
       ? { latitude: 1.3068, longitude: 103.819 }
@@ -179,9 +203,9 @@ function App() {
               name="origin-mode"
               id="origin-demo"
               checked={originMode === 'demo'}
-              onChange={() => { locationRequest.current++; setIsLocating(false); setOriginMode('demo'); setError(''); }}
+              onChange={() => { locationRequest.current++; setIsLocating(false); setOriginMode('demo'); setMapOrigin(null); setError(''); }}
             />
-            {liveMode ? 'Use the Singapore example start (1.3068, 103.819)' : 'Fixture Chennai example (T. Nagar: 13.0418, 80.2341)'}
+            {liveMode ? 'Try the Singapore example start' : 'Fixture Chennai example (T. Nagar: 13.0418, 80.2341)'}
           </label>
           <label className="check">
             <input
@@ -189,34 +213,12 @@ function App() {
               name="origin-mode"
               id="origin-device"
               checked={originMode === 'device'}
-              onChange={() => {
-                setOriginMode('device');
-                setError('');
-                const requestId = ++locationRequest.current;
-                if (!('geolocation' in navigator)) { setError('Geolocation unavailable. Choose an example or enter coordinates.'); return; }
-                if (!deviceCoords && 'geolocation' in navigator) {
-                  setIsLocating(true);
-                  navigator.geolocation.getCurrentPosition(
-                    pos => {
-                      if (locationRequest.current !== requestId) return;
-                      setIsLocating(false);
-                      if (!Number.isFinite(pos.coords.accuracy) || pos.coords.accuracy > 100) { setError('Location accuracy is too low. Retry GPS or enter coordinates.'); return; }
-                      setDeviceCoords({ latitude: Number(pos.coords.latitude.toFixed(6)), longitude: Number(pos.coords.longitude.toFixed(6)), accuracy: pos.coords.accuracy });
-                    },
-                    err => {
-                      if (locationRequest.current !== requestId) return;
-                      setIsLocating(false);
-                      setError(`Location access unavailable (${err.message}). Choose an example or enter coordinates.`);
-                    },
-                    { timeout: 8000, maximumAge: 0, enableHighAccuracy: true }
-                  );
-                }
-              }}
+              onChange={requestLocation}
             />
-              {isLocating ? 'Detecting your device location…' : deviceCoords ? `Device location (${deviceCoords.latitude}, ${deviceCoords.longitude}), accuracy ±${Math.ceil(deviceCoords.accuracy)} m` : 'Use my current location (GPS)'}
+              {isLocating ? 'Detecting your device location…' : deviceCoords ? `Device location · accuracy ±${Math.ceil(deviceCoords.accuracy)} m` : 'Use my current location (GPS)'}
           </label>
-          <label className="check"><input type="radio" name="origin-mode" checked={originMode === 'manual'} onChange={() => { locationRequest.current++; setIsLocating(false); setOriginMode('manual'); setError(''); }} />Enter coordinates</label>
-          {originMode === 'manual' && <div className="controls"><label>Latitude<input type="number" required min="-90" max="90" step="any" value={latitude} onChange={e => setLatitude(e.target.valueAsNumber)} /></label><label>Longitude<input type="number" required min="-180" max="180" step="any" value={longitude} onChange={e => setLongitude(e.target.valueAsNumber)} /></label></div>}
+          {originMode === 'device' && <button className="secondary" type="button" onClick={requestLocation} disabled={isLocating}>Refresh GPS</button>}
+          <LocationPicker apiBase={apiBase} point={mapOrigin} onChange={point => { locationRequest.current++; setIsLocating(false); setOriginMode('map'); setMapOrigin(point); setError(''); }} />
         </fieldset>
         <div className="controls">
           <label>Time incl. return (min)<input id="duration" type="number" min="15" max="480" step="1" required value={duration} onChange={e => setDuration(e.target.valueAsNumber)} /></label>
@@ -232,7 +234,7 @@ function App() {
         <label className="check"><input id="quiet" type="checkbox" checked={quiet} onChange={e => setQuiet(e.target.checked)} />Prefer somewhere quiet</label>
         <details className="extras"><summary>Add a rule or preference</summary><label>Anything else? <span>Optional · parsed by Gemma</span><textarea maxLength={4000} rows={2} value={text} onChange={e => setText(e.target.value)} /></label></details>
         {error && <p role="alert" className="status">{error}</p>}
-        <button type="submit" disabled={connection !== 'ready' || isLocating || (originMode === 'device' && !deviceCoords)}>{liveMode ? 'Compile one live plan' : 'Compile one fixture plan'}</button>
+        <button type="submit" disabled={connection !== 'ready' || isLocating || (originMode === 'device' && !deviceCoords) || (originMode === 'map' && !mapOrigin)}>{liveMode ? 'Compile one live plan' : 'Compile one fixture plan'}</button>
       </form>}
       <p role="status" className="connection">{connection === 'checking' ? 'Checking API…' : connection === 'ready' ? (liveMode ? 'API connected · live mode ready' : 'API connected · live compilation disabled') : 'API unavailable'}</p>
       {connection === 'unavailable' && <button type="button" onClick={() => setAttempt(attempt + 1)}>Check connection</button>}

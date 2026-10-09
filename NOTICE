@@ -6,3 +6,5 @@ Gemma weights are not distributed here. Gemma Terms: https://ai.google.dev/gemma
 Ollama: MIT runtime, model licenses separate.
 ElevenLabs free audio: noncommercial demonstration only, elevenlabs.io attribution required.
 React, Vite, FastAPI, HTTPX and other dependencies retain their distributed notices.
+Leaflet 1.9.4: BSD-2-Clause; copyright Volodymyr Agafonkin and CloudMade; complete license retained in docs/licenses/Leaflet.txt.
+Photon public geocoding: OpenStreetMap-derived location data, ODbL attribution shown; public service fair-use terms at https://github.com/komoot/photon#demo-server.
