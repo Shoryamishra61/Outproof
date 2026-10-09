@@ -1,10 +1,10 @@
 {
-  "executed_at": "2026-10-09T02:31:57.856Z",
+  "executed_at": "2026-10-09T21:16:17.138Z",
   "base_url": "https://outproof-web.onrender.com",
   "status": "PASS",
-  "duration_seconds": 65.08,
-  "size_bytes": 3343359,
-  "sha256": "e1fd3b2873e16e8bebbba0590d3f05357d9bacc3d7499098b8c653b8179a45f3",
+  "duration_seconds": 68.28,
+  "size_bytes": 3390677,
+  "sha256": "288b682a6c96db22a8104875a1a166465bc52010f94c0334a0cc4f201fc22e24",
   "http_status": 200,
   "range_status": 206,
   "viewports": [

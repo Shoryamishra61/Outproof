@@ -18,7 +18,7 @@ The public interface has one constraint form, one accepted plan, a source ledger
 
 ## Demo
 
-[Open the live application](https://outproof-web.onrender.com/) and [watch the public execution recording](https://outproof-web.onrender.com/demo.html). The daytime plan/proof/GO recording shows software execution, not a physical outing. A [fresh mobile location-search recording](https://outproof-web.onrender.com/location-demo.webm) separately shows the revised starting-area and map interface. Its final public asset link must pass the release smoke before publication.
+[Open the live application](https://outproof-web.onrender.com/) and [watch the public execution recording](https://outproof-web.onrender.com/demo.html). The fresh current-time plan/proof/GO recording shows software execution, not a physical outing. Its HTTPS playback, exact hash, range response, keyboard and responsive checks passed. A [mobile location-search recording](https://outproof-web.onrender.com/location-demo.webm) separately shows the revised starting-area and map interface.
 
 ## Code
 
