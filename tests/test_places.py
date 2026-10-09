@@ -211,9 +211,69 @@ def test_concurrent_outage_queries_share_cooldown() -> None:
                 provider.discover(ORIGIN, 1000), provider.discover(ORIGIN, 1000)
             )
             assert all(isinstance(result, CompilationFailure) for result in results)
+            assert calls == 2
+
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize("kind", ["connect", "timeout", "502", "503", "504"])
+def test_one_transient_retry_recovers_without_inventing_facts(kind: str) -> None:
+    async def run() -> None:
+        calls = 0
+
+        def handle(request: httpx.Request) -> httpx.Response:
+            nonlocal calls
+            calls += 1
+            if calls == 1:
+                if kind == "connect":
+                    raise httpx.ConnectError("Synthetic connection failure", request=request)
+                if kind == "timeout":
+                    raise httpx.ReadTimeout("Synthetic timeout", request=request)
+                return httpx.Response(int(kind))
+            return httpx.Response(200, json=response())
+
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handle)) as client:
+            provider = OverpassPlacesProvider(client)
+            result = await provider.discover(ORIGIN, 1000)
+            assert not isinstance(result, CompilationFailure) and calls == 2
+            assert provider.availability.retry_at == 0
+            assert result[0].price is None and result[0].opening_windows is None
+
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize("status", [403, 406, 429, 500, 503])
+def test_denial_and_server_retry_after_are_not_retried(status: int) -> None:
+    async def run() -> None:
+        calls = 0
+
+        def handle(request: httpx.Request) -> httpx.Response:
+            nonlocal calls
+            calls += 1
+            return httpx.Response(status, headers={"Retry-After": "600"})
+
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handle)) as client:
+            provider = OverpassPlacesProvider(client)
+            result = await provider.discover(ORIGIN, 1000)
+            assert isinstance(result, CompilationFailure) and "600 seconds" in result.message
+            assert calls == 1
+            assert isinstance(await provider.discover(ORIGIN, 1000), CompilationFailure)
             assert calls == 1
 
     asyncio.run(run())
+
+
+def test_retry_after_date_and_invalid_values() -> None:
+    from datetime import timedelta
+    from email.utils import format_datetime
+
+    from app.places import retry_delay_seconds
+
+    assert retry_delay_seconds(None) == retry_delay_seconds("invalid") == 60
+    assert retry_delay_seconds("-1") == 60
+    assert retry_delay_seconds("600") == 600
+    later = format_datetime(datetime.now(UTC) + timedelta(minutes=10), usegmt=True)
+    assert 599 <= retry_delay_seconds(later) <= 600
 
 
 def test_incomplete_map_response_cools_down_but_empty_valid_response_does_not() -> None:

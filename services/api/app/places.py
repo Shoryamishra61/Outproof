@@ -3,6 +3,7 @@
 import asyncio
 import logging
 from datetime import UTC, datetime
+from email.utils import parsedate_to_datetime
 from math import ceil
 from time import monotonic
 from typing import Protocol
@@ -22,6 +23,23 @@ class OverpassAvailability:
     def __init__(self) -> None:
         self.retry_at = 0.0
         self.lock = asyncio.Lock()
+
+
+def retry_delay_seconds(value: str | None) -> int:
+    if value is None:
+        return 60
+    try:
+        if len(value) <= 12:
+            return max(60, int(value))
+    except ValueError:
+        pass
+    try:
+        retry_at = parsedate_to_datetime(value)
+        if retry_at.tzinfo is not None:
+            return max(60, ceil((retry_at - datetime.now(UTC)).total_seconds()))
+    except (ValueError, TypeError, OverflowError):
+        pass
+    return 60
 
 
 def overpass_query(origin: Coordinates, radius_meters: int) -> str:
@@ -187,38 +205,52 @@ class OverpassPlacesProvider:
                     "no nearby place has been verified."
                 ),
             )
-        try:
-            response = await self.client.post(
-                self.endpoint,
-                data={"data": query},
-                timeout=40,
-                headers={
-                    "User-Agent": "GroundRule/0.1 (https://github.com/Shoryamishra61/Outproof)"
-                },
-                follow_redirects=False,
-            )
-            response.raise_for_status()
-            result = normalize_overpass(response.json(), observed_at=datetime.now(UTC))
-            if (
-                isinstance(result, CompilationFailure)
-                and result.code == "SOURCE_TEMPORARILY_UNAVAILABLE"
-            ):
-                self.availability.retry_at = monotonic() + 60
-            else:
-                self.availability.retry_at = 0
-            return result
-        except (httpx.HTTPError, ValueError) as error:
-            status = (
-                error.response.status_code if isinstance(error, httpx.HTTPStatusError) else None
-            )
-            logging.getLogger(__name__).warning(
-                "discovery failure kind=%s http_status=%s", type(error).__name__, status
-            )
-            self.availability.retry_at = monotonic() + 60
-            return CompilationFailure(
-                code="SOURCE_TEMPORARILY_UNAVAILABLE",
-                message=(
-                    "Map discovery could not be reached. Retry in 60 seconds; "
-                    "no nearby place has been verified."
-                ),
-            )
+        for attempt in range(2):
+            try:
+                response = await self.client.post(
+                    self.endpoint,
+                    data={"data": query},
+                    timeout=40,
+                    headers={
+                        "User-Agent": "GroundRule/0.1 (https://github.com/Shoryamishra61/Outproof)"
+                    },
+                    follow_redirects=False,
+                )
+                response.raise_for_status()
+                result = normalize_overpass(response.json(), observed_at=datetime.now(UTC))
+                if (
+                    isinstance(result, CompilationFailure)
+                    and result.code == "SOURCE_TEMPORARILY_UNAVAILABLE"
+                ):
+                    self.availability.retry_at = monotonic() + 60
+                else:
+                    self.availability.retry_at = 0
+                return result
+            except (httpx.HTTPError, ValueError) as error:
+                status = (
+                    error.response.status_code if isinstance(error, httpx.HTTPStatusError) else None
+                )
+                logging.getLogger(__name__).warning(
+                    "discovery failure kind=%s http_status=%s", type(error).__name__, status
+                )
+                retry_after = (
+                    error.response.headers.get("Retry-After")
+                    if isinstance(error, httpx.HTTPStatusError)
+                    else None
+                )
+                transient = isinstance(
+                    error, (httpx.ConnectError, httpx.TimeoutException)
+                ) or status in {502, 503, 504}
+                if attempt == 0 and transient and retry_after is None:
+                    await asyncio.sleep(1)
+                    continue
+                delay = retry_delay_seconds(retry_after)
+                self.availability.retry_at = monotonic() + delay
+                return CompilationFailure(
+                    code="SOURCE_TEMPORARILY_UNAVAILABLE",
+                    message=(
+                        f"Map discovery is temporarily unavailable. Retry in {delay} seconds; "
+                        "no nearby place has been verified."
+                    ),
+                )
+        raise AssertionError("Bounded discovery attempt did not return")

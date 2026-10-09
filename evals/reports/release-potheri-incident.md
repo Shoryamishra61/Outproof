@@ -26,3 +26,9 @@ Visual thesis remains a field notebook: one chosen starting pin, a plain limits 
 | Physical trials | UNEXECUTED | Software checks and screen recordings do not replace field trials |
 
 The configured endpoints are public community services with no uptime guarantee; the authenticated model tunnel still depends on this laptop. No paid service was enabled.
+
+## Repeat failure and bounded recovery
+
+Final-build repeat at `2200b6f6cd5680e5f063c0ad4b453c679d0d3131` returned another HTTP 503 (request `3c44abddc03345c88ef36f88d944d981`). The actual upstream result was HTTP 504. The previous successful discovery run therefore does **not** establish stable discovery availability. The real browser still displayed the correct failure, retained limits and no plan/GO, with no page exceptions or overflow at 320/390/1440 pixels. Computed error/status text contrasts were 11.859:1 and 5.948:1. Both services matched green CI 37988737783; authentication remained 401/401/200.
+
+Recovery now attempts at most two requests, separated by one second, for connection/timeouts and HTTP 502/503/504 without a server Retry-After. It never immediately retries access denials, rate limits, malformed/incomplete data or unknown operational facts. A valid server Retry-After (seconds or HTTP date) is respected with a minimum 60-second cooldown. No facts from partial responses are merged. Eleven additional controlled checks cover transient recovery, private-safe diagnostics, serialization and server cooldown. `./scripts/check.ps1` then passed 4,914 tests/two opt-in skips, 17 schemas, 60 structural cases, 85 policy cases, Ruff and TypeScript/Vite. Production verification of this final retry change is pending; the recorded upstream 504 remains a real failure.
