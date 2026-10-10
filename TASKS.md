@@ -281,3 +281,8 @@ Thousands of controlled cases are not thousands of real outings. Potheri admissi
 - [x] Execute and retain the real post-deployment GitHub workflow (38038858430 PASS on 0badba9).
 - [ ] Finish the separately preserved final 100-origin production campaign.
 - [ ] Human manual device/screen-reader sessions and three physical India trials.
+
+- [x] Add an optional actual route-start proposal only for bounded origin mismatch, with no venue-endpoint displacement or unmodeled ferry/toll.
+- [x] Require explicit selection then a new compilation; preserve every limit and disclose unverified travel to the new starting point.
+- [x] Execute actual local Bengaluru parser/source/round-trip/ranker recovery and zero-walking refusal; controlled schema, keyboard, invalid/distant/missing-source and paid-route regressions pass.
+- [ ] Deploy and execute this explicit recovery in a fresh unmocked public browser, including proof/GO and responsive review.

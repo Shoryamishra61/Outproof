@@ -1,0 +1,15 @@
+{
+  "executed_at": "2026-10-10T09:45:31.491103+00:00",
+  "scope": "Read-only existing SerpApi account/quota; no search, purchase, top-up or plan change",
+  "status": "PASS",
+  "http_status": 200,
+  "account": {
+    "account_status": "Active",
+    "plan_name": "Free Plan",
+    "plan_monthly_price": 0.0,
+    "searches_per_month": 250,
+    "plan_searches_left": 242,
+    "total_searches_left": 242,
+    "this_month_usage": 8
+  }
+}

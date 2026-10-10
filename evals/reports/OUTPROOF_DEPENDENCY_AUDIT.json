@@ -1,0 +1,19 @@
+{
+  "executed_at": "2026-10-10T09:22:18.617070+00:00",
+  "commands": [
+    "uv run pip-audit --local --format json --output artifacts/release/python-dependency-audit.json",
+    "npm audit --prefix apps/web --audit-level=high --json"
+  ],
+  "scope": "Installed locked software dependencies and current provider advisories; no binary/model or unknown-vulnerability guarantee",
+  "python_findings": 0,
+  "npm_findings": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "status": "PASS",
+  "github_execution_of_added_gates": "PENDING"
+}

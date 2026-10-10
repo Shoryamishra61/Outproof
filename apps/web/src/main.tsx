@@ -4,7 +4,7 @@ import Ajv from 'ajv/dist/2020';
 import addFormats from 'ajv-formats';
 import compiledSchema from '../../../contracts/compiled-plan.schema.json';
 import failureSchema from '../../../contracts/compilation-failure.schema.json';
-import type { CompiledPlan, CompilationFailure, ConstraintSet, Evidence, Money } from '../../../contracts/domain';
+import type { CompiledPlan, CompilationFailure, ConstraintSet, Coordinates, Evidence, Money } from '../../../contracts/domain';
 import { LocationPicker, type StartingPoint } from './LocationPicker';
 import './style.css';
 
@@ -22,6 +22,13 @@ const ageHours: Record<string, number> = { identity: 720, coordinates: 720, cate
 function money(value: Money | null) {
   if (!value) return 'Unknown';
   return new Intl.NumberFormat('en-IN', { style: 'currency', currency: value.currency_code }).format(value.minor_units / (value.currency_code === 'JPY' ? 1 : 100));
+}
+function nearbyOrigin(proposed: Coordinates, original: Coordinates): boolean {
+  const radians = Math.PI / 180;
+  const latitude = (proposed.latitude - original.latitude) * radians;
+  const longitude = (proposed.longitude - original.longitude) * radians;
+  const separation = 12742000 * Math.asin(Math.min(1, Math.sqrt(Math.sin(latitude / 2) ** 2 + Math.cos(proposed.latitude * radians) * Math.cos(original.latitude * radians) * Math.sin(longitude / 2) ** 2)));
+  return separation <= 100;
 }
 function sourceState(source: Evidence) {
   const elapsed = (Date.now() - Date.parse(source.observed_at)) / 3600000;
@@ -93,12 +100,15 @@ function App() {
   const [isLocating, setIsLocating] = useState(false);
   const [text, setText] = useState('');
   const [error, setError] = useState('');
+  const [proposedOrigin, setProposedOrigin] = useState<StartingPoint | null>(null);
   const [lastCompileFailed, setLastCompileFailed] = useState(false);
   const [result, setResult] = useState<CompiledPlan | null>(null);
   const [sent, setSent] = useState<ConstraintSet | null>(null);
   const [step, setStep] = useState(0);
   const [audioError, setAudioError] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
+  const errorPanel = useRef<HTMLParagraphElement>(null);
+  const compileButton = useRef<HTMLButtonElement>(null);
   const pending = useRef<AbortController | null>(null);
   const locationRequest = useRef(0);
   useEffect(() => {
@@ -112,11 +122,11 @@ function App() {
     }).catch(() => setConnection('unavailable')).finally(() => window.clearTimeout(timeout));
     return () => { window.clearTimeout(timeout); controller.abort(); };
   }, [attempt]);
-  useEffect(() => { heading.current?.focus(); }, [state, step]);
+  useEffect(() => { (state === 'home' ? errorPanel.current ?? heading.current : heading.current)?.focus(); }, [state, step]);
   useEffect(() => () => pending.current?.abort(), []);
   useEffect(() => () => { locationRequest.current++; }, []);
   function requestLocation() {
-    setOriginMode('device'); setError(''); setDeviceCoords(null); setMapOrigin(null);
+    setOriginMode('device'); setError(''); setProposedOrigin(null); setDeviceCoords(null); setMapOrigin(null);
     const requestId = ++locationRequest.current;
     if (!window.isSecureContext || !('geolocation' in navigator)) {
       setIsLocating(false); setError('GPS is unavailable here. Search for an area or choose on the map.'); return;
@@ -155,7 +165,7 @@ function App() {
       max_walking_meters: null, return_by_local: null, locale: 'en-IN',
       origin, departure_at: new Date().toISOString(), strict_budget: true,
     };
-    setSent(controls); setError(''); setLastCompileFailed(false); setResult(null); setStep(0); setState('compiling');
+    setSent(controls); setError(''); setProposedOrigin(null); setLastCompileFailed(false); setResult(null); setStep(0); setState('compiling');
     const controller = new AbortController(); pending.current = controller;
     const timeout = window.setTimeout(() => controller.abort(), 185000);
     try {
@@ -164,6 +174,9 @@ function App() {
       const body: unknown = await response.json();
       if (pending.current !== controller) return;
       if (!response.ok || !acceptedPlan(body, controls, mode)) {
+        if (isFailure(body) && body.code === 'UNSUPPORTED_CONSTRAINT' && body.suggested_origin && nearbyOrigin(body.suggested_origin, origin)) {
+          setProposedOrigin({ ...body.suggested_origin, label: 'Mapped walking-route start' });
+        }
         const failureMessage = isFailure(body)
           ? body.message
           : 'The response could not be verified. No plan displayed.';
@@ -199,7 +212,7 @@ function App() {
       <form onSubmit={compile} aria-label="Outing controls">
         <fieldset className="origin-choice">
           <legend>Starting location</legend>
-          {liveMode && <button type="button" className="secondary" onClick={() => { locationRequest.current++; setIsLocating(false); setOriginMode('map'); setMapOrigin({ latitude: 30.7443502, longitude: 76.7787642, label: 'Reviewed Shanti Kunj walking start, Chandigarh, India' }); setCurrency('INR'); setBudget(0); setError(''); }}>Try the Chandigarh walking start</button>}
+          {liveMode && <button type="button" className="secondary" onClick={() => { locationRequest.current++; setIsLocating(false); setOriginMode('map'); setMapOrigin({ latitude: 30.7443502, longitude: 76.7787642, label: 'Reviewed Shanti Kunj walking start, Chandigarh, India' }); setCurrency('INR'); setBudget(0); setProposedOrigin(null); setError(''); }}>Try the Chandigarh walking start</button>}
           <label className="check">
             <input
               type="radio"
@@ -207,7 +220,7 @@ function App() {
               id="origin-demo"
               aria-describedby={liveMode ? 'example-limits' : undefined}
               checked={originMode === 'demo'}
-              onChange={() => { locationRequest.current++; setIsLocating(false); setOriginMode('demo'); setMapOrigin(null); if (liveMode) { setCurrency('SGD'); setBudget(0); } setError(''); }}
+              onChange={() => { locationRequest.current++; setIsLocating(false); setOriginMode('demo'); setMapOrigin(null); setProposedOrigin(null); if (liveMode) { setCurrency('SGD'); setBudget(0); } setError(''); }}
             />
             {liveMode ? 'Try the Singapore example start' : 'Fixture Chennai example (T. Nagar: 13.0418, 80.2341)'}
           </label>
@@ -223,7 +236,7 @@ function App() {
               {isLocating ? 'Detecting your device location…' : deviceCoords ? `Device location · accuracy ±${Math.ceil(deviceCoords.accuracy)} m` : 'Use my current location (GPS)'}
           </label>
           {originMode === 'device' && <button className="secondary" type="button" onClick={requestLocation} disabled={isLocating}>Refresh GPS</button>}
-          <LocationPicker apiBase={apiBase} point={mapOrigin} onChange={point => { locationRequest.current++; setIsLocating(false); setOriginMode('map'); setMapOrigin(point); setError(''); }} />
+          <LocationPicker apiBase={apiBase} point={mapOrigin} onChange={point => { locationRequest.current++; setIsLocating(false); setOriginMode('map'); setMapOrigin(point); setProposedOrigin(null); setError(''); }} />
         </fieldset>
         <div className="controls">
           <label>Time incl. return (min)<input id="duration" type="number" min="15" max="480" step="1" required value={duration} onChange={e => setDuration(e.target.valueAsNumber)} /></label>
@@ -238,8 +251,9 @@ function App() {
         <fieldset><legend>Hard rules</legend><label className="check"><input id="vegetarian" type="checkbox" checked={veg} onChange={e => setVeg(e.target.checked)} />Vegetarian required</label><label className="check"><input id="no-mall" type="checkbox" checked={mall} onChange={e => setMall(e.target.checked)} />No mall</label></fieldset>
         <label className="check"><input id="quiet" type="checkbox" checked={quiet} onChange={e => setQuiet(e.target.checked)} />Prefer somewhere quiet</label>
         <details className="extras"><summary>Add a rule or preference</summary><label>Anything else? <span>Optional · parsed by Gemma</span><textarea maxLength={4000} rows={2} value={text} onChange={e => setText(e.target.value)} /></label></details>
-        {error && <p role="alert" className="status">{error}</p>}
-        <button type="submit" disabled={connection !== 'ready' || isLocating || (originMode === 'device' && !deviceCoords) || (originMode === 'map' && !mapOrigin)}>{liveMode ? 'Compile one live plan' : 'Compile one fixture plan'}</button>
+        {error && <p ref={errorPanel} tabIndex={-1} role="alert" className="status">{error}</p>}
+        {proposedOrigin && <div className="notice"><p>The provider found a nearby walking-route start. Choose it only if you can start there. Travel from your current pin to that point is not verified or included. Your limits stay the same; compile again after selecting it.</p><button type="button" onClick={() => { locationRequest.current++; setIsLocating(false); setOriginMode('map'); setMapOrigin(proposedOrigin); setProposedOrigin(null); setError(''); compileButton.current?.focus(); }}>Set start to mapped route</button></div>}
+        <button ref={compileButton} type="submit" disabled={connection !== 'ready' || isLocating || (originMode === 'device' && !deviceCoords) || (originMode === 'map' && !mapOrigin)}>{liveMode ? 'Compile one live plan' : 'Compile one fixture plan'}</button>
       </form>}
       <p role="status" className="connection">{lastCompileFailed ? 'Last compilation failed · no verified plan' : connection === 'checking' ? 'Checking API…' : connection === 'ready' ? (liveMode ? 'API reachable · reviewed-source check passed; selected area checked on compile' : 'API connected · live compilation disabled') : 'API unavailable'}</p>
       {connection === 'unavailable' && <button type="button" onClick={() => setAttempt(attempt + 1)}>Check connection</button>}

@@ -1,0 +1,17 @@
+{
+  "executed_at": "2026-10-10T09:43:01.984272+00:00",
+  "scope": "Read-only actual production Sentry technical operation counts over the last hour; no prompts, user bodies, coordinates or credentials retained",
+  "status": "FAIL",
+  "http_status": 200,
+  "technical_operations": [
+    {
+      "operation": "http.server",
+      "count": 106.0
+    },
+    {
+      "operation": "ground_rule.ground_and_validate",
+      "count": 9.0
+    }
+  ],
+  "failure_kind": "AssertionError"
+}

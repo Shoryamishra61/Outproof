@@ -1,0 +1,28 @@
+{
+  "executed_at": "2026-10-10T10:09:24.635227+00:00",
+  "scope": "Independent complete-cohort, contract and immutable-deployment audit; original selected public-area origins and scheduled17IST departure. No substituted starts or physical visits.",
+  "source_sha256": "3d255a07b619867cfdd5f67678f1a70ab54405d83c93a70b93326302079b5fb1",
+  "commit": "9103889ef1024603e4dde1a3264758db7cd69633",
+  "started_at": "2026-10-10T08:59:09.781528+00:00",
+  "completed_at": "2026-10-10T10:07:00.920719+00:00",
+  "departure_at": "2026-10-10T17:00:00+05:30",
+  "actual_searches": 100,
+  "actual_compiles": 100,
+  "distinct_origins": 100,
+  "outcomes": {
+    "TYPED_REJECTION": 76,
+    "TEMPORARY_PROVIDER_ERROR": 24
+  },
+  "failure_codes": {
+    "NO_GROUNDED_CANDIDATES": 74,
+    "SOURCE_TEMPORARILY_UNAVAILABLE": 24,
+    "UNSUPPORTED_CONSTRAINT": 2
+  },
+  "evidence_recording_status": "PASS",
+  "broad_working_coverage_status": "FAIL",
+  "limitations": [
+    "Scheduled software compilation is not a current-location physical outing",
+    "Safe refusals and provider errors are not accepted plans",
+    "Later confirmed-origin repairs are a separate deployed build and population"
+  ]
+}

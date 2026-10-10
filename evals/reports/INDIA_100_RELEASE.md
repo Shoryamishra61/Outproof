@@ -1,3 +1,9 @@
+# Current release status
+
+[The current Outproof release report](OUTPROOF_CURRENT_RELEASE.md) supersedes earlier whole-trip and coverage claims below. Final100: zero accepted,76 typed refusals,24 provider failures; independent evidence audit PASS, broad coverage FAIL. The current origin-confirmation repair is locally verified and public verification is pending.
+
+--- Historical evidence ---
+
 # India production coverage campaign
 
 The actual deployed API at `a519dc8f42494f75973a6a16948eda855875703b` was tested at **100 distinct India starting coordinates**, selected from real Photon search responses. All 100 had an actual compilation request; there were **0 accepted plans, 87 typed rejections and 13 temporary provider errors**. Deployment identity did not change within any case. Every attempted city, origin, input, timestamp, HTTP status, request ID, latency and full response is in `INDIA_100_BASELINE.json`.

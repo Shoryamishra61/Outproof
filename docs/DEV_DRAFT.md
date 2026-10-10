@@ -38,7 +38,9 @@ One real audit changed the implementation: a provider echoed the requested city-
 
 GitHub Actions runs locked builds, schema and policy checks, controlled provider regressions, browser journeys and secret scanning. A separate production workflow requires a real accepted public compilation and hard-rule refusals after deployment. Controlled tests, public execution and physical trials remain separate evidence populations.
 
-The release reports retain unsuccessful India searches and provider failures. Potheri has no evidence-sufficient accepted outing. Broad India coverage remains unfinished. Three physical India visits and physical screen-ratio measurement are **UNEXECUTED**. The product makes no physical access or safety guarantee.
+Sentry records technical timing rather than private prompts or location history. An actual sampled HTTP/grounding/Gemma hierarchy is retained in the [sanitized trace report](https://github.com/Shoryamishra61/Outproof/blob/master/evals/reports/OUTPROOF_SENTRY_TRACE_LIVE.json). Sampling is 10%; the latest one-hour query did not include a ranking span, and that failed observation check is retained too.
+
+The release reports retain unsuccessful India searches and provider failures. Potheri has no evidence-sufficient accepted outing. The final live campaign produced no verified outing from the 100 original India starting points. Broad India coverage remains unfinished. Three physical India visits and physical screen-ratio measurement are **UNEXECUTED**. The product makes no physical access or safety guarantee.
 
 ## Why Does Open Innovation Matter?
 

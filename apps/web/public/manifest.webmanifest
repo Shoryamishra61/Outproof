@@ -1,7 +1,7 @@
 {
-  "name": "Ground Rule",
-  "short_name": "Ground Rule",
-  "description": "Your limits in. One real plan out. Development setup only.",
+  "name": "Outproof",
+  "short_name": "Outproof",
+  "description": "One outing. Every limit checked. Live compilation needs a network connection.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

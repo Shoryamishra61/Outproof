@@ -401,6 +401,16 @@ class CompilationFailure(Contract):
         "MODEL_OUTPUT_INVALID",
     ]
     message: NonEmptyStr
+    # Keep ordinary failure payloads unchanged for existing browser sessions.
+    suggested_origin: Coordinates | None = Field(
+        default=None, exclude_if=lambda value: value is None
+    )
+
+    @model_validator(mode="after")
+    def route_start_only_for_unsupported_origin(self) -> Self:
+        if self.suggested_origin is not None and self.code != "UNSUPPORTED_CONSTRAINT":
+            raise ValueError("An origin proposal cannot repair missing source or model evidence")
+        return self
 
 
 CONTRACT_MODELS = (

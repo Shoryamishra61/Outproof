@@ -5,6 +5,7 @@ from pathlib import Path
 import pytest
 from ground_rule.models import (
     CandidatePlan,
+    CompilationFailure,
     CompiledPlan,
     ConstraintSet,
     Evidence,
@@ -15,6 +16,38 @@ from jsonschema import Draft202012Validator, FormatChecker
 from pydantic import ValidationError
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_ordinary_failure_serialization_keeps_existing_payload() -> None:
+    failure = CompilationFailure(code="NO_GROUNDED_CANDIDATES", message="No source proof")
+    assert failure.model_dump(mode="json") == {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No source proof",
+    }
+    proposal = CompilationFailure(
+        code="UNSUPPORTED_CONSTRAINT",
+        message="Choose a mapped route start",
+        suggested_origin={"latitude": 13.04, "longitude": 80.23},
+    )
+    assert proposal.model_dump(mode="json")["suggested_origin"] == {
+        "latitude": 13.04,
+        "longitude": 80.23,
+    }
+
+
+def test_origin_proposal_cannot_claim_to_repair_source_or_model_failures() -> None:
+    for code in (
+        "NO_GROUNDED_CANDIDATES",
+        "SOURCE_TEMPORARILY_UNAVAILABLE",
+        "MODEL_OUTPUT_INVALID",
+    ):
+        with pytest.raises(ValidationError):
+            CompilationFailure(
+                code=code,
+                message="Synthetic failure",
+                suggested_origin={"latitude": 13.04, "longitude": 80.23},
+            )
 
 
 def test_currency_safe_arithmetic_and_comparison() -> None:

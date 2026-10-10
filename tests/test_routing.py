@@ -61,6 +61,64 @@ def test_route_geometry_must_reach_coordinates_not_just_echo_them() -> None:
     )
     assert isinstance(result, CompilationFailure) and result.code == "UNSUPPORTED_CONSTRAINT"
     assert "map pin" in result.message
+    assert result.suggested_origin == START
+
+
+@pytest.mark.parametrize(
+    "origin_latitude, destination_latitude", [(13.042, 13.045), (13.0402, 13.0452)]
+)
+def test_distant_or_unbound_destination_cannot_propose_an_origin(
+    origin_latitude: float, destination_latitude: float
+) -> None:
+    value = payload()
+    value["trip"]["locations"][0]["lat"] = origin_latitude
+    value["trip"]["locations"][1]["lat"] = destination_latitude
+    result = normalize_valhalla(
+        value,
+        from_id="origin",
+        to_id="park",
+        start=Coordinates(latitude=origin_latitude, longitude=START.longitude),
+        end=Coordinates(latitude=destination_latitude, longitude=END.longitude),
+        route_id="test-route",
+        endpoint="https://test/route",
+        observed_at=datetime(2026, 10, 7, tzinfo=UTC),
+    )
+    assert isinstance(result, CompilationFailure) and result.suggested_origin is None
+
+
+def test_return_route_can_propose_only_its_actual_origin_endpoint() -> None:
+    value = payload()
+    value["trip"]["locations"][1]["lat"] += 0.0002
+    result = normalize_valhalla(
+        value,
+        from_id="park",
+        to_id="origin",
+        start=START,
+        end=Coordinates(latitude=13.0452, longitude=END.longitude),
+        route_id="test-route",
+        endpoint="https://test/route",
+        observed_at=datetime(2026, 10, 7, tzinfo=UTC),
+    )
+    assert isinstance(result, CompilationFailure) and result.suggested_origin == END
+
+
+@pytest.mark.parametrize("field", ["has_ferry", "has_toll"])
+def test_unmodeled_cost_cannot_be_repaired_by_an_origin_proposal(field: str) -> None:
+    value = payload()
+    value["trip"]["locations"][0]["lat"] += 0.0002
+    value["trip"]["summary"][field] = True
+    value["trip"]["legs"][0]["summary"][field] = True
+    result = normalize_valhalla(
+        value,
+        from_id="origin",
+        to_id="park",
+        start=Coordinates(latitude=13.0402, longitude=START.longitude),
+        end=END,
+        route_id="test-route",
+        endpoint="https://test/route",
+        observed_at=datetime(2026, 10, 7, tzinfo=UTC),
+    )
+    assert isinstance(result, CompilationFailure) and result.suggested_origin is None
 
 
 @pytest.mark.parametrize(

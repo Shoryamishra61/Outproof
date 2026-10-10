@@ -120,15 +120,6 @@ def normalize_valhalla(
                 raise ValueError("Trip and single-leg summaries conflict")
             points = route_shape(trip["legs"][0]["shape"])
             endpoint_offsets = [distance_meters(start, points[0]), distance_meters(end, points[-1])]
-            # One meter allows coordinate serialization rounding, not an unverified connector.
-            if any(offset > 1 for offset in endpoint_offsets):
-                return CompilationFailure(
-                    code="UNSUPPORTED_CONSTRAINT",
-                    message=(
-                        "The walking route does not reach the chosen point. "
-                        "Move the map pin onto a public footpath and try again."
-                    ),
-                )
             # Ferries/tolls may introduce unmodeled mandatory costs; never call them free walks.
             for field in ("has_ferry", "has_toll"):
                 if type(summary.get(field)) is not bool:
@@ -138,6 +129,29 @@ def normalize_valhalla(
                         code="UNSUPPORTED_CONSTRAINT",
                         message="Walking route has a ferry/toll with unsupported mandatory cost",
                     )
+            # One meter allows coordinate serialization rounding, not an unverified connector.
+            if any(offset > 1 for offset in endpoint_offsets):
+                proposed = None
+                if (
+                    from_id == "origin"
+                    and 1 < endpoint_offsets[0] <= 100
+                    and endpoint_offsets[1] <= 1
+                ):
+                    proposed = points[0]
+                elif (
+                    to_id == "origin"
+                    and 1 < endpoint_offsets[1] <= 100
+                    and endpoint_offsets[0] <= 1
+                ):
+                    proposed = points[-1]
+                return CompilationFailure(
+                    code="UNSUPPORTED_CONSTRAINT",
+                    message=(
+                        "The walking route does not reach the chosen point. "
+                        "Move the map pin onto a public footpath and try again."
+                    ),
+                    suggested_origin=proposed,
+                )
             duration = math.ceil(seconds)
             distance = float(kilometers * 1000)
         value = dict(

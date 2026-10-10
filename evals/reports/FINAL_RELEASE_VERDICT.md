@@ -1,3 +1,21 @@
+# Current release status
+
+[The current Outproof release report](OUTPROOF_CURRENT_RELEASE.md) supersedes earlier whole-trip and coverage claims below. Final100: zero accepted,76 typed refusals,24 provider failures; independent evidence audit PASS, broad coverage FAIL. The current origin-confirmation repair is locally verified and public verification is pending.
+
+--- Historical evidence ---
+
+# Current Outproof execution checkpoint — 2026-10-10T09:20:41.327306+00:00
+
+**BLOCKED — CRITICAL RELEASE REQUIREMENTS UNMET.** The public application and73-second demo are actually accessible. Build9103889ef1024603e4dde1a3264758db7cd69633 has green Checks38039425822, matching live Render services and real Production verification38039596322: Gemma parser/ranker/source/routing -> one reviewed Shanti Kunj plan; zero-walking and wrong-currency requests refused. Actual map loading/tiles and new public video decode/play/range/hash checks passed. No physical outing or worldwide coverage follows from these results.
+
+The final separately preserved100-origin campaign is active on this fixed build: 31 actual cases checkpointed in INDIA_100_FINAL.json, scheduled departure17:00IST, no physical visits. Its results must not be called complete or merged with the original baseline/intermediate cohort. Deployment is frozen until this campaign completes.
+
+Local undeployed route-start recovery passed real Bengaluru parser/source/routing/ranker execution: original city point refused; recompilation from the returned mapped route point accepted one plan; walking zero still refused. Selection is explicit, travel to the new point is unverified/excluded, and every limit stays unchanged. Canonical checks and complete controlled browser suite passed; public verification is pending. Optional failure-contract metadata does not loosen one-metre route acceptance or any hard policy. See OUTPROOF_CONFIRMED_ORIGIN_LOCAL.json and ADR0014.
+
+Remaining blockers: broad India accepted coverage/Potheri authoritative admission and hours, always-on authenticated inference, human device/screen-reader sessions, three physical India trials and screen-ratio measurement. New spend remains$0; no additional key is required for the demonstrated narrow flows. Engineering freeze09:00IST was missed. DEV remains an unpublished draft; it is not accurate to say only submission remains. Next: finish the active fixed-build cohort, publish the tested repair through CI/deployment, then execute its actual public browser recovery and final evidence handoff.
+
+--- Prior checkpoint ---
+
 # Latest actual Outproof public verification — 2026-10-10T08:52:22.441087+00:00
 
 Product build 0badba9efaca04a3c5234af69e8bb33827a9fc59: Checks38038738220 green, both matching Render deployments live, actual production version confirmed. Production verification38038858430 passed real Gemma parser/ranker -> one Shanti Kunj plan (HTTP200), zero-walking/wrong-currency refusals (409), fixture prohibition, exact model tag and allowed/denied CORS. A clean actual public browser passed the explicit reviewed start, one plan, source proof, GO/voice/next/back, keyboard focus and mobile390. A separate real typed Chandigarh/GPS-denial flow passed visible recovery and endpoint refusal at six widths. This refusal is not accepted geographic coverage.

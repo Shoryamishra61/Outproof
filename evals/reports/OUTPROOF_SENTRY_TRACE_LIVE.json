@@ -1,0 +1,38 @@
+{
+  "executed_at": "2026-10-10T09:46:17.686583+00:00",
+  "scope": "Separate read-only24-hour sampled production ranking hierarchy; does not erase the failed1-hour ranking window or prove every request is sampled",
+  "status": "PASS_FOR_OBSERVED_SAMPLED_HIERARCHY",
+  "query_http_status": 200,
+  "trace_http_status": 200,
+  "trace_id": "0bc97145377e40098b9d6003ab99de8b",
+  "spans": [
+    {
+      "event_id": "a834817f9cdd910a",
+      "op": "http.server",
+      "parent_span_id": null,
+      "start_timestamp": 1791604655.513858,
+      "end_timestamp": 1791604661.975273,
+      "duration": 6461.414814,
+      "children": [
+        {
+          "event_id": "8b4d89ed5512ddb1",
+          "op": "ground_rule.ground_and_validate",
+          "parent_span_id": "a834817f9cdd910a",
+          "start_timestamp": 1791604657.266624,
+          "end_timestamp": 1791604660.344392,
+          "duration": 3077.768087,
+          "children": []
+        },
+        {
+          "event_id": "97cfae1702f387f6",
+          "op": "ground_rule.gemma_rank",
+          "parent_span_id": "a834817f9cdd910a",
+          "start_timestamp": 1791604660.344466,
+          "end_timestamp": 1791604661.972564,
+          "duration": 1628.098011,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

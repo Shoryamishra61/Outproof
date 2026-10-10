@@ -1,3 +1,9 @@
+# Current release status
+
+[The current Outproof release report](OUTPROOF_CURRENT_RELEASE.md) supersedes earlier whole-trip and coverage claims below. Final100: zero accepted,76 typed refusals,24 provider failures; independent evidence audit PASS, broad coverage FAIL. The current origin-confirmation repair is locally verified and public verification is pending.
+
+--- Historical evidence ---
+
 # Current India release checkpoint — October 10, 2026
 
 The public product has verified, narrow LIVE paths: Tanglin/Singapore, Shanti Kunj and Terraced Gardens/Chandigarh, and Cubbon Park/Bengaluru. The requested broad India product remains **BLOCKED**. The original real 100-origin campaign accepted **0/100**; the three repaired India gardens and their targeted successes do not turn that cohort green. Potheri remains unsupported. The 09:00 IST freeze target was missed.

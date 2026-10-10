@@ -2,6 +2,8 @@
 
 Executed use and contest eligibility are different. Only the judge determines eligibility. No installation, key presence, HTTP 200 or unused credits is counted as working integration. All new cash spending is zero.
 
+Fresh read-only checks on October10: SerpApi remains an active Free Plan, with242 of250 monthly searches left (`OUTPROOF_SERPAPI_QUOTA.json`). The latest one-hour Sentry query returned real HTTP/grounding spans but no sampled ranking span; that failed check is preserved (`OUTPROOF_SENTRY_LIVE.json`). A separate24-hour query returned an actual linked HTTP/grounding/Gemma hierarchy from03:57:35UTC (`OUTPROOF_SENTRY_TRACE_LIVE.json`). Sampling remains10%; this is not proof that every current request has a complete trace. Current production discovery diagnostics retrieved actual upstream504 errors, not guessed provider failures (`OUTPROOF_DISCOVERY_DIAGNOSTICS.json`). No plan, quota, overage or subscription was changed.
+
 | Category | Executed capability / evidence | Claim status |
 |---|---|---|
 | Render | Two free public services; actual LIVE browser compile/proof/GO; CI-gated deployment and recovery receipts | VERIFIED deployment; availability limited by free/laptop runtime |

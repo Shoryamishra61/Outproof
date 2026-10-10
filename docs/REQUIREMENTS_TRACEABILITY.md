@@ -1,5 +1,16 @@
 # Requirements traceability
 
+Current Outproof receipts take precedence over the historical populations below. `OUTPROOF_BROWSER_REVIEW.md` records actual unmocked public parser/ranker, source proof, GO/voice, keyboard, map and mobile execution, with explicit limitations. The final fixed-build India campaign remains in progress; its checkpoint is `INDIA_100_FINAL.json`. A typed refusal is not working coverage. Physical India visits and human device/screen-reader sessions remain UNEXECUTED.
+
+| Flow | Implementation | Evidence | Current scope |
+|---|---|---|---|
+| Distinct same-name starting points | geocoding.py; LocationPicker.tsx | test_geocoding.py; location.spec.ts; outproof-origin-refusal-recovered/receipt.json | Real public search/selection; no outing acceptance implied |
+| Mapped route-start confirmation | routing.py; models.py; main.tsx; generated failure schema | test_routing.py; test_contracts.py; location.spec.ts; OUTPROOF_CONFIRMED_ORIGIN_LOCAL.json | Real local parser/source/routing/ranker recovery; public verification pending |
+| Every limit preserved after selection | main.tsx | location.spec.ts compares submitted controls before/after confirmation | Controlled; origin/departure alone change |
+| Map initialization / source failure / GPS denial | LocationPicker.tsx; main.tsx | OUTPROOF_FINAL_MAP_PUBLIC.json; actual public refusal receipt | Public map loading/tiles and real browser permission denial; physical GPS accuracy unmeasured |
+| Exact deployed build with actual accepted compilation | production.yml; verify_production.py | OUTPROOF_FINAL_PRODUCTION_GITHUB.json | Real public model, sources, routes and proof; closed venues/outages fail the workflow |
+| New demo download, decode and play | demo.html; demo.webm | release-demo-public.json | Actual HTTPS, range, hash, playback and responsive player; no physical footage |
+
 Executed populations are separate: canonical controlled checks, 4,096 synthetic compiler journeys, 124 controlled Chromium journeys, 50 real global attempts, bounded real public probes and zero physical outings. Source filenames are relative to their existing app/domain/test directories. A controlled oracle is not a live geographic capability.
 
 | ID | Requirement | Implementation | Executed oracle / artifact | Evidence status |

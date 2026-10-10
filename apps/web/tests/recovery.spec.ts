@@ -10,6 +10,7 @@ test('source outage is distinct from readiness and retains controls for recovery
   }));
   await submit.click();
   await expect(page.getByRole('alert')).toContainText('Retry in 60 seconds');
+  await expect(page.getByRole('alert')).toBeFocused();
   await expect(page.getByText('Last compilation failed · no verified plan', { exact: true })).toBeVisible();
   await expect(page.getByLabel('Time incl. return (min)')).toHaveValue('90');
   await expect(page.getByRole('heading', { name: 'One fixture plan.' })).toHaveCount(0);

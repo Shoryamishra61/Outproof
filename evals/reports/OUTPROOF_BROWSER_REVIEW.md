@@ -1,3 +1,9 @@
+# Current release status
+
+[The current Outproof release report](OUTPROOF_CURRENT_RELEASE.md) supersedes earlier whole-trip and coverage claims below. Final100: zero accepted,76 typed refusals,24 provider failures; independent evidence audit PASS, broad coverage FAIL. The current origin-confirmation repair is locally verified and public verification is pending.
+
+--- Historical evidence ---
+
 # Outproof real browser review — 2026-10-10T08:52:22.441087+00:00
 
 Scope: an agent visually reviewed screenshots from a fresh, unmocked public Chromium session. The interactive computer-use tool returned an empty browser/app inventory. This is not a human manual device session, screen-reader session or physical outing. All source/API/model requests below were real.
@@ -16,7 +22,11 @@ Scope: an agent visually reviewed screenshots from a fresh, unmocked public Chro
 | Submit original city-centre origin | HTTP 409 UNSUPPORTED_CONSTRAINT asks for a public footpath; selected origin preserved, no GO | request 82763da68b034e349edcdf459fd5c691 |
 | Resize refusal UI | 320, 360, 390, 768, 1024 and 1440 widths: no horizontal overflow | refusal screenshots and receipt |
 
-The positive flow took 7.494 seconds to plan. Its 26.139-second GO measurement includes deliberate recording holds and is not physical Time To Grass. The new recording duration is 72.6 seconds; public playback of that replacement is pending deployment. The preceding 69.36-second asset passed actual public playback, HTTP 200/range 206 and hash checks separately; its old receipt is retained.
+The positive flow took 7.494 seconds to plan. Its 26.139-second GO measurement includes deliberate recording holds and is not physical Time To Grass. The recording duration is 72.6 seconds. Its deployed replacement passed actual public decode/playback, opt-in voice, HTTP 200/range 206, exact hash, focus and six widths on build9103889 (`release-demo-public.json`). The preceding69.36-second receipt remains historical.
+
+The new map loading notice was observed on the actual public build, followed by loaded map tiles. INR500 -> explicit Singapore SGD0 -> Chandigarh INR0 presets passed without a currency conversion, at360/768/1024/1440px with no overflow or JavaScript errors (`OUTPROOF_FINAL_MAP_PUBLIC.json`).
+
+Explicit mapped route-start recovery is locally implemented and tested: a real Bengaluru original-origin request was refused, a reconstructed request from the provider's actual route point compiled with real sources/Gemma, and zero walking remained a refusal (`OUTPROOF_CONFIRMED_ORIGIN_LOCAL.json`). Controlled keyboard tests require separate selection and compare every retained limit. Public deployment and screenshot review of this new recovery are still pending; it is not certified by the historical public screenshots above.
 
 Visual thesis: field notebook. Signatures: an explicitly chosen map pin, a plain constraint form, and one proof ledger leading to GO. The mobile result and original desktop form were visually inspected. The early selected-map screenshot shows initialization before Leaflet finishes, so a visible loading state and aria-busy were added; no map success is inferred from that blank frame. Other actual refusal screenshots contain loaded map imagery.
 

@@ -1,0 +1,14 @@
+{
+  "executed_at": "2026-10-10T08:58:13.396Z",
+  "scope": "Actual current public map initialization/preset/currency widgets; no compilation or physical GPS",
+  "errors": [],
+  "loading_notice_observed": true,
+  "map_tiles_loaded": true,
+  "viewports": [
+    360,
+    768,
+    1024,
+    1440
+  ],
+  "status": "PASS"
+}

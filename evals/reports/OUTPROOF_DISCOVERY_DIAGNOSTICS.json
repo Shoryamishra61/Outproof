@@ -1,0 +1,211 @@
+{
+  "executed_at": "2026-10-10T09:47:28.635120+00:00",
+  "scope": "Read-only latest40 production discovery-failure diagnostics in the last hour; sanitized exception class/status only; not a complete campaign population",
+  "status": "PASS_FOR_RETRIEVING_ACTUAL_FAILURES",
+  "http_status": 200,
+  "diagnostics": [
+    {
+      "at": "2026-10-10T09:09:05.660244917Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:11:15.620622513Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:11:49.7447856Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:12:57.491035882Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:12:59.029691593Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:14:01.831446823Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:14:34.427295474Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:14:35.958873882Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:16:06.460428443Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:16:07.983846755Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:17:10.905363306Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:17:12.427945117Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:18:15.47567797Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:18:52.548149035Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:18:54.063219287Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:20:31.911062329Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:21:06.718181566Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:21:08.260727962Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:22:42.305216774Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:23:59.248769316Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:24:00.759604838Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:25:34.475664523Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:25:36.005060643Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:28:13.208159327Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:30:36.906163088Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:34:38.83091903Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:34:40.365350755Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:37:17.571360712Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:37:19.092538858Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:38:56.777946406Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:39:35.815175346Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:39:37.324363256Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:40:40.317179433Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:40:41.850554487Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:43:26.096074146Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:44:30.391370763Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:45:01.226736533Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:45:02.735170984Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:46:39.628476066Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    },
+    {
+      "at": "2026-10-10T09:46:41.136234233Z",
+      "failure_kind": "HTTPStatusError",
+      "upstream_http_status": "504"
+    }
+  ],
+  "counts": {
+    "HTTPStatusError/504": 40
+  }
+}

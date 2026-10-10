@@ -19,6 +19,7 @@ export function LocationPicker({ apiBase, point, onChange }: { apiBase: string; 
   const [mapReady, setMapReady] = useState(false);
   const [mapError, setMapError] = useState('');
   const container = useRef<HTMLDivElement>(null);
+  const mapToggle = useRef<HTMLButtonElement>(null);
   const map = useRef<LeafletMap | null>(null);
   const marker = useRef<Marker | null>(null);
   const search = useRef<AbortController | null>(null);
@@ -97,8 +98,8 @@ export function LocationPicker({ apiBase, point, onChange }: { apiBase: string; 
     {searchState === 'loading' && <p role="status">Finding matching places…</p>}
     {searchState === 'empty' && <p role="status">No matching places. Add the city or country, or choose on the map.</p>}
     {searchState === 'error' && <p role="alert" className="status">{message}</p>}
-    {searchState === 'results' && <ul className="location-results" aria-label="Matching starting locations">{results.map((p, index) => <li key={`${p.latitude}:${p.longitude}:${index}`}><button type="button" onClick={() => { onChange(p); setResults([]); setSearchState('idle'); }}>{p.label}</button></li>)}</ul>}
-    <button className="secondary map-toggle" type="button" aria-expanded={showMap} onClick={() => setShowMap(!showMap)}>{showMap ? 'Hide map' : 'Choose on map'}</button>
+    {searchState === 'results' && <ul className="location-results" aria-label="Matching starting locations">{results.map((p, index) => <li key={`${p.latitude}:${p.longitude}:${index}`}><button type="button" onClick={() => { onChange(p); setResults([]); setSearchState('idle'); mapToggle.current?.focus(); }}>{p.label}</button></li>)}</ul>}
+    <button ref={mapToggle} className="secondary map-toggle" type="button" aria-expanded={showMap} onClick={() => setShowMap(!showMap)}>{showMap ? 'Hide map' : 'Choose on map'}</button>
     {showMap && <div className="origin-map-panel">{!mapReady && !mapError && <p role="status">Loading the starting-point map… Place search still works.</p>}<p id="map-help">Tap the map or drag the pin. With a keyboard, use arrow keys to move the map, then choose its centre.</p><div className="origin-map" ref={container} role="region" aria-busy={!mapReady} tabIndex={0} aria-label="Starting location map" aria-describedby="map-help" onKeyDown={e => { const steps: Record<string, [number, number]> = { ArrowLeft: [-80, 0], ArrowRight: [80, 0], ArrowUp: [0, -80], ArrowDown: [0, 80] }; if (steps[e.key]) { e.preventDefault(); map.current?.panBy(steps[e.key], { animate: false }); } }} /><button type="button" disabled={!mapReady} onClick={() => { const p = map.current?.getCenter().wrap(); if (p && Math.abs(p.lat) <= 90) onChange({ latitude: p.lat, longitude: p.lng, label: 'Chosen starting point on the map' }); }}>Use map centre as start</button>{mapError && <p role="status">{mapError}</p>}</div>}
     {point && <p role="status" className="selected-location"><strong>Starting point:</strong> {point.label}</p>}
     <small className="map-credit">Place search: <a href="https://photon.komoot.io" target="_blank" rel="noreferrer">Photon</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap contributors</a></small>

@@ -1,3 +1,11 @@
+# Current Outproof security scope
+
+Historical Bengaluru city-origin whole-trip acceptances below are withdrawn: fresh route geometry omitted an unverified origin connector. The acceptance threshold remains one metre. A locally tested optional failure proposal now requires explicit user selection and a new compilation; it cannot repair missing sources, fees, model output or a displaced venue endpoint. No successful-plan or hard-policy contract was relaxed. Public verification of this new recovery is pending.
+
+Fresh installed-lock dependency audits passed with no known findings (`OUTPROOF_DEPENDENCY_AUDIT.json`); the existing Checks workflow now runs these audit commands and retains reports even on failure. Actual execution of these added GitHub steps is pending the post-campaign push. Trust boundaries, auth, CORS and rate limits retain their prior executed controls; final secret/history/bundle/trace scans follow the complete campaign and new public evidence. No blanket security guarantee, paid security service or physical network-interruption claim is issued.
+
+--- Historical executed evidence ---
+
 ## Verified Bengaluru extension — 2026-10-10
 
 Build `f53f7894b3635918825ebd2feadb83389b4f8916`, CI [38023859778](https://github.com/Shoryamishra61/Outproof/actions/runs/38023859778). The provider initially reported the new deployment live while the public API still served the preceding build; those zero-compile precondition failures are preserved in `INDIA_DEPLOY_PROBE_INTERRUPTION.json`. A restart and exact-SHA free redeploy were followed by an actual matching version response. API `dep-db4s0vl9fdbs73amks8g` and web `dep-db4rse3rjlhs73a6df10` were observed live.

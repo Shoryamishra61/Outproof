@@ -1,5 +1,9 @@
 # Deployment
 
+The Checks workflow also audits the installed locked Python dependencies and npm lockfile against current advisories. Both reports upload with release evidence even on failure. Python audit failures and npm high/critical findings block that build; a network/audit failure is not converted into a clean result. The new commands passed locally with no known findings; their next actual GitHub execution remains a separate gate.
+
+`EXPECTED_COMMIT=<exact deployed SHA> node scripts/verify_public_origin.mjs` performs the unmocked Bengaluru route-start browser journey: actual place search, original-point refusal, explicit mapped-point selection, full recompilation, proof/GO and a zero-walking refusal. It retains console/network observations, screenshots and a trace. Run while the reviewed Cubbon main grounds are open and inference is online; an outage or closed venue is a failed live run, never a simulated pass. This is agent browser execution, not a physical visit or human hardware session. Its first actual execution is pending the tested recovery deployment.
+
 Public frontend: https://outproof-web.onrender.com
 
 Production API: https://outproof-api.onrender.com
