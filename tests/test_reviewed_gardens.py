@@ -155,3 +155,56 @@ def test_reviewed_source_errors_do_not_fall_back_to_unverified_facts(status, cap
     assert "source_kind=osm_park" in caplog.text
     assert f"http_status={status}" in caplog.text
     assert "169.254" not in caplog.text and "Authorization" not in caplog.text
+
+
+@pytest.mark.parametrize(
+    "mutation", [None, "stale", "future", "wrong_url", "bad_html", "fee", "denied"]
+)
+def test_relay_preserves_source_identity_freshness_and_claim_checks(monkeypatch, mutation):
+    from app.reviewed_gardens import fetch_garden
+
+    garden, park, path, html = source_example()
+    monkeypatch.setenv("OLLAMA_BASE_URL", "https://relay.example")
+    monkeypatch.setenv("GEMMA_API_KEY", "synthetic-key")
+    calls = []
+
+    def handle(request):
+        calls.append(request)
+        if request.url.host == "www.openstreetmap.org":
+            assert "authorization" not in request.headers
+            return httpx.Response(
+                200, json=park if str(garden.park_way) in request.url.path else path
+            )
+        assert str(request.url) == f"https://relay.example/sources/chandigarh/{garden.park_way}"
+        assert request.headers["authorization"] == "Bearer synthetic-key"
+        if mutation == "denied":
+            return httpx.Response(401)
+        observed = datetime.now(UTC) + timedelta(
+            seconds={"stale": -31, "future": 10}.get(mutation, 0)
+        )
+        return httpx.Response(
+            200,
+            json={
+                "source_url": "https://wrong.example" if mutation == "wrong_url" else garden.url,
+                "observed_at": observed.isoformat(),
+                "html": 12
+                if mutation == "bad_html"
+                else html.replace("Not Applicable", "INR 100")
+                if mutation == "fee"
+                else html,
+            },
+        )
+
+    async def run():
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handle)) as client:
+            if mutation is None:
+                place = await fetch_garden(client, garden)
+                assert place.price.upper.minor_units == 0
+                lineage = next(e.value for e in place.evidence if e.field == "parse_lineage")
+                assert lineage["official_retrieval_transport"] == "authenticated_laptop_relay"
+            else:
+                with pytest.raises((ValueError, httpx.HTTPStatusError)):
+                    await fetch_garden(client, garden)
+        assert len(calls) == 3
+
+    asyncio.run(run())

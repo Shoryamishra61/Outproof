@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "executed_at": "2026-10-10T03:48:51.516238+00:00",
+  "scope": "Actual protected tunnel requests after verified proxy restart; no physical outing",
+  "rows": [
+    {
+      "capability": "model",
+      "authentication_statuses": [
+        401,
+        401,
+        200
+      ]
+    },
+    {
+      "capability": "official_source",
+      "authentication_statuses": [
+        401,
+        401,
+        200
+      ],
+      "source_url": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+      "observed_at": "2026-10-10T03:48:51.497879+00:00",
+      "html_bytes": 50001,
+      "sha256": "468b0d47e4e9ac7348a1bad5b8a468ce3695299ca04d0c83eec0b8993faab679"
+    }
+  ],
+  "launcher_pid": 27808
+}

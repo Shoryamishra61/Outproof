@@ -3,6 +3,7 @@
 import hashlib
 import json
 import logging
+import os
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from html.parser import HTMLParser
@@ -129,7 +130,12 @@ def inside_boundary(point: Coordinates, ring: list[Coordinates]) -> bool:
 
 
 def normalize_garden(
-    garden: ReviewedGarden, park: dict, path: dict, html: str, observed_at: datetime
+    garden: ReviewedGarden,
+    park: dict,
+    path: dict,
+    html: str,
+    observed_at: datetime,
+    official_transport: str = "direct_https",
 ) -> PlaceCandidate:
     page = GardenPage()
     page.feed(html)
@@ -258,6 +264,7 @@ def normalize_garden(
                     parser="chandigarh-garden-v1",
                     authority="Chandigarh Tourism Department",
                     page_sha256=hashlib.sha256(html.encode()).hexdigest(),
+                    official_retrieval_transport=official_transport,
                     coordinate_kind="mapped_pedestrian_access_node",
                     access_node=garden.access_node,
                     path_way=garden.path_way,
@@ -271,8 +278,32 @@ def normalize_garden(
     )
 
 
+async def read_reviewed_source(
+    client: httpx.AsyncClient, url: str, authorization: str | None = None
+) -> bytes:
+    headers = {"User-Agent": "GroundRule/0.1 (https://github.com/Shoryamishra61/Outproof)"}
+    if authorization:
+        headers["Authorization"] = authorization
+    async with client.stream(
+        "GET",
+        url,
+        timeout=15,
+        follow_redirects=False,
+        headers=headers,
+    ) as response:
+        response.raise_for_status()
+        body = bytearray()
+        async for chunk in response.aiter_bytes():
+            body.extend(chunk)
+            if len(body) > 1_000_000:
+                raise ValueError("Reviewed source exceeds byte bound")
+        return bytes(body)
+
+
 async def fetch_garden(client: httpx.AsyncClient, garden: ReviewedGarden) -> PlaceCandidate:
     responses = []
+    observed_at = datetime.now(UTC)
+    official_transport = "direct_https"
     for source_kind, url in zip(
         ("osm_park", "osm_path", "official_garden"),
         (
@@ -283,23 +314,29 @@ async def fetch_garden(client: httpx.AsyncClient, garden: ReviewedGarden) -> Pla
         strict=True,
     ):
         try:
-            async with client.stream(
-                "GET",
-                url,
-                timeout=15,
-                follow_redirects=False,
-                headers={
-                    "User-Agent": "GroundRule/0.1 (https://github.com/Shoryamishra61/Outproof)"
-                },
-            ) as response:
-                response.raise_for_status()
-                body = bytearray()
-                async for chunk in response.aiter_bytes():
-                    body.extend(chunk)
-                    if len(body) > 1_000_000:
-                        raise ValueError("Reviewed source exceeds byte bound")
-                responses.append(bytes(body))
-        except (httpx.HTTPError, ValueError) as error:
+            relay = os.getenv("OLLAMA_BASE_URL", "").rstrip("/")
+            key = os.getenv("GEMMA_API_KEY", "")
+            if source_kind == "official_garden" and relay.startswith("https://") and key:
+                # Render cannot connect to this authority; reuse the protected model host.
+                body = await read_reviewed_source(
+                    client,
+                    f"{relay}/sources/chandigarh/{garden.park_way}",
+                    "Bearer " + key,
+                )
+                envelope = json.loads(body)
+                fetched_at = datetime.fromisoformat(envelope["observed_at"])
+                age = (datetime.now(UTC) - fetched_at).total_seconds()
+                if envelope["source_url"] != garden.url or not -5 <= age <= 30:
+                    raise ValueError("Reviewed relay identity or freshness invalid")
+                html = envelope["html"]
+                if not isinstance(html, str):
+                    raise ValueError("Reviewed relay body invalid")
+                responses.append(html.encode("utf-8"))
+                observed_at = min(observed_at, fetched_at)
+                official_transport = "authenticated_laptop_relay"
+            else:
+                responses.append(await read_reviewed_source(client, url))
+        except (httpx.HTTPError, ValueError, KeyError, TypeError) as error:
             status = (
                 error.response.status_code if isinstance(error, httpx.HTTPStatusError) else None
             )
@@ -315,5 +352,6 @@ async def fetch_garden(client: httpx.AsyncClient, garden: ReviewedGarden) -> Pla
         json.loads(responses[0]),
         json.loads(responses[1]),
         responses[2].decode("utf-8"),
-        datetime.now(UTC),
+        observed_at,
+        official_transport,
     )

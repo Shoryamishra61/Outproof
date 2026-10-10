@@ -1,0 +1,46 @@
+{
+  "executed_at": "2026-10-10T03:34:30.752Z",
+  "url": "https://outproof-web.onrender.com",
+  "scope": "Actual current-time India public search -> Gemma parser/ranker -> official sources/OSM/Valhalla -> proof/GO; no physical outing",
+  "errors": [],
+  "requests": [
+    {
+      "status": 503,
+      "request_id": "6281db692bb744a59115912c8fd33259",
+      "body": {
+        "status": "FAILURE",
+        "code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+        "message": "Reviewed garden source or mapped access changed; no claims asserted"
+      }
+    }
+  ],
+  "readiness": [
+    {
+      "status": 200,
+      "body": {
+        "status": "ready",
+        "model_reachable": true,
+        "live_evidence_available": true,
+        "compilation_available": true,
+        "mode": "LIVE",
+        "readiness_scope": "reviewed Singapore source and route only",
+        "global_compilation_verified": false
+      }
+    }
+  ],
+  "version": {
+    "version": "0.1.0",
+    "commit": "15e591de32531014c5b6f3d2bcca307b1793b360",
+    "environment": "production"
+  },
+  "selected_start": {
+    "label": "Sector 16 Cricket Stadium, Jan Marg, Chandigarh, India",
+    "coordinates": {
+      "latitude": 30.7419173,
+      "longitude": 76.7747257
+    }
+  },
+  "parser_input": "I prefer somewhere quiet. I'm not vegan.",
+  "status": "FAIL",
+  "failure": "Error: Reviewed garden source or mapped access changed; no claims asserted"
+}

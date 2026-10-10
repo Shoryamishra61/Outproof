@@ -1,0 +1,5 @@
+{
+  "status": "FAILURE",
+  "code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+  "message": "Reviewed garden source or mapped access changed; no claims asserted"
+}

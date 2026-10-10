@@ -1,4 +1,4 @@
-"""Authenticated, bounded proxy for the two Ollama calls used by Ground Rule."""
+"""Authenticated, bounded model calls and reviewed official-page transport."""
 
 import asyncio
 import json
@@ -6,10 +6,13 @@ import os
 import secrets
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager, nullcontext
+from datetime import UTC, datetime
 
 import httpx
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+
+from app.reviewed_gardens import GARDENS, read_reviewed_source
 
 
 @asynccontextmanager
@@ -27,6 +30,34 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
 busy = asyncio.Lock()
+source_busy = asyncio.Lock()
+
+
+@app.get("/sources/chandigarh/{park_way}")
+async def official_garden(park_way: str, request: Request) -> JSONResponse:
+    key = os.getenv("GEMMA_API_KEY", "")
+    if not key or not secrets.compare_digest(
+        request.headers.get("Authorization", ""), "Bearer " + key
+    ):
+        return JSONResponse(status_code=401, content={"error": "Authentication required"})
+    garden = next((g for g in GARDENS if str(g.park_way) == park_way), None)
+    if garden is None:
+        return JSONResponse(status_code=404, content={"error": "Unsupported source"})
+    if source_busy.locked():
+        return JSONResponse(status_code=429, content={"error": "Source busy"})
+    try:
+        async with source_busy, httpx.AsyncClient(trust_env=False) as client:
+            html = (await read_reviewed_source(client, garden.url)).decode("utf-8")
+            return JSONResponse(
+                headers={"Cache-Control": "no-store"},
+                content={
+                    "source_url": garden.url,
+                    "observed_at": datetime.now(UTC).isoformat(),
+                    "html": html,
+                },
+            )
+    except (httpx.HTTPError, ValueError):
+        return JSONResponse(status_code=503, content={"error": "Reviewed source unavailable"})
 
 
 @app.api_route("/api/{operation}", methods=["GET", "POST"])

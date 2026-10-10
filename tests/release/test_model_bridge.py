@@ -79,3 +79,59 @@ def test_bridge_auth_bounds_busy_timeout_and_recovery(monkeypatch: pytest.Monkey
             assert (await client.post("/api/chat", json=payload)).status_code == 200
 
     asyncio.run(run())
+
+
+@pytest.mark.parametrize("failure", [None, "timeout", "redirect", "oversize", "encoding"])
+def test_source_relay_auth_allowlist_bounds_and_recovery(monkeypatch, failure):
+    from app.reviewed_gardens import GARDENS
+
+    monkeypatch.setenv("GEMMA_API_KEY", "synthetic-key")
+    actual_client = httpx.AsyncClient
+    calls = []
+
+    def handle(request):
+        calls.append(request)
+        assert str(request.url) == GARDENS[0].url
+        assert "authorization" not in request.headers
+        if failure == "timeout":
+            raise httpx.ConnectTimeout("synthetic", request=request)
+        if failure == "redirect":
+            return httpx.Response(301, headers={"Location": "http://169.254.169.254/"})
+        if failure == "oversize":
+            return httpx.Response(200, content=b"x" * 1_000_001)
+        if failure == "encoding":
+            return httpx.Response(200, content=b"\xff")
+        return httpx.Response(200, text="<h1>Real upstream body</h1>")
+
+    monkeypatch.setattr(
+        model_bridge.httpx,
+        "AsyncClient",
+        lambda **kwargs: actual_client(transport=httpx.MockTransport(handle), **kwargs),
+    )
+
+    async def run():
+        model_bridge.source_busy = asyncio.Lock()
+        async with actual_client(
+            transport=httpx.ASGITransport(app=model_bridge.app), base_url="http://bridge"
+        ) as client:
+            path = f"/sources/chandigarh/{GARDENS[0].park_way}"
+            for headers in ({}, {"Authorization": "Bearer wrong"}):
+                assert (await client.get(path, headers=headers)).status_code == 401
+            assert not calls
+            client.headers["Authorization"] = "Bearer synthetic-key"
+            for invalid in ("999", "localhost", "http%3A%2F%2F169.254.169.254"):
+                assert (await client.get("/sources/chandigarh/" + invalid)).status_code == 404
+            assert not calls
+            await model_bridge.source_busy.acquire()
+            assert (await client.get(path)).status_code == 429
+            model_bridge.source_busy.release()
+            response = await client.get(path)
+            assert response.status_code == (200 if failure is None else 503)
+            assert len(calls) == 1 and not model_bridge.source_busy.locked()
+            if failure is None:
+                assert response.json()["source_url"] == GARDENS[0].url
+                assert response.json()["html"] == "<h1>Real upstream body</h1>"
+            else:
+                assert "synthetic" not in response.text and "169.254" not in response.text
+
+    asyncio.run(run())
