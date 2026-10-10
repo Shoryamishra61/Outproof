@@ -20,7 +20,7 @@ The implemented live source coverage is narrow: Singapore Botanic Gardens at Tan
 
 [Open Outproof](https://outproof-web.onrender.com/). Choose the explicitly labelled Chandigarh walking start to inspect the reviewed corridor, or search your public starting area and adjust its map pin.
 
-[Watch the real public software demonstration](https://outproof-web.onrender.com/demo.html). The existing recording was captured before the Outproof rename; it shows the same one-plan, proof and GO loop. It depicts no physical outing. Inference depends on an awake laptop and an authenticated temporary tunnel; provider outages and cold starts can prevent compilation.
+[Watch the real public software demonstration](https://outproof-web.onrender.com/demo.html). The 73-second recording shows the real renamed Outproof interface, one-plan proof and GO loop. It depicts no physical outing. Inference depends on an awake laptop and an authenticated temporary tunnel; provider outages and cold starts can prevent compilation.
 
 ## Code
 

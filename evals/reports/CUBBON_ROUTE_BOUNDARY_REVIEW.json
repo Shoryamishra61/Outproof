@@ -1,0 +1,202 @@
+{
+  "scope": "Two fresh Valhalla requests matching accepted browser request payloads; cached reviewed OSM courthouse geometry; no physical verification",
+  "executed_at": "2026-10-10T05:02:43.960033+00:00",
+  "source_receipt": "artifacts/release/public-india-cubbon/compile-response.json",
+  "source_receipt_sha256": "90a9fb0c6644d31a3fe9611c2f76121d8e7e2211c6ec8ad519b4bed03d22b583",
+  "courthouse_source": ".tools/cubbon-gate-context.json",
+  "courthouse_source_sha256": "31b575030eeb215b3212cf8f5a7992d29c25f0ee6c5161b5207b043a68e0a7f6",
+  "courthouse_way": 208686727,
+  "courthouse_version": 14,
+  "courthouse_timestamp": "2026-01-06T05:20:59Z",
+  "courthouse_points": 21,
+  "polyline_precision": 6,
+  "method": "Independent winding number plus every route-segment/courthouse-edge intersection; boundary touches count as FAIL; local planar minimum clearance",
+  "routes": [
+    {
+      "route_id": "valhalla:d509eba187f99f181c8668b5",
+      "request": {
+        "locations": [
+          {
+            "lat": 12.9767936,
+            "lon": 77.590082,
+            "type": "break",
+            "search_cutoff": 100
+          },
+          {
+            "lat": 12.9771413,
+            "lon": 77.5911742,
+            "type": "break",
+            "search_cutoff": 100
+          }
+        ],
+        "costing": "pedestrian",
+        "units": "kilometers"
+      },
+      "receipt_seconds": 109,
+      "receipt_meters": 140,
+      "http_status": 200,
+      "response_bytes": 2210,
+      "response_sha256": "44d8c68abe208b003dca8fef130ac25d5109771540a55cf167ed3a319f771212",
+      "latency_seconds": 0.828,
+      "status": "PASS",
+      "fresh_seconds": 109,
+      "fresh_meters": 140.0,
+      "shape": "qs`wWy~u~rCCKgDaMqCmK}AwMiAaKSkGHwHEg@x@EbBT",
+      "decoded_coordinates_lon_lat": [
+        [
+          77.590013,
+          12.976969
+        ],
+        [
+          77.590019,
+          12.976971
+        ],
+        [
+          77.590244,
+          12.977055
+        ],
+        [
+          77.590443,
+          12.977128
+        ],
+        [
+          77.590679,
+          12.977175
+        ],
+        [
+          77.590872,
+          12.977212
+        ],
+        [
+          77.591006,
+          12.977222
+        ],
+        [
+          77.591162,
+          12.977217
+        ],
+        [
+          77.591182,
+          12.97722
+        ],
+        [
+          77.591185,
+          12.977191
+        ],
+        [
+          77.591174,
+          12.977141
+        ]
+      ],
+      "shape_points": 11,
+      "inside_or_boundary_vertex_indices": [],
+      "boundary_intersections": [],
+      "minimum_court_clearance_meters": 16.413,
+      "request_endpoint_relations": [
+        "OUTSIDE",
+        "OUTSIDE"
+      ],
+      "shape_endpoint_offset_meters": [
+        20.888,
+        0.04
+      ],
+      "metrics_match_receipt": true
+    },
+    {
+      "route_id": "valhalla:7e648f79445ab7d45bb89e57",
+      "request": {
+        "locations": [
+          {
+            "lat": 12.9771413,
+            "lon": 77.5911742,
+            "type": "break",
+            "search_cutoff": 100
+          },
+          {
+            "lat": 12.9767936,
+            "lon": 77.590082,
+            "type": "break",
+            "search_cutoff": 100
+          }
+        ],
+        "costing": "pedestrian",
+        "units": "kilometers"
+      },
+      "receipt_seconds": 100,
+      "receipt_meters": 140,
+      "http_status": 200,
+      "response_bytes": 2177,
+      "response_sha256": "c77568940faf4ac80bd3fda76c23bd51abaea0fbebbd9c9c78670f2c183198b2",
+      "latency_seconds": 0.204,
+      "status": "PASS",
+      "fresh_seconds": 100,
+      "fresh_meters": 140.0,
+      "shape": "i~`wWkgx~rCcBUy@DDf@IvHRjGhA`K|AvMpClKfD`MBJ",
+      "decoded_coordinates_lon_lat": [
+        [
+          77.591174,
+          12.977141
+        ],
+        [
+          77.591185,
+          12.977191
+        ],
+        [
+          77.591182,
+          12.97722
+        ],
+        [
+          77.591162,
+          12.977217
+        ],
+        [
+          77.591006,
+          12.977222
+        ],
+        [
+          77.590872,
+          12.977212
+        ],
+        [
+          77.590679,
+          12.977175
+        ],
+        [
+          77.590443,
+          12.977128
+        ],
+        [
+          77.590244,
+          12.977055
+        ],
+        [
+          77.590019,
+          12.976971
+        ],
+        [
+          77.590013,
+          12.976969
+        ]
+      ],
+      "shape_points": 11,
+      "inside_or_boundary_vertex_indices": [],
+      "boundary_intersections": [],
+      "minimum_court_clearance_meters": 16.413,
+      "request_endpoint_relations": [
+        "OUTSIDE",
+        "OUTSIDE"
+      ],
+      "shape_endpoint_offset_meters": [
+        0.04,
+        20.888
+      ],
+      "metrics_match_receipt": true
+    }
+  ],
+  "limitations": [
+    "Receipt has no original route shape; fresh exact-request reproduction is separate evidence.",
+    "Other accepted short-origin route pair has no retained shape and was not freshly queried.",
+    "OSM geometry and pedestrian provider output do not establish physical access or safety."
+  ],
+  "overall_status": "PASS_FOR_TWO_FRESH_BROWSER_ROUTES"
+}

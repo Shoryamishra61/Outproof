@@ -1,0 +1,90 @@
+{
+  "executed_at": "2026-10-10T08:48:05.151Z",
+  "scope": "Real public typed Chandigarh search, exact chosen origin, endpoint refusal and UI recovery; no mocks, no physical outing",
+  "errors": [],
+  "status": "PASS_FOR_VISIBLE_REFUSAL_AND_RECOVERY",
+  "version": {
+    "version": "0.1.0",
+    "commit": "0badba9efaca04a3c5234af69e8bb33827a9fc59",
+    "environment": "production"
+  },
+  "search": {
+    "results": [
+      {
+        "label": "Chandigarh, India — map match 1",
+        "coordinates": {
+          "latitude": 30.7334421,
+          "longitude": 76.7797143
+        }
+      },
+      {
+        "label": "Chandigarh, India — map match 2",
+        "coordinates": {
+          "latitude": 30.729844,
+          "longitude": 76.7841457
+        }
+      },
+      {
+        "label": "Chandigarh, Durgapur Subdistrict, Mymensingh Division, Bangladesh",
+        "coordinates": {
+          "latitude": 25.1065664,
+          "longitude": 90.7475556
+        }
+      }
+    ],
+    "attribution": "OpenStreetMap contributors / Photon"
+  },
+  "selected": {
+    "label": "Chandigarh, India — map match 1",
+    "coordinates": {
+      "latitude": 30.7334421,
+      "longitude": 76.7797143
+    }
+  },
+  "actual_headless_gps_refusal": "Location access unavailable: permission was denied. Allow location in your browser settings, retry GPS, or search for an area.",
+  "compilation": {
+    "http_status": 409,
+    "request_id": "82763da68b034e349edcdf459fd5c691",
+    "controls": {
+      "currency_code": "INR",
+      "budget_minor_units": 0,
+      "budget_scope": "TOTAL",
+      "duration_max_minutes": 90,
+      "party_mode": "SOLO",
+      "party_size": 1,
+      "vibes": [
+        "Explore"
+      ],
+      "hard_constraints": [],
+      "soft_constraints": [
+        {
+          "preference": "quiet"
+        }
+      ],
+      "max_walking_minutes": 60,
+      "max_walking_meters": null,
+      "return_by_local": null,
+      "locale": "en-IN",
+      "origin": {
+        "latitude": 30.7334421,
+        "longitude": 76.7797143
+      },
+      "departure_at": "2026-10-10T08:48:11.208Z",
+      "strict_budget": true
+    },
+    "body": {
+      "status": "FAILURE",
+      "code": "UNSUPPORTED_CONSTRAINT",
+      "message": "The walking route does not reach the chosen point. Move the map pin onto a public footpath and try again."
+    }
+  },
+  "viewports": [
+    320,
+    360,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "outing_status": "REFUSED_UNVERIFIED_ROUTE_CONNECTOR"
+}

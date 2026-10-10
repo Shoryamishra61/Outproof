@@ -1,3 +1,11 @@
+# Latest actual Outproof public verification — 2026-10-10T08:52:22.441087+00:00
+
+Product build 0badba9efaca04a3c5234af69e8bb33827a9fc59: Checks38038738220 green, both matching Render deployments live, actual production version confirmed. Production verification38038858430 passed real Gemma parser/ranker -> one Shanti Kunj plan (HTTP200), zero-walking/wrong-currency refusals (409), fixture prohibition, exact model tag and allowed/denied CORS. A clean actual public browser passed the explicit reviewed start, one plan, source proof, GO/voice/next/back, keyboard focus and mobile390. A separate real typed Chandigarh/GPS-denial flow passed visible recovery and endpoint refusal at six widths. This refusal is not accepted geographic coverage.
+
+Actual recording72.6s and its new Outproof poster are prepared for the next deployment; public replacement playback is still pending. The first blank-map initialization screenshot triggered a visible loading state/aria-busy; targeted location browser checks ran and build passed. See OUTPROOF_BROWSER_REVIEW.md. Initial provider/browser/harness failures remain retained. Broad India coverage, Potheri evidence, permanent model hosting, human device/screen-reader checks and physicalIndia0/3 remain blocked/unexecuted. No paid spend. This is not a perfect or fully completed production release; DEV remains unpublished.
+
+--- Prior checkpoint ---
+
 # Outproof remediation checkpoint — 2026-10-10T08:40:17.527313+00:00
 
 **BLOCKED — CRITICAL REQUIREMENTS UNMET.** Public product renamed to Outproof in the current working tree; deployment verification is pending. Local real source/Valhalla/protected Gemma compilation passed. Actual path endpoints are now checked: Shanti Kunj and a mapped Cubbon footpath passed both directions; the original Chandigarh city-origin route was refused. A fresh reproduction of the historical Bengaluru city-origin route found a 20.888 m omitted connector, so that whole-trip acceptance is withdrawn rather than extended by guessed walking time. The original eight-case radius probe remains FAIL (Potheri upstream HTTP504/503); the duplicate-label browser failure is preserved.

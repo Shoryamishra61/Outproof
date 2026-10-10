@@ -2,7 +2,7 @@
 
 **One outing. Every limit checked.** An open-weight Gemma outing compiler for Touch Grass.
 
-[Open Outproof](https://outproof-web.onrender.com/) · [69-second public India execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
+[Open Outproof](https://outproof-web.onrender.com/) · [73-second public Outproof execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
 
 Reviewed live support includes Singapore Botanic Gardens/Tanglin and mapped pedestrian corridors at Shanti Kunj and Terraced Gardens, Chandigarh, and Cubbon Park, Bengaluru. Official venue admission/hours, exact OSM access geometry and independent Valhalla round trips ground main-ground walks. Cubbon's general grounds close Mondays and second Tuesdays; the checked path excludes the mapped High Court grounds. India mapped access is not physically checked. The actual 100-area India baseline accepted zero plans; these narrow repaired corridors do not establish broad coverage. See [India execution evidence](evals/reports/INDIA_100_RELEASE.md).
 

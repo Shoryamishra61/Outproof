@@ -277,7 +277,7 @@ Thousands of controlled cases are not thousands of real outings. Potheri admissi
 - [x] Reproduce ambiguous Chandigarh labels and deduplicate exact provider points with distinct map-match labels.
 - [x] Reject route geometry that omits an unverified connector; fresh actual mapped Shanti/Cubbon route pairs and local LIVE compilation demonstrated.
 - [x] Preserve failed headless browser runs; configure Vite to survive closed stdin.
-- [ ] Verify new name, reviewed origin preset, parser/proof/GO and route refusal on the deployed build.
-- [ ] Execute and retain the new real post-deployment GitHub workflow.
+- [x] Verify new name, reviewed origin preset, parser/proof/GO and route refusal on the deployed 0badba9 build.
+- [x] Execute and retain the real post-deployment GitHub workflow (38038858430 PASS on 0badba9).
 - [ ] Finish the separately preserved final 100-origin production campaign.
 - [ ] Human manual device/screen-reader sessions and three physical India trials.

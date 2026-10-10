@@ -1,0 +1,7 @@
+{
+  "status": "HARNESS_FAILURE",
+  "scope": "Actual public browser; no compilation performed before harness terminated",
+  "failure": "Unhandled pending response after the context closed; exact failure action retained in trace",
+  "likely_cause": "Focus assertion before keyboard modality; corrected by tabbing before focusing in the separately retained recovered run",
+  "no_success_claim": true
+}
