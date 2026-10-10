@@ -46,14 +46,47 @@ def source_example(index=0):
         "Open : Daily Timings : 05:00 AM to 09:00 PM Entry Fee : Not Applicable "
         "Download Tourism"
     )
+    if garden.source_format == "karnataka_attraction":
+        html = (
+            f"<h1>{garden.title}</h1>{garden.sector}"
+            "<table><tr><td>Entry Fee</td>"
+            "<td>Free (select attractions have nominal charges)</td></tr>"
+            "<tr><td>Cubbon Park (General)</td><td>6:00 AM</td><td>6:00 PM</td>"
+            "<td>Mondays &amp; 2nd Tuesdays</td></tr></table>"
+        )
     return garden, park, path, html
+
+
+def excluded_example(garden):
+    lat, lon = garden.coordinates.latitude + 0.01, garden.coordinates.longitude
+    return {
+        "elements": [
+            *(
+                {"type": "node", "id": i, "lat": lat + a, "lon": lon + b}
+                for i, (a, b) in enumerate([(0, 0), (0, 0.001), (0.001, 0.001), (0.001, 0)], 1)
+            ),
+            {
+                "type": "way",
+                "id": garden.excluded_way,
+                "nodes": [1, 2, 3, 4, 1],
+                "tags": {"amenity": "courthouse", "name": "High Court of Karnataka"},
+            },
+        ]
+    }
 
 
 @pytest.mark.parametrize("index", range(len(GARDENS)))
 def test_official_fee_hours_are_identity_bound_and_scope_limited(index):
     garden, park, path, html = source_example(index)
     observed = datetime.now(UTC)
-    place = normalize_garden(garden, park, path, html, observed)
+    place = normalize_garden(
+        garden,
+        park,
+        path,
+        html,
+        observed,
+        excluded=excluded_example(garden) if garden.excluded_way else None,
+    )
     assert place.price.upper.minor_units == 0 and place.price.upper.currency_code == "INR"
     assert place.coordinates == garden.coordinates
     assert all(e.observed_at == observed for e in place.evidence)
@@ -175,7 +208,7 @@ def test_relay_preserves_source_identity_freshness_and_claim_checks(monkeypatch,
             return httpx.Response(
                 200, json=park if str(garden.park_way) in request.url.path else path
             )
-        assert str(request.url) == f"https://relay.example/sources/chandigarh/{garden.park_way}"
+        assert str(request.url) == f"https://relay.example/sources/gardens/{garden.park_way}"
         assert request.headers["authorization"] == "Bearer synthetic-key"
         if mutation == "denied":
             return httpx.Response(401)
@@ -208,3 +241,96 @@ def test_relay_preserves_source_identity_freshness_and_claim_checks(monkeypatch,
         assert len(calls) == 3
 
     asyncio.run(run())
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        "hours",
+        "closure",
+        "fee",
+        "duplicate",
+        "hidden",
+        "missing_exclusion",
+        "wrong_exclusion",
+        "overlap",
+        "crossing",
+    ],
+)
+def test_cubbon_conflicts_and_restricted_geometry_fail_closed(mutation):
+    garden, park, path, html = source_example(2)
+    excluded = excluded_example(garden)
+    if mutation == "hours":
+        html = html.replace("6:00 PM", "9:00 PM")
+    elif mutation == "closure":
+        html = html.replace("Mondays &amp; 2nd Tuesdays", "None")
+    elif mutation == "fee":
+        html = html.replace("Free (select attractions have nominal charges)", "INR 100")
+    elif mutation == "duplicate":
+        html = html.replace("</table>", "<tr><td>Entry Fee</td><td>INR 100</td></tr></table>")
+    elif mutation == "hidden":
+        html = "<div hidden>" + html + "</div>"
+    elif mutation == "missing_exclusion":
+        excluded = None
+    elif mutation == "wrong_exclusion":
+        excluded["elements"][-1]["id"] = 999
+    elif mutation == "overlap":
+        excluded = park
+        excluded["elements"][-1]["id"] = garden.excluded_way
+        excluded["elements"][-1]["tags"] = {
+            "amenity": "courthouse",
+            "name": "High Court of Karnataka",
+        }
+    elif mutation == "crossing":
+        lat, lon = garden.coordinates.latitude, garden.coordinates.longitude
+        for point, (a, b) in zip(
+            excluded["elements"][:4],
+            [(0.0009, -0.0001), (0.0009, 0.0001), (0.0011, 0.0001), (0.0011, -0.0001)],
+            strict=True,
+        ):
+            point.update(lat=lat + a, lon=lon + b)
+    with pytest.raises(ValueError):
+        normalize_garden(garden, park, path, html, datetime.now(UTC), excluded=excluded)
+
+
+@pytest.mark.parametrize(
+    "when,minutes,opened",
+    [
+        ("2026-10-10T09:00:00+05:30", 30, True),
+        ("2026-10-12T09:00:00+05:30", 30, False),
+        ("2026-10-13T09:00:00+05:30", 30, False),
+        ("2026-10-20T09:00:00+05:30", 30, True),
+        ("2026-10-10T05:30:00+05:30", 30, False),
+        ("2026-10-10T17:50:00+05:30", 30, False),
+    ],
+)
+def test_cubbon_general_hours_preserve_monthly_closure_and_full_dwell(when, minutes, opened):
+    garden, park, path, html = source_example(2)
+    arrival = datetime.fromisoformat(when)
+    place = normalize_garden(
+        garden, park, path, html, arrival - timedelta(minutes=1), excluded=excluded_example(garden)
+    )
+    record = next(e for e in place.evidence if e.field == "opening_hours")
+    result = windows_from_hours(
+        record, arrival, arrival + timedelta(minutes=minutes), "Asia/Kolkata"
+    )
+    assert bool(result) is opened and result is not None
+
+
+@pytest.mark.parametrize(
+    "points,intersects",
+    [
+        (((0.0, 0.0), (2.0, 2.0), (0.0, 2.0), (2.0, 0.0)), True),
+        (((0.0, 0.0), (0.0, 2.0), (0.0, 1.0), (0.0, 3.0)), True),
+        (((0.0, 0.0), (0.0, 1.0), (0.0, 1.0), (1.0, 1.0)), True),
+        (((0.0, 0.0), (0.0, 1.0), (0.0, 2.0), (0.0, 3.0)), False),
+        (((0.0, 0.0), (0.0, 1.0), (1.0, 0.0), (1.0, 1.0)), False),
+    ],
+)
+def test_restricted_ground_segment_crossings_and_boundary_touches(points, intersects):
+    from app.reviewed_gardens import segments_intersect
+    from ground_rule.models import Coordinates
+
+    assert (
+        segments_intersect(*(Coordinates(latitude=a, longitude=b) for a, b in points)) is intersects
+    )

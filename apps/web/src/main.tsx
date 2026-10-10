@@ -78,7 +78,7 @@ function App() {
   const [attempt, setAttempt] = useState(0);
   const [duration, setDuration] = useState(90);
   const [budget, setBudget] = useState(liveMode ? 0 : 500);
-  const [currency, setCurrency] = useState<NonNullable<ConstraintSet['currency_code']>>(liveMode ? 'SGD' : 'INR');
+  const [currency, setCurrency] = useState<NonNullable<ConstraintSet['currency_code']>>('INR');
   const [scope, setScope] = useState<'PER_PERSON' | 'TOTAL'>(liveMode ? 'TOTAL' : 'PER_PERSON');
   const [party, setParty] = useState<ConstraintSet['party_mode']>(liveMode ? 'SOLO' : 'FRIEND');
   const [size, setSize] = useState(4);
@@ -168,7 +168,7 @@ function App() {
           ? body.message
           : 'The response could not be verified. No plan displayed.';
         const contextHelp = originMode === 'device'
-          ? `${failureMessage} Reviewed live evidence currently covers only the Singapore Botanic Gardens Tanglin entrance corridor.`
+          ? `${failureMessage} Reviewed source-backed walks cover Tanglin in Singapore, Shanti Kunj and Terraced Garden in Chandigarh, and Cubbon Park in Bengaluru. Other areas may lack operational evidence.`
           : failureMessage;
         throw new Error(contextHelp);
       }
@@ -194,7 +194,7 @@ function App() {
     {isResultLive && <p className="notice">Verified live places, operating hours and pedestrian routes.</p>}
     {state === 'home' && <>
       <h1 ref={heading} tabIndex={-1}>Set your limits.<br />Leave the deciding here.</h1><p className="intro">One plan, checked against every hard rule.</p>
-      {liveMode && <p className="notice">Reviewed coverage: Singapore Botanic Gardens, Tanglin entrance (05:00–00:00 Singapore time), and Shanti Kunj and Terraced Garden in Chandigarh (05:00–21:00 India time). Main garden paths only. Search works worldwide; most India areas still lack a verified outing. Your location goes to map and routing providers; it is not saved as outing history.</p>}
+      {liveMode && <p className="notice">Reviewed walks: Tanglin, Singapore (05:00–00:00 local time); Shanti Kunj and Terraced Garden, Chandigarh (05:00–21:00); Cubbon Park, Bengaluru (06:00–18:00, closed Mondays and second Tuesdays). India times are IST. Main garden paths only; mapped India access is not physically checked. Most areas still lack a verified outing. Your location goes to map and routing providers; it is not saved as outing history.</p>}
       {!isEnabled ? <section><h2>Live evidence gate</h2><p>Real outing compilation is unavailable while required evidence is incomplete.</p></section> :
       <form onSubmit={compile} aria-label="Outing controls">
         <fieldset className="origin-choice">
@@ -204,11 +204,13 @@ function App() {
               type="radio"
               name="origin-mode"
               id="origin-demo"
+              aria-describedby={liveMode ? 'example-limits' : undefined}
               checked={originMode === 'demo'}
-              onChange={() => { locationRequest.current++; setIsLocating(false); setOriginMode('demo'); setMapOrigin(null); setError(''); }}
+              onChange={() => { locationRequest.current++; setIsLocating(false); setOriginMode('demo'); setMapOrigin(null); if (liveMode) { setCurrency('SGD'); setBudget(0); } setError(''); }}
             />
             {liveMode ? 'Try the Singapore example start' : 'Fixture Chennai example (T. Nagar: 13.0418, 80.2341)'}
           </label>
+          {liveMode && <small id="example-limits">The Singapore example sets a SGD 0 budget.</small>}
           <label className="check">
             <input
               type="radio"

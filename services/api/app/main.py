@@ -201,7 +201,7 @@ def create_app(
             "verified_live_regions": [
                 "Singapore Botanic Gardens Tanglin entrance corridor",
                 *(
-                    f"{garden.name}, Chandigarh mapped pedestrian access corridor"
+                    f"{garden.name}, {garden.city} mapped pedestrian access corridor"
                     for garden in GARDENS
                 ),
             ],
@@ -245,7 +245,7 @@ def create_app(
             except (httpx.HTTPError, ValueError, KeyError, TypeError):
                 reachable = False
         source_ready = False
-        source_scope = "reviewed Singapore and Chandigarh probes; selected area not checked"
+        source_scope = "reviewed Singapore and India probes; selected area not checked"
         if live_enabled and reachable:
             async with httpx.AsyncClient(trust_env=False) as client:
                 discovery = LivePlacesProvider(

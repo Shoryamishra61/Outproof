@@ -46,7 +46,7 @@ def test_authenticated_remote_model_does_not_follow_redirects() -> None:
     asyncio.run(run())
 
 
-@pytest.mark.parametrize("available_garden", [0, 1])
+@pytest.mark.parametrize("available_garden", range(len(GARDENS)))
 def test_singapore_outage_does_not_disable_a_verified_india_source(monkeypatch, available_garden):
     async def discover(self, origin, radius_meters):
         from app.live import GATE
@@ -129,7 +129,7 @@ def test_concurrent_readiness_waits_for_one_real_probe(
                 finally:
                     release.set()
                     responses = await asyncio.gather(first, second)
-                assert calls == (1 if source_available else 3)
+                assert calls == (1 if source_available else 1 + len(GARDENS))
                 assert responses[0].json() == responses[1].json()
                 assert all(r.status_code == (200 if source_available else 503) for r in responses)
                 assert responses[0].json()["compilation_available"] is source_available
@@ -137,10 +137,10 @@ def test_concurrent_readiness_waits_for_one_real_probe(
                 assert responses[0].json()["readiness_scope"] == (
                     "reviewed Singapore source and route only"
                     if source_available
-                    else "reviewed Singapore and Chandigarh probes; selected area not checked"
+                    else "reviewed Singapore and India probes; selected area not checked"
                 )
                 assert (await client.get("/v1/health/ready")).json() == responses[0].json()
-                assert calls == (1 if source_available else 3)
+                assert calls == (1 if source_available else 1 + len(GARDENS))
 
     asyncio.run(run())
 

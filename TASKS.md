@@ -257,3 +257,10 @@ Thousands of controlled cases are not thousands of real outings. Potheri admissi
 - [x] Execute real local source/routing/Gemma compilation for Shanti Kunj and Terraced Gardens; eleven checks pass for each.
 - [x] Verify both added paths in deployed API and clean public browser, including proof/GO and five hard-rule failure cases (`91868df`).
 - [ ] Reach broad India accepted-outing coverage. The 100-place campaign demonstrates a critical gap, not a passing global release gate.
+
+## Bengaluru source extension
+
+- [x] Verify official free general-ground admission and exact closure schedule; reject attraction and special-walker inference.
+- [x] Verify a fresh mapped footway inside Cubbon and outside the High Court boundary, including segment crossings/touches; reject court/Press Club gates.
+- [x] Execute local LIVE source/routing/Gemma orchestration; no physical gate claim.
+- [ ] Verify deployed Bengaluru API and clean browser, with Monday/second-Tuesday/dwell failure cases.

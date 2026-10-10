@@ -7,6 +7,7 @@ import os
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from html.parser import HTMLParser
+from itertools import pairwise
 from math import asin, cos, radians, sin, sqrt
 
 import httpx
@@ -25,6 +26,11 @@ class ReviewedGarden:
     coordinates: Coordinates
     probe_origin: Coordinates
     url: str
+    city: str = "Chandigarh"
+    authority: str = "Chandigarh Tourism Department"
+    opening_hours: str = "Mo-Su 05:00-21:00"
+    source_format: str = "chandigarh_garden"
+    excluded_way: int | None = None
 
 
 GARDENS = (
@@ -50,6 +56,22 @@ GARDENS = (
         Coordinates(latitude=30.7132815, longitude=76.7701731),
         "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
     ),
+    ReviewedGarden(
+        "Cubbon Park",
+        "Cubbon Park (Sri Chamarajendra Park), Bangalore",
+        "Ambedkar Veedhi",
+        22895320,
+        1276833566,
+        11854682505,
+        Coordinates(latitude=12.9771413, longitude=77.5911742),
+        Coordinates(latitude=12.9772684, longitude=77.5911720),
+        "https://karnatakatourism.org/en/attractions/cubbon-park",
+        city="Bengaluru",
+        authority="Department of Tourism, Government of Karnataka",
+        opening_hours="Tu-Su 06:00-18:00; Tu[2] off",
+        source_format="karnataka_attraction",
+        excluded_way=208686727,
+    ),
 )
 
 
@@ -60,6 +82,9 @@ class GardenPage(HTMLParser):
         self.parts: list[str] = []
         self.headings: list[str] = []
         self.heading_parts: list[str] = []
+        self.rows: list[tuple[str, ...]] = []
+        self.row_cells: list[str] = []
+        self.cell_parts: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = dict(attrs)
@@ -88,8 +113,18 @@ class GardenPage(HTMLParser):
             "wbr",
         }:
             self.stack.append((tag, hidden))
+        if tag == "tr":
+            self.row_cells = []
+        if tag in {"td", "th"}:
+            self.cell_parts = []
 
     def handle_endtag(self, tag: str) -> None:
+        if tag in {"td", "th"}:
+            self.row_cells.append(" ".join(" ".join(self.cell_parts).split()))
+            self.cell_parts = []
+        if tag == "tr":
+            self.rows.append(tuple(self.row_cells))
+            self.row_cells = []
         if tag == "h1" and self.heading_parts:
             self.headings.append(" ".join(" ".join(self.heading_parts).split()))
             self.heading_parts = []
@@ -103,6 +138,8 @@ class GardenPage(HTMLParser):
             self.parts.append(value)
             if any(tag == "h1" for tag, _ in self.stack):
                 self.heading_parts.append(value)
+            if any(tag in {"td", "th"} for tag, _ in self.stack):
+                self.cell_parts.append(value)
 
 
 def distance_meters(a: Coordinates, b: Coordinates) -> float:
@@ -129,6 +166,31 @@ def inside_boundary(point: Coordinates, ring: list[Coordinates]) -> bool:
     return inside
 
 
+def segments_intersect(a: Coordinates, b: Coordinates, c: Coordinates, d: Coordinates) -> bool:
+    """Conservatively reject boundary touches as well as crossings in reviewed local geometry."""
+
+    def cross(p: Coordinates, q: Coordinates, r: Coordinates) -> float:
+        return (q.longitude - p.longitude) * (r.latitude - p.latitude) - (
+            q.latitude - p.latitude
+        ) * (r.longitude - p.longitude)
+
+    def on_segment(p: Coordinates, q: Coordinates, r: Coordinates) -> bool:
+        return (
+            abs(cross(p, q, r)) <= 1e-12
+            and min(p.latitude, q.latitude) - 1e-12
+            <= r.latitude
+            <= max(p.latitude, q.latitude) + 1e-12
+            and min(p.longitude, q.longitude) - 1e-12
+            <= r.longitude
+            <= max(p.longitude, q.longitude) + 1e-12
+        )
+
+    ab_c, ab_d, cd_a, cd_b = cross(a, b, c), cross(a, b, d), cross(c, d, a), cross(c, d, b)
+    return (ab_c * ab_d < 0 and cd_a * cd_b < 0) or any(
+        (on_segment(a, b, c), on_segment(a, b, d), on_segment(c, d, a), on_segment(c, d, b))
+    )
+
+
 def normalize_garden(
     garden: ReviewedGarden,
     park: dict,
@@ -136,24 +198,40 @@ def normalize_garden(
     html: str,
     observed_at: datetime,
     official_transport: str = "direct_https",
+    excluded: dict | None = None,
 ) -> PlaceCandidate:
     page = GardenPage()
     page.feed(html)
     visible = " ".join(" ".join(page.parts).split())
-    if page.headings != [garden.title] or visible.count("GENERAL INFORMATION") != 1:
+    if page.headings != [garden.title]:
         raise ValueError("Official garden identity or information section changed")
-    information = visible.split("GENERAL INFORMATION", 1)[1].split("Download Tourism", 1)[0]
-    expected = (
-        garden.sector,
-        "Chandigarh",
-        "Open : Daily",
-        "Timings : 05:00 AM to 09:00 PM",
-        "Entry Fee : Not Applicable",
-    )
-    if not all(claim in information for claim in expected) or any(
-        information.count(field) != 1 for field in ("Open :", "Timings :", "Entry Fee")
-    ):
-        raise ValueError("Official fee, hours or address changed; no inference permitted")
+    if garden.source_format == "chandigarh_garden":
+        if visible.count("GENERAL INFORMATION") != 1:
+            raise ValueError("Official information section changed")
+        information = visible.split("GENERAL INFORMATION", 1)[1].split("Download Tourism", 1)[0]
+        expected = (
+            garden.sector,
+            garden.city,
+            "Open : Daily",
+            "Timings : 05:00 AM to 09:00 PM",
+            "Entry Fee : Not Applicable",
+        )
+        if not all(claim in information for claim in expected) or any(
+            information.count(field) != 1 for field in ("Open :", "Timings :", "Entry Fee")
+        ):
+            raise ValueError("Official fee, hours or address changed; no inference permitted")
+    elif garden.source_format == "karnataka_attraction":
+        fee = ("Entry Fee", "Free (select attractions have nominal charges)")
+        hours = ("Cubbon Park (General)", "6:00 AM", "6:00 PM", "Mondays & 2nd Tuesdays")
+        if (
+            [r for r in page.rows if r and r[0] == fee[0]] != [fee]
+            or [r for r in page.rows if r and r[0] == hours[0]] != [hours]
+            or garden.sector not in visible
+        ):
+            raise ValueError("Official general-park fee, schedule or locality changed")
+        expected = (*fee, *hours, garden.sector)
+    else:
+        raise ValueError("Unsupported reviewed source format")
     park_elements, path_elements = park["elements"], path["elements"]
     boundary = [e for e in park_elements if e["type"] == "way"]
     footway = [e for e in path_elements if e["type"] == "way"]
@@ -200,9 +278,38 @@ def normalize_garden(
         or not any(not inside_boundary(p, ring) for p in path_points)
     ):
         raise ValueError("Access point moved or is not inside this garden")
+    if garden.excluded_way:
+        if excluded is None:
+            raise ValueError("Restricted-ground boundary missing")
+        ways = [e for e in excluded["elements"] if e["type"] == "way"]
+        nodes = {e["id"]: e for e in excluded["elements"] if e["type"] == "node"}
+        if (
+            len(ways) != 1
+            or ways[0]["id"] != garden.excluded_way
+            or (ways[0].get("tags", {}).get("amenity"), ways[0].get("tags", {}).get("name"))
+            != ("courthouse", "High Court of Karnataka")
+        ):
+            raise ValueError("Restricted-ground boundary identity changed")
+        exclusion = [
+            Coordinates(latitude=nodes[n]["lat"], longitude=nodes[n]["lon"])
+            for n in ways[0]["nodes"]
+        ]
+        if (
+            len(exclusion) < 4
+            or exclusion[0] != exclusion[-1]
+            or any(inside_boundary(p, exclusion) for p in path_points)
+            or any(
+                segments_intersect(a, b, c, d)
+                for a, b in pairwise(path_points)
+                for c, d in pairwise(exclusion)
+            )
+        ):
+            raise ValueError("Reviewed pedestrian path overlaps restricted grounds")
     subject = f"osm:way/{garden.park_way}"
     park_url = f"https://www.openstreetmap.org/api/0.6/way/{garden.park_way}/full.json"
     path_url = f"https://www.openstreetmap.org/api/0.6/way/{garden.path_way}/full.json"
+    excluded_url = f"https://www.openstreetmap.org/api/0.6/way/{garden.excluded_way}/full.json"
+    osm_refs = {park_url, path_url, excluded_url}
 
     def fact(field: str, value: object, reference: str = garden.url) -> Evidence:
         return Evidence.model_validate(
@@ -211,11 +318,11 @@ def normalize_garden(
                 subject_id=subject,
                 field=field,
                 value=value,
-                source="OSM" if reference in {park_url, path_url} else "DIRECT",
+                source="OSM" if reference in osm_refs else "DIRECT",
                 source_ref=reference,
                 observed_at=observed_at,
                 expires_at=observed_at + timedelta(hours=24),
-                confidence="MEDIUM" if reference in {park_url, path_url} else "HIGH",
+                confidence="MEDIUM" if reference in osm_refs else "HIGH",
             )
         )
 
@@ -251,18 +358,34 @@ def normalize_garden(
             fact("coordinates", coordinates.model_dump(), path_url),
             fact("categories", ["park"], park_url),
             fact("public_access", True),
-            fact("opening_hours", "Mo-Su 05:00-21:00"),
+            fact("opening_hours", garden.opening_hours),
             fact("timezone", "Asia/Kolkata"),
+            *(
+                (
+                    fact(
+                        "excluded_ground_access",
+                        {"boundary_way": garden.excluded_way, "path_outside_boundary": True},
+                        excluded_url,
+                    ),
+                )
+                if garden.excluded_way
+                else ()
+            ),
             fact(
                 "visit_scope",
                 "Main garden pedestrian paths only. No food, cafeteria, parking, "
-                "purchases or paid activities. Mapped access point, not a physically checked gate.",
+                "purchases, attractions, rentals, courts, clubs or paid activities. "
+                "Mapped access point, not a physically checked gate.",
             ),
             fact(
                 "parse_lineage",
                 dict(
-                    parser="chandigarh-garden-v1",
-                    authority="Chandigarh Tourism Department",
+                    parser=(
+                        "karnataka-main-park-v1"
+                        if garden.source_format == "karnataka_attraction"
+                        else "chandigarh-garden-v1"
+                    ),
+                    authority=garden.authority,
                     page_sha256=hashlib.sha256(html.encode()).hexdigest(),
                     official_retrieval_transport=official_transport,
                     coordinate_kind="mapped_pedestrian_access_node",
@@ -270,7 +393,8 @@ def normalize_garden(
                     path_way=garden.path_way,
                     park_way=garden.park_way,
                     path_crosses_park_boundary=True,
-                    timezone_rule="Reviewed Chandigarh jurisdiction uses India civil time",
+                    excluded_boundary_way=garden.excluded_way,
+                    timezone_rule=f"Reviewed {garden.city} jurisdiction uses India civil time",
                     claims=list(expected),
                 ),
             ),
@@ -304,15 +428,19 @@ async def fetch_garden(client: httpx.AsyncClient, garden: ReviewedGarden) -> Pla
     responses = []
     observed_at = datetime.now(UTC)
     official_transport = "direct_https"
-    for source_kind, url in zip(
-        ("osm_park", "osm_path", "official_garden"),
-        (
-            f"https://www.openstreetmap.org/api/0.6/way/{garden.park_way}/full.json",
-            f"https://www.openstreetmap.org/api/0.6/way/{garden.path_way}/full.json",
-            garden.url,
-        ),
-        strict=True,
-    ):
+    sources = [
+        ("osm_park", f"https://www.openstreetmap.org/api/0.6/way/{garden.park_way}/full.json"),
+        ("osm_path", f"https://www.openstreetmap.org/api/0.6/way/{garden.path_way}/full.json"),
+    ]
+    if garden.excluded_way:
+        sources.append(
+            (
+                "osm_exclusion",
+                f"https://www.openstreetmap.org/api/0.6/way/{garden.excluded_way}/full.json",
+            )
+        )
+    sources.append(("official_garden", garden.url))
+    for source_kind, url in sources:
         try:
             relay = os.getenv("OLLAMA_BASE_URL", "").rstrip("/")
             key = os.getenv("GEMMA_API_KEY", "")
@@ -320,7 +448,7 @@ async def fetch_garden(client: httpx.AsyncClient, garden: ReviewedGarden) -> Pla
                 # Render cannot connect to this authority; reuse the protected model host.
                 body = await read_reviewed_source(
                     client,
-                    f"{relay}/sources/chandigarh/{garden.park_way}",
+                    f"{relay}/sources/gardens/{garden.park_way}",
                     "Bearer " + key,
                 )
                 envelope = json.loads(body)
@@ -351,7 +479,8 @@ async def fetch_garden(client: httpx.AsyncClient, garden: ReviewedGarden) -> Pla
         garden,
         json.loads(responses[0]),
         json.loads(responses[1]),
-        responses[2].decode("utf-8"),
+        responses[-1].decode("utf-8"),
         observed_at,
         official_transport,
+        json.loads(responses[2]) if garden.excluded_way else None,
     )

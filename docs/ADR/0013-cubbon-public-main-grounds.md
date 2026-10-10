@@ -1,0 +1,7 @@
+# ADR 0013: Cubbon main grounds with scoped recurring hours and restricted-ground checks
+
+The current Karnataka Tourism page publishes free general park admission, 06:00–18:00, closed Mondays and second Tuesdays. Paid attractions and special morning-walker hours cannot be inherited. Exact visible table rows and the unique venue heading are checked before facts enter the shared reviewed-garden normalizer. The existing hours engine evaluates `Tu-Su 06:00-18:00; Tu[2] off`, including full dwell across closing time.
+
+Registered OSM park22895320, footway1276833566 and inside node11854682505 are fetched freshly. The footway must cross the named park boundary, keep its reviewed anchor and have no restrictive access tags. The separately fetched High Court boundary208686727 must retain its courthouse identity; all footway vertices and segments must stay outside it. Boundary touches fail closed. Private/permit court gates and the Press Club gate were rejected as candidates. This verifies mapped destination context, not physical gate conditions or an independent audit of every provider route segment.
+
+Original source URLs, body hash, actual observation time, explicit relay transport and exclusion evidence are preserved. The protected source relay retains the prior Chandigarh route for known-green rollback compatibility and adds the canonical registered-garden route; arbitrary upstream URLs remain unsupported. No paid service, model change or physical trial was introduced.

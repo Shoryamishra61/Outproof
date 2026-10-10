@@ -34,6 +34,7 @@ source_busy = asyncio.Lock()
 
 
 @app.get("/sources/chandigarh/{park_way}")
+@app.get("/sources/gardens/{park_way}")
 async def official_garden(park_way: str, request: Request) -> JSONResponse:
     key = os.getenv("GEMMA_API_KEY", "")
     if not key or not secrets.compare_digest(
