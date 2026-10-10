@@ -9,6 +9,41 @@ from typing import Protocol
 import httpx
 from ground_rule.models import CompilationFailure, Coordinates, Evidence, RouteFact
 
+from app.reviewed_gardens import distance_meters
+
+
+def route_shape(encoded: object) -> tuple[Coordinates, ...]:
+    """Decode Valhalla's polyline6; malformed or oversized geometry fails closed."""
+    if not isinstance(encoded, str) or not 2 <= len(encoded) <= 200_000:
+        raise ValueError("Missing or oversized route shape")
+    points = []
+    position = 0
+    latitude = longitude = 0
+    while position < len(encoded):
+        deltas = []
+        for _ in range(2):
+            value = shift = 0
+            while True:
+                if position >= len(encoded) or shift > 30:
+                    raise ValueError("Truncated or overflowing route shape")
+                byte = ord(encoded[position]) - 63
+                position += 1
+                if not 0 <= byte <= 63:
+                    raise ValueError("Invalid route shape character")
+                value |= (byte & 31) << shift
+                shift += 5
+                if byte < 32:
+                    break
+            deltas.append(~(value >> 1) if value & 1 else value >> 1)
+        latitude += deltas[0]
+        longitude += deltas[1]
+        points.append(Coordinates(latitude=latitude / 1_000_000, longitude=longitude / 1_000_000))
+        if len(points) > 20_000:
+            raise ValueError("Oversized route shape")
+    if len(points) < 2:
+        raise ValueError("Incomplete route shape")
+    return tuple(points)
+
 
 class RoutingProvider(Protocol):
     async def route(
@@ -51,6 +86,7 @@ def normalize_valhalla(
             raise ValueError("Conflicting provider error or response identity")
         duration = None
         distance = None
+        endpoint_offsets = None
         if not unreachable:
             trip = payload["trip"]
             if (
@@ -82,6 +118,17 @@ def normalize_valhalla(
                 )
             if trip["legs"][0]["summary"] != summary:
                 raise ValueError("Trip and single-leg summaries conflict")
+            points = route_shape(trip["legs"][0]["shape"])
+            endpoint_offsets = [distance_meters(start, points[0]), distance_meters(end, points[-1])]
+            # One meter allows coordinate serialization rounding, not an unverified connector.
+            if any(offset > 1 for offset in endpoint_offsets):
+                return CompilationFailure(
+                    code="UNSUPPORTED_CONSTRAINT",
+                    message=(
+                        "The walking route does not reach the chosen point. "
+                        "Move the map pin onto a public footpath and try again."
+                    ),
+                )
             # Ferries/tolls may introduce unmodeled mandatory costs; never call them free walks.
             for field in ("has_ferry", "has_toll"):
                 if type(summary.get(field)) is not bool:
@@ -123,6 +170,10 @@ def normalize_valhalla(
                 error_code=code,
                 response_id=payload.get("id"),
                 request=route_request(start, end),
+                shape_endpoint_offsets_meters=endpoint_offsets,
+                shape_sha256=hashlib.sha256(trip["legs"][0]["shape"].encode()).hexdigest()
+                if not unreachable
+                else None,
             ),
             source="VALHALLA",
             source_ref=endpoint,

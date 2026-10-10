@@ -2,6 +2,26 @@ import { test, expect } from './fixtures';
 
 const chennai = { label: 'Chennai, Tamil Nadu, India', coordinates: { latitude: 13.0418, longitude: 80.2341 } };
 
+test('distinct same-name map matches submit the selected point', async ({ page }) => {
+  const matches = [
+    { ...chennai, label: 'Chennai, India — map match 1' },
+    { label: 'Chennai, India — map match 2', coordinates: { latitude: 13.05, longitude: 80.24 } },
+  ];
+  await page.route('**/v1/locations/search', route => route.fulfill({ json: { results: matches } }));
+  await page.goto('/');
+  await expect(page.locator('.eyebrow').first()).toContainText('Outproof');
+  await page.getByLabel('Search for your starting area').fill('Chennai');
+  await page.getByRole('button', { name: 'Search places', exact: true }).click();
+  await page.getByRole('button', { name: matches[1].label, exact: true }).press('Enter');
+  let submitted: unknown;
+  await page.route('**/v1/plans/compile', route => {
+    submitted = route.request().postDataJSON().controls.origin;
+    return route.fulfill({ status: 409, json: { status: 'FAILURE', code: 'NO_GROUNDED_CANDIDATES', message: 'Controlled evidence refusal' } });
+  });
+  await page.getByRole('button', { name: 'Compile one fixture plan' }).click();
+  await expect.poll(() => submitted).toEqual(matches[1].coordinates);
+});
+
 for (const width of [360, 768, 1024, 1440]) {
   test(`search select and keyboard map at ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });

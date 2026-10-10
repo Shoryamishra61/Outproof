@@ -1,3 +1,13 @@
+# Outproof remediation checkpoint — 2026-10-10T08:40:17.527313+00:00
+
+**BLOCKED — CRITICAL REQUIREMENTS UNMET.** Public product renamed to Outproof in the current working tree; deployment verification is pending. Local real source/Valhalla/protected Gemma compilation passed. Actual path endpoints are now checked: Shanti Kunj and a mapped Cubbon footpath passed both directions; the original Chandigarh city-origin route was refused. A fresh reproduction of the historical Bengaluru city-origin route found a 20.888 m omitted connector, so that whole-trip acceptance is withdrawn rather than extended by guessed walking time. The original eight-case radius probe remains FAIL (Potheri upstream HTTP504/503); the duplicate-label browser failure is preserved.
+
+Canonical checks ran successfully; the headless browser rerun passed after the Vite stdin shutdown repair. Initial failed local runs are retained in ignored logs. A new real post-deployment GitHub workflow is implemented and awaiting execution. It requires actual parser/ranker compilation, current sources, outbound/return routing, deterministic proof, fixture prohibition, exact runtime identity and two hard-rule refusals; health alone cannot pass it.
+
+Broad India accepted coverage, Potheri admission/hours, permanent inference availability, human device/screen-reader checks and three physical India trials remain unmet. No new spend is authorized. Do not publish the DEV draft as a complete production release. The freeze target was missed. Next: push checked changes, observe green CI and matching public deployment, run the real public workflow/browser, then checkpoint the final paced 100-origin campaign. Historical receipts below keep their original scope.
+
+--- Previous checkpoint ---
+
 # Latest India scope verdict — 2026-10-10
 
 **BLOCKED — CRITICAL REQUIREMENTS UNMET** for the requested broad India release. The original 100-origin campaign accepted zero plans: 87 typed refusals and 13 provider failures. Repairs have verified three India gardens across two cities in actual production: Shanti Kunj and Terraced Gardens, Chandigarh, and Cubbon Park, Bengaluru. Four targeted current-time API plans and three clean public browser parser/ranker/proof/GO flows passed; twelve negative API requests were refused. Those separate targeted repairs do not establish 100-place operation. An intermediate campaign was preserved after 19 cases (one accepted, seventeen refusals, one provider failure). A newly reproduced fixed-radius exclusion is being corrected before the final full campaign; no partial receipt is called complete.

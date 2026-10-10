@@ -189,16 +189,17 @@ function App() {
     ...(index < result.plan.stops.length ? [{ destination: result.plan.stops[index].place.name ?? 'Destination', action: `Spend ${result.plan.stops[index].dwell_seconds / 60} minutes here.` }] : []),
   ]) : [];
   return <main>
-    <p className="eyebrow">Ground Rule / {isResultLive ? 'LIVE' : liveMode ? 'LIVE' : fixtureMode ? 'FIXTURE DEMO' : 'live compiler unavailable'}</p>
+    <p className="eyebrow">Outproof / {isResultLive ? 'LIVE' : liveMode ? 'LIVE' : fixtureMode ? 'FIXTURE DEMO' : 'live compiler unavailable'}</p>
     {!isResultLive && fixtureMode && <p className="notice">Fictional places, prices and routes. Practice only.</p>}
     {isResultLive && <p className="notice">Verified live places, operating hours and pedestrian routes.</p>}
     {state === 'home' && <>
-      <h1 ref={heading} tabIndex={-1}>Set your limits.<br />Leave the deciding here.</h1><p className="intro">One plan, checked against every hard rule.</p>
+      <h1 ref={heading} tabIndex={-1}>Less searching.<br />More outside.</h1><p className="intro">One outing. Every limit checked.</p>
       {liveMode && <p className="notice">Reviewed walks: Tanglin, Singapore (05:00–00:00 local time); Shanti Kunj and Terraced Garden, Chandigarh (05:00–21:00); Cubbon Park, Bengaluru (06:00–18:00, closed Mondays and second Tuesdays). India times are IST. Main garden paths only; mapped India access is not physically checked. Most areas still lack a verified outing. Your location goes to map and routing providers; it is not saved as outing history.</p>}
       {!isEnabled ? <section><h2>Live evidence gate</h2><p>Real outing compilation is unavailable while required evidence is incomplete.</p></section> :
       <form onSubmit={compile} aria-label="Outing controls">
         <fieldset className="origin-choice">
           <legend>Starting location</legend>
+          {liveMode && <button type="button" className="secondary" onClick={() => { locationRequest.current++; setIsLocating(false); setOriginMode('map'); setMapOrigin({ latitude: 30.7443502, longitude: 76.7787642, label: 'Reviewed Shanti Kunj walking start, Chandigarh, India' }); setCurrency('INR'); setBudget(0); setError(''); }}>Try the Chandigarh walking start</button>}
           <label className="check">
             <input
               type="radio"

@@ -39,18 +39,25 @@ def normalize_locations(payload: object) -> LocationResults:
         if any(type(v) not in (int, float) for v in coordinates):
             raise ValueError("Invalid location coordinates")
         parts = []
-        for key in ("name", "street", "city", "state", "country"):
+        for key in ("name", "street", "district", "county", "city", "state", "country"):
             value = feature["properties"].get(key)
             if value is not None and (not isinstance(value, str) or len(value) > 280):
                 raise ValueError("Invalid location label")
             if value and value not in parts:
                 parts.append(value)
-        results.append(
-            LocationResult(
-                label=", ".join(parts)[:280],
-                coordinates=Coordinates(latitude=coordinates[1], longitude=coordinates[0]),
-            )
+        result = LocationResult(
+            label=", ".join(parts)[:280],
+            coordinates=Coordinates(latitude=coordinates[1], longitude=coordinates[0]),
         )
+        if result not in results:
+            results.append(result)
+    labels = [result.label for result in results]
+    for index, result in enumerate(results):
+        if labels.count(result.label) > 1:
+            match = labels[: index + 1].count(result.label)
+            results[index] = result.model_copy(
+                update={"label": f"{result.label[:250]} — map match {match}"}
+            )
     return LocationResults(results=results)
 
 

@@ -2,9 +2,9 @@
 
 ## Product
 
-**Ground Rule**
+**Outproof**
 
-Tagline: **Your limits in. One real plan out.**
+Tagline: **One outing. Every limit checked.**
 
 ## Problem
 
@@ -19,7 +19,7 @@ People often want to leave home but fail to convert intention into an outing bec
 - unreliable venue information
 - endless browsing
 
-Ground Rule reduces decisions rather than increasing recommendations.
+Outproof reduces decisions rather than increasing recommendations.
 
 ## Job to be done
 

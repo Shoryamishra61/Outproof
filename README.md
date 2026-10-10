@@ -1,8 +1,8 @@
-# Ground Rule / Outproof
+# Outproof
 
-**Your limits in. One real plan out.** An open-weight Gemma outing compiler for Touch Grass.
+**One outing. Every limit checked.** An open-weight Gemma outing compiler for Touch Grass.
 
-[Open Ground Rule](https://outproof-web.onrender.com/) · [69-second public India execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
+[Open Outproof](https://outproof-web.onrender.com/) · [69-second public India execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
 
 Reviewed live support includes Singapore Botanic Gardens/Tanglin and mapped pedestrian corridors at Shanti Kunj and Terraced Gardens, Chandigarh, and Cubbon Park, Bengaluru. Official venue admission/hours, exact OSM access geometry and independent Valhalla round trips ground main-ground walks. Cubbon's general grounds close Mondays and second Tuesdays; the checked path excludes the mapped High Court grounds. India mapped access is not physically checked. The actual 100-area India baseline accepted zero plans; these narrow repaired corridors do not establish broad coverage. See [India execution evidence](evals/reports/INDIA_100_RELEASE.md).
 
@@ -17,6 +17,10 @@ Requires Python 3.12+, Node 24, uv and Ollama. Dependencies are locked. Run `./s
 Use `.env.example` for variable names. Shells do not load env files automatically. Configure secrets in ignored local files or provider dashboards; never use frontend variables for credentials. Remote Ollama requires HTTPS plus `GEMMA_API_KEY`. The authenticated temporary laptop tunnel has no uptime guarantee; it is not stable hosting.
 
 `/v1/health/live` reports the process only. `/v1/health/ready` probes the configured model tag and one available reviewed source/route, cached for 60 seconds; it does not establish selected-area or global compilation. `/v1/version` exposes build SHA. Production forbids fixture mode.
+
+## Current release boundary
+
+Outproof is the public product name; internal package and environment-variable names retain their established Ground Rule identifiers. The latest engineering repair binds walking metrics to actual route-shape endpoints. Historical accepted Chandigarh/Bengaluru city-centre receipts are superseded where unverified snapping omitted a connector. Choose the explicit reviewed Chandigarh start or an actual public footpath; arbitrary city-centre coordinates can fail. A place-search result never establishes an outing. Broad India coverage, permanent model hosting and physical trials remain unmet.
 
 ## Evidence
 

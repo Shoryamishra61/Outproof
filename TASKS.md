@@ -270,3 +270,14 @@ Thousands of controlled cases are not thousands of real outings. Potheri admissi
 - [x] Reproduce the Chandigarh 1 km discovery exclusion with real source/Valhalla/Gemma evidence and a feasible 41-minute round trip.
 - [x] Use the existing 3 km provider cap; preserve all route and hard-policy checks; 62 narrow and 4,974 canonical tests pass.
 - [ ] Verify the bounded-radius correction in deployed API and browser, then execute the final 100-area campaign.
+
+## Outproof release remediation
+
+- [x] Rename public product, title and API documentation to Outproof; retain established internal identifiers.
+- [x] Reproduce ambiguous Chandigarh labels and deduplicate exact provider points with distinct map-match labels.
+- [x] Reject route geometry that omits an unverified connector; fresh actual mapped Shanti/Cubbon route pairs and local LIVE compilation demonstrated.
+- [x] Preserve failed headless browser runs; configure Vite to survive closed stdin.
+- [ ] Verify new name, reviewed origin preset, parser/proof/GO and route refusal on the deployed build.
+- [ ] Execute and retain the new real post-deployment GitHub workflow.
+- [ ] Finish the separately preserved final 100-origin production campaign.
+- [ ] Human manual device/screen-reader sessions and three physical India trials.

@@ -49,6 +49,17 @@ def test_search_normalizes_point_and_does_not_invent_venue_facts() -> None:
     assert normalize_locations({"features": []}).results == []
 
 
+def test_duplicate_provider_points_collapse_and_distinct_matches_remain_selectable() -> None:
+    first = payload()["features"][0]
+    second = payload(latitude=13.09)["features"][0]
+    results = normalize_locations({"features": [first, second, second, second]})
+    assert [result.label for result in results.results] == [
+        "Chennai, India — map match 1",
+        "Chennai, India — map match 2",
+    ]
+    assert [result.coordinates.latitude for result in results.results] == [13.08, 13.09]
+
+
 def test_search_is_identified_cached_and_globally_rate_limited() -> None:
     requests = []
 

@@ -4,7 +4,7 @@ from datetime import UTC, datetime
 
 import httpx
 import pytest
-from app.routing import ValhallaRoutingProvider, normalize_valhalla
+from app.routing import ValhallaRoutingProvider, normalize_valhalla, route_shape
 from ground_rule.models import CompilationFailure, Coordinates, RouteFact
 
 START = Coordinates(latitude=13.04, longitude=80.23)
@@ -19,7 +19,7 @@ def payload() -> dict:
             status=0,
             units="kilometers",
             summary=summary,
-            legs=[dict(summary=deepcopy(summary))],
+            legs=[dict(summary=deepcopy(summary), shape="_w{zW_fz_xCowHowH")],
             locations=[dict(lat=p.latitude, lon=p.longitude) for p in (START, END)],
         ),
     )
@@ -44,6 +44,38 @@ def test_rounds_duration_up_and_binds_coordinates() -> None:
     assert route.duration_seconds == 602 and route.distance_meters == 850.0
     assert route.evidence[0].value["from_coordinates"] == START.model_dump()
     assert route.evidence[0].value["to_coordinates"] == END.model_dump()
+
+
+def test_route_geometry_must_reach_coordinates_not_just_echo_them() -> None:
+    value = payload()
+    value["trip"]["locations"][0]["lat"] += 0.0002
+    result = normalize_valhalla(
+        value,
+        from_id="origin",
+        to_id="osm:node/1",
+        start=Coordinates(latitude=13.0402, longitude=80.23),
+        end=END,
+        route_id="test-route",
+        endpoint="https://test/route",
+        observed_at=datetime(2026, 10, 7, tzinfo=UTC),
+    )
+    assert isinstance(result, CompilationFailure) and result.code == "UNSUPPORTED_CONSTRAINT"
+    assert "map pin" in result.message
+
+
+@pytest.mark.parametrize(
+    "shape",
+    [None, "", "_", "??", "~~~~~~~~~~~~", "\x00?", "?" * 200_001],
+    ids=["missing", "empty", "truncated", "one-point", "overflow", "invalid", "oversized"],
+)
+def test_missing_or_malformed_route_geometry_cannot_establish_travel(shape: object) -> None:
+    value = payload()
+    value["trip"]["legs"][0]["shape"] = shape
+    assert isinstance(normalize(value), CompilationFailure)
+
+
+def test_polyline6_decodes_both_endpoints() -> None:
+    assert route_shape("_w{zW_fz_xCowHowH") == (START, END)
 
 
 @pytest.mark.parametrize("code", [170, 171, 441, 442])

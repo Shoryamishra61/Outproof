@@ -1,0 +1,342 @@
+{
+  "executed_at": "2026-10-10T08:30:04.278937+00:00",
+  "scope": "Actual pedestrian shape endpoint checks, no physical outings",
+  "routes": [
+    {
+      "label": "Cubbon-map-footpath",
+      "origin": {
+        "latitude": 12.976969,
+        "longitude": 77.590013
+      },
+      "routes": [
+        {
+          "route_id": "valhalla:fe102de177b118e78904597d",
+          "from_id": "origin",
+          "to_id": "Cubbon Park",
+          "reachable": true,
+          "duration_seconds": 109,
+          "distance_meters": 140.0,
+          "evidence": [
+            {
+              "evidence_id": "valhalla:fe102de177b118e78904597d:walking_route",
+              "subject_id": "valhalla:fe102de177b118e78904597d",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "Cubbon Park",
+                "from_coordinates": {
+                  "latitude": 12.976969,
+                  "longitude": 77.590013
+                },
+                "to_coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "reachable": true,
+                "duration_seconds": 109,
+                "distance_meters": 140.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T08:30:05.731161Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:fe102de177b118e78904597d:metadata",
+              "subject_id": "valhalla:fe102de177b118e78904597d",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:fe102de177b118e78904597d",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 12.976969,
+                      "lon": 77.590013,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 12.9771413,
+                      "lon": 77.5911742,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                },
+                "shape_endpoint_offsets_meters": [
+                  0.0,
+                  0.039779644548605136
+                ],
+                "shape_sha256": "74c36fc1476d03ecf9c06d343bce47cec2673360dcdadebe294546fbd541ae6e"
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T08:30:05.731161Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            }
+          ]
+        },
+        {
+          "route_id": "valhalla:b9b469277ad7d6b712e95201",
+          "from_id": "Cubbon Park",
+          "to_id": "origin",
+          "reachable": true,
+          "duration_seconds": 100,
+          "distance_meters": 140.0,
+          "evidence": [
+            {
+              "evidence_id": "valhalla:b9b469277ad7d6b712e95201:walking_route",
+              "subject_id": "valhalla:b9b469277ad7d6b712e95201",
+              "field": "walking_route",
+              "value": {
+                "from_id": "Cubbon Park",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "to_coordinates": {
+                  "latitude": 12.976969,
+                  "longitude": 77.590013
+                },
+                "reachable": true,
+                "duration_seconds": 100,
+                "distance_meters": 140.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T08:30:05.922816Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:b9b469277ad7d6b712e95201:metadata",
+              "subject_id": "valhalla:b9b469277ad7d6b712e95201",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:b9b469277ad7d6b712e95201",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 12.9771413,
+                      "lon": 77.5911742,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 12.976969,
+                      "lon": 77.590013,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                },
+                "shape_endpoint_offsets_meters": [
+                  0.039779644548605136,
+                  0.0
+                ],
+                "shape_sha256": "e4101cb63ca4f5bf0f13d0e293c7463673ce635a3556fd2b3939875503ede07c"
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T08:30:05.922816Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            }
+          ]
+        }
+      ],
+      "both_reachable": true
+    },
+    {
+      "label": "Shanti-reviewed-probe",
+      "origin": {
+        "latitude": 30.7443502,
+        "longitude": 76.7787642
+      },
+      "routes": [
+        {
+          "route_id": "valhalla:d6460ab797272e203fe45dc8",
+          "from_id": "origin",
+          "to_id": "Shanti Kunj",
+          "reachable": true,
+          "duration_seconds": 47,
+          "distance_meters": 65.0,
+          "evidence": [
+            {
+              "evidence_id": "valhalla:d6460ab797272e203fe45dc8:walking_route",
+              "subject_id": "valhalla:d6460ab797272e203fe45dc8",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "Shanti Kunj",
+                "from_coordinates": {
+                  "latitude": 30.7443502,
+                  "longitude": 76.7787642
+                },
+                "to_coordinates": {
+                  "latitude": 30.7440211,
+                  "longitude": 76.7781861
+                },
+                "reachable": true,
+                "duration_seconds": 47,
+                "distance_meters": 65.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T08:30:18.616206Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:d6460ab797272e203fe45dc8:metadata",
+              "subject_id": "valhalla:d6460ab797272e203fe45dc8",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:d6460ab797272e203fe45dc8",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 30.7443502,
+                      "lon": 76.7787642,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 30.7440211,
+                      "lon": 76.7781861,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                },
+                "shape_endpoint_offsets_meters": [
+                  0.02932398915696268,
+                  0.014662015950578656
+                ],
+                "shape_sha256": "feb74f358ddca23f2758a04af5a6ccb5f8d2bf0090b516076418cb23881d10d9"
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T08:30:18.616206Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            }
+          ]
+        },
+        {
+          "route_id": "valhalla:df7f930457d96b605b10265b",
+          "from_id": "Shanti Kunj",
+          "to_id": "origin",
+          "reachable": true,
+          "duration_seconds": 47,
+          "distance_meters": 65.0,
+          "evidence": [
+            {
+              "evidence_id": "valhalla:df7f930457d96b605b10265b:walking_route",
+              "subject_id": "valhalla:df7f930457d96b605b10265b",
+              "field": "walking_route",
+              "value": {
+                "from_id": "Shanti Kunj",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 30.7440211,
+                  "longitude": 76.7781861
+                },
+                "to_coordinates": {
+                  "latitude": 30.7443502,
+                  "longitude": 76.7787642
+                },
+                "reachable": true,
+                "duration_seconds": 47,
+                "distance_meters": 65.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T08:30:18.802136Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:df7f930457d96b605b10265b:metadata",
+              "subject_id": "valhalla:df7f930457d96b605b10265b",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:df7f930457d96b605b10265b",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 30.7440211,
+                      "lon": 76.7781861,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 30.7443502,
+                      "lon": 76.7787642,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                },
+                "shape_endpoint_offsets_meters": [
+                  0.014662015950578656,
+                  0.02932398915696268
+                ],
+                "shape_sha256": "352ccb92603d872450e3d0cc11bd6002ed53b13378bd4421f2a187ef66fe97ca"
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T08:30:18.802136Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            }
+          ]
+        }
+      ],
+      "both_reachable": true
+    },
+    {
+      "label": "Chandigarh-city",
+      "origin": {
+        "latitude": 30.7334421,
+        "longitude": 76.7797143
+      },
+      "routes": [
+        {
+          "status": "FAILURE",
+          "code": "UNSUPPORTED_CONSTRAINT",
+          "message": "The walking route does not reach the chosen point. Move the map pin onto a public footpath and try again."
+        },
+        {
+          "status": "FAILURE",
+          "code": "UNSUPPORTED_CONSTRAINT",
+          "message": "The walking route does not reach the chosen point. Move the map pin onto a public footpath and try again."
+        }
+      ],
+      "both_reachable": false
+    }
+  ]
+}

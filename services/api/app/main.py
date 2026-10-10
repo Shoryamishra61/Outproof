@@ -76,7 +76,7 @@ def create_app(
     technical_logger.setLevel(logging.INFO)
     if not technical_logger.handlers:
         technical_logger.addHandler(logging.StreamHandler())
-    app = FastAPI(title="Ground Rule", version="0.1.0")
+    app = FastAPI(title="Outproof", version="0.1.0")
     origins = [s.strip() for s in os.getenv("GROUND_RULE_CORS_ORIGINS", "").split(",") if s.strip()]
     if "*" in origins:
         raise ValueError("Explicit CORS origins required")

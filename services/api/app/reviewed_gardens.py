@@ -143,7 +143,7 @@ class GardenPage(HTMLParser):
 
 
 def distance_meters(a: Coordinates, b: Coordinates) -> float:
-    """Discovery proximity only; Valhalla still owns every walking metric."""
+    """Geodesic separation for discovery/binding; never a walking metric."""
     lat_a, lat_b = radians(a.latitude), radians(b.latitude)
     delta_lat = lat_b - lat_a
     delta_lon = radians(b.longitude - a.longitude)

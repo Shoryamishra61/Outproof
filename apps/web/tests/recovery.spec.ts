@@ -88,7 +88,7 @@ for (const width of [320, 390, 1440]) for (const path of ['gps', 'lowaccuracy', 
     }
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.reload();
-    await expect(page.getByRole('heading', { name: /Set your limits/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Less searching/ })).toBeVisible();
     await expect(page.getByText('Phone down.', { exact: true })).toHaveCount(0);
   });
 }

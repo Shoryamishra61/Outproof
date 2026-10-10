@@ -1,0 +1,36 @@
+{
+  "executed_at": "2026-10-10T05:01:35.267Z",
+  "url": "https://outproof-web.onrender.com",
+  "scope": "Actual current-time India public search -> Gemma parser/ranker -> official sources/OSM/Valhalla -> proof/GO; no physical outing",
+  "errors": [],
+  "requests": [],
+  "readiness": [
+    {
+      "status": 200,
+      "body": {
+        "status": "ready",
+        "model_reachable": true,
+        "live_evidence_available": true,
+        "compilation_available": true,
+        "mode": "LIVE",
+        "readiness_scope": "reviewed Singapore source and route only",
+        "global_compilation_verified": false
+      }
+    }
+  ],
+  "version": {
+    "version": "0.1.0",
+    "commit": "a5b3427720111e4c3dd6944ee1ea6175d6c9cff8",
+    "environment": "production"
+  },
+  "initial_currency": "INR",
+  "selected_start": {
+    "label": "Chandigarh, India",
+    "coordinates": {
+      "latitude": 30.7334421,
+      "longitude": 76.7797143
+    }
+  },
+  "status": "FAIL",
+  "failure": "Error: locator.click: Error: strict mode violation: getByRole('button', { name: 'Chandigarh, India', exact: true }) resolved to 4 elements:\n    1) <button type=\"button\">Chandigarh, India</button> aka getByRole('button', { name: 'Chandigarh, India' }).first()\n    2) <button type=\"button\">Chandigarh, India</button> aka getByRole('button', { name: 'Chandigarh, India' }).nth(1)\n    3) <button type=\"button\">Chandigarh, India</button> aka getByRole('button', { name: 'Chandigarh, India' }).nth(2)\n    4) <button type=\"button\">Chandigarh, India</button> aka getByRole('button', { name: 'Chandigarh, India' }).nth(3)\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Chandigarh, India', exact: true })\u001b[22m\n"
+}
