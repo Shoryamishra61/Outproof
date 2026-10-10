@@ -85,7 +85,7 @@ def create_app(
         allow_origins=origins,
         allow_methods=["GET", "POST"],
         allow_headers=["Content-Type"],
-        expose_headers=["X-Request-ID", "Retry-After"],
+        expose_headers=["X-Request-ID", "Retry-After", "X-Server-Time"],
     )
     hosts = os.getenv("GROUND_RULE_ALLOWED_HOSTS", "*").split(",")
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=hosts)
@@ -144,6 +144,7 @@ def create_app(
         response.headers.update(
             {
                 "X-Request-ID": request_id,
+                "X-Server-Time": clock().isoformat(),
                 "X-Content-Type-Options": "nosniff",
                 "X-Frame-Options": "DENY",
                 "Referrer-Policy": "no-referrer",

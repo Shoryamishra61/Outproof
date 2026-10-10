@@ -15,3 +15,7 @@ The 09:00 IST freeze was missed. Physical trials remain **0/3 UNEXECUTED**, phys
 [Application](https://outproof-web.onrender.com/), [demo](https://outproof-web.onrender.com/demo.html), [source](https://github.com/Shoryamishra61/Outproof).
 
 Evidence: `INDIA_100_FINAL.json`, `INDIA_100_FINAL_AUDIT.json`, `OUTPROOF_CONFIRMED_ORIGIN_LOCAL.json`, `OUTPROOF_SINGAPORE_ORIGIN_LOCAL.json`, `OUTPROOF_KEYBOARD_RECOVERY.json`. The DEV draft remains unpublished.
+
+## Real public recovery failure retained
+
+Build27dc3e1 passed GitHub Checks38044106152 and production workflow38044261625 and both services matched. Actual Bengaluru search/refusal/explicit selection/recompile/proof succeeded, but immediate GO failed with a browser clock about half a second behind the API. `OUTPROOF_ORIGIN_PUBLIC_FAILURE.json` and `artifacts/release/outproof-confirmed-route-start/` retain the failed complete-flow attempt. Clock alignment is now being repaired without relaxing freshness gates; new public verification remains pending. The73-second demo playback and corrected public branding passed again on27dc3e1.

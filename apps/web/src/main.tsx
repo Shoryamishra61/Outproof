@@ -4,8 +4,9 @@ import Ajv from 'ajv/dist/2020';
 import addFormats from 'ajv-formats';
 import compiledSchema from '../../../contracts/compiled-plan.schema.json';
 import failureSchema from '../../../contracts/compilation-failure.schema.json';
-import type { CompiledPlan, CompilationFailure, ConstraintSet, Coordinates, Evidence, Money } from '../../../contracts/domain';
+import type { CompiledPlan, CompilationFailure, ConstraintSet, Coordinates, Money } from '../../../contracts/domain';
 import { LocationPicker, type StartingPoint } from './LocationPicker';
+import { canStart, responseTime, sourceState } from './planFreshness';
 import './style.css';
 
 const ajv = new Ajv({ strict: false });
@@ -18,7 +19,6 @@ const apiBase = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
 const isEnabled = fixtureMode || liveMode;
 const voiceEnabled = import.meta.env.VITE_GROUND_RULE_VOICE_ENABLED === 'true';
 const checkCodes = ['BUDGET', 'CURRENCY', 'DURATION', 'ROUTING', 'RETURN_TRIP', 'OPENING_HOURS', 'WALKING', 'EXCLUSIONS', 'DIETARY', 'GROUNDING', 'PRICE_CONFIDENCE'];
-const ageHours: Record<string, number> = { identity: 720, coordinates: 720, categories: 168, excluded_categories: 168, dietary_options: 168, price: 24, opening_window: 24, walking_route: 0.25 };
 function money(value: Money | null) {
   if (!value) return 'Unknown';
   return new Intl.NumberFormat('en-IN', { style: 'currency', currency: value.currency_code }).format(value.minor_units / (value.currency_code === 'JPY' ? 1 : 100));
@@ -29,12 +29,6 @@ function nearbyOrigin(proposed: Coordinates, original: Coordinates): boolean {
   const longitude = (proposed.longitude - original.longitude) * radians;
   const separation = 12742000 * Math.asin(Math.min(1, Math.sqrt(Math.sin(latitude / 2) ** 2 + Math.cos(proposed.latitude * radians) * Math.cos(original.latitude * radians) * Math.sin(longitude / 2) ** 2)));
   return separation <= 100;
-}
-function sourceState(source: Evidence) {
-  const elapsed = (Date.now() - Date.parse(source.observed_at)) / 3600000;
-  if (elapsed < 0) return 'Future observation';
-  if ((source.expires_at && Date.now() >= Date.parse(source.expires_at)) || elapsed >= (ageHours[source.field] ?? Infinity)) return 'Stale — revalidation required';
-  return 'Observation retained';
 }
 function acceptedPlan(value: unknown, controls: ConstraintSet, mode: CompiledPlan['mode']): value is CompiledPlan {
   if (!isCompiled(value) || value.status !== 'SUCCESS' || value.mode !== mode) return false;
@@ -63,21 +57,6 @@ function acceptedPlan(value: unknown, controls: ConstraintSet, mode: CompiledPla
   return false;
 }
 
-function canStart(value: CompiledPlan): boolean {
-  if (value.mode === 'FIXTURE') return true;
-  const now = Date.now();
-  if (now < Date.parse(value.compiled_at) || now - Date.parse(value.compiled_at) > 60000) return false;
-  if (!value.proof.sources.every(s => sourceState(s) === 'Observation retained')) return false;
-  if (value.return_by_local && now + value.proof.total_duration_seconds * 1000 > Date.parse(value.return_by_local)) return false;
-  let arrival = now;
-  for (const [i, stop] of value.plan.stops.entries()) {
-    arrival += (value.plan.routes[i].duration_seconds ?? 0) * 1000;
-    const departure = arrival + stop.dwell_seconds * 1000;
-    if (!stop.place.opening_windows?.some(w => Date.parse(w.opens_at) <= arrival && Date.parse(w.closes_at) >= departure)) return false;
-    arrival = departure;
-  }
-  return true;
-}
 
 function App() {
   const [state, setState] = useState<'home' | 'compiling' | 'result' | 'go'>('home');
@@ -110,6 +89,9 @@ function App() {
   const errorPanel = useRef<HTMLParagraphElement>(null);
   const compileButton = useRef<HTMLButtonElement>(null);
   const pending = useRef<AbortController | null>(null);
+  const serverClock = useRef<{ time: number; receivedAt: number; receivedWallTime: number } | null>(null);
+  // Suspended time and forward clock changes must not extend a plan's freshness.
+  const currentTime = () => serverClock.current ? serverClock.current.time + Math.max(performance.now() - serverClock.current.receivedAt, Date.now() - serverClock.current.receivedWallTime) : Date.now();
   const locationRequest = useRef(0);
   useEffect(() => {
     const controller = new AbortController();
@@ -165,11 +147,13 @@ function App() {
       max_walking_meters: null, return_by_local: null, locale: 'en-IN',
       origin, departure_at: new Date().toISOString(), strict_budget: true,
     };
+    serverClock.current = null;
     setSent(controls); setError(''); setProposedOrigin(null); setLastCompileFailed(false); setResult(null); setStep(0); setState('compiling');
     const controller = new AbortController(); pending.current = controller;
     const timeout = window.setTimeout(() => controller.abort(), 185000);
     try {
       const mode = isLive ? 'LIVE' : 'FIXTURE';
+      const requestStarted = performance.now();
       const response = await fetch(`${apiBase}/v1/plans/compile`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: controller.signal, body: JSON.stringify({ mode, controls, free_text: text }) });
       const body: unknown = await response.json();
       if (pending.current !== controller) return;
@@ -185,6 +169,8 @@ function App() {
           : failureMessage;
         throw new Error(contextHelp);
       }
+      const time = responseTime(response.headers.get('X-Server-Time'), body.compiled_at, performance.now() - requestStarted);
+      if (body.mode === 'LIVE' && time !== null) serverClock.current = { time, receivedAt: performance.now(), receivedWallTime: Date.now() };
       setResult(body); setState('result');
     } catch (cause) {
       if (pending.current !== controller) return;
@@ -264,11 +250,11 @@ function App() {
       <dl className="totals"><div><dt>Total time</dt><dd>{Math.ceil(result.proof.total_duration_seconds / 60)} min</dd><small>including return</small></div><div><dt>Mandatory cost · {result.proof.cost.confidence}</dt><dd>{money(result.proof.cost.upper)}</dd><small>whole party · cap {money({ currency_code: sent.currency_code ?? currency, minor_units: (sent.budget_minor_units ?? 0) * (sent.budget_scope === 'PER_PERSON' ? sent.party_size ?? 1 : 1) })}</small></div></dl>
       {result.plan.stops.flatMap(s => s.place.evidence.filter(e => e.field === 'visit_scope')).map(e => <p className="notice" key={e.evidence_id}>{String(e.value)}</p>)}
       <ol className="sequence">{actions.map((action, index) => <li key={index}><strong>{action.destination}</strong><span>{action.action}</span></li>)}</ol>
-      <button type="button" onClick={() => { if (!canStart(result)) { setError('Plan evidence or departure window needs a fresh check. Compile again before leaving.'); setState('home'); } else setState('go'); }}>{isResultLive ? 'GO' : 'GO · practice'}</button>
+      <button type="button" onClick={() => { if (!canStart(result, currentTime())) { setError('Plan evidence or departure window needs a fresh check. Compile again before leaving.'); setState('home'); } else setState('go'); }}>{isResultLive ? 'GO' : 'GO · practice'}</button>
       <details className="proof"><summary>Plan Proof · {result.proof.validation.checks.length} hard checks passed</summary>
         <p>Budget: {money(result.proof.cost.upper)} total. Time: {result.proof.total_duration_seconds / 60} min, including return. Walking: {result.proof.walking_distance_meters} m.</p>
         <ul>{result.proof.validation.checks.map(check => <li key={check.code}><strong>{check.status} {check.code}</strong><p>{check.message}</p><small>Evidence: {check.evidence_ids.join(', ') || 'No source needed for absent constraint'}</small></li>)}</ul>
-        <h2>Source observations · {result.mode}</h2><ul>{result.proof.sources.map(source => <li key={source.evidence_id}><strong>{source.evidence_id}</strong><br /><small>{source.source_ref.startsWith('https://') ? <a href={source.source_ref} target="_blank" rel="noreferrer">Source</a> : source.source_ref}<br />Observed {source.observed_at}<br />{sourceState(source)}{source.expires_at && ` · expires ${source.expires_at}`}</small></li>)}</ul>
+        <h2>Source observations · {result.mode}</h2><ul>{result.proof.sources.map(source => <li key={source.evidence_id}><strong>{source.evidence_id}</strong><br /><small>{source.source_ref.startsWith('https://') ? <a href={source.source_ref} target="_blank" rel="noreferrer">Source</a> : source.source_ref}<br />Observed {source.observed_at}<br />{sourceState(source, currentTime())}{source.expires_at && ` · expires ${source.expires_at}`}</small></li>)}</ul>
       </details>
       <button className="secondary" type="button" onClick={() => setState('home')}>Edit constraints</button>
     </section>}

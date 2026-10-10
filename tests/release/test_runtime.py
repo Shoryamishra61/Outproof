@@ -1,4 +1,5 @@
 import asyncio
+from datetime import UTC, datetime
 from types import SimpleNamespace
 
 import httpx
@@ -180,5 +181,30 @@ def test_liveness_is_distinct_from_ready_and_requests_are_bounded(
                 assert response.headers["Cache-Control"] == "no-store"
             limited = await client.post("/v1/plans/compile", json={})
             assert limited.status_code == 429 and limited.headers["Retry-After"] == "60"
+
+    asyncio.run(run())
+
+
+def test_response_clock_is_server_owned_and_exposed_only_to_allowed_origin(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("GROUND_RULE_CORS_ORIGINS", "https://outproof-web.onrender.com")
+    now = datetime(2026, 10, 10, 10, 17, 38, tzinfo=UTC)
+
+    async def run() -> None:
+        app = create_app(clock=lambda: now)
+        async with httpx.AsyncClient(
+            transport=httpx.ASGITransport(app=app), base_url="http://test"
+        ) as client:
+            for origin in ("https://outproof-web.onrender.com", "https://denied.example"):
+                response = await client.get(
+                    "/v1/health/live",
+                    headers={"Origin": origin, "X-Server-Time": "untrusted-client-time"},
+                )
+                assert response.headers["X-Server-Time"] == now.isoformat()
+                assert "X-Server-Time" in response.headers["Access-Control-Expose-Headers"]
+                assert response.headers.get("Access-Control-Allow-Origin") == (
+                    origin if origin == "https://outproof-web.onrender.com" else None
+                )
 
     asyncio.run(run())
