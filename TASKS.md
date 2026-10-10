@@ -255,5 +255,5 @@ Thousands of controlled cases are not thousands of real outings. Potheri admissi
 - [x] Preserve inputs, full responses, request IDs, latencies and stable deployment identity; scheduled departure explicitly 10:00 IST, no physical outings.
 - [x] Add fresh official Chandigarh admission/hours joined to actual OSM park boundaries and pedestrian access paths; no city-wide fee/hour inheritance.
 - [x] Execute real local source/routing/Gemma compilation for Shanti Kunj and Terraced Gardens; eleven checks pass for each.
-- [ ] Verify both added paths in deployed API and clean public browser, including proof/GO and failure cases.
+- [x] Verify both added paths in deployed API and clean public browser, including proof/GO and five hard-rule failure cases (`91868df`).
 - [ ] Reach broad India accepted-outing coverage. The 100-place campaign demonstrates a critical gap, not a passing global release gate.

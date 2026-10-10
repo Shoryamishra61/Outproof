@@ -4,7 +4,7 @@
 
 [Open Ground Rule](https://outproof-web.onrender.com/) · [68-second public execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
 
-Live coverage is limited to the reviewed Singapore Botanic Gardens Tanglin entrance corridor, main grounds only. Official NParks admission/hours, an OSM pedestrian gate and independent Valhalla round trips ground the compiler. Other locations may yield a typed refusal; worldwide operation is not claimed.
+Reviewed live support includes Singapore Botanic Gardens/Tanglin and mapped pedestrian corridors at Shanti Kunj and Terraced Gardens, Chandigarh. Official venue admission/hours, exact OSM access geometry and independent Valhalla round trips ground main-ground walks. India mapped access is not physically checked. The actual 100-area India baseline accepted zero plans; these narrow repaired corridors do not establish broad coverage. See [India execution evidence](evals/reports/INDIA_100_RELEASE.md).
 
 Anna Nagar's previous accepted result was withdrawn: a civic listing and general schedule do not prove zero admission or venue-specific hours. The correct area is 57,927 m² (~14.31 acres). See [release evidence audit](evals/reports/FINAL_EVIDENCE_AUDIT.md).
 
@@ -16,7 +16,7 @@ Requires Python 3.12+, Node 24, uv and Ollama. Dependencies are locked. Run `./s
 
 Use `.env.example` for variable names. Shells do not load env files automatically. Configure secrets in ignored local files or provider dashboards; never use frontend variables for credentials. Remote Ollama requires HTTPS plus `GEMMA_API_KEY`. The authenticated temporary laptop tunnel has no uptime guarantee; it is not stable hosting.
 
-`/v1/health/live` reports the process only. `/v1/health/ready` probes the configured model tag and reviewed Singapore source/route, cached for 60 seconds; it does not establish selected-area or global compilation. `/v1/version` exposes build SHA. Production forbids fixture mode.
+`/v1/health/live` reports the process only. `/v1/health/ready` probes the configured model tag and one available reviewed source/route, cached for 60 seconds; it does not establish selected-area or global compilation. `/v1/version` exposes build SHA. Production forbids fixture mode.
 
 ## Evidence
 

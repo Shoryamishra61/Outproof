@@ -27,3 +27,11 @@ The rollback drill unexpectedly changed both service autodeploy settings to off,
 Local Ollama runtime `/api/version` returned0.35.1, and `/api/ps` confirmed the exact resident model and4096 context (`release-runtime-version.json`). A later prompt-only negation correction passed three real authenticated parser calls while retaining the policy guards; historical failures remain preserved. Final canonical/CI/deployment receipts identify the final version separately.
 
 Limits: laptop/tunnel/free-service sleep prevents a 24/7 claim. Supported admission is main gardens only, not paid attractions/food/parking. Global attempts: 0/50 accepted,40 typed refusals,10 provider failures. Physical outings: zero.
+
+## Latest India transport correction
+
+Runtime91868df/CI38021995707 passed and both matching Render deployments wentLIVE. Two current-time publicAPI plans accepted, plus two full public browsers using real typed area search and Gemma parsing/ranking: ShantiKunj6.968s toplan/25.525s toGO including demonstration holds; TerracedGardens6.485s/7.023s. Both11PASS/INR0/no fixture facts, proof/map/opt-invoice/mobile/keyboard. Five API negatives409: currency, duration, walking, scheduled closed visit and unknown diet. Actual first503/sourceConnectTimeout and failedvideo remain retained. Fresh69.36s recording decoded/played locally; its new public asset check follows deployment. BroadIndia remainsBLOCKED.
+
+## Latest India transport correction
+
+Runtime91868df/CI38021995707 passed and both matching Render deployments wentLIVE. Two current-time public API plans accepted, plus two full public browsers using real typed area search and Gemma parsing/ranking: ShantiKunj6.968s toplan/25.525s toGO including demonstration holds; TerracedGardens6.485s/7.023s. Both11PASS/INR0/no fixture facts, proof/map/opt-invoice/mobile/keyboard. Five API negatives409: currency, duration, walking, scheduled closed visit and unknown diet. Actual first503/sourceConnectTimeout and failedvideo remain retained. Fresh69.36s recording decoded/played locally; its new public asset check follows deployment. BroadIndia remainsBLOCKED.

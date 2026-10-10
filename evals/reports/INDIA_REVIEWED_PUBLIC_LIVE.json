@@ -1,0 +1,1767 @@
+{
+  "scope": "Actual current-time production India plans and hard-rule refusals; no physical outings",
+  "results": [
+    {
+      "kind": "Shanti Kunj-current",
+      "executed_at": "2026-10-10T03:55:00.137699+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 30.7443502,
+          "longitude": 76.7787642
+        },
+        "departure_at": "2026-10-10T03:54:54.849725+00:00",
+        "strict_budget": true
+      },
+      "http_status": 200,
+      "request_id": "486284486cb64912ad757fbef37cbbad",
+      "latency_seconds": 5.29,
+      "body": {
+        "status": "SUCCESS",
+        "plan": {
+          "plan_id": "template-A:ab7316a0870d8fdcb8299bfd",
+          "origin": {
+            "latitude": 30.7443502,
+            "longitude": 76.7787642
+          },
+          "departure_at": "2026-10-10T03:54:54.849725Z",
+          "stops": [
+            {
+              "place": {
+                "place_id": "osm:way/129720606",
+                "provider": "OSM",
+                "provider_id": "way/129720606",
+                "name": "Shanti Kunj",
+                "coordinates": {
+                  "latitude": 30.7440211,
+                  "longitude": 76.7781861
+                },
+                "categories": [
+                  "park"
+                ],
+                "opening_windows": [
+                  {
+                    "opens_at": "2026-10-10T03:55:41.849725Z",
+                    "closes_at": "2026-10-10T15:30:00Z",
+                    "evidence": [
+                      {
+                        "evidence_id": "osm:way/129720606:opening_hours:2026-10-10T03:55:41.849725+00:00:2026-10-10T15:30:00+00:00",
+                        "subject_id": "osm:way/129720606",
+                        "field": "opening_window",
+                        "value": [
+                          "2026-10-10T03:55:41.849725+00:00",
+                          "2026-10-10T15:30:00+00:00"
+                        ],
+                        "source": "DIRECT",
+                        "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+                        "observed_at": "2026-10-10T03:54:55.277594Z",
+                        "expires_at": "2026-10-11T03:54:55.277594Z",
+                        "confidence": "HIGH"
+                      }
+                    ]
+                  }
+                ],
+                "price": {
+                  "confidence": "VERIFIED",
+                  "lower": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "upper": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "scope": "TOTAL",
+                  "evidence": [
+                    {
+                      "evidence_id": "osm:way/129720606:price",
+                      "subject_id": "osm:way/129720606",
+                      "field": "price",
+                      "value": {
+                        "currency_code": "INR",
+                        "lower_minor_units": 0,
+                        "upper_minor_units": 0,
+                        "scope": "TOTAL",
+                        "covers_all_mandatory_costs": true
+                      },
+                      "source": "DIRECT",
+                      "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+                      "observed_at": "2026-10-10T03:54:55.277594Z",
+                      "expires_at": "2026-10-11T03:54:55.277594Z",
+                      "confidence": "HIGH"
+                    }
+                  ]
+                },
+                "dietary_options": null,
+                "evidence": [
+                  {
+                    "evidence_id": "osm:way/129720606:identity",
+                    "subject_id": "osm:way/129720606",
+                    "field": "identity",
+                    "value": {
+                      "provider": "OSM",
+                      "provider_id": "way/129720606",
+                      "name": "Shanti Kunj"
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/129720606/full.json",
+                    "observed_at": "2026-10-10T03:54:55.277594Z",
+                    "expires_at": "2026-10-11T03:54:55.277594Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/129720606:coordinates",
+                    "subject_id": "osm:way/129720606",
+                    "field": "coordinates",
+                    "value": {
+                      "latitude": 30.7440211,
+                      "longitude": 76.7781861
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/655074179/full.json",
+                    "observed_at": "2026-10-10T03:54:55.277594Z",
+                    "expires_at": "2026-10-11T03:54:55.277594Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/129720606:categories",
+                    "subject_id": "osm:way/129720606",
+                    "field": "categories",
+                    "value": [
+                      "park"
+                    ],
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/129720606/full.json",
+                    "observed_at": "2026-10-10T03:54:55.277594Z",
+                    "expires_at": "2026-10-11T03:54:55.277594Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/129720606:public_access",
+                    "subject_id": "osm:way/129720606",
+                    "field": "public_access",
+                    "value": true,
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+                    "observed_at": "2026-10-10T03:54:55.277594Z",
+                    "expires_at": "2026-10-11T03:54:55.277594Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/129720606:opening_hours",
+                    "subject_id": "osm:way/129720606",
+                    "field": "opening_hours",
+                    "value": "Mo-Su 05:00-21:00",
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+                    "observed_at": "2026-10-10T03:54:55.277594Z",
+                    "expires_at": "2026-10-11T03:54:55.277594Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/129720606:timezone",
+                    "subject_id": "osm:way/129720606",
+                    "field": "timezone",
+                    "value": "Asia/Kolkata",
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+                    "observed_at": "2026-10-10T03:54:55.277594Z",
+                    "expires_at": "2026-10-11T03:54:55.277594Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/129720606:visit_scope",
+                    "subject_id": "osm:way/129720606",
+                    "field": "visit_scope",
+                    "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases or paid activities. Mapped access point, not a physically checked gate.",
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+                    "observed_at": "2026-10-10T03:54:55.277594Z",
+                    "expires_at": "2026-10-11T03:54:55.277594Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/129720606:parse_lineage",
+                    "subject_id": "osm:way/129720606",
+                    "field": "parse_lineage",
+                    "value": {
+                      "parser": "chandigarh-garden-v1",
+                      "authority": "Chandigarh Tourism Department",
+                      "page_sha256": "468b0d47e4e9ac7348a1bad5b8a468ce3695299ca04d0c83eec0b8993faab679",
+                      "official_retrieval_transport": "authenticated_laptop_relay",
+                      "coordinate_kind": "mapped_pedestrian_access_node",
+                      "access_node": 6137905894,
+                      "path_way": 655074179,
+                      "park_way": 129720606,
+                      "path_crosses_park_boundary": true,
+                      "timezone_rule": "Reviewed Chandigarh jurisdiction uses India civil time",
+                      "claims": [
+                        "Sector 16",
+                        "Chandigarh",
+                        "Open : Daily",
+                        "Timings : 05:00 AM to 09:00 PM",
+                        "Entry Fee : Not Applicable"
+                      ]
+                    },
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+                    "observed_at": "2026-10-10T03:54:55.277594Z",
+                    "expires_at": "2026-10-11T03:54:55.277594Z",
+                    "confidence": "HIGH"
+                  }
+                ]
+              },
+              "arrival_at": "2026-10-10T03:55:41.849725Z",
+              "dwell_seconds": 1800
+            }
+          ],
+          "routes": [
+            {
+              "route_id": "valhalla:882cb6f120864884d65e40bf",
+              "from_id": "origin",
+              "to_id": "osm:way/129720606",
+              "reachable": true,
+              "duration_seconds": 47,
+              "distance_meters": 65.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:882cb6f120864884d65e40bf:walking_route",
+                  "subject_id": "valhalla:882cb6f120864884d65e40bf",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "origin",
+                    "to_id": "osm:way/129720606",
+                    "from_coordinates": {
+                      "latitude": 30.7443502,
+                      "longitude": 76.7787642
+                    },
+                    "to_coordinates": {
+                      "latitude": 30.7440211,
+                      "longitude": 76.7781861
+                    },
+                    "reachable": true,
+                    "duration_seconds": 47,
+                    "distance_meters": 65.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T03:54:58.473759Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:882cb6f120864884d65e40bf:metadata",
+                  "subject_id": "valhalla:882cb6f120864884d65e40bf",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:882cb6f120864884d65e40bf",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 30.7443502,
+                          "lon": 76.7787642,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 30.7440211,
+                          "lon": 76.7781861,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T03:54:58.473759Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            },
+            {
+              "route_id": "valhalla:4bc1eb51a59ec91583a5f5c7",
+              "from_id": "osm:way/129720606",
+              "to_id": "origin",
+              "reachable": true,
+              "duration_seconds": 47,
+              "distance_meters": 65.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:4bc1eb51a59ec91583a5f5c7:walking_route",
+                  "subject_id": "valhalla:4bc1eb51a59ec91583a5f5c7",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "osm:way/129720606",
+                    "to_id": "origin",
+                    "from_coordinates": {
+                      "latitude": 30.7440211,
+                      "longitude": 76.7781861
+                    },
+                    "to_coordinates": {
+                      "latitude": 30.7443502,
+                      "longitude": 76.7787642
+                    },
+                    "reachable": true,
+                    "duration_seconds": 47,
+                    "distance_meters": 65.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T03:54:58.643693Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:4bc1eb51a59ec91583a5f5c7:metadata",
+                  "subject_id": "valhalla:4bc1eb51a59ec91583a5f5c7",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:4bc1eb51a59ec91583a5f5c7",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 30.7440211,
+                          "lon": 76.7781861,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 30.7443502,
+                          "lon": 76.7787642,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T03:54:58.643693Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            }
+          ]
+        },
+        "proof": {
+          "validation": {
+            "plan_id": "template-A:ab7316a0870d8fdcb8299bfd",
+            "accepted": true,
+            "checks": [
+              {
+                "code": "GROUNDING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Provider identity and coordinates must be evidenced",
+                "evidence_ids": [
+                  "osm:way/129720606:identity",
+                  "osm:way/129720606:coordinates"
+                ]
+              },
+              {
+                "code": "ROUTING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Every leg including return needs reachable walking facts",
+                "evidence_ids": [
+                  "valhalla:882cb6f120864884d65e40bf:walking_route",
+                  "valhalla:4bc1eb51a59ec91583a5f5c7:walking_route"
+                ]
+              },
+              {
+                "code": "DURATION",
+                "status": "PASS",
+                "hard": true,
+                "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+                "evidence_ids": [
+                  "valhalla:882cb6f120864884d65e40bf:walking_route",
+                  "valhalla:4bc1eb51a59ec91583a5f5c7:walking_route"
+                ]
+              },
+              {
+                "code": "RETURN_TRIP",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete round trip must meet the explicit return deadline in UTC",
+                "evidence_ids": [
+                  "valhalla:882cb6f120864884d65e40bf:walking_route",
+                  "valhalla:4bc1eb51a59ec91583a5f5c7:walking_route"
+                ]
+              },
+              {
+                "code": "WALKING",
+                "status": "PASS",
+                "hard": true,
+                "message": "All walking legs count against both supplied maxima",
+                "evidence_ids": [
+                  "valhalla:882cb6f120864884d65e40bf:walking_route",
+                  "valhalla:4bc1eb51a59ec91583a5f5c7:walking_route"
+                ]
+              },
+              {
+                "code": "CURRENCY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Costs must share the budget currency; no conversion",
+                "evidence_ids": [
+                  "osm:way/129720606:price"
+                ]
+              },
+              {
+                "code": "PRICE_CONFIDENCE",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete mandatory cost needs current positive evidence",
+                "evidence_ids": [
+                  "osm:way/129720606:price"
+                ]
+              },
+              {
+                "code": "BUDGET",
+                "status": "PASS",
+                "hard": true,
+                "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+                "evidence_ids": [
+                  "osm:way/129720606:price"
+                ]
+              },
+              {
+                "code": "OPENING_HOURS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Known hours must cover arrival through required dwell",
+                "evidence_ids": [
+                  "osm:way/129720606:opening_hours:2026-10-10T03:55:41.849725+00:00:2026-10-10T15:30:00+00:00"
+                ]
+              },
+              {
+                "code": "EXCLUSIONS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Hard exclusions require positive absence and category evidence",
+                "evidence_ids": []
+              },
+              {
+                "code": "DIETARY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+                "evidence_ids": []
+              }
+            ]
+          },
+          "cost": {
+            "confidence": "VERIFIED",
+            "lower": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "upper": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "scope": "TOTAL",
+            "evidence": [
+              {
+                "evidence_id": "osm:way/129720606:price",
+                "subject_id": "osm:way/129720606",
+                "field": "price",
+                "value": {
+                  "currency_code": "INR",
+                  "lower_minor_units": 0,
+                  "upper_minor_units": 0,
+                  "scope": "TOTAL",
+                  "covers_all_mandatory_costs": true
+                },
+                "source": "DIRECT",
+                "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+                "observed_at": "2026-10-10T03:54:55.277594Z",
+                "expires_at": "2026-10-11T03:54:55.277594Z",
+                "confidence": "HIGH"
+              }
+            ]
+          },
+          "total_duration_seconds": 1894,
+          "walking_distance_meters": 130.0,
+          "sources": [
+            {
+              "evidence_id": "valhalla:882cb6f120864884d65e40bf:walking_route",
+              "subject_id": "valhalla:882cb6f120864884d65e40bf",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "osm:way/129720606",
+                "from_coordinates": {
+                  "latitude": 30.7443502,
+                  "longitude": 76.7787642
+                },
+                "to_coordinates": {
+                  "latitude": 30.7440211,
+                  "longitude": 76.7781861
+                },
+                "reachable": true,
+                "duration_seconds": 47,
+                "distance_meters": 65.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T03:54:58.473759Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:882cb6f120864884d65e40bf:metadata",
+              "subject_id": "valhalla:882cb6f120864884d65e40bf",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:882cb6f120864884d65e40bf",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 30.7443502,
+                      "lon": 76.7787642,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 30.7440211,
+                      "lon": 76.7781861,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T03:54:58.473759Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:4bc1eb51a59ec91583a5f5c7:walking_route",
+              "subject_id": "valhalla:4bc1eb51a59ec91583a5f5c7",
+              "field": "walking_route",
+              "value": {
+                "from_id": "osm:way/129720606",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 30.7440211,
+                  "longitude": 76.7781861
+                },
+                "to_coordinates": {
+                  "latitude": 30.7443502,
+                  "longitude": 76.7787642
+                },
+                "reachable": true,
+                "duration_seconds": 47,
+                "distance_meters": 65.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T03:54:58.643693Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:4bc1eb51a59ec91583a5f5c7:metadata",
+              "subject_id": "valhalla:4bc1eb51a59ec91583a5f5c7",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:4bc1eb51a59ec91583a5f5c7",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 30.7440211,
+                      "lon": 76.7781861,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 30.7443502,
+                      "lon": 76.7787642,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T03:54:58.643693Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/129720606:identity",
+              "subject_id": "osm:way/129720606",
+              "field": "identity",
+              "value": {
+                "provider": "OSM",
+                "provider_id": "way/129720606",
+                "name": "Shanti Kunj"
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/129720606/full.json",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/129720606:coordinates",
+              "subject_id": "osm:way/129720606",
+              "field": "coordinates",
+              "value": {
+                "latitude": 30.7440211,
+                "longitude": 76.7781861
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/655074179/full.json",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/129720606:categories",
+              "subject_id": "osm:way/129720606",
+              "field": "categories",
+              "value": [
+                "park"
+              ],
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/129720606/full.json",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/129720606:public_access",
+              "subject_id": "osm:way/129720606",
+              "field": "public_access",
+              "value": true,
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129720606:opening_hours",
+              "subject_id": "osm:way/129720606",
+              "field": "opening_hours",
+              "value": "Mo-Su 05:00-21:00",
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129720606:timezone",
+              "subject_id": "osm:way/129720606",
+              "field": "timezone",
+              "value": "Asia/Kolkata",
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129720606:visit_scope",
+              "subject_id": "osm:way/129720606",
+              "field": "visit_scope",
+              "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases or paid activities. Mapped access point, not a physically checked gate.",
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129720606:parse_lineage",
+              "subject_id": "osm:way/129720606",
+              "field": "parse_lineage",
+              "value": {
+                "parser": "chandigarh-garden-v1",
+                "authority": "Chandigarh Tourism Department",
+                "page_sha256": "468b0d47e4e9ac7348a1bad5b8a468ce3695299ca04d0c83eec0b8993faab679",
+                "official_retrieval_transport": "authenticated_laptop_relay",
+                "coordinate_kind": "mapped_pedestrian_access_node",
+                "access_node": 6137905894,
+                "path_way": 655074179,
+                "park_way": 129720606,
+                "path_crosses_park_boundary": true,
+                "timezone_rule": "Reviewed Chandigarh jurisdiction uses India civil time",
+                "claims": [
+                  "Sector 16",
+                  "Chandigarh",
+                  "Open : Daily",
+                  "Timings : 05:00 AM to 09:00 PM",
+                  "Entry Fee : Not Applicable"
+                ]
+              },
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129720606:price",
+              "subject_id": "osm:way/129720606",
+              "field": "price",
+              "value": {
+                "currency_code": "INR",
+                "lower_minor_units": 0,
+                "upper_minor_units": 0,
+                "scope": "TOTAL",
+                "covers_all_mandatory_costs": true
+              },
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129720606:opening_hours:2026-10-10T03:55:41.849725+00:00:2026-10-10T15:30:00+00:00",
+              "subject_id": "osm:way/129720606",
+              "field": "opening_window",
+              "value": [
+                "2026-10-10T03:55:41.849725+00:00",
+                "2026-10-10T15:30:00+00:00"
+              ],
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/shantikunj",
+              "observed_at": "2026-10-10T03:54:55.277594Z",
+              "expires_at": "2026-10-11T03:54:55.277594Z",
+              "confidence": "HIGH"
+            }
+          ]
+        },
+        "reason": "Selected for your soft preferences.",
+        "compiled_at": "2026-10-10T03:55:00.387144Z",
+        "mode": "LIVE",
+        "return_by_local": null
+      },
+      "passed": true
+    },
+    {
+      "kind": "Terraced Gardens-current",
+      "executed_at": "2026-10-10T03:55:16.903170+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 30.7132815,
+          "longitude": 76.7701731
+        },
+        "departure_at": "2026-10-10T03:55:12.145804+00:00",
+        "strict_budget": true
+      },
+      "http_status": 200,
+      "request_id": "bc45ea5f3615487284e40dd10152b2fb",
+      "latency_seconds": 4.761,
+      "body": {
+        "status": "SUCCESS",
+        "plan": {
+          "plan_id": "template-A:8051ab5128bbe352b13c69e5",
+          "origin": {
+            "latitude": 30.7132815,
+            "longitude": 76.7701731
+          },
+          "departure_at": "2026-10-10T03:55:12.145804Z",
+          "stops": [
+            {
+              "place": {
+                "place_id": "osm:way/129460621",
+                "provider": "OSM",
+                "provider_id": "way/129460621",
+                "name": "Terraced Gardens",
+                "coordinates": {
+                  "latitude": 30.7133495,
+                  "longitude": 76.7702857
+                },
+                "categories": [
+                  "park"
+                ],
+                "opening_windows": [
+                  {
+                    "opens_at": "2026-10-10T03:55:23.145804Z",
+                    "closes_at": "2026-10-10T15:30:00Z",
+                    "evidence": [
+                      {
+                        "evidence_id": "osm:way/129460621:opening_hours:2026-10-10T03:55:23.145804+00:00:2026-10-10T15:30:00+00:00",
+                        "subject_id": "osm:way/129460621",
+                        "field": "opening_window",
+                        "value": [
+                          "2026-10-10T03:55:23.145804+00:00",
+                          "2026-10-10T15:30:00+00:00"
+                        ],
+                        "source": "DIRECT",
+                        "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+                        "observed_at": "2026-10-10T03:55:12.576581Z",
+                        "expires_at": "2026-10-11T03:55:12.576581Z",
+                        "confidence": "HIGH"
+                      }
+                    ]
+                  }
+                ],
+                "price": {
+                  "confidence": "VERIFIED",
+                  "lower": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "upper": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "scope": "TOTAL",
+                  "evidence": [
+                    {
+                      "evidence_id": "osm:way/129460621:price",
+                      "subject_id": "osm:way/129460621",
+                      "field": "price",
+                      "value": {
+                        "currency_code": "INR",
+                        "lower_minor_units": 0,
+                        "upper_minor_units": 0,
+                        "scope": "TOTAL",
+                        "covers_all_mandatory_costs": true
+                      },
+                      "source": "DIRECT",
+                      "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+                      "observed_at": "2026-10-10T03:55:12.576581Z",
+                      "expires_at": "2026-10-11T03:55:12.576581Z",
+                      "confidence": "HIGH"
+                    }
+                  ]
+                },
+                "dietary_options": null,
+                "evidence": [
+                  {
+                    "evidence_id": "osm:way/129460621:identity",
+                    "subject_id": "osm:way/129460621",
+                    "field": "identity",
+                    "value": {
+                      "provider": "OSM",
+                      "provider_id": "way/129460621",
+                      "name": "Terraced Gardens"
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/129460621/full.json",
+                    "observed_at": "2026-10-10T03:55:12.576581Z",
+                    "expires_at": "2026-10-11T03:55:12.576581Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/129460621:coordinates",
+                    "subject_id": "osm:way/129460621",
+                    "field": "coordinates",
+                    "value": {
+                      "latitude": 30.7133495,
+                      "longitude": 76.7702857
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/1078014066/full.json",
+                    "observed_at": "2026-10-10T03:55:12.576581Z",
+                    "expires_at": "2026-10-11T03:55:12.576581Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/129460621:categories",
+                    "subject_id": "osm:way/129460621",
+                    "field": "categories",
+                    "value": [
+                      "park"
+                    ],
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/129460621/full.json",
+                    "observed_at": "2026-10-10T03:55:12.576581Z",
+                    "expires_at": "2026-10-11T03:55:12.576581Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/129460621:public_access",
+                    "subject_id": "osm:way/129460621",
+                    "field": "public_access",
+                    "value": true,
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+                    "observed_at": "2026-10-10T03:55:12.576581Z",
+                    "expires_at": "2026-10-11T03:55:12.576581Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/129460621:opening_hours",
+                    "subject_id": "osm:way/129460621",
+                    "field": "opening_hours",
+                    "value": "Mo-Su 05:00-21:00",
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+                    "observed_at": "2026-10-10T03:55:12.576581Z",
+                    "expires_at": "2026-10-11T03:55:12.576581Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/129460621:timezone",
+                    "subject_id": "osm:way/129460621",
+                    "field": "timezone",
+                    "value": "Asia/Kolkata",
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+                    "observed_at": "2026-10-10T03:55:12.576581Z",
+                    "expires_at": "2026-10-11T03:55:12.576581Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/129460621:visit_scope",
+                    "subject_id": "osm:way/129460621",
+                    "field": "visit_scope",
+                    "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases or paid activities. Mapped access point, not a physically checked gate.",
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+                    "observed_at": "2026-10-10T03:55:12.576581Z",
+                    "expires_at": "2026-10-11T03:55:12.576581Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/129460621:parse_lineage",
+                    "subject_id": "osm:way/129460621",
+                    "field": "parse_lineage",
+                    "value": {
+                      "parser": "chandigarh-garden-v1",
+                      "authority": "Chandigarh Tourism Department",
+                      "page_sha256": "32379951600bef61b4ffb88775364e43fba6c7b8f73b8cc52560227210c55cc3",
+                      "official_retrieval_transport": "authenticated_laptop_relay",
+                      "coordinate_kind": "mapped_pedestrian_access_node",
+                      "access_node": 9883600810,
+                      "path_way": 1078014066,
+                      "park_way": 129460621,
+                      "path_crosses_park_boundary": true,
+                      "timezone_rule": "Reviewed Chandigarh jurisdiction uses India civil time",
+                      "claims": [
+                        "Sector 33B",
+                        "Chandigarh",
+                        "Open : Daily",
+                        "Timings : 05:00 AM to 09:00 PM",
+                        "Entry Fee : Not Applicable"
+                      ]
+                    },
+                    "source": "DIRECT",
+                    "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+                    "observed_at": "2026-10-10T03:55:12.576581Z",
+                    "expires_at": "2026-10-11T03:55:12.576581Z",
+                    "confidence": "HIGH"
+                  }
+                ]
+              },
+              "arrival_at": "2026-10-10T03:55:23.145804Z",
+              "dwell_seconds": 1800
+            }
+          ],
+          "routes": [
+            {
+              "route_id": "valhalla:587c3be2cdeaf8a3db9ba1ab",
+              "from_id": "origin",
+              "to_id": "osm:way/129460621",
+              "reachable": true,
+              "duration_seconds": 11,
+              "distance_meters": 13.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:587c3be2cdeaf8a3db9ba1ab:walking_route",
+                  "subject_id": "valhalla:587c3be2cdeaf8a3db9ba1ab",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "origin",
+                    "to_id": "osm:way/129460621",
+                    "from_coordinates": {
+                      "latitude": 30.7132815,
+                      "longitude": 76.7701731
+                    },
+                    "to_coordinates": {
+                      "latitude": 30.7133495,
+                      "longitude": 76.7702857
+                    },
+                    "reachable": true,
+                    "duration_seconds": 11,
+                    "distance_meters": 13.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T03:55:15.440401Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:587c3be2cdeaf8a3db9ba1ab:metadata",
+                  "subject_id": "valhalla:587c3be2cdeaf8a3db9ba1ab",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:587c3be2cdeaf8a3db9ba1ab",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 30.7132815,
+                          "lon": 76.7701731,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 30.7133495,
+                          "lon": 76.7702857,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T03:55:15.440401Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            },
+            {
+              "route_id": "valhalla:235fdd723099eb6128b0bed1",
+              "from_id": "osm:way/129460621",
+              "to_id": "origin",
+              "reachable": true,
+              "duration_seconds": 9,
+              "distance_meters": 13.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:235fdd723099eb6128b0bed1:walking_route",
+                  "subject_id": "valhalla:235fdd723099eb6128b0bed1",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "osm:way/129460621",
+                    "to_id": "origin",
+                    "from_coordinates": {
+                      "latitude": 30.7133495,
+                      "longitude": 76.7702857
+                    },
+                    "to_coordinates": {
+                      "latitude": 30.7132815,
+                      "longitude": 76.7701731
+                    },
+                    "reachable": true,
+                    "duration_seconds": 9,
+                    "distance_meters": 13.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T03:55:15.614300Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:235fdd723099eb6128b0bed1:metadata",
+                  "subject_id": "valhalla:235fdd723099eb6128b0bed1",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:235fdd723099eb6128b0bed1",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 30.7133495,
+                          "lon": 76.7702857,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 30.7132815,
+                          "lon": 76.7701731,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T03:55:15.614300Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            }
+          ]
+        },
+        "proof": {
+          "validation": {
+            "plan_id": "template-A:8051ab5128bbe352b13c69e5",
+            "accepted": true,
+            "checks": [
+              {
+                "code": "GROUNDING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Provider identity and coordinates must be evidenced",
+                "evidence_ids": [
+                  "osm:way/129460621:identity",
+                  "osm:way/129460621:coordinates"
+                ]
+              },
+              {
+                "code": "ROUTING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Every leg including return needs reachable walking facts",
+                "evidence_ids": [
+                  "valhalla:587c3be2cdeaf8a3db9ba1ab:walking_route",
+                  "valhalla:235fdd723099eb6128b0bed1:walking_route"
+                ]
+              },
+              {
+                "code": "DURATION",
+                "status": "PASS",
+                "hard": true,
+                "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+                "evidence_ids": [
+                  "valhalla:587c3be2cdeaf8a3db9ba1ab:walking_route",
+                  "valhalla:235fdd723099eb6128b0bed1:walking_route"
+                ]
+              },
+              {
+                "code": "RETURN_TRIP",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete round trip must meet the explicit return deadline in UTC",
+                "evidence_ids": [
+                  "valhalla:587c3be2cdeaf8a3db9ba1ab:walking_route",
+                  "valhalla:235fdd723099eb6128b0bed1:walking_route"
+                ]
+              },
+              {
+                "code": "WALKING",
+                "status": "PASS",
+                "hard": true,
+                "message": "All walking legs count against both supplied maxima",
+                "evidence_ids": [
+                  "valhalla:587c3be2cdeaf8a3db9ba1ab:walking_route",
+                  "valhalla:235fdd723099eb6128b0bed1:walking_route"
+                ]
+              },
+              {
+                "code": "CURRENCY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Costs must share the budget currency; no conversion",
+                "evidence_ids": [
+                  "osm:way/129460621:price"
+                ]
+              },
+              {
+                "code": "PRICE_CONFIDENCE",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete mandatory cost needs current positive evidence",
+                "evidence_ids": [
+                  "osm:way/129460621:price"
+                ]
+              },
+              {
+                "code": "BUDGET",
+                "status": "PASS",
+                "hard": true,
+                "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+                "evidence_ids": [
+                  "osm:way/129460621:price"
+                ]
+              },
+              {
+                "code": "OPENING_HOURS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Known hours must cover arrival through required dwell",
+                "evidence_ids": [
+                  "osm:way/129460621:opening_hours:2026-10-10T03:55:23.145804+00:00:2026-10-10T15:30:00+00:00"
+                ]
+              },
+              {
+                "code": "EXCLUSIONS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Hard exclusions require positive absence and category evidence",
+                "evidence_ids": []
+              },
+              {
+                "code": "DIETARY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+                "evidence_ids": []
+              }
+            ]
+          },
+          "cost": {
+            "confidence": "VERIFIED",
+            "lower": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "upper": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "scope": "TOTAL",
+            "evidence": [
+              {
+                "evidence_id": "osm:way/129460621:price",
+                "subject_id": "osm:way/129460621",
+                "field": "price",
+                "value": {
+                  "currency_code": "INR",
+                  "lower_minor_units": 0,
+                  "upper_minor_units": 0,
+                  "scope": "TOTAL",
+                  "covers_all_mandatory_costs": true
+                },
+                "source": "DIRECT",
+                "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+                "observed_at": "2026-10-10T03:55:12.576581Z",
+                "expires_at": "2026-10-11T03:55:12.576581Z",
+                "confidence": "HIGH"
+              }
+            ]
+          },
+          "total_duration_seconds": 1820,
+          "walking_distance_meters": 26.0,
+          "sources": [
+            {
+              "evidence_id": "valhalla:587c3be2cdeaf8a3db9ba1ab:walking_route",
+              "subject_id": "valhalla:587c3be2cdeaf8a3db9ba1ab",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "osm:way/129460621",
+                "from_coordinates": {
+                  "latitude": 30.7132815,
+                  "longitude": 76.7701731
+                },
+                "to_coordinates": {
+                  "latitude": 30.7133495,
+                  "longitude": 76.7702857
+                },
+                "reachable": true,
+                "duration_seconds": 11,
+                "distance_meters": 13.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T03:55:15.440401Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:587c3be2cdeaf8a3db9ba1ab:metadata",
+              "subject_id": "valhalla:587c3be2cdeaf8a3db9ba1ab",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:587c3be2cdeaf8a3db9ba1ab",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 30.7132815,
+                      "lon": 76.7701731,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 30.7133495,
+                      "lon": 76.7702857,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T03:55:15.440401Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:235fdd723099eb6128b0bed1:walking_route",
+              "subject_id": "valhalla:235fdd723099eb6128b0bed1",
+              "field": "walking_route",
+              "value": {
+                "from_id": "osm:way/129460621",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 30.7133495,
+                  "longitude": 76.7702857
+                },
+                "to_coordinates": {
+                  "latitude": 30.7132815,
+                  "longitude": 76.7701731
+                },
+                "reachable": true,
+                "duration_seconds": 9,
+                "distance_meters": 13.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T03:55:15.614300Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:235fdd723099eb6128b0bed1:metadata",
+              "subject_id": "valhalla:235fdd723099eb6128b0bed1",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:235fdd723099eb6128b0bed1",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 30.7133495,
+                      "lon": 76.7702857,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 30.7132815,
+                      "lon": 76.7701731,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T03:55:15.614300Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/129460621:identity",
+              "subject_id": "osm:way/129460621",
+              "field": "identity",
+              "value": {
+                "provider": "OSM",
+                "provider_id": "way/129460621",
+                "name": "Terraced Gardens"
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/129460621/full.json",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/129460621:coordinates",
+              "subject_id": "osm:way/129460621",
+              "field": "coordinates",
+              "value": {
+                "latitude": 30.7133495,
+                "longitude": 76.7702857
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/1078014066/full.json",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/129460621:categories",
+              "subject_id": "osm:way/129460621",
+              "field": "categories",
+              "value": [
+                "park"
+              ],
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/129460621/full.json",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/129460621:public_access",
+              "subject_id": "osm:way/129460621",
+              "field": "public_access",
+              "value": true,
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129460621:opening_hours",
+              "subject_id": "osm:way/129460621",
+              "field": "opening_hours",
+              "value": "Mo-Su 05:00-21:00",
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129460621:timezone",
+              "subject_id": "osm:way/129460621",
+              "field": "timezone",
+              "value": "Asia/Kolkata",
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129460621:visit_scope",
+              "subject_id": "osm:way/129460621",
+              "field": "visit_scope",
+              "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases or paid activities. Mapped access point, not a physically checked gate.",
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129460621:parse_lineage",
+              "subject_id": "osm:way/129460621",
+              "field": "parse_lineage",
+              "value": {
+                "parser": "chandigarh-garden-v1",
+                "authority": "Chandigarh Tourism Department",
+                "page_sha256": "32379951600bef61b4ffb88775364e43fba6c7b8f73b8cc52560227210c55cc3",
+                "official_retrieval_transport": "authenticated_laptop_relay",
+                "coordinate_kind": "mapped_pedestrian_access_node",
+                "access_node": 9883600810,
+                "path_way": 1078014066,
+                "park_way": 129460621,
+                "path_crosses_park_boundary": true,
+                "timezone_rule": "Reviewed Chandigarh jurisdiction uses India civil time",
+                "claims": [
+                  "Sector 33B",
+                  "Chandigarh",
+                  "Open : Daily",
+                  "Timings : 05:00 AM to 09:00 PM",
+                  "Entry Fee : Not Applicable"
+                ]
+              },
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129460621:price",
+              "subject_id": "osm:way/129460621",
+              "field": "price",
+              "value": {
+                "currency_code": "INR",
+                "lower_minor_units": 0,
+                "upper_minor_units": 0,
+                "scope": "TOTAL",
+                "covers_all_mandatory_costs": true
+              },
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/129460621:opening_hours:2026-10-10T03:55:23.145804+00:00:2026-10-10T15:30:00+00:00",
+              "subject_id": "osm:way/129460621",
+              "field": "opening_window",
+              "value": [
+                "2026-10-10T03:55:23.145804+00:00",
+                "2026-10-10T15:30:00+00:00"
+              ],
+              "source": "DIRECT",
+              "source_ref": "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
+              "observed_at": "2026-10-10T03:55:12.576581Z",
+              "expires_at": "2026-10-11T03:55:12.576581Z",
+              "confidence": "HIGH"
+            }
+          ]
+        },
+        "reason": "Selected for your soft preferences.",
+        "compiled_at": "2026-10-10T03:55:17.156275Z",
+        "mode": "LIVE",
+        "return_by_local": null
+      },
+      "passed": true
+    },
+    {
+      "kind": "wrong-currency",
+      "executed_at": "2026-10-10T03:55:31.894612+00:00",
+      "controls": {
+        "currency_code": "USD",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 30.7132815,
+          "longitude": 76.7701731
+        },
+        "departure_at": "2026-10-10T03:55:28.913154+00:00",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "49da4d562f9d4d3bbe7d38435efd5052",
+      "latency_seconds": 2.984,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    },
+    {
+      "kind": "too-short",
+      "executed_at": "2026-10-10T03:55:46.686665+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 20,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 30.7132815,
+          "longitude": 76.7701731
+        },
+        "departure_at": "2026-10-10T03:55:43.902489+00:00",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "30caf2b62abb4d4f8fab1fe5b521150b",
+      "latency_seconds": 2.798,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    },
+    {
+      "kind": "no-walking",
+      "executed_at": "2026-10-10T03:56:02.268196+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 0,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 30.7132815,
+          "longitude": 76.7701731
+        },
+        "departure_at": "2026-10-10T03:55:58.703744+00:00",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "18d6a893f1f74ee2a0afea140b2b37d2",
+      "latency_seconds": 3.573,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    },
+    {
+      "kind": "closed",
+      "executed_at": "2026-10-10T03:56:17.608149+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 30.7132815,
+          "longitude": 76.7701731
+        },
+        "departure_at": "2026-10-10T21:01:00+05:30",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "95993f540be542ef84cbe81b77da2363",
+      "latency_seconds": 3.332,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    },
+    {
+      "kind": "dietary-unknown",
+      "executed_at": "2026-10-10T03:56:32.826342+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 30.7132815,
+          "longitude": 76.7701731
+        },
+        "departure_at": "2026-10-10T03:56:29.618257+00:00",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "242a59d5dcdd434c9073c754cd49b1c0",
+      "latency_seconds": 3.216,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    }
+  ],
+  "version": {
+    "version": "0.1.0",
+    "commit": "91868df1457622a83ffdabbcc434f35804f70085",
+    "environment": "production"
+  },
+  "final_version": {
+    "version": "0.1.0",
+    "commit": "91868df1457622a83ffdabbcc434f35804f70085",
+    "environment": "production"
+  },
+  "status": "PASS"
+}
