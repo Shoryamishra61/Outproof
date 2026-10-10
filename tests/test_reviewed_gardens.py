@@ -136,7 +136,7 @@ def test_full_dwell_and_closing_time_are_enforced_without_new_windows():
 
 
 @pytest.mark.parametrize("status", [301, 403, 429, 503])
-def test_reviewed_source_errors_do_not_fall_back_to_unverified_facts(status):
+def test_reviewed_source_errors_do_not_fall_back_to_unverified_facts(status, caplog):
     calls = []
 
     def handle(request):
@@ -152,3 +152,6 @@ def test_reviewed_source_errors_do_not_fall_back_to_unverified_facts(status):
         assert result.code == "SOURCE_TEMPORARILY_UNAVAILABLE" and len(calls) == 1
 
     asyncio.run(run())
+    assert "source_kind=osm_park" in caplog.text
+    assert f"http_status={status}" in caplog.text
+    assert "169.254" not in caplog.text and "Authorization" not in caplog.text

@@ -36,6 +36,7 @@ from app.observability import configure
 from app.parser import parse_constraints
 from app.places import OverpassAvailability, PlacesProvider
 from app.ranker import LocalGemma, ModelProvider
+from app.reviewed_gardens import GARDENS
 from app.routing import RoutingProvider, ValhallaRoutingProvider
 from app.source_discovery import SerpSourceDiscovery
 
@@ -197,7 +198,13 @@ def create_app(
         return {
             "fixture_enabled": fixture_enabled,
             "live_enabled": live_enabled,
-            "verified_live_regions": ["Singapore Botanic Gardens Tanglin entrance corridor"],
+            "verified_live_regions": [
+                "Singapore Botanic Gardens Tanglin entrance corridor",
+                *(
+                    f"{garden.name}, Chandigarh mapped pedestrian access corridor"
+                    for garden in GARDENS
+                ),
+            ],
             "live_evidence_configured": live_enabled,
             "model": os.getenv("GEMMA_MODEL", "gemma4:e2b-it-qat"),
             "offline_compilation": False,
@@ -238,22 +245,33 @@ def create_app(
             except (httpx.HTTPError, ValueError, KeyError, TypeError):
                 reachable = False
         source_ready = False
+        source_scope = "reviewed Singapore and Chandigarh probes; selected area not checked"
         if live_enabled and reachable:
             async with httpx.AsyncClient(trust_env=False) as client:
                 discovery = LivePlacesProvider(
                     client, os.getenv("OVERPASS_URL", "https://overpass-api.de/api/interpreter")
                 )
-                source_ready = not isinstance(
-                    await discovery.discover(GATE, 1000), CompilationFailure
+                routing = ValhallaRoutingProvider(
+                    client, os.getenv("VALHALLA_BASE_URL", "https://valhalla1.openstreetmap.de")
                 )
-                if source_ready:
-                    routing = ValhallaRoutingProvider(
-                        client, os.getenv("VALHALLA_BASE_URL", "https://valhalla1.openstreetmap.de")
-                    )
-                    route = await routing.route(
-                        "probe", "gate", Coordinates(latitude=1.3068, longitude=103.819), GATE
-                    )
-                    source_ready = not isinstance(route, CompilationFailure) and route.reachable
+                try:
+                    async with asyncio.timeout(45):
+                        for name, access, start in (
+                            ("Singapore", GATE, Coordinates(latitude=1.3068, longitude=103.819)),
+                            *((g.name, g.coordinates, g.probe_origin) for g in GARDENS),
+                        ):
+                            places = await discovery.discover(access, 1000)
+                            if isinstance(places, CompilationFailure) or not places:
+                                continue
+                            route = await routing.route(
+                                "probe", "access", start, places[0].coordinates
+                            )
+                            if not isinstance(route, CompilationFailure) and route.reachable:
+                                source_ready = True
+                                source_scope = f"reviewed {name} source and route only"
+                                break
+                except TimeoutError:
+                    source_ready = False
         ready = reachable and (fixture_enabled or (live_enabled and source_ready))
         return JSONResponse(
             status_code=200 if ready else 503,
@@ -263,9 +281,7 @@ def create_app(
                 "live_evidence_available": source_ready,
                 "compilation_available": ready,
                 "mode": ("FIXTURE" if fixture_enabled else "LIVE") if ready else None,
-                "readiness_scope": "reviewed Singapore source and route only"
-                if live_enabled
-                else "development fixtures only",
+                "readiness_scope": source_scope if live_enabled else "development fixtures only",
                 "global_compilation_verified": False,
             },
         )

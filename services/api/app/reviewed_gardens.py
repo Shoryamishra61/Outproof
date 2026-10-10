@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import logging
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from html.parser import HTMLParser
@@ -21,6 +22,7 @@ class ReviewedGarden:
     path_way: int
     access_node: int
     coordinates: Coordinates
+    probe_origin: Coordinates
     url: str
 
 
@@ -33,6 +35,7 @@ GARDENS = (
         655074179,
         6137905894,
         Coordinates(latitude=30.7440211, longitude=76.7781861),
+        Coordinates(latitude=30.7443502, longitude=76.7787642),
         "https://chandigarhtourism.gov.in/gardens/shantikunj",
     ),
     ReviewedGarden(
@@ -43,6 +46,7 @@ GARDENS = (
         1078014066,
         9883600810,
         Coordinates(latitude=30.7133495, longitude=76.7702857),
+        Coordinates(latitude=30.7132815, longitude=76.7701731),
         "https://chandigarhtourism.gov.in/gardens/Terracedgarden",
     ),
 )
@@ -269,25 +273,43 @@ def normalize_garden(
 
 async def fetch_garden(client: httpx.AsyncClient, garden: ReviewedGarden) -> PlaceCandidate:
     responses = []
-    for url in (
-        f"https://www.openstreetmap.org/api/0.6/way/{garden.park_way}/full.json",
-        f"https://www.openstreetmap.org/api/0.6/way/{garden.path_way}/full.json",
-        garden.url,
+    for source_kind, url in zip(
+        ("osm_park", "osm_path", "official_garden"),
+        (
+            f"https://www.openstreetmap.org/api/0.6/way/{garden.park_way}/full.json",
+            f"https://www.openstreetmap.org/api/0.6/way/{garden.path_way}/full.json",
+            garden.url,
+        ),
+        strict=True,
     ):
-        async with client.stream(
-            "GET",
-            url,
-            timeout=15,
-            follow_redirects=False,
-            headers={"User-Agent": "GroundRule/0.1 (https://github.com/Shoryamishra61/Outproof)"},
-        ) as response:
-            response.raise_for_status()
-            body = bytearray()
-            async for chunk in response.aiter_bytes():
-                body.extend(chunk)
-                if len(body) > 1_000_000:
-                    raise ValueError("Reviewed source exceeds byte bound")
-            responses.append(bytes(body))
+        try:
+            async with client.stream(
+                "GET",
+                url,
+                timeout=15,
+                follow_redirects=False,
+                headers={
+                    "User-Agent": "GroundRule/0.1 (https://github.com/Shoryamishra61/Outproof)"
+                },
+            ) as response:
+                response.raise_for_status()
+                body = bytearray()
+                async for chunk in response.aiter_bytes():
+                    body.extend(chunk)
+                    if len(body) > 1_000_000:
+                        raise ValueError("Reviewed source exceeds byte bound")
+                responses.append(bytes(body))
+        except (httpx.HTTPError, ValueError) as error:
+            status = (
+                error.response.status_code if isinstance(error, httpx.HTTPStatusError) else None
+            )
+            logging.getLogger(__name__).warning(
+                "reviewed source failure source_kind=%s kind=%s http_status=%s",
+                source_kind,
+                type(error).__name__,
+                status,
+            )
+            raise
     return normalize_garden(
         garden,
         json.loads(responses[0]),

@@ -238,7 +238,7 @@ function App() {
         {error && <p role="alert" className="status">{error}</p>}
         <button type="submit" disabled={connection !== 'ready' || isLocating || (originMode === 'device' && !deviceCoords) || (originMode === 'map' && !mapOrigin)}>{liveMode ? 'Compile one live plan' : 'Compile one fixture plan'}</button>
       </form>}
-      <p role="status" className="connection">{lastCompileFailed ? 'Last compilation failed · no verified plan' : connection === 'checking' ? 'Checking API…' : connection === 'ready' ? (liveMode ? 'API reachable · Singapore source check passed; selected area checked on compile' : 'API connected · live compilation disabled') : 'API unavailable'}</p>
+      <p role="status" className="connection">{lastCompileFailed ? 'Last compilation failed · no verified plan' : connection === 'checking' ? 'Checking API…' : connection === 'ready' ? (liveMode ? 'API reachable · reviewed-source check passed; selected area checked on compile' : 'API connected · live compilation disabled') : 'API unavailable'}</p>
       {connection === 'unavailable' && <button type="button" onClick={() => setAttempt(attempt + 1)}>Check connection</button>}
     </>}
     {state === 'compiling' && <section aria-busy="true"><h1 ref={heading} tabIndex={-1}>Checking one outing.</h1><p role="status">Grounding sources, checking hard rules, then selecting a valid plan with Gemma.</p><button type="button" onClick={() => { pending.current?.abort(); pending.current = null; setError('Compilation stopped. Your controls are retained.'); setState('home'); }}>Cancel</button></section>}

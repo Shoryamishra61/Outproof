@@ -7,6 +7,7 @@ from app.live import LivePlacesProvider
 from app.main import create_app, fixture_configuration_enabled, live_configuration_enabled
 from app.model_connection import model_connection
 from app.ranker import LocalGemma
+from app.reviewed_gardens import GARDENS
 from app.routing import ValhallaRoutingProvider
 from ground_rule.models import CompilationFailure
 
@@ -45,6 +46,46 @@ def test_authenticated_remote_model_does_not_follow_redirects() -> None:
     asyncio.run(run())
 
 
+@pytest.mark.parametrize("available_garden", [0, 1])
+def test_singapore_outage_does_not_disable_a_verified_india_source(monkeypatch, available_garden):
+    async def discover(self, origin, radius_meters):
+        from app.live import GATE
+
+        if origin == GATE:
+            return CompilationFailure(
+                code="SOURCE_TEMPORARILY_UNAVAILABLE", message="Controlled Singapore outage"
+            )
+        if origin != GARDENS[available_garden].coordinates:
+            return CompilationFailure(
+                code="SOURCE_TEMPORARILY_UNAVAILABLE", message="Controlled first garden outage"
+            )
+        return (SimpleNamespace(coordinates=GARDENS[available_garden].coordinates),)
+
+    async def route(*args, **kwargs):
+        return SimpleNamespace(reachable=True)
+
+    monkeypatch.setattr(LivePlacesProvider, "discover", discover)
+    monkeypatch.setattr(ValhallaRoutingProvider, "route", route)
+
+    async def run():
+        async with httpx.AsyncClient() as model_client:
+            app = create_app(live_enabled=True, model=LocalGemma(model_client, "gemma4:e2b-it-qat"))
+            async with httpx.AsyncClient(
+                transport=httpx.ASGITransport(app=app), base_url="http://test"
+            ) as client:
+                response = await client.get("/v1/health/ready")
+                assert response.status_code == 200
+                assert (
+                    response.json()["readiness_scope"]
+                    == f"reviewed {GARDENS[available_garden].name} source and route only"
+                )
+                assert response.json()["global_compilation_verified"] is False
+                regions = (await client.get("/v1/capabilities")).json()["verified_live_regions"]
+                assert any("Shanti Kunj" in region for region in regions)
+
+    asyncio.run(run())
+
+
 @pytest.mark.parametrize("source_available", [True, False])
 def test_concurrent_readiness_waits_for_one_real_probe(
     monkeypatch: pytest.MonkeyPatch, source_available: bool
@@ -60,7 +101,7 @@ def test_concurrent_readiness_waits_for_one_real_probe(
             entered.set()
             await release.wait()
             return (
-                []
+                (SimpleNamespace(coordinates=args[1]),)
                 if source_available
                 else CompilationFailure(
                     code="SOURCE_TEMPORARILY_UNAVAILABLE", message="Controlled source outage"
@@ -88,17 +129,18 @@ def test_concurrent_readiness_waits_for_one_real_probe(
                 finally:
                     release.set()
                     responses = await asyncio.gather(first, second)
-                assert calls == 1
+                assert calls == (1 if source_available else 3)
                 assert responses[0].json() == responses[1].json()
                 assert all(r.status_code == (200 if source_available else 503) for r in responses)
                 assert responses[0].json()["compilation_available"] is source_available
                 assert responses[0].json()["global_compilation_verified"] is False
-                assert (
-                    responses[0].json()["readiness_scope"]
-                    == "reviewed Singapore source and route only"
+                assert responses[0].json()["readiness_scope"] == (
+                    "reviewed Singapore source and route only"
+                    if source_available
+                    else "reviewed Singapore and Chandigarh probes; selected area not checked"
                 )
                 assert (await client.get("/v1/health/ready")).json() == responses[0].json()
-                assert calls == 1
+                assert calls == (1 if source_available else 3)
 
     asyncio.run(run())
 
