@@ -15,7 +15,8 @@ from ground_rule.models import (
     PriceEvidence,
 )
 
-from app.places import OverpassAvailability, OverpassPlacesProvider
+from app.places import OverpassAvailability, OverpassPlacesProvider, overpass_query
+from app.reviewed_gardens import GARDENS, distance_meters, fetch_garden
 from app.source_discovery import SerpSourceDiscovery
 
 PARK_SOURCE = "https://sbg.nparks.gov.sg/visit/general-info/"
@@ -144,7 +145,7 @@ def normalize_tanglin(gate: object, html: str, observed_at: datetime) -> PlaceCa
 
 
 class LivePlacesProvider:
-    """One reviewed public garden entrance; other regions retain generic discovery only."""
+    """Reviewed official gardens where verified; other regions retain generic discovery."""
 
     def __init__(
         self,
@@ -160,6 +161,23 @@ class LivePlacesProvider:
     async def discover(
         self, origin: Coordinates, radius_meters: int
     ) -> tuple[PlaceCandidate, ...] | CompilationFailure:
+        overpass_query(origin, radius_meters)
+        nearby = sorted(
+            (
+                garden
+                for garden in GARDENS
+                if distance_meters(origin, garden.coordinates) <= radius_meters
+            ),
+            key=lambda garden: distance_meters(origin, garden.coordinates),
+        )
+        if nearby:
+            try:
+                return (await fetch_garden(self.client, nearby[0]),)
+            except (httpx.HTTPError, ValueError, KeyError, TypeError):
+                return CompilationFailure(
+                    code="SOURCE_TEMPORARILY_UNAVAILABLE",
+                    message="Reviewed garden source or mapped access changed; no claims asserted",
+                )
         # Restrict to the reviewed entrance corridor; distant origins do not gain coverage.
         if (
             abs(origin.latitude - GATE.latitude) > 0.006

@@ -1,0 +1,127 @@
+{
+  "campaign": "100 distinct India starting areas, actual deployed API",
+  "case_fingerprint": "3bb31f6797328816d2ba28e26006e1331329f75adf2edc0d241c4e2aba70837f",
+  "departure_at": "2026-10-10T10:00:00+05:30",
+  "scope": "Scheduled daytime software compilation; no physical trips, no mocked sources",
+  "started_at": "2026-10-09T21:27:47.483282+00:00",
+  "results": [
+    {
+      "id": "india-001",
+      "area": "Chennai",
+      "query": "Chennai, India",
+      "executed_at": "2026-10-09T21:27:47.548168+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "a519dc8f42494f75973a6a16948eda855875703b",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "1facfbee0fa04043ac1aae16a3411c49",
+      "search_result": {
+        "results": [
+          {
+            "label": "Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.0800915,
+              "longitude": 80.2807978
+            }
+          },
+          {
+            "label": "Indian Maritime University, Chennai Campus, East Coast Road, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.8714121,
+              "longitude": 80.2354245
+            }
+          },
+          {
+            "label": "Chennai Egmore, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.0783583,
+              "longitude": 80.2611685
+            }
+          },
+          {
+            "label": "McKinsey & Company Chennai Service Center, Taramani Link Road, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.9815286,
+              "longitude": 80.2404302
+            }
+          },
+          {
+            "label": "Chennai Port, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.096423,
+              "longitude": 80.303623
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "outcome": "EXECUTION_OR_ORACLE_FAILURE",
+      "failure_kind": "ValidationError",
+      "latency_ms": 1437.03
+    },
+    {
+      "id": "india-002",
+      "area": "Mumbai",
+      "query": "Mumbai, India",
+      "executed_at": "2026-10-09T21:28:00.996985+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "a519dc8f42494f75973a6a16948eda855875703b",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "d3c1ec06f0b44776be5433079ac3347f",
+      "search_result": {
+        "results": [
+          {
+            "label": "Mumbai, Maharashtra, India",
+            "coordinates": {
+              "latitude": 19.054999,
+              "longitude": 72.8692035
+            }
+          },
+          {
+            "label": "Navi Mumbai, Maharashtra, India",
+            "coordinates": {
+              "latitude": 19.0308262,
+              "longitude": 73.0198537
+            }
+          },
+          {
+            "label": "Mumbai Suburban District, Maharashtra, India",
+            "coordinates": {
+              "latitude": 19.1309844,
+              "longitude": 72.8894618
+            }
+          },
+          {
+            "label": "Mumbai City District, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.9723889,
+              "longitude": 72.8258988
+            }
+          },
+          {
+            "label": "Mumbai CSMT, Dr Dadabhai Naoroji Road, Mumbai, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.9404925,
+              "longitude": 72.8357856
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "outcome": "EXECUTION_OR_ORACLE_FAILURE",
+      "failure_kind": "ValidationError",
+      "latency_ms": 1272.55
+    }
+  ],
+  "completed_cases": 2,
+  "outcomes": {
+    "EXECUTION_OR_ORACLE_FAILURE": 2
+  },
+  "updated_at": "2026-10-09T21:28:02.264458+00:00",
+  "complete": false
+}

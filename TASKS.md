@@ -248,3 +248,12 @@ Searchable origins do not check worldwide outing coverage or physical GPS/field 
 - [ ] Verify an accepted Potheri outing with authoritative admission and operating-hours evidence.
 
 Thousands of controlled cases are not thousands of real outings. Potheri admission/hours remain unverified; no accepted Potheri plan is claimed.
+
+## India 100-place production campaign — 2026-10-10
+
+- [x] Execute 100 production searches and compiles at 100 distinct India origins: zero accepted, 87 typed rejections, 13 provider failures on `a519dc8`.
+- [x] Preserve inputs, full responses, request IDs, latencies and stable deployment identity; scheduled departure explicitly 10:00 IST, no physical outings.
+- [x] Add fresh official Chandigarh admission/hours joined to actual OSM park boundaries and pedestrian access paths; no city-wide fee/hour inheritance.
+- [x] Execute real local source/routing/Gemma compilation for Shanti Kunj and Terraced Gardens; eleven checks pass for each.
+- [ ] Verify both added paths in deployed API and clean public browser, including proof/GO and failure cases.
+- [ ] Reach broad India accepted-outing coverage. The 100-place campaign demonstrates a critical gap, not a passing global release gate.

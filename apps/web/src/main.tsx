@@ -194,7 +194,7 @@ function App() {
     {isResultLive && <p className="notice">Verified live places, operating hours and pedestrian routes.</p>}
     {state === 'home' && <>
       <h1 ref={heading} tabIndex={-1}>Set your limits.<br />Leave the deciding here.</h1><p className="intro">One plan, checked against every hard rule.</p>
-      {liveMode && <p className="notice">Verified outings currently cover only Singapore Botanic Gardens, Tanglin entrance. Main grounds only, 05:00–00:00 Singapore time. Starting-area search works worldwide; other areas have no supported outing yet. Your location goes to map and routing providers; it is not saved as outing history.</p>}
+      {liveMode && <p className="notice">Reviewed coverage: Singapore Botanic Gardens, Tanglin entrance (05:00–00:00 Singapore time), and Shanti Kunj and Terraced Garden in Chandigarh (05:00–21:00 India time). Main garden paths only. Search works worldwide; most India areas still lack a verified outing. Your location goes to map and routing providers; it is not saved as outing history.</p>}
       {!isEnabled ? <section><h2>Live evidence gate</h2><p>Real outing compilation is unavailable while required evidence is incomplete.</p></section> :
       <form onSubmit={compile} aria-label="Outing controls">
         <fieldset className="origin-choice">

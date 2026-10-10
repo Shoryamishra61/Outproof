@@ -1,3 +1,9 @@
+# Latest India scope verdict — 2026-10-10
+
+**BLOCKED — CRITICAL REQUIREMENTS UNMET** for the requested broad India product. Actual production baseline `a519dc8`: 100 distinct origins, zero accepted, 87 typed rejections, 13 provider failures. Source-backed Shanti Kunj/Terraced Gardens passed actual local inference/routing; public deployment verification of this repair is pending. Canonical 4,936 tests/two opt-in skips and 135 controlled browser passes do not establish real coverage. Preserve the prior supported Singapore evidence below, but do not equate it with the new India target. Next: green CI and matching free Render deployment, then current-time public India API/browser/proof/GO. No new permissions/keys or paid services required for these checks. Physical India trials0/3 UNEXECUTED; laptop inference availability remains conditional. See INDIA_100_RELEASE.md.
+
+--- Historical prior scope verdict ---
+
 # CONDITIONAL RELEASE — DISCLOSED LIMITATIONS
 
 Core supported public execution and the actual public demo assets are evidenced. This report supersedes historical lower-case verdicts and withdrawn Anna Nagar acceptances. Source/runtime SHAs are recorded per executed receipt; a final evidence update receives its own green CI and deployment verification.

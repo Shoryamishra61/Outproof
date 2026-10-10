@@ -67,3 +67,7 @@ Demonstrated uses are Render, Gemma, Sentry technical agent spans, SerpApi offic
 All new cash spending is capped at zero. Existing free quotas and credits are used with bounded calls and no automatic top-up. Three physical India field trials have **not** happened. Screen Ratio, physical departure time, safe access and worldwide coverage are not claimed. The supported product is a small evidenced loop, with honest rejection where the world cannot yet be proved.
 
 The final author review must confirm the fresh public links and final verdict, keep these limitations visible, check partner claims against the ledger, and publish one DEV entry using the challenge template and tags. This draft has not been published.
+
+## India coverage correction
+
+A fresh production campaign tried 100 distinct India starting areas. It returned zero accepted outings: 87 missing-evidence refusals and 13 provider failures. Those results remain published separately from controlled test counts. The shared source repair adds official Chandigarh fee/hour records joined to mapped pedestrian access for Shanti Kunj and Terraced Gardens; both completed real local Gemma/source/route validation with eleven checks. Deployed verification is recorded separately before any successful public India claim. This is narrow reviewed support, not a global or 100-place success claim. Physical visits remain unexecuted.
