@@ -1,0 +1,139 @@
+{
+  "report_type": "read_only_primary_source_research",
+  "checked_on_utc": "2026-10-10",
+  "scope": "Anonymous public tariff and operational evidence; no booking or payment actions",
+  "status": "BLOCKED",
+  "venue": {
+    "name": "Semmozhi Poonga, Chennai",
+    "official_public_url": "https://etickets.tnhorticulture.in/sp/bookingticket/EntryTicket",
+    "authority_homepage": "https://www.tnhorticulture.tn.gov.in/home-page",
+    "authority_link_redirect": "https://tnhorticulture.in/spetickets/ -> https://etickets.tnhorticulture.in/",
+    "public_project_id": "71c0a1c3-251a-4344-ba43-35475d235e14",
+    "public_project_slug": "sp",
+    "public_entry_category_id": "3b2b5f37-63f7-4836-8b44-2c19f1c583a0",
+    "identity_limit": "The project supplies Chennai and park name, not an independently verified physical entrance, coordinates or mapped containment. Do not merge with the different Coimbatore Semmozhi Poonga."
+  },
+  "executed_browser_navigation": {
+    "runtime": "Installed @playwright/test Chromium, headless",
+    "command_shape": "PowerShell here-string piped to node --input-type=module, workdir apps/web",
+    "actions": [
+      "Opened the official public ticket homepage",
+      "Clicked img[src$='/project/sp.png']",
+      "Clicked img[src$='/mobilemainmenu/1.png']",
+      "Read rendered public Entry Ticket tariff and page-initiated GET business responses"
+    ],
+    "tariff_observed_at_utc": "2026-10-10T03:52:30.205Z",
+    "availability_observed_at_utc": "2026-10-10T03:53:33.286Z",
+    "public_navigation_and_business_paths_reverified_at_utc": "2026-10-10T03:58:51.640Z",
+    "visible_selected_date": "10-10-2026 Saturday",
+    "business_responses": [
+      {"path": "/api/project", "http_status": 200},
+      {"path": "/api/project/71c0a1c3-251a-4344-ba43-35475d235e14", "http_status": 200},
+      {"path": "/api/category/tickettype/71c0a1c3-251a-4344-ba43-35475d235e14", "http_status": 200},
+      {"path": "/api/category/3b2b5f37-63f7-4836-8b44-2c19f1c583a0/2026-10-10", "http_status": 200},
+      {"path": "/api/daycloseandholiday/71c0a1c3-251a-4344-ba43-35475d235e14", "http_status": 200},
+      {"path": "/api/holidayinfo/onlinedates/3b2b5f37-63f7-4836-8b44-2c19f1c583a0/71c0a1c3-251a-4344-ba43-35475d235e14", "http_status": 200}
+    ],
+    "api_origin": "https://liveapi.tnhorticulture.in",
+    "privacy": "Only whitelisted public business facts retained. Anonymous session tokens, authorization headers, cookies and raw auth responses were not printed or saved."
+  },
+  "tariff": {
+    "currency": "INR",
+    "rendered_and_structured_products": [
+      {"class": "adult", "displayed_age_rule": "12 years and above", "amount": 75, "unit": "person", "is_deposit": false, "refund_charge": 0},
+      {"class": "child", "displayed_age_rule": "5 to 10 years", "amount": 40, "unit": "person", "is_deposit": false, "refund_charge": 0},
+      {"class": "young_child", "displayed_age_rule": "3 to 4 years", "amount": 20, "unit": "person", "is_deposit": false, "refund_charge": 0}
+    ],
+    "conflicting_same_category_description_amounts": {"adult": 200, "child": 100},
+    "ticket_validity_from_entry_minutes": 120,
+    "optional_camera_amount": 100,
+    "optional_photoshoot_amount": 5000,
+    "all_in_final_admission": "UNKNOWN",
+    "tax_or_convenience_charge_inclusion": "UNKNOWN",
+    "age_11_policy": "UNKNOWN",
+    "under_3_policy": "UNKNOWN",
+    "admission_status": "BLOCKED",
+    "reason": "Visible and product-record prices conflict with the same authoritative category description. There is no authoritative reconciliation, all-in price statement or complete age policy. No checkout was performed to infer missing charges."
+  },
+  "hours_and_days": {
+    "category_park_timing": {"opens_local": "08:00", "closes_local": "19:00", "timezone": "Asia/Kolkata"},
+    "project_online_booking_window": {"opens_local": "09:00", "closes_local": "18:30"},
+    "booking_window_is_not_park_hours": true,
+    "date_scoped_open_response": {"date": "2026-10-10", "isHoliday": false, "isDayClose": false, "isKidsZoneClose": false},
+    "online_date_response": {"dateTs": "2026-10-10", "day": "Sat", "holidayType": 1},
+    "holidayType_semantics": "UNKNOWN; no public schema was verified",
+    "recurring_operating_weekdays": "UNKNOWN",
+    "limits": [
+      "Today's false holiday/day-close flags do not prove every weekday is open",
+      "The generic close-description string is a UI template, not proof that the active morning page was closed",
+      "Global amusement maintenance flags are not venue-scoped and cannot be inherited by this garden",
+      "No actual physical gate or operating-state visit was performed"
+    ]
+  },
+  "blocked_release_facts": [
+    "Reconciled authoritative admission prices",
+    "All-in mandatory entry cost and tax/convenience-charge inclusion",
+    "Complete age eligibility including age 11",
+    "Explicit recurring operating days",
+    "Verified venue entrance coordinates and identity/access evidence",
+    "Pedestrian outbound and return routing to the verified entrance"
+  ],
+  "not_executed": ["Add", "cart", "checkout", "OTP", "booking creation", "payment", "physical visit"],
+  "third_city_candidates": [
+    {
+      "name": "Cubbon Park (Sri Chamarajendra Park), Bangalore",
+      "url": "https://karnatakatourism.org/en/attractions/cubbon-park",
+      "authority": "Department of Tourism, Government of Karnataka",
+      "checked_at_utc": "2026-10-10T03:57:12.370426+00:00",
+      "http_status": 200,
+      "bytes": 107994,
+      "sha256": "3310af4bed27c330203b54a331d5958bf51b4c1f3f583b083eda3a5a3c072f54",
+      "robots": {"url": "https://karnatakatourism.org/robots.txt", "http_status": 200, "wildcard_rule": "Allow: /", "checked_at_utc": "2026-10-10T03:56:40.945248+00:00"},
+      "main_park_walk_only_admission": {"amount": 0, "currency": "INR", "scope": "Main park only; excludes paid attractions, rentals and parking"},
+      "general_hours": {"opens_local": "06:00", "closes_local": "18:00", "timezone": "Asia/Kolkata", "closed_weekdays": ["Monday"], "additional_monthly_closure": "Second Tuesday"},
+      "selectors": {"heading": "h1", "fee_row_first_cell": "Entry Fee", "hours_row_first_cell": "Cubbon Park (General)"},
+      "identity_hint": "Ambedkar Veedhi, Shivaji Nagar, Bengaluru 560001; north entrance opposite Vidhana Soudha",
+      "status": "SOURCE_FACTS_OBSERVED_GATE_AND_ROUTE_UNVERIFIED",
+      "limits": "Do not substitute special 05:00-08:00 walkers hours for general hours. A separate official flower-show page states paid event admission for November 27 through December 7, 2025; those ended dates do not establish a current October 2026 fee, but event exceptions must remain scoped. No exhaustive source-conflict audit, entrance mapping, route or physical visit was performed.",
+      "historical_event_exception_url": "https://karnatakatourism.org/en/blogs/bengalurus-newest-bloom-inside-the-massive-cubbon-park-flower-show-2025"
+    },
+    {
+      "name": "Lodhi Garden, Delhi",
+      "operator_hours_url": "https://www.ndmc.gov.in/hi/services/ndmc_gardens.aspx",
+      "checked_at_utc": "2026-10-10T03:57:13.608364+00:00",
+      "http_status": 200,
+      "bytes": 63400,
+      "sha256": "dafff3ca5487fc2f3a3553023cb48e3c6fdd36ee3728b4a855bfcd6612ac422a",
+      "seasonal_hours": [
+        {"local_date_span": "April 1 through September 30", "opens_local": "05:00", "closes_local": "20:00"},
+        {"local_date_span": "October 1 through March 31", "opens_local": "06:00", "closes_local": "20:00"}
+      ],
+      "tourism_identity_and_fee_url": "https://delhitourism.gov.in/tourist_place/lodi_tomb.html",
+      "tourism_checked_at_utc": "2026-10-10T03:57:14.731754+00:00",
+      "tourism_http_status": 200,
+      "tourism_bytes": 19633,
+      "tourism_sha256": "d864e9da9c97d6780e0e915726b1b12b99f8a43cf28c42c32c778dc0e3af9714",
+      "tourism_claim": "Lodi Tomb page identifies Lodhi Garden, says daily and free entry, but only vague morning-to-evening hours",
+      "robots": {"ndmc_http_status": 404, "delhi_tourism_http_status": 404, "meaning": "No robots file found; not an unlimited-access grant"},
+      "status": "BLOCKED_RECONCILIATION_AND_SCOPE",
+      "older_staging_faq": {
+        "url": "https://edistrictstaging.delhi.gov.in/Public/ViewUploadScanDocumentTemplate?q=+LU8U28AiW2mtY8wT9SZprcEi8PkaSpflefnD3xyhXk%3D",
+        "checked_at_utc": "2026-10-10T04:00:48.855097+00:00",
+        "http_status": 200,
+        "bytes": 130040,
+        "sha256": "55f5c1b966ff9899245ffe05bbe3ee6392e647afeae0f0ed875247dc58893cd0",
+        "page": 2,
+        "daily_hours_claim": "05:00-19:00",
+        "pdf_metadata_creation_date": "2021-04-15",
+        "relevance": "An older currently served staging FAQ, not the municipal operator's current seasonal table; does not authoritatively reconcile the difference"
+      },
+      "entrance_identity_lead": {
+        "url": "https://www.ndmc.gov.in/departments/Departments/Enforcement/list-of-authorised-advertisement-and-hoarings-by-se-sp.pdf",
+        "actual_pdf_opened": true,
+        "rows": ["35: main entry gate 1 near Lodhi Garden bus stop", "36: main entry gate 4 on Rajesh Pilot Marg"],
+        "limits": "Advertising-panel location list; supports an entrance naming lead, not current gate opening, fees, coordinates or routability"
+      },
+      "limits": "The older Delhi government staging FAQ states 05:00-19:00 without seasons. Tomb-page free entry has not been independently scoped to every main-garden entrance. Gate mapping and routing were not verified."
+    }
+  ]
+}

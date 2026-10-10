@@ -263,4 +263,10 @@ Thousands of controlled cases are not thousands of real outings. Potheri admissi
 - [x] Verify official free general-ground admission and exact closure schedule; reject attraction and special-walker inference.
 - [x] Verify a fresh mapped footway inside Cubbon and outside the High Court boundary, including segment crossings/touches; reject court/Press Club gates.
 - [x] Execute local LIVE source/routing/Gemma orchestration; no physical gate claim.
-- [ ] Verify deployed Bengaluru API and clean browser, with Monday/second-Tuesday/dwell failure cases.
+- [x] Verify deployed Bengaluru API and clean browser: two current-time starts and seven typed refusals; controlled closure/dwell tests isolate the schedule rules.
+- [x] Check actual INR default and Singapore SGD-zero preset, five viewport widths, no conversion.
+- [ ] Complete the separately preserved post-repair 100-area production campaign.
+
+- [x] Reproduce the Chandigarh 1 km discovery exclusion with real source/Valhalla/Gemma evidence and a feasible 41-minute round trip.
+- [x] Use the existing 3 km provider cap; preserve all route and hard-policy checks; 62 narrow and 4,974 canonical tests pass.
+- [ ] Verify the bounded-radius correction in deployed API and browser, then execute the final 100-area campaign.

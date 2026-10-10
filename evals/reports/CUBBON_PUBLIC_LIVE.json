@@ -1,0 +1,1907 @@
+{
+  "scope": "Actual current-time production India plans and hard-rule refusals; no physical outings",
+  "results": [
+    {
+      "kind": "Cubbon Park-current",
+      "executed_at": "2026-10-10T04:36:44.466341+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9772684,
+          "longitude": 77.591172
+        },
+        "departure_at": "2026-10-10T04:36:39.083472+00:00",
+        "strict_budget": true
+      },
+      "http_status": 200,
+      "request_id": "1d26e97cd4cb47ca8c6c33f02f1449ea",
+      "latency_seconds": 5.382,
+      "body": {
+        "status": "SUCCESS",
+        "plan": {
+          "plan_id": "template-A:dc30195a5f2c28e4b8c59765",
+          "origin": {
+            "latitude": 12.9772684,
+            "longitude": 77.591172
+          },
+          "departure_at": "2026-10-10T04:36:39.083472Z",
+          "stops": [
+            {
+              "place": {
+                "place_id": "osm:way/22895320",
+                "provider": "OSM",
+                "provider_id": "way/22895320",
+                "name": "Cubbon Park",
+                "coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "categories": [
+                  "park"
+                ],
+                "opening_windows": [
+                  {
+                    "opens_at": "2026-10-10T04:36:50.083472Z",
+                    "closes_at": "2026-10-10T12:30:00Z",
+                    "evidence": [
+                      {
+                        "evidence_id": "osm:way/22895320:opening_hours:2026-10-10T04:36:50.083472+00:00:2026-10-10T12:30:00+00:00",
+                        "subject_id": "osm:way/22895320",
+                        "field": "opening_window",
+                        "value": [
+                          "2026-10-10T04:36:50.083472+00:00",
+                          "2026-10-10T12:30:00+00:00"
+                        ],
+                        "source": "DIRECT",
+                        "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                        "observed_at": "2026-10-10T04:36:39.521904Z",
+                        "expires_at": "2026-10-11T04:36:39.521904Z",
+                        "confidence": "HIGH"
+                      }
+                    ]
+                  }
+                ],
+                "price": {
+                  "confidence": "VERIFIED",
+                  "lower": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "upper": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "scope": "TOTAL",
+                  "evidence": [
+                    {
+                      "evidence_id": "osm:way/22895320:price",
+                      "subject_id": "osm:way/22895320",
+                      "field": "price",
+                      "value": {
+                        "currency_code": "INR",
+                        "lower_minor_units": 0,
+                        "upper_minor_units": 0,
+                        "scope": "TOTAL",
+                        "covers_all_mandatory_costs": true
+                      },
+                      "source": "DIRECT",
+                      "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                      "observed_at": "2026-10-10T04:36:39.521904Z",
+                      "expires_at": "2026-10-11T04:36:39.521904Z",
+                      "confidence": "HIGH"
+                    }
+                  ]
+                },
+                "dietary_options": null,
+                "evidence": [
+                  {
+                    "evidence_id": "osm:way/22895320:identity",
+                    "subject_id": "osm:way/22895320",
+                    "field": "identity",
+                    "value": {
+                      "provider": "OSM",
+                      "provider_id": "way/22895320",
+                      "name": "Cubbon Park"
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:coordinates",
+                    "subject_id": "osm:way/22895320",
+                    "field": "coordinates",
+                    "value": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/1276833566/full.json",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:categories",
+                    "subject_id": "osm:way/22895320",
+                    "field": "categories",
+                    "value": [
+                      "park"
+                    ],
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:public_access",
+                    "subject_id": "osm:way/22895320",
+                    "field": "public_access",
+                    "value": true,
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:opening_hours",
+                    "subject_id": "osm:way/22895320",
+                    "field": "opening_hours",
+                    "value": "Tu-Su 06:00-18:00; Tu[2] off",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:timezone",
+                    "subject_id": "osm:way/22895320",
+                    "field": "timezone",
+                    "value": "Asia/Kolkata",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:excluded_ground_access",
+                    "subject_id": "osm:way/22895320",
+                    "field": "excluded_ground_access",
+                    "value": {
+                      "boundary_way": 208686727,
+                      "path_outside_boundary": true
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/208686727/full.json",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:visit_scope",
+                    "subject_id": "osm:way/22895320",
+                    "field": "visit_scope",
+                    "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases, attractions, rentals, courts, clubs or paid activities. Mapped access point, not a physically checked gate.",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:parse_lineage",
+                    "subject_id": "osm:way/22895320",
+                    "field": "parse_lineage",
+                    "value": {
+                      "parser": "karnataka-main-park-v1",
+                      "authority": "Department of Tourism, Government of Karnataka",
+                      "page_sha256": "63946f288338ce6290752456c9241f49d025a0a0b49158a8c07f622fc1ce5572",
+                      "official_retrieval_transport": "authenticated_laptop_relay",
+                      "coordinate_kind": "mapped_pedestrian_access_node",
+                      "access_node": 11854682505,
+                      "path_way": 1276833566,
+                      "park_way": 22895320,
+                      "path_crosses_park_boundary": true,
+                      "excluded_boundary_way": 208686727,
+                      "timezone_rule": "Reviewed Bengaluru jurisdiction uses India civil time",
+                      "claims": [
+                        "Entry Fee",
+                        "Free (select attractions have nominal charges)",
+                        "Cubbon Park (General)",
+                        "6:00 AM",
+                        "6:00 PM",
+                        "Mondays & 2nd Tuesdays",
+                        "Ambedkar Veedhi"
+                      ]
+                    },
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:39.521904Z",
+                    "expires_at": "2026-10-11T04:36:39.521904Z",
+                    "confidence": "HIGH"
+                  }
+                ]
+              },
+              "arrival_at": "2026-10-10T04:36:50.083472Z",
+              "dwell_seconds": 1800
+            }
+          ],
+          "routes": [
+            {
+              "route_id": "valhalla:f60782aaea47e5bd036ba200",
+              "from_id": "origin",
+              "to_id": "osm:way/22895320",
+              "reachable": true,
+              "duration_seconds": 11,
+              "distance_meters": 14.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:f60782aaea47e5bd036ba200:walking_route",
+                  "subject_id": "valhalla:f60782aaea47e5bd036ba200",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "origin",
+                    "to_id": "osm:way/22895320",
+                    "from_coordinates": {
+                      "latitude": 12.9772684,
+                      "longitude": 77.591172
+                    },
+                    "to_coordinates": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "reachable": true,
+                    "duration_seconds": 11,
+                    "distance_meters": 14.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:36:43.079572Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:f60782aaea47e5bd036ba200:metadata",
+                  "subject_id": "valhalla:f60782aaea47e5bd036ba200",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:f60782aaea47e5bd036ba200",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 12.9772684,
+                          "lon": 77.591172,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 12.9771413,
+                          "lon": 77.5911742,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:36:43.079572Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            },
+            {
+              "route_id": "valhalla:e2f90e1540570439cc537717",
+              "from_id": "osm:way/22895320",
+              "to_id": "origin",
+              "reachable": true,
+              "duration_seconds": 10,
+              "distance_meters": 14.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:e2f90e1540570439cc537717:walking_route",
+                  "subject_id": "valhalla:e2f90e1540570439cc537717",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "osm:way/22895320",
+                    "to_id": "origin",
+                    "from_coordinates": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "to_coordinates": {
+                      "latitude": 12.9772684,
+                      "longitude": 77.591172
+                    },
+                    "reachable": true,
+                    "duration_seconds": 10,
+                    "distance_meters": 14.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:36:43.241368Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:e2f90e1540570439cc537717:metadata",
+                  "subject_id": "valhalla:e2f90e1540570439cc537717",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:e2f90e1540570439cc537717",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 12.9771413,
+                          "lon": 77.5911742,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 12.9772684,
+                          "lon": 77.591172,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:36:43.241368Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            }
+          ]
+        },
+        "proof": {
+          "validation": {
+            "plan_id": "template-A:dc30195a5f2c28e4b8c59765",
+            "accepted": true,
+            "checks": [
+              {
+                "code": "GROUNDING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Provider identity and coordinates must be evidenced",
+                "evidence_ids": [
+                  "osm:way/22895320:identity",
+                  "osm:way/22895320:coordinates"
+                ]
+              },
+              {
+                "code": "ROUTING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Every leg including return needs reachable walking facts",
+                "evidence_ids": [
+                  "valhalla:f60782aaea47e5bd036ba200:walking_route",
+                  "valhalla:e2f90e1540570439cc537717:walking_route"
+                ]
+              },
+              {
+                "code": "DURATION",
+                "status": "PASS",
+                "hard": true,
+                "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+                "evidence_ids": [
+                  "valhalla:f60782aaea47e5bd036ba200:walking_route",
+                  "valhalla:e2f90e1540570439cc537717:walking_route"
+                ]
+              },
+              {
+                "code": "RETURN_TRIP",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete round trip must meet the explicit return deadline in UTC",
+                "evidence_ids": [
+                  "valhalla:f60782aaea47e5bd036ba200:walking_route",
+                  "valhalla:e2f90e1540570439cc537717:walking_route"
+                ]
+              },
+              {
+                "code": "WALKING",
+                "status": "PASS",
+                "hard": true,
+                "message": "All walking legs count against both supplied maxima",
+                "evidence_ids": [
+                  "valhalla:f60782aaea47e5bd036ba200:walking_route",
+                  "valhalla:e2f90e1540570439cc537717:walking_route"
+                ]
+              },
+              {
+                "code": "CURRENCY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Costs must share the budget currency; no conversion",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "PRICE_CONFIDENCE",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete mandatory cost needs current positive evidence",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "BUDGET",
+                "status": "PASS",
+                "hard": true,
+                "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "OPENING_HOURS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Known hours must cover arrival through required dwell",
+                "evidence_ids": [
+                  "osm:way/22895320:opening_hours:2026-10-10T04:36:50.083472+00:00:2026-10-10T12:30:00+00:00"
+                ]
+              },
+              {
+                "code": "EXCLUSIONS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Hard exclusions require positive absence and category evidence",
+                "evidence_ids": []
+              },
+              {
+                "code": "DIETARY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+                "evidence_ids": []
+              }
+            ]
+          },
+          "cost": {
+            "confidence": "VERIFIED",
+            "lower": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "upper": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "scope": "TOTAL",
+            "evidence": [
+              {
+                "evidence_id": "osm:way/22895320:price",
+                "subject_id": "osm:way/22895320",
+                "field": "price",
+                "value": {
+                  "currency_code": "INR",
+                  "lower_minor_units": 0,
+                  "upper_minor_units": 0,
+                  "scope": "TOTAL",
+                  "covers_all_mandatory_costs": true
+                },
+                "source": "DIRECT",
+                "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                "observed_at": "2026-10-10T04:36:39.521904Z",
+                "expires_at": "2026-10-11T04:36:39.521904Z",
+                "confidence": "HIGH"
+              }
+            ]
+          },
+          "total_duration_seconds": 1821,
+          "walking_distance_meters": 28.0,
+          "sources": [
+            {
+              "evidence_id": "valhalla:f60782aaea47e5bd036ba200:walking_route",
+              "subject_id": "valhalla:f60782aaea47e5bd036ba200",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "osm:way/22895320",
+                "from_coordinates": {
+                  "latitude": 12.9772684,
+                  "longitude": 77.591172
+                },
+                "to_coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "reachable": true,
+                "duration_seconds": 11,
+                "distance_meters": 14.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:36:43.079572Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:f60782aaea47e5bd036ba200:metadata",
+              "subject_id": "valhalla:f60782aaea47e5bd036ba200",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:f60782aaea47e5bd036ba200",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 12.9772684,
+                      "lon": 77.591172,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 12.9771413,
+                      "lon": 77.5911742,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:36:43.079572Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:e2f90e1540570439cc537717:walking_route",
+              "subject_id": "valhalla:e2f90e1540570439cc537717",
+              "field": "walking_route",
+              "value": {
+                "from_id": "osm:way/22895320",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "to_coordinates": {
+                  "latitude": 12.9772684,
+                  "longitude": 77.591172
+                },
+                "reachable": true,
+                "duration_seconds": 10,
+                "distance_meters": 14.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:36:43.241368Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:e2f90e1540570439cc537717:metadata",
+              "subject_id": "valhalla:e2f90e1540570439cc537717",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:e2f90e1540570439cc537717",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 12.9771413,
+                      "lon": 77.5911742,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 12.9772684,
+                      "lon": 77.591172,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:36:43.241368Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:identity",
+              "subject_id": "osm:way/22895320",
+              "field": "identity",
+              "value": {
+                "provider": "OSM",
+                "provider_id": "way/22895320",
+                "name": "Cubbon Park"
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:coordinates",
+              "subject_id": "osm:way/22895320",
+              "field": "coordinates",
+              "value": {
+                "latitude": 12.9771413,
+                "longitude": 77.5911742
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/1276833566/full.json",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:categories",
+              "subject_id": "osm:way/22895320",
+              "field": "categories",
+              "value": [
+                "park"
+              ],
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:public_access",
+              "subject_id": "osm:way/22895320",
+              "field": "public_access",
+              "value": true,
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:opening_hours",
+              "subject_id": "osm:way/22895320",
+              "field": "opening_hours",
+              "value": "Tu-Su 06:00-18:00; Tu[2] off",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:timezone",
+              "subject_id": "osm:way/22895320",
+              "field": "timezone",
+              "value": "Asia/Kolkata",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:excluded_ground_access",
+              "subject_id": "osm:way/22895320",
+              "field": "excluded_ground_access",
+              "value": {
+                "boundary_way": 208686727,
+                "path_outside_boundary": true
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/208686727/full.json",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:visit_scope",
+              "subject_id": "osm:way/22895320",
+              "field": "visit_scope",
+              "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases, attractions, rentals, courts, clubs or paid activities. Mapped access point, not a physically checked gate.",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:parse_lineage",
+              "subject_id": "osm:way/22895320",
+              "field": "parse_lineage",
+              "value": {
+                "parser": "karnataka-main-park-v1",
+                "authority": "Department of Tourism, Government of Karnataka",
+                "page_sha256": "63946f288338ce6290752456c9241f49d025a0a0b49158a8c07f622fc1ce5572",
+                "official_retrieval_transport": "authenticated_laptop_relay",
+                "coordinate_kind": "mapped_pedestrian_access_node",
+                "access_node": 11854682505,
+                "path_way": 1276833566,
+                "park_way": 22895320,
+                "path_crosses_park_boundary": true,
+                "excluded_boundary_way": 208686727,
+                "timezone_rule": "Reviewed Bengaluru jurisdiction uses India civil time",
+                "claims": [
+                  "Entry Fee",
+                  "Free (select attractions have nominal charges)",
+                  "Cubbon Park (General)",
+                  "6:00 AM",
+                  "6:00 PM",
+                  "Mondays & 2nd Tuesdays",
+                  "Ambedkar Veedhi"
+                ]
+              },
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:price",
+              "subject_id": "osm:way/22895320",
+              "field": "price",
+              "value": {
+                "currency_code": "INR",
+                "lower_minor_units": 0,
+                "upper_minor_units": 0,
+                "scope": "TOTAL",
+                "covers_all_mandatory_costs": true
+              },
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:opening_hours:2026-10-10T04:36:50.083472+00:00:2026-10-10T12:30:00+00:00",
+              "subject_id": "osm:way/22895320",
+              "field": "opening_window",
+              "value": [
+                "2026-10-10T04:36:50.083472+00:00",
+                "2026-10-10T12:30:00+00:00"
+              ],
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:39.521904Z",
+              "expires_at": "2026-10-11T04:36:39.521904Z",
+              "confidence": "HIGH"
+            }
+          ]
+        },
+        "reason": "Selected for your soft preferences.",
+        "compiled_at": "2026-10-10T04:36:44.743264Z",
+        "mode": "LIVE",
+        "return_by_local": null
+      },
+      "passed": true
+    },
+    {
+      "kind": "original-Bengaluru-origin",
+      "executed_at": "2026-10-10T04:37:01.073680+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9767936,
+          "longitude": 77.590082
+        },
+        "departure_at": "2026-10-10T04:36:56.475172+00:00",
+        "strict_budget": true
+      },
+      "http_status": 200,
+      "request_id": "37cf0975ea4d4f938706645623321340",
+      "latency_seconds": 4.598,
+      "body": {
+        "status": "SUCCESS",
+        "plan": {
+          "plan_id": "template-A:57eb9a04407412e3faabf9db",
+          "origin": {
+            "latitude": 12.9767936,
+            "longitude": 77.590082
+          },
+          "departure_at": "2026-10-10T04:36:56.475172Z",
+          "stops": [
+            {
+              "place": {
+                "place_id": "osm:way/22895320",
+                "provider": "OSM",
+                "provider_id": "way/22895320",
+                "name": "Cubbon Park",
+                "coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "categories": [
+                  "park"
+                ],
+                "opening_windows": [
+                  {
+                    "opens_at": "2026-10-10T04:38:45.475172Z",
+                    "closes_at": "2026-10-10T12:30:00Z",
+                    "evidence": [
+                      {
+                        "evidence_id": "osm:way/22895320:opening_hours:2026-10-10T04:38:45.475172+00:00:2026-10-10T12:30:00+00:00",
+                        "subject_id": "osm:way/22895320",
+                        "field": "opening_window",
+                        "value": [
+                          "2026-10-10T04:38:45.475172+00:00",
+                          "2026-10-10T12:30:00+00:00"
+                        ],
+                        "source": "DIRECT",
+                        "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                        "observed_at": "2026-10-10T04:36:57.018197Z",
+                        "expires_at": "2026-10-11T04:36:57.018197Z",
+                        "confidence": "HIGH"
+                      }
+                    ]
+                  }
+                ],
+                "price": {
+                  "confidence": "VERIFIED",
+                  "lower": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "upper": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "scope": "TOTAL",
+                  "evidence": [
+                    {
+                      "evidence_id": "osm:way/22895320:price",
+                      "subject_id": "osm:way/22895320",
+                      "field": "price",
+                      "value": {
+                        "currency_code": "INR",
+                        "lower_minor_units": 0,
+                        "upper_minor_units": 0,
+                        "scope": "TOTAL",
+                        "covers_all_mandatory_costs": true
+                      },
+                      "source": "DIRECT",
+                      "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                      "observed_at": "2026-10-10T04:36:57.018197Z",
+                      "expires_at": "2026-10-11T04:36:57.018197Z",
+                      "confidence": "HIGH"
+                    }
+                  ]
+                },
+                "dietary_options": null,
+                "evidence": [
+                  {
+                    "evidence_id": "osm:way/22895320:identity",
+                    "subject_id": "osm:way/22895320",
+                    "field": "identity",
+                    "value": {
+                      "provider": "OSM",
+                      "provider_id": "way/22895320",
+                      "name": "Cubbon Park"
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:coordinates",
+                    "subject_id": "osm:way/22895320",
+                    "field": "coordinates",
+                    "value": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/1276833566/full.json",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:categories",
+                    "subject_id": "osm:way/22895320",
+                    "field": "categories",
+                    "value": [
+                      "park"
+                    ],
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:public_access",
+                    "subject_id": "osm:way/22895320",
+                    "field": "public_access",
+                    "value": true,
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:opening_hours",
+                    "subject_id": "osm:way/22895320",
+                    "field": "opening_hours",
+                    "value": "Tu-Su 06:00-18:00; Tu[2] off",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:timezone",
+                    "subject_id": "osm:way/22895320",
+                    "field": "timezone",
+                    "value": "Asia/Kolkata",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:excluded_ground_access",
+                    "subject_id": "osm:way/22895320",
+                    "field": "excluded_ground_access",
+                    "value": {
+                      "boundary_way": 208686727,
+                      "path_outside_boundary": true
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/208686727/full.json",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:visit_scope",
+                    "subject_id": "osm:way/22895320",
+                    "field": "visit_scope",
+                    "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases, attractions, rentals, courts, clubs or paid activities. Mapped access point, not a physically checked gate.",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:parse_lineage",
+                    "subject_id": "osm:way/22895320",
+                    "field": "parse_lineage",
+                    "value": {
+                      "parser": "karnataka-main-park-v1",
+                      "authority": "Department of Tourism, Government of Karnataka",
+                      "page_sha256": "37b435466c7260727ea1e4f9637dcadec605e5fa3de331a4ea8bdf02616d6f19",
+                      "official_retrieval_transport": "authenticated_laptop_relay",
+                      "coordinate_kind": "mapped_pedestrian_access_node",
+                      "access_node": 11854682505,
+                      "path_way": 1276833566,
+                      "park_way": 22895320,
+                      "path_crosses_park_boundary": true,
+                      "excluded_boundary_way": 208686727,
+                      "timezone_rule": "Reviewed Bengaluru jurisdiction uses India civil time",
+                      "claims": [
+                        "Entry Fee",
+                        "Free (select attractions have nominal charges)",
+                        "Cubbon Park (General)",
+                        "6:00 AM",
+                        "6:00 PM",
+                        "Mondays & 2nd Tuesdays",
+                        "Ambedkar Veedhi"
+                      ]
+                    },
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:36:57.018197Z",
+                    "expires_at": "2026-10-11T04:36:57.018197Z",
+                    "confidence": "HIGH"
+                  }
+                ]
+              },
+              "arrival_at": "2026-10-10T04:38:45.475172Z",
+              "dwell_seconds": 1800
+            }
+          ],
+          "routes": [
+            {
+              "route_id": "valhalla:d509eba187f99f181c8668b5",
+              "from_id": "origin",
+              "to_id": "osm:way/22895320",
+              "reachable": true,
+              "duration_seconds": 109,
+              "distance_meters": 140.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "subject_id": "valhalla:d509eba187f99f181c8668b5",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "origin",
+                    "to_id": "osm:way/22895320",
+                    "from_coordinates": {
+                      "latitude": 12.9767936,
+                      "longitude": 77.590082
+                    },
+                    "to_coordinates": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "reachable": true,
+                    "duration_seconds": 109,
+                    "distance_meters": 140.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:36:59.652244Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:d509eba187f99f181c8668b5:metadata",
+                  "subject_id": "valhalla:d509eba187f99f181c8668b5",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:d509eba187f99f181c8668b5",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 12.9767936,
+                          "lon": 77.590082,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 12.9771413,
+                          "lon": 77.5911742,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:36:59.652244Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            },
+            {
+              "route_id": "valhalla:7e648f79445ab7d45bb89e57",
+              "from_id": "osm:way/22895320",
+              "to_id": "origin",
+              "reachable": true,
+              "duration_seconds": 100,
+              "distance_meters": 140.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:7e648f79445ab7d45bb89e57:walking_route",
+                  "subject_id": "valhalla:7e648f79445ab7d45bb89e57",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "osm:way/22895320",
+                    "to_id": "origin",
+                    "from_coordinates": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "to_coordinates": {
+                      "latitude": 12.9767936,
+                      "longitude": 77.590082
+                    },
+                    "reachable": true,
+                    "duration_seconds": 100,
+                    "distance_meters": 140.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:36:59.830236Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:7e648f79445ab7d45bb89e57:metadata",
+                  "subject_id": "valhalla:7e648f79445ab7d45bb89e57",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:7e648f79445ab7d45bb89e57",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 12.9771413,
+                          "lon": 77.5911742,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 12.9767936,
+                          "lon": 77.590082,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:36:59.830236Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            }
+          ]
+        },
+        "proof": {
+          "validation": {
+            "plan_id": "template-A:57eb9a04407412e3faabf9db",
+            "accepted": true,
+            "checks": [
+              {
+                "code": "GROUNDING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Provider identity and coordinates must be evidenced",
+                "evidence_ids": [
+                  "osm:way/22895320:identity",
+                  "osm:way/22895320:coordinates"
+                ]
+              },
+              {
+                "code": "ROUTING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Every leg including return needs reachable walking facts",
+                "evidence_ids": [
+                  "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "valhalla:7e648f79445ab7d45bb89e57:walking_route"
+                ]
+              },
+              {
+                "code": "DURATION",
+                "status": "PASS",
+                "hard": true,
+                "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+                "evidence_ids": [
+                  "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "valhalla:7e648f79445ab7d45bb89e57:walking_route"
+                ]
+              },
+              {
+                "code": "RETURN_TRIP",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete round trip must meet the explicit return deadline in UTC",
+                "evidence_ids": [
+                  "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "valhalla:7e648f79445ab7d45bb89e57:walking_route"
+                ]
+              },
+              {
+                "code": "WALKING",
+                "status": "PASS",
+                "hard": true,
+                "message": "All walking legs count against both supplied maxima",
+                "evidence_ids": [
+                  "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "valhalla:7e648f79445ab7d45bb89e57:walking_route"
+                ]
+              },
+              {
+                "code": "CURRENCY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Costs must share the budget currency; no conversion",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "PRICE_CONFIDENCE",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete mandatory cost needs current positive evidence",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "BUDGET",
+                "status": "PASS",
+                "hard": true,
+                "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "OPENING_HOURS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Known hours must cover arrival through required dwell",
+                "evidence_ids": [
+                  "osm:way/22895320:opening_hours:2026-10-10T04:38:45.475172+00:00:2026-10-10T12:30:00+00:00"
+                ]
+              },
+              {
+                "code": "EXCLUSIONS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Hard exclusions require positive absence and category evidence",
+                "evidence_ids": []
+              },
+              {
+                "code": "DIETARY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+                "evidence_ids": []
+              }
+            ]
+          },
+          "cost": {
+            "confidence": "VERIFIED",
+            "lower": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "upper": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "scope": "TOTAL",
+            "evidence": [
+              {
+                "evidence_id": "osm:way/22895320:price",
+                "subject_id": "osm:way/22895320",
+                "field": "price",
+                "value": {
+                  "currency_code": "INR",
+                  "lower_minor_units": 0,
+                  "upper_minor_units": 0,
+                  "scope": "TOTAL",
+                  "covers_all_mandatory_costs": true
+                },
+                "source": "DIRECT",
+                "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                "observed_at": "2026-10-10T04:36:57.018197Z",
+                "expires_at": "2026-10-11T04:36:57.018197Z",
+                "confidence": "HIGH"
+              }
+            ]
+          },
+          "total_duration_seconds": 2009,
+          "walking_distance_meters": 280.0,
+          "sources": [
+            {
+              "evidence_id": "valhalla:d509eba187f99f181c8668b5:walking_route",
+              "subject_id": "valhalla:d509eba187f99f181c8668b5",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "osm:way/22895320",
+                "from_coordinates": {
+                  "latitude": 12.9767936,
+                  "longitude": 77.590082
+                },
+                "to_coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "reachable": true,
+                "duration_seconds": 109,
+                "distance_meters": 140.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:36:59.652244Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:d509eba187f99f181c8668b5:metadata",
+              "subject_id": "valhalla:d509eba187f99f181c8668b5",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:d509eba187f99f181c8668b5",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 12.9767936,
+                      "lon": 77.590082,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 12.9771413,
+                      "lon": 77.5911742,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:36:59.652244Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:7e648f79445ab7d45bb89e57:walking_route",
+              "subject_id": "valhalla:7e648f79445ab7d45bb89e57",
+              "field": "walking_route",
+              "value": {
+                "from_id": "osm:way/22895320",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "to_coordinates": {
+                  "latitude": 12.9767936,
+                  "longitude": 77.590082
+                },
+                "reachable": true,
+                "duration_seconds": 100,
+                "distance_meters": 140.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:36:59.830236Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:7e648f79445ab7d45bb89e57:metadata",
+              "subject_id": "valhalla:7e648f79445ab7d45bb89e57",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:7e648f79445ab7d45bb89e57",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 12.9771413,
+                      "lon": 77.5911742,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 12.9767936,
+                      "lon": 77.590082,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:36:59.830236Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:identity",
+              "subject_id": "osm:way/22895320",
+              "field": "identity",
+              "value": {
+                "provider": "OSM",
+                "provider_id": "way/22895320",
+                "name": "Cubbon Park"
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:coordinates",
+              "subject_id": "osm:way/22895320",
+              "field": "coordinates",
+              "value": {
+                "latitude": 12.9771413,
+                "longitude": 77.5911742
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/1276833566/full.json",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:categories",
+              "subject_id": "osm:way/22895320",
+              "field": "categories",
+              "value": [
+                "park"
+              ],
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:public_access",
+              "subject_id": "osm:way/22895320",
+              "field": "public_access",
+              "value": true,
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:opening_hours",
+              "subject_id": "osm:way/22895320",
+              "field": "opening_hours",
+              "value": "Tu-Su 06:00-18:00; Tu[2] off",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:timezone",
+              "subject_id": "osm:way/22895320",
+              "field": "timezone",
+              "value": "Asia/Kolkata",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:excluded_ground_access",
+              "subject_id": "osm:way/22895320",
+              "field": "excluded_ground_access",
+              "value": {
+                "boundary_way": 208686727,
+                "path_outside_boundary": true
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/208686727/full.json",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:visit_scope",
+              "subject_id": "osm:way/22895320",
+              "field": "visit_scope",
+              "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases, attractions, rentals, courts, clubs or paid activities. Mapped access point, not a physically checked gate.",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:parse_lineage",
+              "subject_id": "osm:way/22895320",
+              "field": "parse_lineage",
+              "value": {
+                "parser": "karnataka-main-park-v1",
+                "authority": "Department of Tourism, Government of Karnataka",
+                "page_sha256": "37b435466c7260727ea1e4f9637dcadec605e5fa3de331a4ea8bdf02616d6f19",
+                "official_retrieval_transport": "authenticated_laptop_relay",
+                "coordinate_kind": "mapped_pedestrian_access_node",
+                "access_node": 11854682505,
+                "path_way": 1276833566,
+                "park_way": 22895320,
+                "path_crosses_park_boundary": true,
+                "excluded_boundary_way": 208686727,
+                "timezone_rule": "Reviewed Bengaluru jurisdiction uses India civil time",
+                "claims": [
+                  "Entry Fee",
+                  "Free (select attractions have nominal charges)",
+                  "Cubbon Park (General)",
+                  "6:00 AM",
+                  "6:00 PM",
+                  "Mondays & 2nd Tuesdays",
+                  "Ambedkar Veedhi"
+                ]
+              },
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:price",
+              "subject_id": "osm:way/22895320",
+              "field": "price",
+              "value": {
+                "currency_code": "INR",
+                "lower_minor_units": 0,
+                "upper_minor_units": 0,
+                "scope": "TOTAL",
+                "covers_all_mandatory_costs": true
+              },
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:opening_hours:2026-10-10T04:38:45.475172+00:00:2026-10-10T12:30:00+00:00",
+              "subject_id": "osm:way/22895320",
+              "field": "opening_window",
+              "value": [
+                "2026-10-10T04:38:45.475172+00:00",
+                "2026-10-10T12:30:00+00:00"
+              ],
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:36:57.018197Z",
+              "expires_at": "2026-10-11T04:36:57.018197Z",
+              "confidence": "HIGH"
+            }
+          ]
+        },
+        "reason": "Selected for your soft preferences.",
+        "compiled_at": "2026-10-10T04:37:01.345389Z",
+        "mode": "LIVE",
+        "return_by_local": null
+      },
+      "passed": true
+    },
+    {
+      "kind": "wrong-currency",
+      "executed_at": "2026-10-10T04:37:16.048289+00:00",
+      "controls": {
+        "currency_code": "USD",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9772684,
+          "longitude": 77.591172
+        },
+        "departure_at": "2026-10-10T04:37:13.082639+00:00",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "1a25da88403f438d89d53583861af9ac",
+      "latency_seconds": 2.965,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    },
+    {
+      "kind": "too-short",
+      "executed_at": "2026-10-10T04:37:31.218529+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 20,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9772684,
+          "longitude": 77.591172
+        },
+        "departure_at": "2026-10-10T04:37:28.052866+00:00",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "856936f591504762851daa80555524b9",
+      "latency_seconds": 3.165,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    },
+    {
+      "kind": "no-walking",
+      "executed_at": "2026-10-10T04:37:48.114868+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 0,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9772684,
+          "longitude": 77.591172
+        },
+        "departure_at": "2026-10-10T04:37:43.223110+00:00",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "edd1265d1fc54c14bb43ad083e0152ba",
+      "latency_seconds": 4.892,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    },
+    {
+      "kind": "closed",
+      "executed_at": "2026-10-10T04:38:02.862768+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9772684,
+          "longitude": 77.591172
+        },
+        "departure_at": "2026-10-10T18:01:00+05:30",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "49fd3ef932ff4711bf17ed9b2f14777f",
+      "latency_seconds": 2.743,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    },
+    {
+      "kind": "monday-closed",
+      "executed_at": "2026-10-10T04:38:19.787662+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9772684,
+          "longitude": 77.591172
+        },
+        "departure_at": "2026-10-12T09:00:00+05:30",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "899c6ceb12f840cdb1e38fa31dc20132",
+      "latency_seconds": 4.92,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No grounded complete template route chain available"
+      },
+      "passed": true
+    },
+    {
+      "kind": "second-tuesday-closed",
+      "executed_at": "2026-10-10T04:38:35.316068+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9772684,
+          "longitude": 77.591172
+        },
+        "departure_at": "2026-10-13T09:00:00+05:30",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "b88a546e6ed64d5aafbddde4e0b321fd",
+      "latency_seconds": 3.524,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No grounded complete template route chain available"
+      },
+      "passed": true
+    },
+    {
+      "kind": "dietary-unknown",
+      "executed_at": "2026-10-10T04:38:50.953856+00:00",
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [
+          {
+            "kind": "DIETARY",
+            "value": "vegetarian"
+          }
+        ],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9772684,
+          "longitude": 77.591172
+        },
+        "departure_at": "2026-10-10T04:38:47.321209+00:00",
+        "strict_budget": true
+      },
+      "http_status": 409,
+      "request_id": "833c9f00e4494bcca7a35dbfc65d1389",
+      "latency_seconds": 3.633,
+      "body": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "passed": true
+    }
+  ],
+  "version": {
+    "version": "0.1.0",
+    "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+    "environment": "production"
+  },
+  "final_version": {
+    "version": "0.1.0",
+    "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+    "environment": "production"
+  },
+  "status": "PASS"
+}

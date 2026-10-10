@@ -19,7 +19,7 @@ from ground_rule.policy import validate_plan
 from ground_rule.proof import place_sources
 
 from app.enrichment import EnrichmentProvider, EnrichmentResult
-from app.places import PlacesProvider
+from app.places import MAX_DISCOVERY_RADIUS_METERS, PlacesProvider
 from app.routing import RoutingProvider
 
 logger = logging.getLogger(__name__)
@@ -92,7 +92,10 @@ async def valid_candidate_plans(
             code="UNSUPPORTED_CONSTRAINT", message="Origin and departure required"
         )
     started = perf_counter()
-    discovered = await discovery.discover(controls.origin, radius_meters=1000)
+    # Discovery scope does not assert walking feasibility; both routed legs must still pass policy.
+    discovered = await discovery.discover(
+        controls.origin, radius_meters=MAX_DISCOVERY_RADIUS_METERS
+    )
     if isinstance(discovered, CompilationFailure):
         return discovered
     by_id: dict[str, PlaceCandidate] = {}

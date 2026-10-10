@@ -2,9 +2,9 @@
 
 **Your limits in. One real plan out.** An open-weight Gemma outing compiler for Touch Grass.
 
-[Open Ground Rule](https://outproof-web.onrender.com/) · [68-second public execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
+[Open Ground Rule](https://outproof-web.onrender.com/) · [69-second public India execution recording](https://outproof-web.onrender.com/demo.html) · [Production API](https://outproof-api.onrender.com/v1/health/ready).
 
-Reviewed live support includes Singapore Botanic Gardens/Tanglin and mapped pedestrian corridors at Shanti Kunj and Terraced Gardens, Chandigarh. Official venue admission/hours, exact OSM access geometry and independent Valhalla round trips ground main-ground walks. India mapped access is not physically checked. The actual 100-area India baseline accepted zero plans; these narrow repaired corridors do not establish broad coverage. See [India execution evidence](evals/reports/INDIA_100_RELEASE.md).
+Reviewed live support includes Singapore Botanic Gardens/Tanglin and mapped pedestrian corridors at Shanti Kunj and Terraced Gardens, Chandigarh, and Cubbon Park, Bengaluru. Official venue admission/hours, exact OSM access geometry and independent Valhalla round trips ground main-ground walks. Cubbon's general grounds close Mondays and second Tuesdays; the checked path excludes the mapped High Court grounds. India mapped access is not physically checked. The actual 100-area India baseline accepted zero plans; these narrow repaired corridors do not establish broad coverage. See [India execution evidence](evals/reports/INDIA_100_RELEASE.md).
 
 Anna Nagar's previous accepted result was withdrawn: a civic listing and general schedule do not prove zero admission or venue-specific hours. The correct area is 57,927 m² (~14.31 acres). See [release evidence audit](evals/reports/FINAL_EVIDENCE_AUDIT.md).
 
@@ -20,7 +20,7 @@ Use `.env.example` for variable names. Shells do not load env files automaticall
 
 ## Evidence
 
-The executed campaign records 4,914 Python tests, 4,096 distinct controlled compiler journeys, 300 adversarial cases and 135 controlled Chromium journeys. These are synthetic/control tests, not actual outings. Historical supported public browser/API/Gemma/source/route/proof/GO runs passed. Twenty bounded production probes included three supported real compiles (one parser plus ranker), with a small warm median of 4.01 s. The initial cold local inference took about 115 s. See the [current verdict](evals/reports/FINAL_RELEASE_VERDICT.md), [production report](evals/reports/FINAL_PRODUCTION_SMOKE.md) and [Potheri incident](evals/reports/release-potheri-incident.md). Three physical outings remain unexecuted.
+The executed campaign records 4,974 Python tests, 4,096 distinct controlled compiler journeys, 300 adversarial cases and 135 controlled Chromium journeys. These are synthetic/control tests, not actual outings. Historical supported public browser/API/Gemma/source/route/proof/GO runs passed. Twenty bounded production probes included three supported real compiles (one parser plus ranker), with a small warm median of 4.01 s. The initial cold local inference took about 115 s. See the [current verdict](evals/reports/FINAL_RELEASE_VERDICT.md), [production report](evals/reports/FINAL_PRODUCTION_SMOKE.md) and [Potheri incident](evals/reports/release-potheri-incident.md). Three physical outings remain unexecuted.
 
 GitHub CI has executed successfully and Render deploys after checks pass. The measured runtime is `gemma4:e2b-it-qat`; no fallback model is silently substituted. [Deployment](docs/DEPLOYMENT.md), [operations](docs/OPERATIONS.md), [partner evidence](docs/PARTNER_ELIGIBILITY.md) and the unpublished [DEV draft](docs/DEV_DRAFT.md) document reproduction and limits.
 

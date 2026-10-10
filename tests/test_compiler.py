@@ -4,7 +4,8 @@ from datetime import timedelta
 import pytest
 from app.compiler import valid_candidate_plans
 from app.fixtures import FixtureProviders
-from ground_rule.models import CompilationFailure
+from app.reviewed_gardens import distance_meters
+from ground_rule.models import CompilationFailure, Coordinates, PlaceCandidate
 
 
 def valid(provider: FixtureProviders, allow_fixture: bool = True) -> object:
@@ -150,3 +151,64 @@ def test_one_enrichment_timeout_keeps_other_valid_candidate() -> None:
             return await super().enrich(place)
 
     assert len(valid(Partial())) == 1
+
+
+@pytest.mark.parametrize("walking_minutes,accepted", [(30, False), (45, True)])
+def test_walkable_candidates_beyond_one_kilometer_keep_walking_limit(
+    walking_minutes: int, accepted: bool
+) -> None:
+    class GeographicFixtures(FixtureProviders):
+        async def discover(
+            self, origin: Coordinates, radius_meters: int
+        ) -> tuple[PlaceCandidate, ...]:
+            return tuple(
+                place
+                for place in self.places
+                if distance_meters(origin, place.coordinates) <= radius_meters
+            )
+
+    provider = GeographicFixtures()
+    origin = provider.controls.origin.model_copy(
+        update={"latitude": provider.controls.origin.latitude - 0.012}
+    )
+    provider.controls = provider.controls.model_copy(
+        update={
+            "origin": origin,
+            "max_walking_minutes": walking_minutes,
+            "max_walking_meters": 4000.0,
+        }
+    )
+    assert all(1000 < distance_meters(origin, p.coordinates) < 3000 for p in provider.places)
+    # Relocate explicitly synthetic observations; no live evidence is refreshed.
+    provider.routes = tuple(
+        route.model_copy(
+            update={
+                "duration_seconds": 1200,
+                "distance_meters": 1800.0,
+                "evidence": tuple(
+                    evidence.model_copy(
+                        update={
+                            "value": {
+                                **evidence.value,
+                                "from_coordinates": origin.model_dump()
+                                if route.from_id == "origin"
+                                else evidence.value["from_coordinates"],
+                                "to_coordinates": origin.model_dump()
+                                if route.to_id == "origin"
+                                else evidence.value["to_coordinates"],
+                                "duration_seconds": 1200,
+                                "distance_meters": 1800.0,
+                            }
+                        }
+                    )
+                    if evidence.field == "walking_route"
+                    else evidence
+                    for evidence in route.evidence
+                ),
+            }
+        )
+        for route in provider.routes
+    )
+    result = valid(provider)
+    assert isinstance(result, tuple)
+    assert bool(result) is accepted

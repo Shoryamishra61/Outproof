@@ -1,0 +1,34 @@
+{
+  "status": "FAIL",
+  "scope": "Preserved interrupted harness probes, no actual compile sent",
+  "currency_widget_probe": {
+    "error": "page.goto Timeout30000ms while waiting for networkidle during deploy",
+    "widget_checks_executed": false
+  },
+  "cubbon_api_precondition": {
+    "expected_commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+    "actual_commit": "ff390492725caf5e4de872a3c7b4aff374a12f29",
+    "compile_requests_sent": 0
+  },
+  "runtime_identity_recheck": {
+    "observed_at": "2026-10-10T04:35:04Z",
+    "render_deploy": "dep-db4rse3rjlhs73a6deng",
+    "render_status": "live",
+    "expected_commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+    "public_commit": "ff390492725caf5e4de872a3c7b4aff374a12f29",
+    "public_capabilities_include_cubbon": false,
+    "cache_busting_and_no_cache_headers_used": true,
+    "api_restart_http_status": 200,
+    "repair_deploy": "dep-db4s0vl9fdbs73amks8g",
+    "repair_pending": false
+  },
+  "recovered": {
+    "actual_public_commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+    "api_deploy": "dep-db4s0vl9fdbs73amks8g",
+    "full_identity_receipt": "INDIA_RUNTIME_IDENTITY.json",
+    "actual_compile_and_browser_receipts": [
+      "CUBBON_PUBLIC_LIVE.json",
+      "artifacts/release/public-india-cubbon/receipt.json"
+    ]
+  }
+}

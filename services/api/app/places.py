@@ -12,6 +12,8 @@ import httpx
 from ground_rule.models import CompilationFailure, Coordinates, Evidence, PlaceCandidate
 from pydantic import ValidationError
 
+MAX_DISCOVERY_RADIUS_METERS = 3000
+
 
 class PlacesProvider(Protocol):
     async def discover(
@@ -44,7 +46,7 @@ def retry_delay_seconds(value: str | None) -> int:
 
 def overpass_query(origin: Coordinates, radius_meters: int) -> str:
     origin = Coordinates.model_validate(origin)
-    if type(radius_meters) is not int or not 1 <= radius_meters <= 3000:
+    if type(radius_meters) is not int or not 1 <= radius_meters <= MAX_DISCOVERY_RADIUS_METERS:
         raise ValueError("Discovery radius must be an integer between 1 and 3000 meters")
     around = f"(around:{radius_meters},{origin.latitude},{origin.longitude})"
     return (

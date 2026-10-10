@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "executed_at": "2026-10-10T04:29:54.699Z",
+  "scope": "Actual public currency default and explicit Singapore preset; no compilation or currency conversion",
+  "initial_currency": "INR",
+  "example_currency": "SGD",
+  "example_budget": 0,
+  "viewports": [
+    360,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "errors": []
+}

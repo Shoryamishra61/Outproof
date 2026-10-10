@@ -1,3 +1,21 @@
+# Current India release checkpoint — October 10, 2026
+
+The public product has verified, narrow LIVE paths: Tanglin/Singapore, Shanti Kunj and Terraced Gardens/Chandigarh, and Cubbon Park/Bengaluru. The requested broad India product remains **BLOCKED**. The original real 100-origin campaign accepted **0/100**; the three repaired India gardens and their targeted successes do not turn that cohort green. Potheri remains unsupported. The 09:00 IST freeze target was missed.
+
+Verified runtime: `f53f7894b3635918825ebd2feadb83389b4f8916`; [CI 38023859778](https://github.com/Shoryamishra61/Outproof/actions/runs/38023859778). Actual identity/free-plan/autodeploy/HTTPS/readiness/model-auth/demo-hash checkpoint passed at 04:45 UTC. API `dep-db4s0vl9fdbs73amks8g` and web `dep-db4rse3rjlhs73a6df10` matched. An earlier provider-live/public-runtime mismatch remains recorded rather than accepted as a successful deployment.
+
+- [Public application](https://outproof-web.onrender.com/), [production readiness](https://outproof-api.onrender.com/v1/health/ready), [public demo](https://outproof-web.onrender.com/demo.html), [source](https://github.com/Shoryamishra61/Outproof).
+- Four targeted current-time India API plans passed (two Chandigarh gardens, two Bengaluru origins); twelve negative requests returned 409. Three actual public browser search/parser/ranker/proof/GO paths passed, including mobile and keyboard execution.
+- Bengaluru's actual plan/GO times were 7.029/7.516 seconds. The fresh 69.36-second Shanti Kunj recording passed real public decoding/playback, 200/206/hash and six viewport checks. No physical footage or physical-trial evidence is claimed.
+- Gemma is actually `gemma4:e2b-it-qat`, digest `07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c`, on the existing RTX 3050 Laptop 4 GB GPU plus system RAM. No extra model download or paid runtime is required. Access remains authenticated and laptop-dependent.
+- The original 1 km discovery scope excluded a feasible 1.185 km-away Chandigarh candidate. Real local source/route/Gemma execution proved 41 walking minutes within 45, and 71 total minutes within 90. The bounded 3 km correction passed 62 narrow tests and the complete canonical command (4,974 Python / two opt-in skips, schemas/evals/Ruff/TypeScript/Vite); its matching new CI/public execution gates are pending. The 19-case intermediate public campaign is explicitly partial and preserved before this fix.
+
+No additional key is needed for the evidenced supported flows. Missing capabilities are authoritative nearby operational facts for unsupported areas, an existing permanent inference/source runtime, and actual physical India field trials. Free providers have intermittent failures. There is no Cloudflare-connected domain or physical Arduino. New cash spend is zero; no subscription, overage or training was activated. Physical trials are **0/3 UNEXECUTED**, Screen Ratio **UNMEASURED**. Only supported partner uses are claimed in [the ledger](../../docs/PARTNER_ELIGIBILITY.md); judges determine eligibility.
+
+[Detailed India evidence and exact commands](INDIA_100_RELEASE.md) distinguishes original, intermediate and targeted cohorts. The [DEV draft](../../docs/DEV_DRAFT.md) is prepared and unpublished. Further release blockers remain; it would be inaccurate to say only publication is left.
+
+--- Historical earlier handoffs ---
+
 # Conditional release handoff
 
 Latest Potheri incident: [executed repair report](release-potheri-incident.md). General discovery failed from Render despite Singapore-only readiness passing. Discovery recovered once after replacing the unreachable endpoint, then a repeat hit upstream HTTP 504; bounded transient recovery was added; a real Potheri browser run found three identities but **no accepted outing**, because admission/hours evidence was insufficient. Current controlled checks: 4,914 Python and 135 browser cases. A separately future-dated supported Singapore API plan passed with real Gemma. Global and Potheri outing coverage remain BLOCKED; thousands of synthetic checks do not establish real-world acceptance.

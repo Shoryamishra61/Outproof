@@ -1,0 +1,2548 @@
+{
+  "campaign": "100 distinct India starting areas, actual deployed API",
+  "case_fingerprint": "3bb31f6797328816d2ba28e26006e1331329f75adf2edc0d241c4e2aba70837f",
+  "departure_at": "2026-10-10T12:00:00+05:30",
+  "scope": "Scheduled daytime software compilation; no physical trips, no mocked sources",
+  "started_at": "2026-10-10T04:39:48.047086+00:00",
+  "results": [
+    {
+      "id": "india-001",
+      "area": "Chennai",
+      "query": "Chennai, India",
+      "executed_at": "2026-10-10T04:39:48.130864+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "ed2520200c1b492e8b0bc0ec1d6c8a73",
+      "search_result": {
+        "results": [
+          {
+            "label": "Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.0800915,
+              "longitude": 80.2807978
+            }
+          },
+          {
+            "label": "Indian Maritime University, Chennai Campus, East Coast Road, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.8714121,
+              "longitude": 80.2354245
+            }
+          },
+          {
+            "label": "Chennai Egmore, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.0783583,
+              "longitude": 80.2611685
+            }
+          },
+          {
+            "label": "McKinsey & Company Chennai Service Center, Taramani Link Road, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.9815286,
+              "longitude": 80.2404302
+            }
+          },
+          {
+            "label": "Chennai Port, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 13.096423,
+              "longitude": 80.303623
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 13.0800915,
+          "longitude": 80.2807978
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "34673b5a5afa4992b8377d049cca7c1a",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 13703.22
+    },
+    {
+      "id": "india-002",
+      "area": "Mumbai",
+      "query": "Mumbai, India",
+      "executed_at": "2026-10-10T04:40:13.840112+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "e35a657460f14356a0759a4a7a7c055a",
+      "search_result": {
+        "results": [
+          {
+            "label": "Mumbai, Maharashtra, India",
+            "coordinates": {
+              "latitude": 19.054999,
+              "longitude": 72.8692035
+            }
+          },
+          {
+            "label": "Navi Mumbai, Maharashtra, India",
+            "coordinates": {
+              "latitude": 19.0308262,
+              "longitude": 73.0198537
+            }
+          },
+          {
+            "label": "Mumbai Suburban District, Maharashtra, India",
+            "coordinates": {
+              "latitude": 19.1309844,
+              "longitude": 72.8894618
+            }
+          },
+          {
+            "label": "Mumbai City District, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.9723889,
+              "longitude": 72.8258988
+            }
+          },
+          {
+            "label": "Mumbai CSMT, Dr Dadabhai Naoroji Road, Mumbai, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.9404925,
+              "longitude": 72.8357856
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 19.054999,
+          "longitude": 72.8692035
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "8eb098b2a62841b2b302edee1cd95d63",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 15312.92
+    },
+    {
+      "id": "india-003",
+      "area": "New Delhi",
+      "query": "New Delhi, India",
+      "executed_at": "2026-10-10T04:40:41.158916+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "8967b56e9faa48dcb9b5fbc6038bee6e",
+      "search_result": {
+        "results": [
+          {
+            "label": "New Delhi, Delhi, India",
+            "coordinates": {
+              "latitude": 28.6138954,
+              "longitude": 77.2090057
+            }
+          },
+          {
+            "label": "New Delhi, Delhi, India",
+            "coordinates": {
+              "latitude": 28.5915539,
+              "longitude": 77.1321486
+            }
+          },
+          {
+            "label": "New Delhi, Foot Over Bridge 3, Delhi, India",
+            "coordinates": {
+              "latitude": 28.6419258,
+              "longitude": 77.2217499
+            }
+          },
+          {
+            "label": "New Delhi, Bhavbhuti Marg, Delhi, India",
+            "coordinates": {
+              "latitude": 28.6434826,
+              "longitude": 77.2227421
+            }
+          },
+          {
+            "label": "Supreme Court of India, Tilak Marg, New Delhi, Delhi, India",
+            "coordinates": {
+              "latitude": 28.6223066,
+              "longitude": 77.2394313
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 28.6138954,
+          "longitude": 77.2090057
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "25447e8897c648bca0727e00c4793f3b",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 17448.47
+    },
+    {
+      "id": "india-004",
+      "area": "Bengaluru",
+      "query": "Bengaluru, India",
+      "executed_at": "2026-10-10T04:41:10.613411+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "9672fb7a635445bf95aa57f5abbe207c",
+      "search_result": {
+        "results": [
+          {
+            "label": "Bengaluru, Karnataka, India",
+            "coordinates": {
+              "latitude": 12.9767936,
+              "longitude": 77.590082
+            }
+          },
+          {
+            "label": "Kempegowda International Airport, Budigere Road, Bengaluru, Karnataka, India",
+            "coordinates": {
+              "latitude": 13.1976048,
+              "longitude": 77.7074856
+            }
+          },
+          {
+            "label": "Indian Space Research Organisation - ISRO Vijinapura Campus, 2nd Main Road, Bengaluru, Karnataka, India",
+            "coordinates": {
+              "latitude": 13.0362405,
+              "longitude": 77.5710127
+            }
+          },
+          {
+            "label": "Bengaluru Urban, Karnataka, India",
+            "coordinates": {
+              "latitude": 12.9461554,
+              "longitude": 77.5503844
+            }
+          },
+          {
+            "label": "Krantivira Sangolli Rayanna (Bengaluru), Gubbi Thotadappa Road, Bengaluru, Karnataka, India",
+            "coordinates": {
+              "latitude": 12.9781739,
+              "longitude": 77.5695603
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9767936,
+          "longitude": 77.590082
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 200,
+      "request_id": "c2acf2de3be146c59265464b655cb8c9",
+      "response": {
+        "status": "SUCCESS",
+        "plan": {
+          "plan_id": "template-A:c4e302d7b6c461922610e6ab",
+          "origin": {
+            "latitude": 12.9767936,
+            "longitude": 77.590082
+          },
+          "departure_at": "2026-10-10T12:00:00+05:30",
+          "stops": [
+            {
+              "place": {
+                "place_id": "osm:way/22895320",
+                "provider": "OSM",
+                "provider_id": "way/22895320",
+                "name": "Cubbon Park",
+                "coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "categories": [
+                  "park"
+                ],
+                "opening_windows": [
+                  {
+                    "opens_at": "2026-10-10T06:31:49Z",
+                    "closes_at": "2026-10-10T12:30:00Z",
+                    "evidence": [
+                      {
+                        "evidence_id": "osm:way/22895320:opening_hours:2026-10-10T06:31:49+00:00:2026-10-10T12:30:00+00:00",
+                        "subject_id": "osm:way/22895320",
+                        "field": "opening_window",
+                        "value": [
+                          "2026-10-10T06:31:49+00:00",
+                          "2026-10-10T12:30:00+00:00"
+                        ],
+                        "source": "DIRECT",
+                        "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                        "observed_at": "2026-10-10T04:41:12.120104Z",
+                        "expires_at": "2026-10-11T04:41:12.120104Z",
+                        "confidence": "HIGH"
+                      }
+                    ]
+                  }
+                ],
+                "price": {
+                  "confidence": "VERIFIED",
+                  "lower": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "upper": {
+                    "currency_code": "INR",
+                    "minor_units": 0
+                  },
+                  "scope": "TOTAL",
+                  "evidence": [
+                    {
+                      "evidence_id": "osm:way/22895320:price",
+                      "subject_id": "osm:way/22895320",
+                      "field": "price",
+                      "value": {
+                        "currency_code": "INR",
+                        "lower_minor_units": 0,
+                        "upper_minor_units": 0,
+                        "scope": "TOTAL",
+                        "covers_all_mandatory_costs": true
+                      },
+                      "source": "DIRECT",
+                      "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                      "observed_at": "2026-10-10T04:41:12.120104Z",
+                      "expires_at": "2026-10-11T04:41:12.120104Z",
+                      "confidence": "HIGH"
+                    }
+                  ]
+                },
+                "dietary_options": null,
+                "evidence": [
+                  {
+                    "evidence_id": "osm:way/22895320:identity",
+                    "subject_id": "osm:way/22895320",
+                    "field": "identity",
+                    "value": {
+                      "provider": "OSM",
+                      "provider_id": "way/22895320",
+                      "name": "Cubbon Park"
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:coordinates",
+                    "subject_id": "osm:way/22895320",
+                    "field": "coordinates",
+                    "value": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/1276833566/full.json",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:categories",
+                    "subject_id": "osm:way/22895320",
+                    "field": "categories",
+                    "value": [
+                      "park"
+                    ],
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:public_access",
+                    "subject_id": "osm:way/22895320",
+                    "field": "public_access",
+                    "value": true,
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:opening_hours",
+                    "subject_id": "osm:way/22895320",
+                    "field": "opening_hours",
+                    "value": "Tu-Su 06:00-18:00; Tu[2] off",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:timezone",
+                    "subject_id": "osm:way/22895320",
+                    "field": "timezone",
+                    "value": "Asia/Kolkata",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:excluded_ground_access",
+                    "subject_id": "osm:way/22895320",
+                    "field": "excluded_ground_access",
+                    "value": {
+                      "boundary_way": 208686727,
+                      "path_outside_boundary": true
+                    },
+                    "source": "OSM",
+                    "source_ref": "https://www.openstreetmap.org/api/0.6/way/208686727/full.json",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "MEDIUM"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:visit_scope",
+                    "subject_id": "osm:way/22895320",
+                    "field": "visit_scope",
+                    "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases, attractions, rentals, courts, clubs or paid activities. Mapped access point, not a physically checked gate.",
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "HIGH"
+                  },
+                  {
+                    "evidence_id": "osm:way/22895320:parse_lineage",
+                    "subject_id": "osm:way/22895320",
+                    "field": "parse_lineage",
+                    "value": {
+                      "parser": "karnataka-main-park-v1",
+                      "authority": "Department of Tourism, Government of Karnataka",
+                      "page_sha256": "6c9542defe7c060a89b23656dc609f58bcabcea2cbd31720c18a2df30cb801d9",
+                      "official_retrieval_transport": "authenticated_laptop_relay",
+                      "coordinate_kind": "mapped_pedestrian_access_node",
+                      "access_node": 11854682505,
+                      "path_way": 1276833566,
+                      "park_way": 22895320,
+                      "path_crosses_park_boundary": true,
+                      "excluded_boundary_way": 208686727,
+                      "timezone_rule": "Reviewed Bengaluru jurisdiction uses India civil time",
+                      "claims": [
+                        "Entry Fee",
+                        "Free (select attractions have nominal charges)",
+                        "Cubbon Park (General)",
+                        "6:00 AM",
+                        "6:00 PM",
+                        "Mondays & 2nd Tuesdays",
+                        "Ambedkar Veedhi"
+                      ]
+                    },
+                    "source": "DIRECT",
+                    "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                    "observed_at": "2026-10-10T04:41:12.120104Z",
+                    "expires_at": "2026-10-11T04:41:12.120104Z",
+                    "confidence": "HIGH"
+                  }
+                ]
+              },
+              "arrival_at": "2026-10-10T06:31:49Z",
+              "dwell_seconds": 1800
+            }
+          ],
+          "routes": [
+            {
+              "route_id": "valhalla:d509eba187f99f181c8668b5",
+              "from_id": "origin",
+              "to_id": "osm:way/22895320",
+              "reachable": true,
+              "duration_seconds": 109,
+              "distance_meters": 140.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "subject_id": "valhalla:d509eba187f99f181c8668b5",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "origin",
+                    "to_id": "osm:way/22895320",
+                    "from_coordinates": {
+                      "latitude": 12.9767936,
+                      "longitude": 77.590082
+                    },
+                    "to_coordinates": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "reachable": true,
+                    "duration_seconds": 109,
+                    "distance_meters": 140.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:41:15.578941Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:d509eba187f99f181c8668b5:metadata",
+                  "subject_id": "valhalla:d509eba187f99f181c8668b5",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:d509eba187f99f181c8668b5",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 12.9767936,
+                          "lon": 77.590082,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 12.9771413,
+                          "lon": 77.5911742,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:41:15.578941Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            },
+            {
+              "route_id": "valhalla:7e648f79445ab7d45bb89e57",
+              "from_id": "osm:way/22895320",
+              "to_id": "origin",
+              "reachable": true,
+              "duration_seconds": 100,
+              "distance_meters": 140.0,
+              "evidence": [
+                {
+                  "evidence_id": "valhalla:7e648f79445ab7d45bb89e57:walking_route",
+                  "subject_id": "valhalla:7e648f79445ab7d45bb89e57",
+                  "field": "walking_route",
+                  "value": {
+                    "from_id": "osm:way/22895320",
+                    "to_id": "origin",
+                    "from_coordinates": {
+                      "latitude": 12.9771413,
+                      "longitude": 77.5911742
+                    },
+                    "to_coordinates": {
+                      "latitude": 12.9767936,
+                      "longitude": 77.590082
+                    },
+                    "reachable": true,
+                    "duration_seconds": 100,
+                    "distance_meters": 140.0
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:41:15.746495Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                },
+                {
+                  "evidence_id": "valhalla:7e648f79445ab7d45bb89e57:metadata",
+                  "subject_id": "valhalla:7e648f79445ab7d45bb89e57",
+                  "field": "valhalla_metadata",
+                  "value": {
+                    "costing": "pedestrian",
+                    "units": "kilometers",
+                    "error_code": null,
+                    "response_id": "valhalla:7e648f79445ab7d45bb89e57",
+                    "request": {
+                      "locations": [
+                        {
+                          "lat": 12.9771413,
+                          "lon": 77.5911742,
+                          "type": "break",
+                          "search_cutoff": 100
+                        },
+                        {
+                          "lat": 12.9767936,
+                          "lon": 77.590082,
+                          "type": "break",
+                          "search_cutoff": 100
+                        }
+                      ],
+                      "costing": "pedestrian",
+                      "units": "kilometers"
+                    }
+                  },
+                  "source": "VALHALLA",
+                  "source_ref": "https://valhalla1.openstreetmap.de/route",
+                  "observed_at": "2026-10-10T04:41:15.746495Z",
+                  "expires_at": null,
+                  "confidence": "MEDIUM"
+                }
+              ]
+            }
+          ]
+        },
+        "proof": {
+          "validation": {
+            "plan_id": "template-A:c4e302d7b6c461922610e6ab",
+            "accepted": true,
+            "checks": [
+              {
+                "code": "GROUNDING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Provider identity and coordinates must be evidenced",
+                "evidence_ids": [
+                  "osm:way/22895320:identity",
+                  "osm:way/22895320:coordinates"
+                ]
+              },
+              {
+                "code": "ROUTING",
+                "status": "PASS",
+                "hard": true,
+                "message": "Every leg including return needs reachable walking facts",
+                "evidence_ids": [
+                  "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "valhalla:7e648f79445ab7d45bb89e57:walking_route"
+                ]
+              },
+              {
+                "code": "DURATION",
+                "status": "PASS",
+                "hard": true,
+                "message": "Full elapsed duration includes all routes and all dwells; departure is authoritative",
+                "evidence_ids": [
+                  "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "valhalla:7e648f79445ab7d45bb89e57:walking_route"
+                ]
+              },
+              {
+                "code": "RETURN_TRIP",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete round trip must meet the explicit return deadline in UTC",
+                "evidence_ids": [
+                  "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "valhalla:7e648f79445ab7d45bb89e57:walking_route"
+                ]
+              },
+              {
+                "code": "WALKING",
+                "status": "PASS",
+                "hard": true,
+                "message": "All walking legs count against both supplied maxima",
+                "evidence_ids": [
+                  "valhalla:d509eba187f99f181c8668b5:walking_route",
+                  "valhalla:7e648f79445ab7d45bb89e57:walking_route"
+                ]
+              },
+              {
+                "code": "CURRENCY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Costs must share the budget currency; no conversion",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "PRICE_CONFIDENCE",
+                "status": "PASS",
+                "hard": true,
+                "message": "Complete mandatory cost needs current positive evidence",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "BUDGET",
+                "status": "PASS",
+                "hard": true,
+                "message": "Conservative mandatory group total must fit the same-currency scoped cap",
+                "evidence_ids": [
+                  "osm:way/22895320:price"
+                ]
+              },
+              {
+                "code": "OPENING_HOURS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Known hours must cover arrival through required dwell",
+                "evidence_ids": [
+                  "osm:way/22895320:opening_hours:2026-10-10T06:31:49+00:00:2026-10-10T12:30:00+00:00"
+                ]
+              },
+              {
+                "code": "EXCLUSIONS",
+                "status": "PASS",
+                "hard": true,
+                "message": "Hard exclusions require positive absence and category evidence",
+                "evidence_ids": []
+              },
+              {
+                "code": "DIETARY",
+                "status": "PASS",
+                "hard": true,
+                "message": "Diet needs positive evidence; allergy/accessibility guarantees unsupported",
+                "evidence_ids": []
+              }
+            ]
+          },
+          "cost": {
+            "confidence": "VERIFIED",
+            "lower": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "upper": {
+              "currency_code": "INR",
+              "minor_units": 0
+            },
+            "scope": "TOTAL",
+            "evidence": [
+              {
+                "evidence_id": "osm:way/22895320:price",
+                "subject_id": "osm:way/22895320",
+                "field": "price",
+                "value": {
+                  "currency_code": "INR",
+                  "lower_minor_units": 0,
+                  "upper_minor_units": 0,
+                  "scope": "TOTAL",
+                  "covers_all_mandatory_costs": true
+                },
+                "source": "DIRECT",
+                "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+                "observed_at": "2026-10-10T04:41:12.120104Z",
+                "expires_at": "2026-10-11T04:41:12.120104Z",
+                "confidence": "HIGH"
+              }
+            ]
+          },
+          "total_duration_seconds": 2009,
+          "walking_distance_meters": 280.0,
+          "sources": [
+            {
+              "evidence_id": "valhalla:d509eba187f99f181c8668b5:walking_route",
+              "subject_id": "valhalla:d509eba187f99f181c8668b5",
+              "field": "walking_route",
+              "value": {
+                "from_id": "origin",
+                "to_id": "osm:way/22895320",
+                "from_coordinates": {
+                  "latitude": 12.9767936,
+                  "longitude": 77.590082
+                },
+                "to_coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "reachable": true,
+                "duration_seconds": 109,
+                "distance_meters": 140.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:41:15.578941Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:d509eba187f99f181c8668b5:metadata",
+              "subject_id": "valhalla:d509eba187f99f181c8668b5",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:d509eba187f99f181c8668b5",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 12.9767936,
+                      "lon": 77.590082,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 12.9771413,
+                      "lon": 77.5911742,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:41:15.578941Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:7e648f79445ab7d45bb89e57:walking_route",
+              "subject_id": "valhalla:7e648f79445ab7d45bb89e57",
+              "field": "walking_route",
+              "value": {
+                "from_id": "osm:way/22895320",
+                "to_id": "origin",
+                "from_coordinates": {
+                  "latitude": 12.9771413,
+                  "longitude": 77.5911742
+                },
+                "to_coordinates": {
+                  "latitude": 12.9767936,
+                  "longitude": 77.590082
+                },
+                "reachable": true,
+                "duration_seconds": 100,
+                "distance_meters": 140.0
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:41:15.746495Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "valhalla:7e648f79445ab7d45bb89e57:metadata",
+              "subject_id": "valhalla:7e648f79445ab7d45bb89e57",
+              "field": "valhalla_metadata",
+              "value": {
+                "costing": "pedestrian",
+                "units": "kilometers",
+                "error_code": null,
+                "response_id": "valhalla:7e648f79445ab7d45bb89e57",
+                "request": {
+                  "locations": [
+                    {
+                      "lat": 12.9771413,
+                      "lon": 77.5911742,
+                      "type": "break",
+                      "search_cutoff": 100
+                    },
+                    {
+                      "lat": 12.9767936,
+                      "lon": 77.590082,
+                      "type": "break",
+                      "search_cutoff": 100
+                    }
+                  ],
+                  "costing": "pedestrian",
+                  "units": "kilometers"
+                }
+              },
+              "source": "VALHALLA",
+              "source_ref": "https://valhalla1.openstreetmap.de/route",
+              "observed_at": "2026-10-10T04:41:15.746495Z",
+              "expires_at": null,
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:identity",
+              "subject_id": "osm:way/22895320",
+              "field": "identity",
+              "value": {
+                "provider": "OSM",
+                "provider_id": "way/22895320",
+                "name": "Cubbon Park"
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:coordinates",
+              "subject_id": "osm:way/22895320",
+              "field": "coordinates",
+              "value": {
+                "latitude": 12.9771413,
+                "longitude": 77.5911742
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/1276833566/full.json",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:categories",
+              "subject_id": "osm:way/22895320",
+              "field": "categories",
+              "value": [
+                "park"
+              ],
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/22895320/full.json",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:public_access",
+              "subject_id": "osm:way/22895320",
+              "field": "public_access",
+              "value": true,
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:opening_hours",
+              "subject_id": "osm:way/22895320",
+              "field": "opening_hours",
+              "value": "Tu-Su 06:00-18:00; Tu[2] off",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:timezone",
+              "subject_id": "osm:way/22895320",
+              "field": "timezone",
+              "value": "Asia/Kolkata",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:excluded_ground_access",
+              "subject_id": "osm:way/22895320",
+              "field": "excluded_ground_access",
+              "value": {
+                "boundary_way": 208686727,
+                "path_outside_boundary": true
+              },
+              "source": "OSM",
+              "source_ref": "https://www.openstreetmap.org/api/0.6/way/208686727/full.json",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "MEDIUM"
+            },
+            {
+              "evidence_id": "osm:way/22895320:visit_scope",
+              "subject_id": "osm:way/22895320",
+              "field": "visit_scope",
+              "value": "Main garden pedestrian paths only. No food, cafeteria, parking, purchases, attractions, rentals, courts, clubs or paid activities. Mapped access point, not a physically checked gate.",
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:parse_lineage",
+              "subject_id": "osm:way/22895320",
+              "field": "parse_lineage",
+              "value": {
+                "parser": "karnataka-main-park-v1",
+                "authority": "Department of Tourism, Government of Karnataka",
+                "page_sha256": "6c9542defe7c060a89b23656dc609f58bcabcea2cbd31720c18a2df30cb801d9",
+                "official_retrieval_transport": "authenticated_laptop_relay",
+                "coordinate_kind": "mapped_pedestrian_access_node",
+                "access_node": 11854682505,
+                "path_way": 1276833566,
+                "park_way": 22895320,
+                "path_crosses_park_boundary": true,
+                "excluded_boundary_way": 208686727,
+                "timezone_rule": "Reviewed Bengaluru jurisdiction uses India civil time",
+                "claims": [
+                  "Entry Fee",
+                  "Free (select attractions have nominal charges)",
+                  "Cubbon Park (General)",
+                  "6:00 AM",
+                  "6:00 PM",
+                  "Mondays & 2nd Tuesdays",
+                  "Ambedkar Veedhi"
+                ]
+              },
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:price",
+              "subject_id": "osm:way/22895320",
+              "field": "price",
+              "value": {
+                "currency_code": "INR",
+                "lower_minor_units": 0,
+                "upper_minor_units": 0,
+                "scope": "TOTAL",
+                "covers_all_mandatory_costs": true
+              },
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "HIGH"
+            },
+            {
+              "evidence_id": "osm:way/22895320:opening_hours:2026-10-10T06:31:49+00:00:2026-10-10T12:30:00+00:00",
+              "subject_id": "osm:way/22895320",
+              "field": "opening_window",
+              "value": [
+                "2026-10-10T06:31:49+00:00",
+                "2026-10-10T12:30:00+00:00"
+              ],
+              "source": "DIRECT",
+              "source_ref": "https://karnatakatourism.org/en/attractions/cubbon-park",
+              "observed_at": "2026-10-10T04:41:12.120104Z",
+              "expires_at": "2026-10-11T04:41:12.120104Z",
+              "confidence": "HIGH"
+            }
+          ]
+        },
+        "reason": "Selected for your soft preferences.",
+        "compiled_at": "2026-10-10T04:41:17.227418Z",
+        "mode": "LIVE",
+        "return_by_local": null
+      },
+      "outcome": "ACCEPTED_VERIFIED_PLAN",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 6421.91
+    },
+    {
+      "id": "india-005",
+      "area": "Hyderabad",
+      "query": "Hyderabad, India",
+      "executed_at": "2026-10-10T04:41:29.038484+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "8209c8787639464fa00a5586b825ebab",
+      "search_result": {
+        "results": [
+          {
+            "label": "Hyderabad, Telangana, India",
+            "coordinates": {
+              "latitude": 17.360589,
+              "longitude": 78.4740613
+            }
+          },
+          {
+            "label": "Hyderabad, Telangana, India",
+            "coordinates": {
+              "latitude": 17.388786,
+              "longitude": 78.4610647
+            }
+          },
+          {
+            "label": "Indian Institute of Technology Hyderabad, Main Gate - Hostel Road, Kandi, Telangana, India",
+            "coordinates": {
+              "latitude": 17.5922751,
+              "longitude": 78.1221891
+            }
+          },
+          {
+            "label": "University of Hyderabad, ISB Ring Road, Telangana, India",
+            "coordinates": {
+              "latitude": 17.4530357,
+              "longitude": 78.3270312
+            }
+          },
+          {
+            "label": "Hyderabad Metropolitan Region, Telangana, India",
+            "coordinates": {
+              "latitude": 17.4166044,
+              "longitude": 78.4771788
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 17.360589,
+          "longitude": 78.4740613
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "27501c900fe342d5ab29d9931f859c2b",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 22604.4
+    },
+    {
+      "id": "india-006",
+      "area": "Kolkata",
+      "query": "Kolkata, India",
+      "executed_at": "2026-10-10T04:42:03.651854+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "351cf700ce7a4b5382d04b6819b3f8fb",
+      "search_result": {
+        "results": [
+          {
+            "label": "Kolkata, West Bengal, India",
+            "coordinates": {
+              "latitude": 22.5726459,
+              "longitude": 88.3638953
+            }
+          },
+          {
+            "label": "Kolkata, West Bengal, India",
+            "coordinates": {
+              "latitude": 22.5354262,
+              "longitude": 88.3633146
+            }
+          },
+          {
+            "label": "Kolkata, Canal Circular Road, West Bengal, India",
+            "coordinates": {
+              "latitude": 22.6012775,
+              "longitude": 88.3841474
+            }
+          },
+          {
+            "label": "Indian Institute of Science Education and Research Kolkata, National Highway 34 Connector, Haringhata, West Bengal, India",
+            "coordinates": {
+              "latitude": 22.9636334,
+              "longitude": 88.5258759
+            }
+          },
+          {
+            "label": "DVC Headquarters, Kolkata, VIP Road, Kolkata, West Bengal, India",
+            "coordinates": {
+              "latitude": 22.5875055,
+              "longitude": 88.3915835
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 22.5726459,
+          "longitude": 88.3638953
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "3048c9c4c2934a5a8fc9c74ddc412917",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 27433.95
+    },
+    {
+      "id": "india-007",
+      "area": "Pune",
+      "query": "Pune, India",
+      "executed_at": "2026-10-10T04:42:43.097359+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "30db559e600c4018ac78a35a78349e89",
+      "search_result": {
+        "results": [
+          {
+            "label": "Pune, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.5213738,
+              "longitude": 73.8545071
+            }
+          },
+          {
+            "label": "Pune District, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.6448627,
+              "longitude": 73.9224157
+            }
+          },
+          {
+            "label": "Film and Television Institute of India, Law College Road, Pune, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.5133081,
+              "longitude": 73.8267363
+            }
+          },
+          {
+            "label": "Pune International Airport, Airport Road, Pune, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.5803749,
+              "longitude": 73.9182265
+            }
+          },
+          {
+            "label": "Pune International Airport, Airport Road, Pune, Maharashtra, India",
+            "coordinates": {
+              "latitude": 18.5803749,
+              "longitude": 73.9182265
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 18.5213738,
+          "longitude": 73.8545071
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "8798145f993b436baf82f48723c5ebfa",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 14931.35
+    },
+    {
+      "id": "india-008",
+      "area": "Ahmedabad",
+      "query": "Ahmedabad, India",
+      "executed_at": "2026-10-10T04:43:10.043350+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "a3697626fd874216ae578f47d496f6ce",
+      "search_result": {
+        "results": [
+          {
+            "label": "Ahmedabad, Gujarat, India",
+            "coordinates": {
+              "latitude": 23.0215374,
+              "longitude": 72.5800568
+            }
+          },
+          {
+            "label": "Ahmedabad, Gujarat, India",
+            "coordinates": {
+              "latitude": 22.745539,
+              "longitude": 72.2974907
+            }
+          },
+          {
+            "label": "Indian Institute of Management Ahmedabad, BRTS Station, Gujarat, India",
+            "coordinates": {
+              "latitude": 23.0308597,
+              "longitude": 72.5362748
+            }
+          },
+          {
+            "label": "Mumbai–Ahmedabad High-speed Rail, Gujarat, India",
+            "coordinates": {
+              "latitude": 21.6346315,
+              "longitude": 72.9561944
+            }
+          },
+          {
+            "label": "Mumbai–Ahmedabad High-speed Rail, Gujarat, India",
+            "coordinates": {
+              "latitude": 21.6346199,
+              "longitude": 72.9562442
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 23.0215374,
+          "longitude": 72.5800568
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "d4dda31caae2425fa2c8b05e68c004ea",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 18410.26
+    },
+    {
+      "id": "india-009",
+      "area": "Jaipur",
+      "query": "Jaipur, India",
+      "executed_at": "2026-10-10T04:43:40.457905+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "94cb8dfdc7eb420b902f91c0bccc493b",
+      "search_result": {
+        "results": [
+          {
+            "label": "Jaipur, Jaipur Municipal Corporation, Rajasthan, India",
+            "coordinates": {
+              "latitude": 26.9154576,
+              "longitude": 75.8189817
+            }
+          },
+          {
+            "label": "Jaipur, Rajasthan, India",
+            "coordinates": {
+              "latitude": 26.9784335,
+              "longitude": 75.7122089
+            }
+          },
+          {
+            "label": "Jaipur, West Bengal, India",
+            "coordinates": {
+              "latitude": 23.4732498,
+              "longitude": 86.1364125
+            }
+          },
+          {
+            "label": "Jaipur International Airport, Prabhu Dayal Marg, Rajasthan, India",
+            "coordinates": {
+              "latitude": 26.8281087,
+              "longitude": 75.8079888
+            }
+          },
+          {
+            "label": "National Sorting Hub Jaipur, Jacob Road, Jaipur, Rajasthan, India",
+            "coordinates": {
+              "latitude": 26.916425,
+              "longitude": 75.7843988
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 26.9154576,
+          "longitude": 75.8189817
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "439359668f204e4d8d6408996766b833",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 19463.64
+    },
+    {
+      "id": "india-010",
+      "area": "Chandigarh",
+      "query": "Chandigarh, India",
+      "executed_at": "2026-10-10T04:44:11.924605+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "a6cbf0f78225463ab13c4424676d05fd",
+      "search_result": {
+        "results": [
+          {
+            "label": "Chandigarh, India",
+            "coordinates": {
+              "latitude": 30.7334421,
+              "longitude": 76.7797143
+            }
+          },
+          {
+            "label": "Chandigarh, India",
+            "coordinates": {
+              "latitude": 30.729844,
+              "longitude": 76.7841457
+            }
+          },
+          {
+            "label": "Reserve Bank of India, Jan Marg, Chandigarh, India",
+            "coordinates": {
+              "latitude": 30.7436651,
+              "longitude": 76.7822557
+            }
+          },
+          {
+            "label": "Chandigarh International Airport, Dakshin Marg, Raipur Khurd, Chandigarh, India",
+            "coordinates": {
+              "latitude": 30.6741923,
+              "longitude": 76.7909851
+            }
+          },
+          {
+            "label": "Chandigarh Railway Station, Railway Station Road, Daria, Chandigarh, India",
+            "coordinates": {
+              "latitude": 30.7021622,
+              "longitude": 76.8214533
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 30.7334421,
+          "longitude": 76.7797143
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "10f8b41287f54df3a475384246f0bfd3",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 18271.36
+    },
+    {
+      "id": "india-011",
+      "area": "Kochi",
+      "query": "Kochi, India",
+      "executed_at": "2026-10-10T04:44:42.210109+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "68f243916a9d47909765dd52b7c9b20a",
+      "search_result": {
+        "results": [
+          {
+            "label": "Kochi, Kerala, India",
+            "coordinates": {
+              "latitude": 9.9679032,
+              "longitude": 76.2444378
+            }
+          },
+          {
+            "label": "Kochi, Ernakulam, Kerala, India",
+            "coordinates": {
+              "latitude": 9.9711453,
+              "longitude": 76.284638
+            }
+          },
+          {
+            "label": "Indian Martime University - Kochi, Kochi, Kerala, India",
+            "coordinates": {
+              "latitude": 9.9296187,
+              "longitude": 76.2875248
+            }
+          },
+          {
+            "label": "Kochi Naval Airbase, Bristow Road, Kochi, Kerala, India",
+            "coordinates": {
+              "latitude": 9.9504642,
+              "longitude": 76.2727237
+            }
+          },
+          {
+            "label": "Fort Immanuel,Fort Kochi, Dutch Cemetery Road, Kochi, Kerala, India",
+            "coordinates": {
+              "latitude": 9.9663159,
+              "longitude": 76.2390124
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 9.9679032,
+          "longitude": 76.2444378
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "10a16d2a25aa4ff8ae72854a639919ad",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 18891.34
+    },
+    {
+      "id": "india-012",
+      "area": "Coimbatore",
+      "query": "Coimbatore, India",
+      "executed_at": "2026-10-10T04:45:13.105257+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "22883628810949888461f72f52ba0813",
+      "search_result": {
+        "results": [
+          {
+            "label": "Coimbatore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.0018115,
+              "longitude": 76.9628425
+            }
+          },
+          {
+            "label": "Coimbatore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.8124445,
+              "longitude": 77.0796084
+            }
+          },
+          {
+            "label": "Coimbatore International Airport, G. D. Naidu Flyover, Coimbatore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.0329077,
+              "longitude": 77.0427014
+            }
+          },
+          {
+            "label": "Coimbatore Railway Station, State Bank Road, Coimbatore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.9962357,
+              "longitude": 76.9679417
+            }
+          },
+          {
+            "label": "Coimbatore Junction, Old Post Office Road, Coimbatore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.9975682,
+              "longitude": 76.9663657
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 11.0018115,
+          "longitude": 76.9628425
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "1eec04a228674ad58e30f3e7d56e53bc",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 19427.23
+    },
+    {
+      "id": "india-013",
+      "area": "Madurai",
+      "query": "Madurai, India",
+      "executed_at": "2026-10-10T04:45:44.550750+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "5c570d74384a4b17bb1100d6c2f377fb",
+      "search_result": {
+        "results": [
+          {
+            "label": "Madurai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 9.9261153,
+              "longitude": 78.1140983
+            }
+          },
+          {
+            "label": "Madurai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 9.9369266,
+              "longitude": 78.007823
+            }
+          },
+          {
+            "label": "Madurai International Airport, Airport Rd, Madurai, Tamil Nadu 625022, Madurai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 9.8362608,
+              "longitude": 78.0939177
+            }
+          },
+          {
+            "label": "Madurai Junction, West Veli Street, Madurai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 9.9192715,
+              "longitude": 78.1098809
+            }
+          },
+          {
+            "label": "Madurai East, Bharathiyar Street, Madurai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 9.9090767,
+              "longitude": 78.1345452
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 9.9261153,
+          "longitude": 78.1140983
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 503,
+      "request_id": "fc6c5a897b554292b1d86a5b203346e5",
+      "response": {
+        "status": "FAILURE",
+        "code": "SOURCE_TEMPORARILY_UNAVAILABLE",
+        "message": "Map discovery is temporarily unavailable. Retry in 60 seconds; no nearby place has been verified."
+      },
+      "outcome": "TEMPORARY_PROVIDER_ERROR",
+      "retry_after_seconds": 60,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 4457.56
+    },
+    {
+      "id": "india-014",
+      "area": "Tiruchirappalli",
+      "query": "Tiruchirappalli, India",
+      "executed_at": "2026-10-10T04:46:49.016374+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "7a1c3a75bca2416e8f9fb32d8929595b",
+      "search_result": {
+        "results": [
+          {
+            "label": "Tiruchirappalli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.8071144,
+              "longitude": 78.6880939
+            }
+          },
+          {
+            "label": "Tiruchirappalli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.8504608,
+              "longitude": 78.724533
+            }
+          },
+          {
+            "label": "National Institute of Technology Trichy, 13th Street, Tiruchirapalli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.7633854,
+              "longitude": 78.8150292
+            }
+          },
+          {
+            "label": "Campion Anglo-Indian Higher Secondary School, Cantonment, Tiruchirappalli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.805102,
+              "longitude": 78.6842261
+            }
+          },
+          {
+            "label": "Tiruchirappalli Fort, Tiruchirappalli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.8305017,
+              "longitude": 78.6978285
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 10.8071144,
+          "longitude": 78.6880939
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "0591c9ca4621436db69b65d09075a1da",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No nearby outing could verify all hard rules, including admission/price, opening hours and walking feasibility. This area may lack required source evidence; retrying cannot supply unsupported facts."
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 21510.8
+    },
+    {
+      "id": "india-015",
+      "area": "Salem",
+      "query": "Salem, India",
+      "executed_at": "2026-10-10T04:47:22.538049+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "1401ce4f6a0449698b8c22b9c7c9949f",
+      "search_result": {
+        "results": [
+          {
+            "label": "Salem, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.6469616,
+              "longitude": 78.2106958
+            }
+          },
+          {
+            "label": "Salem, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.6551982,
+              "longitude": 78.1581771
+            }
+          },
+          {
+            "label": "Salem, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.6595407,
+              "longitude": 78.1808031
+            }
+          },
+          {
+            "label": "Salem Airport, Perimeter Road, Dharapuram, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.7822998,
+              "longitude": 78.0630901
+            }
+          },
+          {
+            "label": "Salem Junction, Railway Underpass, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.6707553,
+              "longitude": 78.1135427
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 11.6469616,
+          "longitude": 78.2106958
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "0a062562e3624893aee3fb0b2d2eb3db",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No named grounded supported POIs in this response"
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 20378.72
+    },
+    {
+      "id": "india-016",
+      "area": "Tirunelveli",
+      "query": "Tirunelveli, India",
+      "executed_at": "2026-10-10T04:47:54.931153+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "701b52414c014e858c22b383e52405a8",
+      "search_result": {
+        "results": [
+          {
+            "label": "Tirunelveli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 8.5495014,
+              "longitude": 77.5805178
+            }
+          },
+          {
+            "label": "Tirunelveli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 8.7331721,
+              "longitude": 77.710255
+            }
+          },
+          {
+            "label": "Tirunelveli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 8.7691945,
+              "longitude": 77.6639775
+            }
+          },
+          {
+            "label": "Tirunelveli Junction, Old Madurai - Kanniyakumari Road, Tirunelveli, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 8.7312234,
+              "longitude": 77.708336
+            }
+          },
+          {
+            "label": "Tirunelveli Government Medical College and Hospital, Palayamkottai - Tiruchendur Road, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 8.7144864,
+              "longitude": 77.7582618
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 8.5495014,
+          "longitude": 77.5805178
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "02d599f76e2240d384be95ac86b05dc6",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No named grounded supported POIs in this response"
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 18704.53
+    },
+    {
+      "id": "india-017",
+      "area": "Vellore",
+      "query": "Vellore, India",
+      "executed_at": "2026-10-10T04:48:25.650105+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "dab3bc73449c4838893dbb7bb38b0c49",
+      "search_result": {
+        "results": [
+          {
+            "label": "Vellore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.9021849,
+              "longitude": 79.061104
+            }
+          },
+          {
+            "label": "Vellore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.9071753,
+              "longitude": 79.1309695
+            }
+          },
+          {
+            "label": "Vellore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.7948109,
+              "longitude": 79.0006411
+            }
+          },
+          {
+            "label": "Vellore Institute of Technology - Chennai, Vandalur Kelambakkam Road, Chennai, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.8429461,
+              "longitude": 80.15541
+            }
+          },
+          {
+            "label": "Vellore Institute of Technology, hostel road, Vellore, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 12.9697498,
+              "longitude": 79.1606601
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 12.9021849,
+          "longitude": 79.061104
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "fb087bfc30c64a7e88e15519a75b092b",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No named grounded supported POIs in this response"
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 23768.71
+    },
+    {
+      "id": "india-018",
+      "area": "Thanjavur",
+      "query": "Thanjavur, India",
+      "executed_at": "2026-10-10T04:49:01.431444+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "090b90873bdc4259930073f4a95b5251",
+      "search_result": {
+        "results": [
+          {
+            "label": "Thanjavur, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.659037,
+              "longitude": 79.2014278
+            }
+          },
+          {
+            "label": "Thanjavur, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.7860267,
+              "longitude": 79.1381497
+            }
+          },
+          {
+            "label": "Thanjavur, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.7443061,
+              "longitude": 79.1031189
+            }
+          },
+          {
+            "label": "Thanjavur Air Force Station, Melavastachavady, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.7225876,
+              "longitude": 79.1083601
+            }
+          },
+          {
+            "label": "Thanjavur Air Force Station, Melavastachavady, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 10.7225876,
+              "longitude": 79.1083601
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 10.659037,
+          "longitude": 79.2014278
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "0615362e5b134e3aa0a5cadee8d782e7",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No named grounded supported POIs in this response"
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 16850.28
+    },
+    {
+      "id": "india-019",
+      "area": "Erode",
+      "query": "Erode, India",
+      "executed_at": "2026-10-10T04:49:30.298929+00:00",
+      "version": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "search_http_status": 200,
+      "search_request_id": "adcb242425b3434dbc54b1612248346b",
+      "search_result": {
+        "results": [
+          {
+            "label": "Erode, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.4905282,
+              "longitude": 77.3505274
+            }
+          },
+          {
+            "label": "Erode, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.3306483,
+              "longitude": 77.7276519
+            }
+          },
+          {
+            "label": "Erode, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.3692044,
+              "longitude": 77.6766269
+            }
+          },
+          {
+            "label": "Erode Junction, Erode - Dharapuram Road, Erode, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.3286258,
+              "longitude": 77.7257896
+            }
+          },
+          {
+            "label": "State Bank of India Main Branch Erode, Gandhiji Road, Erode, Tamil Nadu, India",
+            "coordinates": {
+              "latitude": 11.3375685,
+              "longitude": 77.7280416
+            }
+          }
+        ],
+        "attribution": "OpenStreetMap contributors / Photon"
+      },
+      "controls": {
+        "currency_code": "INR",
+        "budget_minor_units": 50000,
+        "budget_scope": "PER_PERSON",
+        "duration_max_minutes": 90,
+        "party_mode": "SOLO",
+        "party_size": 1,
+        "vibes": [
+          "Explore"
+        ],
+        "hard_constraints": [],
+        "soft_constraints": [],
+        "max_walking_minutes": 45,
+        "max_walking_meters": null,
+        "return_by_local": null,
+        "locale": "en-IN",
+        "origin": {
+          "latitude": 11.4905282,
+          "longitude": 77.3505274
+        },
+        "departure_at": "2026-10-10T12:00:00+05:30",
+        "strict_budget": true
+      },
+      "compile_http_status": 409,
+      "request_id": "334322704e1b4a0c89bbb3ec576ca0b3",
+      "response": {
+        "status": "FAILURE",
+        "code": "NO_GROUNDED_CANDIDATES",
+        "message": "No named grounded supported POIs in this response"
+      },
+      "outcome": "TYPED_REJECTION",
+      "retry_after_seconds": 0,
+      "version_after": {
+        "version": "0.1.0",
+        "commit": "f53f7894b3635918825ebd2feadb83389b4f8916",
+        "environment": "production"
+      },
+      "deployment_changed_during_case": false,
+      "latency_ms": 18769.72
+    }
+  ],
+  "completed_cases": 19,
+  "outcomes": {
+    "TYPED_REJECTION": 17,
+    "ACCEPTED_VERIFIED_PLAN": 1,
+    "TEMPORARY_PROVIDER_ERROR": 1
+  },
+  "updated_at": "2026-10-10T04:49:49.067879+00:00",
+  "complete": false,
+  "interrupted_at": "2026-10-10T04:49:51.451935+00:00",
+  "interruption_reason": "Paused own campaign after actual local Chandigarh route proved a valid1185m-away candidate excluded by fixed1000m discovery; partial observations retained before bounded-radius repair"
+}
