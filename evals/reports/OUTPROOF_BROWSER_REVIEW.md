@@ -1,3 +1,9 @@
+# Current public review
+
+c6711c9: actual Bengaluru refusal/explicit confirmation/recompilation/proof/GO/zero-walking PASS; six widths320–1440 no overflow, no JS exceptions and no failed network requests. Two expected HTTP409 console messages retained. Natural Tab/Enter/text-only mobile Chandigarh journey PASS without programmatic focus or pointer use. Error/plan/GO/mobile screenshots visually reviewed. First failed GO trace preserved; clock repair retains freshness. Unchanged independent policy replay of untouched network bytes PASS; decoded replay failure retained. Human device/screen-reader and physical trials unexecuted. [Executed handoff](OUTPROOF_EXECUTED_HANDOFF.md).
+
+--- Historical evidence ---
+
 # Current release status
 
 [The current Outproof release report](OUTPROOF_CURRENT_RELEASE.md) supersedes earlier whole-trip and coverage claims below. Final100: zero accepted,76 typed refusals,24 provider failures; independent evidence audit PASS, broad coverage FAIL. The current origin-confirmation repair is locally verified and public verification is pending.

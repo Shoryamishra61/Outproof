@@ -1,3 +1,9 @@
+# Current executed status
+
+[The executed handoff](OUTPROOF_EXECUTED_HANDOFF.md) supersedes pending statuses below: c6711c9 public recovery and natural keyboard paths PASS; original100 coverage FAIL.
+
+--- Earlier checkpoints ---
+
 # Outproof current release — October 10, 2026
 
 **Broad release FAIL.** The final immutable production campaign searched and compiled all 100 original India origins: zero accepted plans, 76 typed refusals and 24 provider failures. The independent audit verified complete evidence; geographic coverage failed. Potheri remains unsupported. Refusals and favourable mapped starts cannot make that cohort successful.

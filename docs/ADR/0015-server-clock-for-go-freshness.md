@@ -6,4 +6,4 @@ The API now emits its own precise `X-Server-Time` at response completion and exp
 
 GO and source-observation labels use the same clock. The existing 60-second plan freshness limit, future-observation rejection, source expiry, visit opening interval and return deadline remain unchanged. Missing or invalid clock metadata keeps the prior strict client-clock behavior. Long requests may conservatively require recompilation; no deadline or freshness tolerance is enlarged.
 
-The pure clock and GO regression reuses the actual failed public response. It checks slow-client recovery and continued rejection of stale, future, expired, closed and late-return plans. API tests verify server ownership and exact allowed-origin CORS. Public verification of the repaired clock is pending deployment.
+The pure clock and GO regression reuses the actual failed public response. It checks slow-client recovery and continued rejection of stale, future, expired, closed and late-return plans. API tests verify server ownership and exact allowed-origin CORS. Actual public full recovery and natural keyboard journey passed on c6711c9; failed first trace retained.

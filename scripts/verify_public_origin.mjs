@@ -2,10 +2,10 @@ import { chromium } from '../apps/web/node_modules/playwright/index.mjs';
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 
-const label = process.env.PUBLIC_RUN_LABEL ?? 'outproof-confirmed-route-start';
+const label = process.env.PUBLIC_RUN_LABEL ?? `outproof-confirmed-route-start-${Date.now()}`;
 assert.match(label, /^[a-z0-9-]+$/);
 const directory = `artifacts/release/${label}`;
-await fs.mkdir(directory, { recursive: true });
+await fs.mkdir(directory);
 const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
 await context.tracing.start({ screenshots: true, snapshots: true, sources: true });
@@ -15,8 +15,9 @@ page.on('pageerror', error => report.errors.push(error.message));
 page.on('console', message => { if (['warning', 'error'].includes(message.type()) && report.console_messages.length < 50) report.console_messages.push({ type: message.type(), text: message.text().slice(0, 1000) }); });
 page.on('requestfailed', request => { const url = new URL(request.url()); report.request_failures.push({ resource: url.origin + url.pathname, error: request.failure()?.errorText }); });
 const responseReceipt = async response => {
-  const body = await response.json();
-  report.requests.push({ status: response.status(), request_id: response.headers()['x-request-id'], server_time: response.headers()['x-server-time'], controls: response.request().postDataJSON().controls, body });
+  const wireBody = await response.text();
+  const body = JSON.parse(wireBody);
+  report.requests.push({ status: response.status(), request_id: response.headers()['x-request-id'], server_time: response.headers()['x-server-time'], controls: response.request().postDataJSON().controls, wire_body: wireBody, body });
   return body;
 };
 try {

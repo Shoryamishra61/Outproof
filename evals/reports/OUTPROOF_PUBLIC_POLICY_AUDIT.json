@@ -1,0 +1,58 @@
+{
+  "executed_at": "2026-10-10T10:40:23.353197+00:00",
+  "status": "PASS",
+  "scope": "Unchanged independent hard policy applied to original captured public response bytes at each compilation time. No new requests, altered evidence, fixture sources or physical trials. Original100 origins remain separate.",
+  "results": [
+    {
+      "receipt": "OUTPROOF_CLOCK_ORIGIN_PUBLIC.json",
+      "request_id": "b919b6e0a9094ef4ab85d92d1926bae2",
+      "status": 409,
+      "outcome": "TYPED_REJECTION",
+      "wire_sha256": "364a06634e06720183dbd26cf2be798be4866e589c78686954e676d2383138d7",
+      "original_trace_resource": "resources/bd7d4a7ffe7d1ee2405c3447dfd99732ccc065cf.json",
+      "wire_file": "artifacts/release/outproof-clock-route-recovery/wire-b919b6e0a9094ef4ab85d92d1926bae2.json"
+    },
+    {
+      "receipt": "OUTPROOF_CLOCK_ORIGIN_PUBLIC.json",
+      "request_id": "9d350c072ffe43a1a887bb2185c0d0cc",
+      "status": 200,
+      "outcome": "ACCEPTED_VERIFIED_PLAN",
+      "wire_sha256": "bcb47ee195963a3a036449169b08190072660a57c6d06026767b5983e91a524d",
+      "original_trace_resource": "resources/f3c0fda8cda4716299df550db83fcabbf21c4b2b.json",
+      "wire_file": "artifacts/release/outproof-clock-route-recovery/wire-9d350c072ffe43a1a887bb2185c0d0cc.json"
+    },
+    {
+      "receipt": "OUTPROOF_CLOCK_ORIGIN_PUBLIC.json",
+      "request_id": "598ae59bc4e346dbb50a39ae807b617b",
+      "status": 409,
+      "outcome": "TYPED_REJECTION",
+      "wire_sha256": "b38d2a996f72e256a7d8ccf4c962c32fe7770e28d301963ed225995c74957a22",
+      "original_trace_resource": "resources/6658d3ff4ebdaf543f0d1de82f1f483cfa08e183.json",
+      "wire_file": "artifacts/release/outproof-clock-route-recovery/wire-598ae59bc4e346dbb50a39ae807b617b.json"
+    },
+    {
+      "receipt": "OUTPROOF_TAB_KEYBOARD_PUBLIC.json",
+      "request_id": "2f4ab4f0b13e47e5b055c2465b1546c6",
+      "status": 200,
+      "outcome": "ACCEPTED_VERIFIED_PLAN",
+      "wire_sha256": "7c3bced46946db643067f2351c84728635376e8a084bd22643e3e0e0b9f3b9aa",
+      "original_trace_resource": "resources/e18d8e4d3f69c797d11f82de8bf39b07c86a24af.json",
+      "wire_file": "artifacts/release/outproof-tab-keyboard/wire-2f4ab4f0b13e47e5b055c2465b1546c6.json"
+    },
+    {
+      "receipt": "OUTPROOF_SINGAPORE_ORIGIN_PUBLIC.json",
+      "request_id": "bdfbe502686d4cf39da102c0500ab847",
+      "status": 409,
+      "outcome": "TYPED_REJECTION",
+      "scope": "Native Python receipt retains numeric JSON types"
+    },
+    {
+      "receipt": "OUTPROOF_SINGAPORE_ORIGIN_PUBLIC.json",
+      "request_id": "2b4e7b90adfb49f98ff6ab33b98f08f0",
+      "status": 200,
+      "outcome": "ACCEPTED_VERIFIED_PLAN",
+      "scope": "Native Python receipt retains numeric JSON types"
+    }
+  ],
+  "initial_lossy_replay_failure": "OUTPROOF_PUBLIC_POLICY_AUDIT_FAILURE.json"
+}

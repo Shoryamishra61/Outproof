@@ -1,0 +1,81 @@
+{
+  "executed_at": "2026-10-10T10:32:00.394144+00:00",
+  "status": "PASS",
+  "commit": "c6711c9b8abcd3e99a74656665cd306110ebd647",
+  "services": {
+    "api": {
+      "id": "srv-db3vs6ub7d7c739r2sq0",
+      "type": "web_service",
+      "plan": "free",
+      "buildPlan": "starter",
+      "autoDeploy": "yes",
+      "autoDeployTrigger": "checksPass",
+      "deploy_id": "dep-db51713rjlhs73aal3i0",
+      "deploy_status": "live",
+      "commit": "c6711c9b8abcd3e99a74656665cd306110ebd647"
+    },
+    "web": {
+      "id": "srv-db3vs8eb7d7c739r31l0",
+      "type": "static_site",
+      "plan": null,
+      "buildPlan": "starter",
+      "autoDeploy": "yes",
+      "autoDeployTrigger": "checksPass",
+      "deploy_id": "dep-db51713rjlhs73aal3rg",
+      "deploy_status": "live",
+      "commit": "c6711c9b8abcd3e99a74656665cd306110ebd647"
+    }
+  },
+  "scope": "Actual release identity, free plan, autodeploy, HTTPS readiness and model authentication; inference/browser receipts separate",
+  "frontend": {
+    "url": "https://outproof-web.onrender.com",
+    "http_status": 200
+  },
+  "readiness": {
+    "url": "https://outproof-api.onrender.com/v1/health/ready",
+    "http_status": 200,
+    "result": {
+      "status": "ready",
+      "model_reachable": true,
+      "live_evidence_available": true,
+      "compilation_available": true,
+      "mode": "LIVE",
+      "readiness_scope": "reviewed Shanti Kunj source and route only",
+      "global_compilation_verified": false
+    }
+  },
+  "version": {
+    "url": "https://outproof-api.onrender.com/v1/version",
+    "http_status": 200,
+    "result": {
+      "version": "0.1.0",
+      "commit": "c6711c9b8abcd3e99a74656665cd306110ebd647",
+      "environment": "production"
+    }
+  },
+  "gemma_model": [
+    {
+      "name": "gemma4:e2b-it-qat",
+      "digest": "07ea59a474013479c8b6b802bef095c40e964a1d776ba02f264c0e30e1aede0c",
+      "size": 4336358185
+    }
+  ],
+  "model_auth_statuses_missing_wrong_correct": [
+    401,
+    401,
+    200
+  ],
+  "demo_sha256": "d6221cbb4bfb6b22ffa98d86fefa00210a099fc4ef02e622c5b5288b019490dd",
+  "checks_workflow": {
+    "id": 38044927811,
+    "status": "SUCCESS",
+    "url": "https://github.com/Shoryamishra61/Outproof/actions/runs/38044927811"
+  },
+  "production_workflow": {
+    "conclusion": "success",
+    "databaseId": 38045069052,
+    "headSha": "c6711c9b8abcd3e99a74656665cd306110ebd647",
+    "status": "completed",
+    "url": "https://github.com/Shoryamishra61/Outproof/actions/runs/38045069052"
+  }
+}
